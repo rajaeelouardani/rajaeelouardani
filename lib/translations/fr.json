@@ -1,0 +1,677 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "certifications": "Certifications",
+    "honors": "Récompenses",
+    "volunteering": "Bénévolat",
+    "languages": "Langues",
+    "contact": "Contact",
+    "blog": "Blog",
+    "hireMe": "Engagez-moi !",
+    "contactMe": "Contactez-moi"
+  },
+  "hero": {
+    "greeting": "SALUT !",
+    "name": "RAJAE ELOUARDANI",
+    "title": "Développeuse Web Full Stack",
+    "subtitle": "Création de Solutions Numériques",
+    "description": "Développeuse web passionnée spécialisée en Next.js, React.js et Node.js. Je transforme des idées en applications web modernes et performantes.",
+    "bio": "Étudiante en Informatique | ALX Software Engineering | Ambassadrice 10000 Codeurs | Co-fondatrice IVR CLUB FSM | Présidente Photography FSM Club",
+    "hireMe": "ENGAGEZ-MOI À TOUT MOMENT !",
+    "viewProjects": "Voir Mes Projets",
+    "yearsExperience": "Années d'Expérience",
+    "webProjects": "Projets Web",
+    "technologies": "Technologies",
+    "imA": "Je suis",
+    "craftingDigitalSolutions": "Création de Solutions Numériques",
+    "descriptionText": "Développeuse web spécialisée en Next.js, React.js et Node.js, je transforme des idées en applications web modernes, performantes et évolutives.",
+    "workTogether": "Travaillons ensemble",
+    "viewMyProjects": "Voir mes projets",
+    "credentials": {
+      "student": "Étudiante en Informatique",
+      "alx": "ALX Software Engineering",
+      "ambassador": "Ambassadrice 10000 Codeurs",
+      "cofounder": "Co-fondatrice IVR Club FSM",
+      "president": "Présidente Photography FSM Club"
+    },
+    "roles": ["Développeuse Web", "Photographe", "Vidéaste", "Designer", "Entrepreneuse"]
+  },
+  "creativePulse": {
+    "sectionLabel": "PROFIL CRÉATIF",
+    "title": "Mon Profil",
+    "subtitle": "Où la technologie rencontre la créativité. Découvrez chaque domaine d'expertise.",
+    "creativeDigitalProfile": "Profil Numérique Créatif",
+    "clickToDiscover": "Cliquez sur un quadrant pour découvrir chaque domaine d'expertise.",
+    "my": "Mon ",
+    "flipWords": ["Créatif", "Numérique", "Professionnel", "Innovant"],
+    "digitalProfile": "Profil Numérique",
+    "creative": "Créatif",
+    "photography": {
+      "title": "Photographie",
+      "description": "Je capture des moments significatifs et des histoires visuelles à travers un objectif créatif et professionnel, en me concentrant sur la composition, l'émotion et l'identité de marque.",
+      "shortDescription": "Raconter des histoires visuelles à travers des objectifs créatifs"
+    },
+    "videography": {
+      "title": "Vidéographie",
+      "description": "Du concept à la coupe finale, je produis des vidéos engageantes qui racontent des histoires, promeuvent des marques et créent un fort impact visuel.",
+      "shortDescription": "Communication de marque axée sur le mouvement"
+    },
+    "webDevelopment": {
+      "title": "Développement Web",
+      "description": "Je construis des applications web modernes, évolutives et performantes en utilisant Next.js, React et Node.js, transformant des idées en produits numériques.",
+      "shortDescription": "Création de solutions numériques évolutives"
+    },
+    "branding": {
+      "title": "Branding",
+      "description": "J'aide les marques à définir leur identité visuelle, leur message et leur présence numérique pour se démarquer et se connecter avec leur audience.",
+      "shortDescription": "Création d'identités visuelles fortes"
+    },
+    "entrepreneurship": {
+      "title": "Entrepreneuriat",
+      "description": "Co-fondatrice et leader communautaire, activement impliquée dans l'innovation, les startups et l'autonomisation des jeunes talents à travers la technologie et la créativité.",
+      "shortDescription": "Diriger l'innovation et les communautés"
+    }
+  },
+  "skills": {
+    "title": "Mes Compétences & Expertise",
+    "subtitle": "Explorez les outils et compétences que j'utilise quotidiennement pour créer des designs visuellement époustouflants et fonctionnels.",
+    "visitSkills": "VISITEZ MES COMPÉTENCES & ENGAGEZ-MOI",
+    "toolsTechnologies": "Outils & Technologies",
+    "industryKnowledge": "Connaissances du Secteur",
+    "interpersonalSkills": "Compétences Interpersonnelles",
+    "my": "Mes ",
+    "skillsText": "Compétences",
+    "andExpertise": " & ",
+    "expertiseText": "Expertise"
+  },
+  "portfolio": {
+    "title": "Mise en Valeur de la Créativité à Travers de Vrais Projets",
+    "subtitle": "Des projets qui combinent créativité et technologie pour créer des solutions innovantes qui inspirent et transforment.",
+    "viewMore": "Voir Plus",
+    "viewDetails": "Voir les Détails",
+    "category": "Catégorie",
+    "my": "Mes ",
+    "flipWords": ["Projets", "Portfolio", "Travaux", "Créations"]
+  },
+  "services": {
+    "title": "Services de Développement Adaptés à Vos Besoins",
+    "subtitle": "Solutions de développement web complètes, de la conception à la mise en production. Expertise en technologies modernes pour créer des applications performantes et évolutives.",
+    "viewMore": "VOIR PLUS",
+    "viewDetails": "VOIR LES DÉTAILS",
+    "my": "Mes ",
+    "flipWords": ["Services", "Expertise", "Compétences", "Offres"],
+    "webDevelopment": "DÉVELOPPEMENT WEB",
+    "webDevelopmentDesc": "Développement de sites web modernes et responsives avec Next.js, React.js, TypeScript. Création d'applications web performantes et optimisées.",
+    "frontendDevelopment": "DÉVELOPPEMENT FRONTEND",
+    "frontendDevelopmentDesc": "Création d'interfaces utilisateur modernes et intuitives avec React, Tailwind CSS et les dernières technologies frontend.",
+    "backendDevelopment": "DÉVELOPPEMENT BACKEND",
+    "backendDevelopmentDesc": "Développement d'APIs RESTful et de serveurs avec Node.js, Express.js, MySQL et Sequelize pour des applications robustes.",
+    "ecommerce": "SOLUTIONS E-COMMERCE",
+    "ecommerceDesc": "Développement de plateformes e-commerce complètes avec WordPress, WooCommerce et solutions personnalisées.",
+    "uiux": "DESIGN UI/UX",
+    "uiuxDesc": "Conception d'interfaces utilisateur attrayantes et d'expériences utilisateur optimisées avec Figma et les meilleures pratiques.",
+    "3d": "EXPÉRIENCES WEB 3D",
+    "3dDesc": "Création d'expériences web interactives en 3D avec React Three Fiber et Three.js pour des sites web immersifs.",
+    "tabAll": "Tous",
+    "allDescription": "Une gamme complète de services numériques, créatifs et techniques pour donner vie à vos idées.",
+    "webDescription": "Je conçois et développe des solutions web modernes, sécurisées et évolutives adaptées aux besoins des entreprises.",
+    "webStarter": "Web Starter",
+    "webStarterFeature1": "Site web d'une page ou landing page",
+    "webStarterFeature2": "Interface utilisateur responsive",
+    "webStarterFeature3": "SEO et performance de base",
+    "webStarterFeature4": "Formulaires de contact et de leads",
+    "webBusiness": "Web Business",
+    "webBusinessFeature1": "Site web multi-pages",
+    "webBusinessFeature2": "Développement frontend et backend",
+    "webBusinessFeature3": "Système d'authentification",
+    "webBusinessFeature4": "Intégration API",
+    "webPro": "Web Pro",
+    "webProFeature1": "Application web full-stack",
+    "webProFeature2": "Architecture de base de données",
+    "webProFeature3": "Tableau de bord administrateur",
+    "webProFeature4": "Support déploiement et maintenance",
+    "branding": "BRANDING",
+    "brandingDescription": "J'aide les marques à définir leur identité, leur langage visuel et leur présence numérique.",
+    "brandingEssentials": "Branding Essentials",
+    "brandingEssentialsFeature1": "Design de logo",
+    "brandingEssentialsFeature2": "Palette de couleurs et typographie",
+    "brandingEssentialsFeature3": "Guide de style de marque",
+    "brandIdentity": "Identité de Marque",
+    "brandIdentityFeature1": "Identité visuelle complète",
+    "brandIdentityFeature2": "Assets pour réseaux sociaux",
+    "brandIdentityFeature3": "Kit de marque numérique",
+    "brandStrategy": "Stratégie de Marque",
+    "brandStrategyFeature1": "Positionnement de marque",
+    "brandStrategyFeature2": "Messaging et storytelling",
+    "brandStrategyFeature3": "Consultation en branding numérique",
+    "photography": "PHOTOGRAPHIE",
+    "photographyDescription": "Photographie professionnelle axée sur la narration, l'image de marque et l'impact visuel.",
+    "photographyBasic": "Photographie Basique",
+    "photographyBasicFeature1": "Séance photo",
+    "photographyBasicFeature2": "Édition de base",
+    "photographyBasicFeature3": "Formats web et réseaux sociaux",
+    "photographyPro": "Photographie Pro",
+    "photographyProFeature1": "Prise de vue créative",
+    "photographyProFeature2": "Retouche avancée",
+    "photographyProFeature3": "Visuels orientés marque",
+    "photographyContent": "Photographie Contenu",
+    "photographyContentFeature1": "Création de contenu pour réseaux sociaux",
+    "photographyContentFeature2": "Photos de campagne et promotionnelles",
+    "videography": "VIDÉOGRAPHIE",
+    "videographyDescription": "Contenu vidéo engageant conçu pour communiquer des histoires et promouvoir les marques.",
+    "videoStarter": "Vidéo Starter",
+    "videoStarterFeature1": "Tournage vidéo court",
+    "videoStarterFeature2": "Montage de base",
+    "videoStarterFeature3": "Formats réseaux sociaux",
+    "videoBusiness": "Vidéo Business",
+    "videoBusinessFeature1": "Scénario et concept",
+    "videoBusinessFeature2": "Tournage professionnel",
+    "videoBusinessFeature3": "Effets de mouvement et transitions",
+    "videoPremium": "Vidéo Premium",
+    "videoPremiumFeature1": "Vidéos de storytelling de marque",
+    "videoPremiumFeature2": "Contenu promotionnel et de campagne",
+    "videoPremiumFeature3": "Post-production avancée",
+    "entrepreneurship": "ENTREPRENEURIAT",
+    "entrepreneurshipDescription": "Soutien aux startups et innovateurs de l'idée à l'exécution.",
+    "startupConsulting": "Consultation Startup",
+    "startupConsultingFeature1": "Validation d'idée",
+    "startupConsultingFeature2": "Feuille de route technique",
+    "startupConsultingFeature3": "Planification MVP",
+    "mvpBuilder": "Constructeur MVP",
+    "mvpBuilderFeature1": "Stratégie produit",
+    "mvpBuilderFeature2": "Guidance UX et technique",
+    "mvpBuilderFeature3": "Planification du développement",
+    "growthSupport": "Support Croissance",
+    "growthSupportFeature1": "Stratégie numérique",
+    "growthSupportFeature2": "Consultation branding et tech",
+    "growthSupportFeature3": "Support à long terme",
+    "requestQuote": "Demander un Devis"
+  },
+  "experience": {
+    "title": "Renforcer le Design avec un Objectif",
+    "subtitle": "En tant que développeuse web et créatrice de contenu, je suis animée par la volonté de contribuer au développement de notre société et d'élever le niveau universitaire des étudiants.",
+    "myExperience": "Mon Expérience",
+    "myEducation": "Ma Formation",
+    "sectionLabel": "ÉDUCATION & EXPÉRIENCE",
+    "flipWords": ["Éducation & Expérience", "Mon Parcours", "Carrière", "Croissance Professionnelle"],
+    "experiences": [
+      {
+        "company": "Freelance",
+        "role": "Développeuse Web Freelance",
+        "description": "Services de développement web freelance depuis 2021. Création de sites web, applications web et solutions numériques personnalisées pour divers clients."
+      },
+      {
+        "company": "Mcovery",
+        "role": "Développement Web (Temps partiel)",
+        "description": "Poste de développement web à distance à temps partiel. Stage précédemment complété (Jul-Août 2025) axé sur WordPress, Next.js, optimisation SEO et gestion de projet avec Trello."
+      },
+      {
+        "company": "MWT Moroccan Walking Tours",
+        "role": "Développeuse Web - Développement de Plateforme",
+        "description": "Développement d'une plateforme de gestion des guides touristiques au Maroc. Actuellement en phase de développement, construction d'un système complet pour gérer et organiser les guides touristiques et leurs services."
+      },
+      {
+        "company": "EXPERTS HUMAN CAPITAL (EHC Groupe)",
+        "role": "Développement Web",
+        "description": "Poste contractuel travaillant avec React.js, Node.js, Express.js, Redux.js, Ant Design, Sequelize.js et MySQL."
+      },
+      {
+        "company": "ECLEE",
+        "role": "Ambassadrice Junior & Stagiaire – Numérisation des Cours & Développement Web",
+        "description": "Contribution à la numérisation du contenu éducatif, développement web d'une plateforme éducative et optimisation de l'organisation des cours pour l'e-learning. Collaboration avec l'équipe pédagogique pour aligner les modules avec les normes internationales."
+      },
+      {
+        "company": "10000 CODEURS",
+        "role": "Ambassadrice 10000 Codeurs",
+        "description": "Promotion de l'éducation au codage et soutien de la communauté de codage au Maroc."
+      },
+      {
+        "company": "Medchain",
+        "role": "PDG du Projet Medchains",
+        "description": "Direction d'un projet de numérisation du secteur de la santé au Maroc grâce à une plateforme sécurisée et une application mobile, basées sur la blockchain."
+      },
+      {
+        "company": "Photography FSM Club",
+        "role": "Présidente du Club de Photographie FSM",
+        "description": "Direction stratégique, organisation de formations web, développement du site photographyfsm.online, promotion des projets des membres."
+      },
+      {
+        "company": "UMI-MUN Club",
+        "role": "Responsable Technique",
+        "description": "Gestion technique des projets et événements du club Model United Nations."
+      },
+      {
+        "company": "IVR CLUB FSM",
+        "role": "Vice-Présidente & Responsable Communication et Marketing",
+        "description": "Leadership et coordination des activités du club IVR. Gestion des partenariats, supervision de la section photographie, organisation d'événements, stratégies marketing et gestion des réseaux sociaux."
+      },
+      {
+        "company": "MowajihAI",
+        "role": "Responsable du département de collecte de données",
+        "description": "Gestion et coordination de l'équipe de collecte de données."
+      },
+      {
+        "company": "CSC-FSM Club",
+        "role": "Co-fondatrice",
+        "description": "Co-fondé le Club Informatique de l'Université Moulay Ismaïl (CSC-FSM) en novembre 2021 avec Mohamed Ahram, Ayoub Elkatibi et d'autres étudiants de la Faculté des Sciences. Le club organise des ateliers pratiques, des hackathons et des projets réels—ouvert aux débutants et aux professionnels."
+      },
+      {
+        "company": "ARMA Association",
+        "role": "Formatrice - Traitement d'image",
+        "description": "Formatrice d'une formation sur le traitement d'image dans le cadre d'une formation en IA/Robotique et traitement d'image avec l'Association des Randonneurs Marocains pour les Aventures (ARMA). Formation des membres de l'association et démonstration de l'importance de l'IA et de ses applications dans tous les domaines."
+      }
+    ],
+    "educations": [
+      {
+        "institution": "Université Moulay Ismail Meknès",
+        "degree": "Sciences Informatiques et Sciences de l'Information et Services Connexes",
+        "description": "Étudiante en informatique. Activités : Club IVR FSM depuis 2023, Club informatique CSC de FSM 2021-2022. Compétences : UML, Compétences Analytiques, Gestion du Temps."
+      },
+      {
+        "institution": "ALX Academy",
+        "degree": "Ingénieur Logiciel",
+        "description": "Formation intensive en ingénierie logicielle. Compétences : Résolution de Problèmes, Programmation C, Git, GitHub, Emacs, Ubuntu, Gestion du Temps."
+      },
+      {
+        "institution": "English for Africa Center",
+        "degree": "Certification Cambridge - Anglais",
+        "description": "Certification en langue anglaise Cambridge."
+      },
+      {
+        "institution": "Centre de formation CAPE avec 2htj consulting",
+        "degree": "Certificat de Participation, Économie",
+        "description": "Formation en économie. Compétences : Travail d'Équipe, Modèle et Notation de Processus Métier, Gestion du Temps, Modèle d'Affaires Canvas."
+      },
+      {
+        "institution": "JA Worldwide",
+        "degree": "Certificat de Réussite, Entrepreneuriat / Études Entrepreneuriales",
+        "description": "Formation en entrepreneuriat. Développement des compétences en présentation, travail d'équipe et connaissance du domaine."
+      },
+      {
+        "institution": "Stage Virtuel par INJAZ Al-Arab et PMIEF",
+        "degree": "Project Management Institute · Stage",
+        "description": "Programme de stage virtuel par INJAZ Al-Arab et PMIEF (Project Management Institute Educational Foundation). Stage à distance axé sur les compétences en gestion de projet et le développement professionnel."
+      },
+      {
+        "institution": "Faculté des Sciences de Meknès & Université de Naples Federico II",
+        "degree": "Cours en ligne et en présentiel - Photographie en recherche (Théorie & Applications)",
+        "description": "Dans le cadre d'une collaboration entre la Faculté des Sciences de Meknès et l'Université de Naples Federico II, cours en ligne et en présentiel sur le thème de la photographie en recherche (Théorie & Applications)."
+      },
+      {
+        "institution": "Lycée Moulay Ismail Meknes",
+        "degree": "Baccalauréat Sciences Mathématiques B (SMB)",
+        "description": "Baccalauréat Sciences Mathématiques B. Formation en mathématiques, physique, chimie et sciences de la vie et de la terre. Activités : Club Art et Culture."
+      }
+    ]
+  },
+  "certifications": {
+    "sectionLabel": "LICENCES & CERTIFICATIONS",
+    "title": "Mes Réalisations & Reconnaissances",
+    "subtitle": "Explorez mes licences professionnelles et certifications qui valident mes compétences et mon expertise.",
+    "list": [
+      {
+        "id": 0,
+        "title": "Participation au Gamethon UNESCO",
+        "issuer": "UNESCO",
+        "date": "2025",
+        "description": "Participation au gamethon organisé à Bouznika en 2025"
+      },
+      {
+        "id": 1,
+        "title": "Company Program",
+        "issuer": "INJAZ Al-Maghrib (Junior Achievement Worldwide)",
+        "date": "Jun 2025",
+        "description": "Équipe gagnante de la compétition régionale de la | IVR CLUB"
+      },
+      {
+        "id": 2,
+        "title": "PMI Internship Program",
+        "issuer": "Project Management Institute",
+        "date": "Jun 2025",
+        "description": "Programme présenté par INJAZ Al-Arab/JA MENA en collaboration avec PMI"
+      },
+      {
+        "id": 3,
+        "title": "Certificat de Participation",
+        "issuer": "Faculté des Sciences Meknès",
+        "date": "May 2025",
+        "description": "Certificat de participation"
+      },
+      {
+        "id": 4,
+        "title": "Meilleure vidéo créative",
+        "issuer": "Université Moulay Ismaïl",
+        "date": "May 2025",
+        "description": "Prix du design - Créativité et photographie"
+      },
+      {
+        "id": 5,
+        "title": "Passport Numérique 10000 Codeurs",
+        "issuer": "10000 CODEURS",
+        "date": "May 2025 - Expires May 2030",
+        "description": "Certification numérique valide jusqu'en 2030"
+      },
+      {
+        "id": 6,
+        "title": "Certificate of Recognition",
+        "issuer": "Al Akhawayn University",
+        "date": "Apr 2025",
+        "description": "Reconnaissance pour contribution exceptionnelle"
+      },
+      {
+        "id": 7,
+        "title": "Lean Six Sigma Yellow Belt",
+        "issuer": "ECLEE",
+        "date": "Apr 2025",
+        "description": "Certification internationale en amélioration des processus"
+      },
+      {
+        "id": 8,
+        "title": "PHOTOGRAPHIE",
+        "issuer": "AUF",
+        "date": "Apr 2025",
+        "description": "Formation en photographie - Université Moulay Ismaïl"
+      },
+      {
+        "id": 9,
+        "title": "Responsive Web Design",
+        "issuer": "freeCodeCamp",
+        "date": "Feb 2025",
+        "description": "Certification en design web responsive"
+      },
+      {
+        "id": 10,
+        "title": "Attestation de Colloque International Pluridisciplinaire",
+        "issuer": "Université Moulay Ismaïl",
+        "date": "Oct 2024",
+        "description": "Participation au colloque international"
+      },
+      {
+        "id": 11,
+        "title": "Company Program",
+        "issuer": "INJAZ Al-Maghrib (Junior Achievement Worldwide)",
+        "date": "Jun 2024",
+        "description": "Programme d'entrepreneuriat"
+      },
+      {
+        "id": 12,
+        "title": "Certificate of Appreciation",
+        "issuer": "International Association of Physics Students",
+        "date": "Mar 2024",
+        "description": "Reconnaissance pour contribution exceptionnelle"
+      },
+      {
+        "id": 13,
+        "title": "Attestation de formation : Design Thinking",
+        "issuer": "AUF - Afrique Centrale et Grands Lacs",
+        "date": "Feb 2024",
+        "description": "Formation en méthodologie Design Thinking"
+      },
+      {
+        "id": 14,
+        "title": "Attestation de remerciement",
+        "issuer": "Université Moulay Ismail Meknès",
+        "date": "Dec 2023",
+        "description": "Reconnaissance pour services rendus"
+      },
+      {
+        "id": 15,
+        "title": "Agribusiness Service Delivery and Community Engagement",
+        "issuer": "UM6P - University Mohammed VI Polytechnic",
+        "date": "Oct 2023",
+        "description": "Blended Summer School en agribusiness"
+      },
+      {
+        "id": 16,
+        "title": "Certificat de réalisation au programme company program",
+        "issuer": "INJAZ Al-Maghrib (Junior Achievement Worldwide)",
+        "date": "Jul 2023",
+        "description": "Certificat de réalisation au programme company program"
+      },
+      {
+        "id": 17,
+        "title": "Big Data Programming Languages & Big Data Vs Data Science",
+        "issuer": "Udemy",
+        "date": "Jul 2023",
+        "description": "Formation en Big Data et langages de programmation"
+      },
+      {
+        "id": 18,
+        "title": "Public Speaking",
+        "issuer": "Udemy",
+        "date": "Jul 2023",
+        "description": "Formation en prise de parole en public - Public Relations"
+      },
+      {
+        "id": 19,
+        "title": "L'art du business plan",
+        "issuer": "Centre 2htj consulting",
+        "date": "May 2023",
+        "description": "Formation en création de business plan"
+      },
+      {
+        "id": 20,
+        "title": "Innovation Camp compétition 1",
+        "issuer": "INJAZ Al-Maghrib (Junior Achievement Worldwide)",
+        "date": "May 2023",
+        "description": "Participation à la compétition Innovation Camp"
+      },
+      {
+        "id": 21,
+        "title": "Innovation Camp compétition 2",
+        "issuer": "INJAZ Al-Maghrib (Junior Achievement Worldwide)",
+        "date": "May 2023",
+        "description": "Participation à la compétition Innovation Camp"
+      },
+      {
+        "id": 22,
+        "title": "Certificate of Appreciation",
+        "issuer": "Club l'arc doré Meknes",
+        "date": "Jan 2023",
+        "description": "Reconnaissance pour contribution au club"
+      },
+      {
+        "id": 23,
+        "title": "Certificat of Achievement",
+        "issuer": "Cambridge International Education",
+        "date": "2022",
+        "description": "Certification Cambridge en anglais"
+      },
+      {
+        "id": 24,
+        "title": "Html5/CSS3",
+        "issuer": "OpenClassrooms",
+        "date": "2022",
+        "description": "Formation en développement web HTML5 et CSS3"
+      },
+      {
+        "id": 25,
+        "title": "Information Systems Development and Society",
+        "issuer": "Alison",
+        "date": "2022",
+        "description": "Formation en développement de systèmes d'information - Méthodologies Agile"
+      },
+      {
+        "id": 26,
+        "title": "Photography",
+        "issuer": "Unihance",
+        "date": "2022",
+        "description": "Formation en photographie - Compétences analytiques"
+      },
+      {
+        "id": 27,
+        "title": "What exactly is an algorithm?",
+        "issuer": "IBM",
+        "date": "2022",
+        "description": "Formation en algorithmes et pensée computationnelle"
+      }
+    ]
+  },
+  "honors": {
+    "sectionLabel": "RÉCOMPENSES & DISTINCTIONS",
+    "title": "Reconnaissance & Réalisations",
+    "subtitle": "Récompenses et distinctions reçues pour l'excellence et l'innovation dans divers domaines.",
+    "list": [
+      {
+        "id": 1,
+        "title": "Meilleure vidéo créative",
+        "issuer": "Université Moulay Ismaïl",
+        "date": "Apr 2025",
+        "description": "Prix du Design 🏆 lors de la compétition des meilleures vidéos créatives des clubs de l'Université Moulay Ismaïl (UMI), tenue les 10 et 11 avril 2025 dans le cadre de la journée \"UMI Out Of The Box\".",
+        "associated": "Photography FSM Club"
+      },
+      {
+        "id": 2,
+        "title": "Prix de la compétition du DEEPTECH STARTUP CHALLENGE",
+        "issuer": "Tamwilcom",
+        "date": "Jan 2025",
+        "description": "Prix de la compétition du DEEPTECH STARTUP CHALLENGE organisé par l'Université Moulay Ismaïl en partenariat avec INCUBOOSTER. Cette journée a été marquée par des présentations inspirantes, des échanges enrichissants entre chercheurs, étudiants et entrepreneurs, ainsi qu'une compétition stimulante, transformant des idées novatrices en projets à fort impact.",
+        "associated": "Université Moulay Ismail Meknès"
+      },
+      {
+        "id": 3,
+        "title": "Prix de Attijariwafa Bank dans la compétition nationale d'INJAZ Elmaghreb",
+        "issuer": "Attijariwafa Bank",
+        "date": "May 2023",
+        "description": "Prix de Attijariwafa Bank dans la compétition nationale d'INJAZ Elmaghreb.",
+        "associated": "Entreprendre pour Apprendre (JA Worldwide)"
+      },
+      {
+        "id": 4,
+        "title": "Prix de Citi Bank dans la compétition nationale d'INJAZ Elmaghreb",
+        "issuer": "Citi Bank",
+        "date": "May 2023",
+        "description": "Prix de Citi Bank dans la compétition nationale d'INJAZ Elmaghreb.",
+        "associated": "Entreprendre pour Apprendre (JA Worldwide)"
+      },
+      {
+        "id": 5,
+        "title": "Premier prix de compétition Innovation Camp",
+        "issuer": "INJAZ El Maghreb & Attijariwafa Bank",
+        "date": "Apr 2023",
+        "description": "Premier prix de compétition Innovation Camp d'organisation INJAZ El Maghreb & Attijariwafa Bank.",
+        "associated": "Entreprendre pour Apprendre (JA Worldwide)"
+      },
+      {
+        "id": 6,
+        "title": "Prix de compétition régionale de l'association \"أنا وأنت\"",
+        "issuer": "Association \"أنا وأنت\"",
+        "date": "Jul 2021",
+        "description": "Prix de compétition régionale de l'association \"أنا وأنت\".",
+        "associated": "Lycée Moulay Ismail Meknes"
+      }
+    ]
+  },
+  "volunteering": {
+    "sectionLabel": "BÉNÉVOLAT",
+    "title": "Redonner à la Communauté",
+    "subtitle": "Engagement bénévole et contribution au développement de la communauté étudiante et sociale."
+  },
+  "languages": {
+    "sectionLabel": "LANGUES",
+    "title": "Maîtrise Multilingue",
+    "subtitle": "Compétences linguistiques pour une communication efficace dans un environnement international.",
+    "flipWords": ["Maîtrise Multilingue", "Compétences Linguistiques", "Communication", "Capacités Linguistiques"],
+    "languagesList": [
+      {
+        "name": "Anglais",
+        "nameEn": "English",
+        "level": "Professionnel"
+      },
+      {
+        "name": "Arabe",
+        "nameEn": "Arabic",
+        "level": "Natif"
+      },
+      {
+        "name": "Français",
+        "nameEn": "French",
+        "level": "Professionnel"
+      },
+      {
+        "name": "Turc",
+        "nameEn": "Turkish",
+        "level": "A1"
+      }
+    ]
+  },
+  "testimonials": {
+    "sectionLabel": "TÉMOIGNAGES",
+    "title": "Mots de Clients Satisfaits",
+    "subtitle": "Recommandations et témoignages de mentors, professeurs et clients satisfaits"
+  },
+  "news": {
+    "sectionLabel": "DERNIÈRES ACTUALITÉS"
+  },
+  "pricing": {
+    "title": "Plan Flexible",
+    "subtitle": "Stratégies complètes, le domaine du conseil répond à un éventail de besoins avec sa gamme d'offres polyvalentes."
+  },
+  "contact": {
+    "title": "Transformer les Idées en Réalité",
+    "phone": "Téléphone",
+    "email": "Email",
+    "address": "Adresse",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "yourEmail": "Votre Email",
+    "yourPhone": "Votre Téléphone",
+    "chooseService": "Choisir un Service",
+    "yourMessage": "Votre Message",
+    "sendMessage": "Envoyer le Message",
+    "sending": "Envoi en cours...",
+    "successMessage": "Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.",
+    "errorMessage": "Erreur lors de l'envoi du message. Veuillez réessayer ou me contacter directement par email."
+  },
+  "news": {
+    "title": "Explorez Mon Processus de Pensée Design",
+    "subtitle": "Nous mettons vos idées et donc vos souhaits sous la forme d'un unique",
+    "readMore": "Lire Plus",
+    "viewMore": "Voir Plus"
+  },
+  "blog": {
+    "sectionLabel": "BLOG",
+    "title": "Blog Technologique & Ressources Éducatives",
+    "subtitle": "Articles, tutoriels et ressources sur les technologies que je maîtrise",
+    "readMore": "Lire Plus",
+    "educationalResources": "Ressources Éducatives",
+    "andEducationalResources": "& Ressources Éducatives",
+    "educationalResourcesLabel": "Ressources Éducatives :",
+    "visitPlatform": "Visiter la Plateforme",
+    "free": "GRATUIT",
+    "flipWords": ["Blog", "Ressources", "Articles", "Tutoriels"],
+    "resources": {
+      "linkedinLearning": "Cours professionnels et certifications",
+      "googleDevelopers": "Ressources et cours gratuits de Google",
+      "edx": "Cours en ligne gratuits des meilleures universités",
+      "metaTraining": "Cours gratuits sur le développement web et le design",
+      "freeCodeCamp": "Bootcamp de codage gratuit et certifications",
+      "coursera": "Cours en ligne d'universités du monde entier",
+      "udemy": "Cours en ligne sur la programmation et la technologie",
+      "khanAcademy": "Cours et leçons en ligne gratuits",
+      "codecademy": "Leçons de codage gratuites et exercices interactifs",
+      "w3schools": "Tutoriels et références gratuits sur le développement web",
+      "mdnWebDocs": "Documentation et tutoriels gratuits pour développeurs web",
+      "theOdinProject": "Curriculum gratuit de développement web full-stack",
+      "mitOpenCourseWare": "Matériaux de cours et conférences gratuits du MIT",
+      "harvardCS50": "Cours d'informatique gratuit de Harvard",
+      "sololearn": "Cours de codage gratuits orientés mobile",
+      "scrimba": "Screencasts de codage interactifs gratuits",
+      "codeOrg": "Éducation informatique gratuite pour tous",
+      "stackOverflow": "Plateforme Q&A gratuite pour développeurs",
+      "githubLearningLab": "Cours interactifs gratuits sur GitHub",
+      "javascriptInfo": "Tutoriel JavaScript moderne gratuit",
+      "reactDocumentation": "Ressources d'apprentissage React officielles gratuites",
+      "ciscoNetworkingAcademy": "Cours gratuits de réseautage et IT de Cisco"
+    }
+  },
+  "footer": {
+    "followUs": "Suivez-nous",
+    "description": "Développeuse web spécialisée en Next.js, React.js et Node.js, je transforme des idées en applications web modernes, performantes et évolutives. Passionnée par la technologie et la créativité, je crée des solutions digitales innovantes."
+  }
+}
+

@@ -1,0 +1,686 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "skills": "Skills",
+    "certifications": "Certifications",
+    "honors": "Honors & Awards",
+    "volunteering": "Volunteering",
+    "languages": "Languages",
+    "contact": "Contact",
+    "blog": "Blog",
+    "hireMe": "Hire Me!",
+    "contactMe": "Contact Me"
+  },
+  "hero": {
+    "greeting": "HOWDY!",
+    "name": "RAJAE ELOUARDANI",
+    "title": "Full Stack Web Developer",
+    "subtitle": "Crafting Digital Solutions",
+    "description": "Passionate web developer specialized in Next.js, React.js, and Node.js. I transform ideas into modern and performant web applications.",
+    "bio": "Computer Science Student | ALX Software Engineering | Ambassador 10000 Codeurs | Co-founder IVR CLUB FSM | President Photography FSM Club",
+    "hireMe": "ANY TIME HIRE ME !",
+    "viewProjects": "View My Projects",
+    "yearsExperience": "Years Experience",
+    "webProjects": "Web Projects",
+    "technologies": "Technologies",
+    "imA": "I'm a",
+    "craftingDigitalSolutions": "Crafting Digital Solutions",
+    "descriptionText": "Web developer specialized in Next.js, React.js, and Node.js, I transform ideas into modern, performant, and scalable web applications.",
+    "workTogether": "Let's work together",
+    "viewMyProjects": "View my projects",
+    "credentials": {
+      "student": "Computer Science Student",
+      "alx": "ALX Software Engineering",
+      "ambassador": "Ambassador 10000 Codeurs",
+      "cofounder": "Co-founder IVR Club FSM",
+      "president": "President Photography FSM Club"
+    },
+    "roles": ["Web Developer", "Photographer", "Videographer", "Designer", "Entrepreneur"]
+  },
+  "creativePulse": {
+    "sectionLabel": "CREATIVE PROFILE",
+    "title": "My Profile",
+    "subtitle": "Where technology meets creativity. Discover each domain of expertise.",
+    "creativeDigitalProfile": "Creative Digital Profile",
+    "clickToDiscover": "Click on a quadrant to discover each domain of expertise.",
+    "my": "My ",
+    "flipWords": ["Creative", "Digital", "Professional", "Innovative"],
+    "digitalProfile": "Digital Profile",
+    "creative": "Creative",
+    "photography": {
+      "title": "Photography",
+      "description": "I capture meaningful moments and visual stories through a creative and professional lens, focusing on composition, emotion, and brand identity.",
+      "shortDescription": "Visual storytelling through creative lenses"
+    },
+    "videography": {
+      "title": "Videography",
+      "description": "From concept to final cut, I produce engaging videos that tell stories, promote brands, and create strong visual impact.",
+      "shortDescription": "Motion-driven brand communication"
+    },
+    "webDevelopment": {
+      "title": "Web Development",
+      "description": "I build modern, scalable, and high-performance web applications using Next.js, React.js, and Node.js, transforming ideas into digital products.",
+      "shortDescription": "Building scalable digital solutions"
+    },
+    "branding": {
+      "title": "Branding",
+      "description": "I help brands define their visual identity, messaging, and digital presence to stand out and connect with their audience.",
+      "shortDescription": "Creating strong visual identities"
+    },
+    "entrepreneurship": {
+      "title": "Entrepreneurship",
+      "description": "Co-founder and community leader, actively involved in innovation, startups, and empowering young talents through tech and creativity.",
+      "shortDescription": "Leading innovation & communities"
+    }
+  },
+  "skills": {
+    "title": "My Skills & Expertise",
+    "subtitle": "Explore the tools and skills I use daily to craft visually stunning, functional designs.",
+    "visitSkills": "VISIT MY SKILL & HIRE ME",
+    "toolsTechnologies": "Tools & Technologies",
+    "industryKnowledge": "Industry Knowledge",
+    "interpersonalSkills": "Interpersonal Skills",
+    "my": "My ",
+    "skillsText": "Skills",
+    "andExpertise": " & ",
+    "expertiseText": "Expertise"
+  },
+  "portfolio": {
+    "title": "Showcasing Creativity Through Real Projects",
+    "subtitle": "Projects that combine creativity and technology to create innovative solutions that inspire and transform.",
+    "viewMore": "View More",
+    "viewDetails": "View Details",
+    "category": "Category",
+    "my": "My ",
+    "flipWords": ["Projects", "Portfolio", "Work", "Creations"]
+  },
+  "services": {
+    "title": "Development Services Tailored to Your Needs",
+    "subtitle": "Complete web development solutions, from design to production. Expertise in modern technologies to create performant and scalable applications.",
+    "viewMore": "VIEW MORE",
+    "viewDetails": "VIEW DETAILS",
+    "my": "My ",
+    "flipWords": ["Services", "Expertise", "Skills", "Offerings"],
+    "webDevelopment": "WEB DEVELOPMENT",
+    "webDevelopmentDesc": "Development of modern and responsive websites with Next.js, React.js, TypeScript. Creation of performant and optimized web applications.",
+    "frontendDevelopment": "FRONTEND DEVELOPMENT",
+    "frontendDevelopmentDesc": "Creation of modern and intuitive user interfaces with React, Tailwind CSS, and the latest frontend technologies.",
+    "backendDevelopment": "BACKEND DEVELOPMENT",
+    "backendDevelopmentDesc": "Development of RESTful APIs and servers with Node.js, Express.js, MySQL, and Sequelize for robust applications.",
+    "ecommerce": "E-COMMERCE SOLUTIONS",
+    "ecommerceDesc": "Development of complete e-commerce platforms with WordPress, WooCommerce, and custom solutions.",
+    "uiux": "UI/UX DESIGN",
+    "uiuxDesc": "Design of attractive user interfaces and optimized user experiences with Figma and best practices.",
+    "3d": "3D WEB EXPERIENCES",
+    "3dDesc": "Creation of interactive 3D web experiences with React Three Fiber and Three.js for immersive websites.",
+    "tabAll": "All",
+    "allDescription": "A complete range of digital, creative, and technical services to bring ideas to life.",
+    "webDescription": "I design and develop modern, secure, and scalable web solutions tailored to business needs.",
+    "webStarter": "Web Starter",
+    "webStarterFeature1": "One-page or landing website",
+    "webStarterFeature2": "Responsive UI",
+    "webStarterFeature3": "Basic SEO & performance",
+    "webStarterFeature4": "Contact & lead forms",
+    "webBusiness": "Web Business",
+    "webBusinessFeature1": "Multi-page website",
+    "webBusinessFeature2": "Frontend & backend development",
+    "webBusinessFeature3": "Authentication system",
+    "webBusinessFeature4": "API integration",
+    "webPro": "Web Pro",
+    "webProFeature1": "Full-stack web application",
+    "webProFeature2": "Database architecture",
+    "webProFeature3": "Admin dashboard",
+    "webProFeature4": "Deployment & maintenance support",
+    "branding": "BRANDING",
+    "brandingDescription": "I help brands define their identity, visual language, and digital presence.",
+    "brandingEssentials": "Branding Essentials",
+    "brandingEssentialsFeature1": "Logo design",
+    "brandingEssentialsFeature2": "Color palette & typography",
+    "brandingEssentialsFeature3": "Brand guidelines",
+    "brandIdentity": "Brand Identity",
+    "brandIdentityFeature1": "Complete visual identity",
+    "brandIdentityFeature2": "Social media assets",
+    "brandIdentityFeature3": "Digital brand kit",
+    "brandStrategy": "Brand Strategy",
+    "brandStrategyFeature1": "Brand positioning",
+    "brandStrategyFeature2": "Messaging & storytelling",
+    "brandStrategyFeature3": "Digital branding consulting",
+    "photography": "PHOTOGRAPHY",
+    "photographyDescription": "Professional photography focused on storytelling, brand image, and visual impact.",
+    "photographyBasic": "Photography Basic",
+    "photographyBasicFeature1": "Photo session",
+    "photographyBasicFeature2": "Basic editing",
+    "photographyBasicFeature3": "Web & social formats",
+    "photographyPro": "Photography Pro",
+    "photographyProFeature1": "Creative shooting",
+    "photographyProFeature2": "Advanced retouching",
+    "photographyProFeature3": "Brand-oriented visuals",
+    "photographyContent": "Photography Content",
+    "photographyContentFeature1": "Content creation for social media",
+    "photographyContentFeature2": "Campaign & promotional photos",
+    "videography": "VIDEOGRAPHY",
+    "videographyDescription": "Engaging video content designed to communicate stories and promote brands.",
+    "videoStarter": "Video Starter",
+    "videoStarterFeature1": "Short video shooting",
+    "videoStarterFeature2": "Basic editing",
+    "videoStarterFeature3": "Social media formats",
+    "videoBusiness": "Video Business",
+    "videoBusinessFeature1": "Script & concept",
+    "videoBusinessFeature2": "Professional shooting",
+    "videoBusinessFeature3": "Motion effects & transitions",
+    "videoPremium": "Video Premium",
+    "videoPremiumFeature1": "Brand storytelling videos",
+    "videoPremiumFeature2": "Promotional & campaign content",
+    "videoPremiumFeature3": "Advanced post-production",
+    "entrepreneurship": "ENTREPRENEURSHIP",
+    "entrepreneurshipDescription": "Supporting startups and innovators from idea to execution.",
+    "startupConsulting": "Startup Consulting",
+    "startupConsultingFeature1": "Idea validation",
+    "startupConsultingFeature2": "Technical roadmap",
+    "startupConsultingFeature3": "MVP planning",
+    "mvpBuilder": "MVP Builder",
+    "mvpBuilderFeature1": "Product strategy",
+    "mvpBuilderFeature2": "UX & technical guidance",
+    "mvpBuilderFeature3": "Development planning",
+    "growthSupport": "Growth Support",
+    "growthSupportFeature1": "Digital strategy",
+    "growthSupportFeature2": "Branding & tech consulting",
+    "growthSupportFeature3": "Long-term support",
+    "requestQuote": "Request a Quote"
+  },
+  "experience": {
+    "title": "Empowering Design With Purpose",
+    "subtitle": "As a web developer and content creator, I am driven by the desire to contribute to the development of our society and elevate the academic level of students.",
+    "myExperience": "My Experience",
+    "myEducation": "My Education",
+    "sectionLabel": "EDUCATION & EXPERIENCE",
+    "flipWords": ["Education & Experience", "My Journey", "Career Path", "Professional Growth"],
+    "experiences": [
+      {
+        "company": "Freelance",
+        "role": "Freelance Web Developer",
+        "description": "Freelance web development services since 2021. Creating websites, web applications and custom digital solutions for various clients."
+      },
+      {
+        "company": "Mcovery",
+        "role": "Web Development (Part-time)",
+        "description": "Remote part-time web development position. Previously completed internship (Jul-Aug 2025) focusing on WordPress, Next.js, SEO optimization, and project management with Trello."
+      },
+      {
+        "company": "MWT Moroccan Walking Tours",
+        "role": "Web Developer - Platform Development",
+        "description": "Development of a management platform for tour guides in Morocco. Currently in development phase, building a comprehensive system to manage and organize tour guides and their services."
+      },
+      {
+        "company": "EXPERTS HUMAN CAPITAL (EHC Groupe)",
+        "role": "Web Development",
+        "description": "Contract position working with React.js, Node.js, Express.js, Redux.js, Ant Design, Sequelize.js, and MySQL."
+      },
+      {
+        "company": "ECLEE",
+        "role": "Junior Ambassador & Intern – Course Digitalization & Web Development",
+        "description": "Contribution to the digitalization of educational content, web development of an educational platform, and optimization of course organization for e-learning. Collaboration with the pedagogical team to align modules with international standards."
+      },
+      {
+        "company": "10000 CODEURS",
+        "role": "10000 Codeurs Ambassador",
+        "description": "Promoting coding education and supporting the coding community in Morocco."
+      },
+      {
+        "company": "Medchain",
+        "role": "CEO of Medchains Project",
+        "description": "Leading a project for the digitalization of the health sector in Morocco through a secure platform and mobile application, based on blockchain."
+      },
+      {
+        "company": "Photography FSM Club",
+        "role": "President of Photography Club FSM",
+        "description": "Strategic direction, organization of web training, development of photographyfsm.online website, promotion of member projects."
+      },
+      {
+        "company": "UMI-MUN Club",
+        "role": "Technical Manager",
+        "description": "Technical management of projects and events of the Model United Nations club."
+      },
+      {
+        "company": "IVR CLUB FSM",
+        "role": "Vice President & Communication and Marketing Manager",
+        "description": "Leadership and coordination of IVR club activities. Partnership management, supervision of photography section, event organization, marketing strategies and social media management."
+      },
+      {
+        "company": "MowajihAI",
+        "role": "Responsible for data collection department",
+        "description": "Management and coordination of the data collection team."
+      },
+      {
+        "company": "CSC-FSM Club",
+        "role": "Co-founder",
+        "description": "Co-founded the Computer Science Club at Université Moulay Ismaïl (CSC-FSM) in November 2021 with Mohamed Ahram, Ayoub Elkatibi and other students from the Faculty of Sciences. The club organizes hands-on workshops, hackathons, and real projects—open to beginners and professionals alike."
+      },
+      {
+        "company": "ARMA Association",
+        "role": "Trainer - Image Processing",
+        "description": "Trainer for a training session on image processing within the framework of AI/Robotics and image processing training with the Moroccan Adventure Hikers Association (ARMA). Training association members and demonstrating the importance of AI and its applications across all domains."
+      }
+    ],
+    "educations": [
+      {
+        "institution": "Université Moulay Ismail Meknès",
+        "degree": "Computer Science and Information Sciences and Related Services",
+        "description": "Computer science student. Activities: IVR FSM Club since 2023, CSC computer science club of FSM 2021-2022. Skills: UML, Analytical Skills, Time Management."
+      },
+      {
+        "institution": "ALX Academy",
+        "degree": "Software Engineer",
+        "description": "Intensive software engineering training. Skills: Problem Solving, C Programming, Git, GitHub, Emacs, Ubuntu, Time Management."
+      },
+      {
+        "institution": "English for Africa Center",
+        "degree": "Cambridge Certification - English",
+        "description": "Cambridge English language certification."
+      },
+      {
+        "institution": "CAPE Training Center with 2htj consulting",
+        "degree": "Certificate of Participation, Economics",
+        "description": "Economics training. Skills: Teamwork, Business Process Model and Notation, Time Management, Business Model Canvas."
+      },
+      {
+        "institution": "JA Worldwide",
+        "degree": "Certificate of Achievement, Entrepreneurship / Entrepreneurial Studies",
+        "description": "Entrepreneurship training. Development of presentation skills, teamwork and domain knowledge."
+      },
+      {
+        "institution": "Virtual Internship by INJAZ Al-Arab and PMIEF",
+        "degree": "Project Management Institute · Internship",
+        "description": "Virtual internship program by INJAZ Al-Arab and PMIEF (Project Management Institute Educational Foundation). Remote internship focusing on project management skills and professional development."
+      },
+      {
+        "institution": "Faculty of Sciences Meknès & University of Naples Federico II",
+        "degree": "Online and In-Person Course - Photography in Research (Theory & Applications)",
+        "description": "As part of a collaboration between the Faculty of Sciences of Meknès and the University of Naples Federico II, online and in-person course on photography in research (Theory & Applications)."
+      },
+      {
+        "institution": "Lycée Moulay Ismail Meknes",
+        "degree": "Baccalaureate Mathematical Sciences B (SMB)",
+        "description": "Baccalaureate Mathematical Sciences B. Training in mathematics, physics, chemistry and life and earth sciences. Activities: Art and Culture Club."
+      }
+    ]
+  },
+  "certifications": {
+    "sectionLabel": "LICENSES & CERTIFICATIONS",
+    "title": "My Achievements & Recognitions",
+    "subtitle": "Explore my professional licenses and certifications that validate my skills and expertise.",
+    "list": [
+      {
+        "id": 0,
+        "title": "UNESCO Gamethon Participation",
+        "issuer": "UNESCO",
+        "date": "2025",
+        "description": "Participation in the gamethon organized in Bouznika in 2025"
+      },
+      {
+        "id": 1,
+        "title": "Company Program",
+        "issuer": "INJAZ Al-Maghrib (Junior Achievement Worldwide)",
+        "date": "Jun 2025",
+        "description": "Winning team of the regional competition | IVR CLUB"
+      },
+      {
+        "id": 2,
+        "title": "PMI Internship Program",
+        "issuer": "Project Management Institute",
+        "date": "Jun 2025",
+        "description": "Program presented by INJAZ Al-Arab/JA MENA in collaboration with PMI"
+      },
+      {
+        "id": 3,
+        "title": "Certificate of Participation",
+        "issuer": "Faculty of Sciences Meknès",
+        "date": "May 2025",
+        "description": "Certificate of participation"
+      },
+      {
+        "id": 4,
+        "title": "Best Creative Video",
+        "issuer": "Université Moulay Ismaïl",
+        "date": "May 2025",
+        "description": "Design Award - Creativity and Photography"
+      },
+      {
+        "id": 5,
+        "title": "Digital Passport 10000 Codeurs",
+        "issuer": "10000 CODEURS",
+        "date": "May 2025 - Expires May 2030",
+        "description": "Digital certification valid until 2030"
+      },
+      {
+        "id": 6,
+        "title": "Certificate of Recognition",
+        "issuer": "Al Akhawayn University",
+        "date": "Apr 2025",
+        "description": "Recognition for exceptional contribution"
+      },
+      {
+        "id": 7,
+        "title": "Lean Six Sigma Yellow Belt",
+        "issuer": "ECLEE",
+        "date": "Apr 2025",
+        "description": "International certification in process improvement"
+      },
+      {
+        "id": 8,
+        "title": "PHOTOGRAPHY",
+        "issuer": "AUF",
+        "date": "Apr 2025",
+        "description": "Photography training - Université Moulay Ismaïl"
+      },
+      {
+        "id": 9,
+        "title": "Responsive Web Design",
+        "issuer": "freeCodeCamp",
+        "date": "Feb 2025",
+        "description": "Responsive web design certification"
+      },
+      {
+        "id": 10,
+        "title": "International Multidisciplinary Colloquium Certificate",
+        "issuer": "Université Moulay Ismaïl",
+        "date": "Oct 2024",
+        "description": "Participation in international colloquium"
+      },
+      {
+        "id": 11,
+        "title": "Company Program",
+        "issuer": "INJAZ Al-Maghrib (Junior Achievement Worldwide)",
+        "date": "Jun 2024",
+        "description": "Entrepreneurship program"
+      },
+      {
+        "id": 12,
+        "title": "Certificate of Appreciation",
+        "issuer": "International Association of Physics Students",
+        "date": "Mar 2024",
+        "description": "Recognition for exceptional contribution"
+      },
+      {
+        "id": 13,
+        "title": "Training Certificate: Design Thinking",
+        "issuer": "AUF - Central Africa and Great Lakes",
+        "date": "Feb 2024",
+        "description": "Design Thinking methodology training"
+      },
+      {
+        "id": 14,
+        "title": "Certificate of Appreciation",
+        "issuer": "Université Moulay Ismail Meknès",
+        "date": "Dec 2023",
+        "description": "Recognition for services rendered"
+      },
+      {
+        "id": 15,
+        "title": "Agribusiness Service Delivery and Community Engagement",
+        "issuer": "UM6P - University Mohammed VI Polytechnic",
+        "date": "Oct 2023",
+        "description": "Blended Summer School in agribusiness"
+      },
+      {
+        "id": 16,
+        "title": "Company Program Completion Certificate",
+        "issuer": "INJAZ Al-Maghrib (Junior Achievement Worldwide)",
+        "date": "Jul 2023",
+        "description": "Company Program completion certificate"
+      },
+      {
+        "id": 17,
+        "title": "Big Data Programming Languages & Big Data Vs Data Science",
+        "issuer": "Udemy",
+        "date": "Jul 2023",
+        "description": "Training in Big Data and programming languages"
+      },
+      {
+        "id": 18,
+        "title": "Public Speaking",
+        "issuer": "Udemy",
+        "date": "Jul 2023",
+        "description": "Public speaking training - Public Relations"
+      },
+      {
+        "id": 19,
+        "title": "The Art of Business Plan",
+        "issuer": "Centre 2htj consulting",
+        "date": "May 2023",
+        "description": "Business plan creation training"
+      },
+      {
+        "id": 20,
+        "title": "Innovation Camp competition 1",
+        "issuer": "INJAZ Al-Maghrib (Junior Achievement Worldwide)",
+        "date": "May 2023",
+        "description": "Participation in Innovation Camp competition"
+      },
+      {
+        "id": 21,
+        "title": "Innovation Camp competition 2",
+        "issuer": "INJAZ Al-Maghrib (Junior Achievement Worldwide)",
+        "date": "May 2023",
+        "description": "Participation in Innovation Camp competition"
+      },
+      {
+        "id": 22,
+        "title": "Certificate of Appreciation",
+        "issuer": "Club l'arc doré Meknes",
+        "date": "Jan 2023",
+        "description": "Recognition for club contribution"
+      },
+      {
+        "id": 23,
+        "title": "Certificate of Achievement",
+        "issuer": "Cambridge International Education",
+        "date": "2022",
+        "description": "Cambridge English certification"
+      },
+      {
+        "id": 24,
+        "title": "Html5/CSS3",
+        "issuer": "OpenClassrooms",
+        "date": "2022",
+        "description": "HTML5 and CSS3 web development training"
+      },
+      {
+        "id": 25,
+        "title": "Information Systems Development and Society",
+        "issuer": "Alison",
+        "date": "2022",
+        "description": "Information systems development training - Agile Methodologies"
+      },
+      {
+        "id": 26,
+        "title": "Photography",
+        "issuer": "Unihance",
+        "date": "2022",
+        "description": "Photography training - Analytical Skills"
+      },
+      {
+        "id": 27,
+        "title": "What exactly is an algorithm?",
+        "issuer": "IBM",
+        "date": "2022",
+        "description": "Algorithm and computational thinking training"
+      }
+    ]
+  },
+  "honors": {
+    "sectionLabel": "HONORS & AWARDS",
+    "title": "Recognition & Achievements",
+    "subtitle": "Awards and distinctions received for excellence and innovation in various fields.",
+    "list": [
+      {
+        "id": 1,
+        "title": "Best Creative Video",
+        "issuer": "Université Moulay Ismaïl",
+        "date": "Apr 2025",
+        "description": "Design Award 🏆 at the best creative videos competition of Université Moulay Ismaïl (UMI) clubs, held on April 10 and 11, 2025 as part of the \"UMI Out Of The Box\" day.",
+        "associated": "Photography FSM Club"
+      },
+      {
+        "id": 2,
+        "title": "DEEPTECH STARTUP CHALLENGE Competition Award",
+        "issuer": "Tamwilcom",
+        "date": "Jan 2025",
+        "description": "Award from the DEEPTECH STARTUP CHALLENGE competition organized by Université Moulay Ismaïl in partnership with INCUBOOSTER. This day was marked by inspiring presentations, enriching exchanges between researchers, students and entrepreneurs, as well as a stimulating competition, transforming innovative ideas into high-impact projects.",
+        "associated": "Université Moulay Ismail Meknès"
+      },
+      {
+        "id": 3,
+        "title": "Attijariwafa Bank Award in INJAZ Elmaghreb National Competition",
+        "issuer": "Attijariwafa Bank",
+        "date": "May 2023",
+        "description": "Attijariwafa Bank Award in INJAZ Elmaghreb National Competition.",
+        "associated": "Junior Achievement Worldwide (JA Worldwide)"
+      },
+      {
+        "id": 4,
+        "title": "Citi Bank Award in INJAZ Elmaghreb National Competition",
+        "issuer": "Citi Bank",
+        "date": "May 2023",
+        "description": "Citi Bank Award in INJAZ Elmaghreb National Competition.",
+        "associated": "Junior Achievement Worldwide (JA Worldwide)"
+      },
+      {
+        "id": 5,
+        "title": "First Prize Innovation Camp Competition",
+        "issuer": "INJAZ El Maghreb & Attijariwafa Bank",
+        "date": "Apr 2023",
+        "description": "First Prize Innovation Camp Competition organized by INJAZ El Maghreb & Attijariwafa Bank.",
+        "associated": "Junior Achievement Worldwide (JA Worldwide)"
+      },
+      {
+        "id": 6,
+        "title": "Regional Competition Award from \"أنا وأنت\" Association",
+        "issuer": "\"أنا وأنت\" Association",
+        "date": "Jul 2021",
+        "description": "Regional Competition Award from \"أنا وأنت\" Association.",
+        "associated": "Lycée Moulay Ismail Meknes"
+      }
+    ]
+  },
+  "volunteering": {
+    "sectionLabel": "VOLUNTEERING",
+    "title": "Giving Back To The Community",
+    "subtitle": "Volunteer engagement and contribution to the development of the student and social community."
+  },
+  "languages": {
+    "sectionLabel": "LANGUAGES",
+    "title": "Multilingual Proficiency",
+    "subtitle": "Language skills for effective communication in an international environment.",
+    "flipWords": ["Multilingual Proficiency", "Language Skills", "Communication", "Linguistic Abilities"],
+    "languagesList": [
+      {
+        "name": "English",
+        "nameEn": "English",
+        "level": "Professional"
+      },
+      {
+        "name": "Arabic",
+        "nameEn": "Arabic",
+        "level": "Native"
+      },
+      {
+        "name": "French",
+        "nameEn": "French",
+        "level": "Professional"
+      },
+      {
+        "name": "Turkish",
+        "nameEn": "Turkish",
+        "level": "A1"
+      }
+    ]
+  },
+  "testimonials": {
+    "sectionLabel": "TESTIMONIALS",
+    "title": "Words from Happy Clients",
+    "subtitle": "Recommendations and testimonials from mentors, professors and satisfied clients"
+  },
+  "news": {
+    "sectionLabel": "LATEST NEWS"
+  },
+  "creativePulse": {
+    "sectionLabel": "CREATIVE PROFILE",
+    "title": "My Profile",
+    "subtitle": "Where technology meets creativity. Discover each domain of expertise.",
+    "creativeDigitalProfile": "Creative Digital Profile",
+    "clickToDiscover": "Click on a quadrant to discover each domain of expertise.",
+    "flipWords": ["Creative", "Digital", "Professional", "Innovative"],
+    "digitalProfile": "Digital Profile"
+  },
+  "pricing": {
+    "title": "Flexible Plan",
+    "subtitle": "Comprehensive strategies, the realm of consulting caters to a spectrum of needs with its array of versatile offerings."
+  },
+  "contact": {
+    "title": "Turn Ideas Into Reality",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "yourEmail": "Your Email",
+    "yourPhone": "Your Phone",
+    "chooseService": "Choose Service",
+    "yourMessage": "Your Message",
+    "sendMessage": "Send Message",
+    "sending": "Sending...",
+    "successMessage": "Message sent successfully! I will get back to you as soon as possible.",
+    "errorMessage": "Error sending message. Please try again or contact me directly via email."
+  },
+  "news": {
+    "title": "Explore My Design Thinking Process",
+    "subtitle": "We put your ideas and thus your wishes in the form of a unique",
+    "readMore": "Read More",
+    "viewMore": "View More"
+  },
+  "blog": {
+    "sectionLabel": "BLOG",
+    "title": "Technology Blog & Educational Resources",
+    "subtitle": "Articles, tutorials, and resources on the technologies I master",
+    "readMore": "Read More",
+    "educationalResources": "Educational Resources",
+    "andEducationalResources": "& Educational Resources",
+    "educationalResourcesLabel": "Educational Resources:",
+    "visitPlatform": "Visit Platform",
+    "free": "FREE",
+    "flipWords": ["Blog", "Resources", "Articles", "Tutorials"],
+    "resources": {
+      "linkedinLearning": "Professional courses and certifications",
+      "googleDevelopers": "Free resources and courses from Google",
+      "edx": "Free online courses from top universities",
+      "metaTraining": "Free courses on web development and design",
+      "freeCodeCamp": "Free coding bootcamp and certifications",
+      "coursera": "Online courses from universities worldwide",
+      "udemy": "Online courses on programming and technology",
+      "khanAcademy": "Free online courses and lessons",
+      "codecademy": "Free coding lessons and interactive exercises",
+      "w3schools": "Free web development tutorials and references",
+      "mdnWebDocs": "Free documentation and tutorials for web developers",
+      "theOdinProject": "Free full-stack web development curriculum",
+      "mitOpenCourseWare": "Free MIT course materials and lectures",
+      "harvardCS50": "Free computer science course from Harvard",
+      "sololearn": "Free mobile-first coding courses",
+      "scrimba": "Free interactive coding screencasts",
+      "codeOrg": "Free computer science education for all",
+      "stackOverflow": "Free Q&A platform for developers",
+      "githubLearningLab": "Free interactive courses on GitHub",
+      "javascriptInfo": "Free modern JavaScript tutorial",
+      "reactDocumentation": "Official free React learning resources",
+      "ciscoNetworkingAcademy": "Free networking and IT courses from Cisco"
+    }
+  },
+  "footer": {
+    "followUs": "Follow Us",
+    "description": "Web developer specialized in Next.js, React.js, and Node.js, I transform ideas into modern, performant, and scalable web applications. Passionate about technology and creativity, I create innovative digital solutions."
+  }
+}
+
