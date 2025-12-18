@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { LayoutTextFlip } from '@/components/ui/layout-text-flip'
 import { useEffect, useState } from 'react'
@@ -215,10 +216,13 @@ export default function GitHubStats() {
               className="bg-gray-900 rounded-lg p-6 border border-gray-800 hover:border-primary-500/50 transition-colors max-w-4xl mx-auto mb-8"
             >
               <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-                <img
+                <Image
                   src={data.user.avatar_url}
                   alt={data.user.login}
+                  width={128}
+                  height={128}
                   className="w-32 h-32 rounded-full border-4 border-primary-500/50"
+                  unoptimized
                 />
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="text-2xl font-bold text-white mb-2" dir={dir}>

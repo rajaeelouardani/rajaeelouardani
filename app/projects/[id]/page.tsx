@@ -82,7 +82,7 @@ export default function ProjectDetailPage() {
                       </p>
                     </div>
 
-                    {projectData.objectives && (
+                    {'objectives' in projectData && projectData.objectives && (
                       <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
                         <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
                           {projectData.objectives}
@@ -95,7 +95,7 @@ export default function ProjectDetailPage() {
                       </div>
                     )}
 
-                    {projectData.achievements && (
+                    {'achievements' in projectData && projectData.achievements && (
                       <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
                         <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
                           {projectData.achievements}
@@ -380,7 +380,7 @@ export default function ProjectDetailPage() {
                       </div>
                     )}
 
-                    {projectData.competitions && (
+                    {'competitions' in projectData && projectData.competitions && (
                       <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
                         <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
                           {projectData.competitions}
@@ -398,7 +398,7 @@ export default function ProjectDetailPage() {
                       </div>
                     )}
 
-                    {projectData.competencies && (
+                    {'competencies' in projectData && projectData.competencies && (
                       <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
                         <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
                           {projectData.competencies}
@@ -453,18 +453,20 @@ export default function ProjectDetailPage() {
                       </div>
                     )}
 
-                    <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
-                      <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
-                        {projectData.targetAudience}
-                      </h3>
-                      <ul className="list-disc list-inside space-y-2 text-white" dir={dir}>
-                        {projectData.targetAudienceList?.map((audience: string, idx: number) => (
-                          <li key={idx}>{audience}</li>
-                        ))}
-                      </ul>
-                    </div>
+                    {'targetAudience' in projectData && projectData.targetAudience && (
+                      <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
+                        <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
+                          {projectData.targetAudience}
+                        </h3>
+                        <ul className="list-disc list-inside space-y-2 text-white" dir={dir}>
+                          {projectData.targetAudienceList?.map((audience: string, idx: number) => (
+                            <li key={idx}>{audience}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
 
-                    {projectData.impact && (
+                    {'impact' in projectData && projectData.impact && (
                       <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
                         <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
                           {projectData.impact}

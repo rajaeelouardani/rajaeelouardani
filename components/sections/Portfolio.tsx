@@ -149,6 +149,16 @@ export default function Portfolio() {
 
         {/* 3D Marquee Section */}
         <div className="relative mx-auto my-10 flex h-screen w-full max-w-7xl flex-col items-center justify-center overflow-hidden rounded-3xl">
+          {/* Title Overlay */}
+          <div className="relative z-20 mx-auto max-w-4xl text-center px-4 mb-8">
+            <h2 className="relative z-20 mx-auto max-w-4xl text-center text-2xl font-bold text-balance text-white md:text-4xl lg:text-6xl mb-4">
+              {t.portfolio.marqueeTitle || 'Mes Projets Web'}
+            </h2>
+            <p className="relative z-20 mx-auto max-w-2xl text-center text-sm text-neutral-200 md:text-base">
+              {t.portfolio.marqueeSubtitle || 'Découvrez mes réalisations web'}
+            </p>
+          </div>
+          
           {/* Overlay */}
           <div className="absolute inset-0 z-10 h-full w-full bg-black/80 dark:bg-black/40" />
           

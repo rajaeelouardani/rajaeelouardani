@@ -99,6 +99,8 @@
     "category": "Category",
     "my": "My ",
     "flipWords": ["Projects", "Portfolio", "Work", "Creations"],
+    "marqueeTitle": "My Web Projects",
+    "marqueeSubtitle": "Discover my web creations",
     "domains": {
       "complete": "Complete Projects",
       "design": "Design",

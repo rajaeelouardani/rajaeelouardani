@@ -14,8 +14,81 @@ import { ThemeProvider } from '@/contexts/ThemeContext'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  title: 'Rajae Elouardani - Portfolio',
-  description: 'Web Developer | Content Creator | Computer Science Student | Ambassadrice 10000 Codeurs | ALX Software Engineering | Présidente Photography FSM Club',
+  title: {
+    default: 'Rajae Elouardani - Portfolio | Web Developer & Content Creator',
+    template: '%s | Rajae Elouardani',
+  },
+  description: 'Développeuse web Full Stack spécialisée en Next.js, React.js et Node.js. Étudiante en Informatique | ALX Software Engineering | Ambassadrice 10000 Codeurs | Présidente Photography FSM Club. Découvrez mes projets web, design et photographie.',
+  keywords: [
+    'Rajae Elouardani',
+    'Web Developer',
+    'Full Stack Developer',
+    'Next.js Developer',
+    'React Developer',
+    'Portfolio',
+    'Web Development',
+    'Photography',
+    'Design',
+    'Morocco',
+    'ALX Software Engineering',
+    '10000 Codeurs',
+  ],
+  authors: [{ name: 'Rajae Elouardani' }],
+  creator: 'Rajae Elouardani',
+  publisher: 'Rajae Elouardani',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://rajaeelouardani.com'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'fr-FR': '/fr',
+      'en-US': '/en',
+      'ar-MA': '/ar',
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'fr_FR',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://rajaeelouardani.com',
+    siteName: 'Rajae Elouardani - Portfolio',
+    title: 'Rajae Elouardani - Web Developer & Content Creator',
+    description: 'Développeuse web Full Stack spécialisée en Next.js, React.js et Node.js. Découvrez mes projets web, design et photographie.',
+    images: [
+      {
+        url: '/Rajae elouardani.png',
+        width: 1200,
+        height: 630,
+        alt: 'Rajae Elouardani - Web Developer',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Rajae Elouardani - Web Developer & Content Creator',
+    description: 'Développeuse web Full Stack spécialisée en Next.js, React.js et Node.js.',
+    images: ['/Rajae elouardani.png'],
+    creator: '@rajaeelouardani',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    // Add your verification codes here when available
+    // google: 'your-google-verification-code',
+    // yandex: 'your-yandex-verification-code',
+  },
 }
 
 export default function RootLayout({
@@ -23,8 +96,61 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://rajaeelouardani.com'
+  
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Rajae Elouardani',
+    jobTitle: 'Web Developer',
+    description: 'Web Developer | Content Creator | Computer Science Student',
+    url: baseUrl,
+    knowsAbout: [
+      'Web Development',
+      'Next.js',
+      'React.js',
+      'Node.js',
+      'TypeScript',
+      'JavaScript',
+      'Photography',
+      'Design',
+    ],
+    alumniOf: [
+      {
+        '@type': 'EducationalOrganization',
+        name: 'ALX Software Engineering',
+      },
+      {
+        '@type': 'EducationalOrganization',
+        name: 'Université Moulay Ismail',
+      },
+    ],
+  }
+
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Rajae Elouardani - Portfolio',
+    url: baseUrl,
+    description: 'Web Developer Portfolio',
+    author: {
+      '@type': 'Person',
+      name: 'Rajae Elouardani',
+    },
+  }
+
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+      </head>
       <body className="antialiased">
         <LanguageProvider>
           <ThemeProvider>

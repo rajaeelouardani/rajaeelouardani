@@ -3,6 +3,7 @@
 import { useParams, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
 import Card3D from '@/components/Card3D'
 import { getBlogPostById } from '@/lib/blogData'
@@ -101,10 +102,14 @@ export default function BlogDetailPage() {
 
           {/* Featured Image */}
           <div className="relative h-64 md:h-96 rounded-lg mb-12 overflow-hidden">
-            <img
+            <Image
               src={post.image}
               alt={post.title}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+              priority
+              quality={90}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
             <div className="absolute inset-0 shine-effect opacity-20"></div>
