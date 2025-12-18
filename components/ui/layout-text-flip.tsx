@@ -41,7 +41,7 @@ export function LayoutTextFlip({ text, words, className }: LayoutTextFlipProps) 
               duration: 0.5,
               ease: [0.16, 1, 0.3, 1],
             }}
-            className="absolute left-0 top-0 inline-block w-full text-primary-500 font-bold"
+            className="absolute left-0 top-0 inline-block w-full text-primary-500 font-bold font-mono"
             style={{
               transformStyle: "preserve-3d",
             }}

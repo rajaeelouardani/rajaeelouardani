@@ -187,7 +187,7 @@ export default function Skills() {
       <section dir={dir} className="py-20 bg-black/80 relative overflow-hidden z-10">
         <div className="container mx-auto px-4">
           <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-mono">
               My Skills & Expertise
             </h2>
           </div>
@@ -214,7 +214,7 @@ export default function Skills() {
           >
             {t?.skills?.visitSkills || 'Visit My Skills'}
           </motion.button>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4" dir={dir}>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-mono" dir={dir}>
             <span>{t?.skills?.my || 'My '}</span>
             <span className="text-primary-500">{t?.skills?.skillsText || 'Skills'}</span>
             <span className="text-green-400">{t?.skills?.andExpertise || ' & '}</span>

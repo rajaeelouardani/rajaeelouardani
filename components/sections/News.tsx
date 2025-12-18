@@ -33,7 +33,7 @@ export default function News() {
             className="flex-1"
           >
             <p className="text-green-400 text-sm uppercase mb-2">{t.news.sectionLabel}</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-mono">
               Explore My Design Thinking Process
             </h2>
           </motion.div>

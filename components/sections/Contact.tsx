@@ -84,7 +84,7 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <p className="text-green-400 text-sm uppercase mb-2" dir={dir}>{t.nav.contact}</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4" dir={dir}>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-mono" dir={dir}>
             {t.contact.title}
           </h2>
         </motion.div>

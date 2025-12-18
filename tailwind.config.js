@@ -26,6 +26,8 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-jetbrains-mono)', 'JetBrains Mono', 'Courier New', 'monospace'],
+        display: ['var(--font-jetbrains-mono)', 'JetBrains Mono', 'Courier New', 'monospace'],
       },
     },
   },
