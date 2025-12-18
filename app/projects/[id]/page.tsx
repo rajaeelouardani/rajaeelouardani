@@ -65,7 +65,7 @@ export default function ProjectDetailPage() {
             const projectData = t?.portfolio?.projects?.[projectId as "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "10" | "11" | "12" | "13" | "14" | "15" | "16"];
             
             // Helper function to safely access optional properties
-            const hasProp = (prop: string) => projectData && prop in projectData;
+            // Note: TypeScript doesn't narrow types with this helper, so we use 'prop' in projectData directly
             
             return (
               <>
@@ -528,14 +528,16 @@ export default function ProjectDetailPage() {
                       </div>
                     )}
 
-                    {projectData.supervisor && (
+                    {hasProp('supervisor') && projectData.supervisor && (
                       <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
                         <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
                           {projectData.supervisor}
                         </h3>
-                        <p className="text-white" dir={dir}>
-                          {projectData.supervisorContent}
-                        </p>
+                        {hasProp('supervisorContent') && (
+                          <p className="text-white" dir={dir}>
+                            {projectData.supervisorContent}
+                          </p>
+                        )}
                       </div>
                     )}
 
