@@ -52,7 +52,7 @@ function DockIcon({ item, index, mouseY, primaryColor, isLoading }: {
   const distance = useTransform(mouseY, (val) => {
     if (!ref.current || val === Infinity) return 0;
     const bounds = ref.current.getBoundingClientRect();
-    return Math.abs((bounds.top + bounds.height / 2) - val);
+    return Math.abs((bounds.top + bounds.height / 2) - (val as number));
   });
 
   const widthSync = useTransform(distance, [-40, 0, 40], [36, 48, 36]);
