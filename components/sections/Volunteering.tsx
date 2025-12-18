@@ -47,14 +47,12 @@ export default function Volunteering() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-green-400 text-sm uppercase mb-2">{t.volunteering.sectionLabel}</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            <span className="gradient-text">Giving Back</span>
-            <br />
-            To The Community
+          <p className="text-green-400 text-sm uppercase mb-2" dir={dir}>{t.volunteering.sectionLabel}</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4" dir={dir}>
+            {t.volunteering.title}
           </h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Engagement bénévole et contribution au développement de la communauté étudiante et sociale.
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto" dir={dir}>
+            {t.volunteering.subtitle}
           </p>
         </motion.div>
 
@@ -66,7 +64,7 @@ export default function Volunteering() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="glass-card p-6 rounded-lg transition-all duration-300 cursor-pointer group card-3d transform-3d"
+                className="glass-card p-6 rounded-lg transition-all duration-300 cursor-pointer group card-3d transform-3d h-full shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:shadow-[0_0_30px_rgba(59,130,246,0.7)]"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
@@ -108,7 +106,7 @@ export default function Volunteering() {
               as="button"
               className="bg-black text-white dark:text-white flex items-center space-x-2 px-8 py-4 font-semibold"
             >
-              <span>Voir toutes les activités bénévoles</span>
+              <span dir={dir}>{t.volunteering.viewMore}</span>
               <motion.span
                 animate={{ x: [0, 5, 0] }}
                 transition={{ repeat: Infinity, duration: 1.5 }}

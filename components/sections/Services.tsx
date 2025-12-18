@@ -5,7 +5,6 @@ import Card3D from '@/components/Card3D'
 import { useLanguage } from '@/contexts/LanguageContext'
 import Link from 'next/link'
 import { LayoutTextFlip } from '@/components/ui/layout-text-flip'
-import { GlobeDemo } from '@/components/GlobeDemo'
 import {
   IconWorld,
   IconDeviceLaptop,
@@ -158,17 +157,6 @@ export default function Services() {
             </Card3D>
           ))}
         </div>
-
-        {/* Globe Section - International Work */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-20"
-        >
-          <GlobeDemo />
-        </motion.div>
       </div>
     </section>
   )

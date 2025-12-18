@@ -6,57 +6,10 @@ import { useLanguage } from '@/contexts/LanguageContext'
 import { AnimatedTestimonials } from '@/components/ui/animated-testimonials'
 import { LayoutTextFlip } from '@/components/ui/layout-text-flip'
 
-const testimonialsData = [
-  {
-    id: 1,
-    name: 'Hajar SLIMANI',
-    role: 'Professeur Habilité - HDR . Ecole Nationale de Commerce et de Gestion - Meknès [ENCG]',
-    content:
-      'Une jeune étudiante exceptionnelle qui se distingue par son excellence académique, sa passion pour les technologies et son engagement remarquable au sein de son établissement. Dotée d\'une solide culture numérique, Rajae maîtrise avec aisance les outils digitaux et s\'intéresse profondément aux innovations technologiques. Curieuse, rigoureuse et toujours à la recherche de nouvelles compétences, elle incarne parfaitement le profil d\'une future leader dans le domaine tech. Je recommande vivement pour toute opportunité académique ou professionnelle.',
-    avatar: '👩‍🏫',
-    date: 'May 31, 2025',
-  },
-  {
-    id: 2,
-    name: 'IMANE BOUHADDOU',
-    role: 'Docteur-Ingénieur Professeur ENSAM-Meknès',
-    content:
-      'J\'ai eu l\'occasion de collaborer avec Rajae dans plusieurs évènements, une étudiante exceptionnelle qui incarne parfaitement le leadership féminin. Engagée, dynamique et dotée d\'un grand sens des responsabilités, elle sait fédérer, inspirer et agir avec impact. Une vraie force motrice que je recommande sans hésiter !',
-    avatar: '👩‍🔬',
-    date: 'May 19, 2025',
-  },
-  {
-    id: 3,
-    name: 'Ronald Richards',
-    role: 'Medical Assistant',
-    content:
-      'Collaborating with you on our website redesign was a game-changer. Not only did you bring fresh, modern aesthetics, but you also made the user experience seamless and engaging.',
-    avatar: '👨‍⚕️',
-    date: '2024',
-  },
-]
+const testimonialsData: any[] = []
 
 // Format for AnimatedTestimonials
-const animatedTestimonials = [
-  {
-    quote: testimonialsData[0].content,
-    name: testimonialsData[0].name,
-    designation: testimonialsData[0].role,
-    src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-    quote: testimonialsData[1].content,
-    name: testimonialsData[1].name,
-    designation: testimonialsData[1].role,
-    src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-    quote: testimonialsData[2].content,
-    name: testimonialsData[2].name,
-    designation: testimonialsData[2].role,
-    src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-]
+const animatedTestimonials: any[] = []
 
 export default function Testimonials() {
   const { t, dir } = useLanguage()
@@ -84,19 +37,22 @@ export default function Testimonials() {
         </motion.div>
 
         {/* Animated Testimonials */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-12"
-        >
-          <AnimatedTestimonials testimonials={animatedTestimonials} />
-        </motion.div>
+        {animatedTestimonials.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+          >
+            <AnimatedTestimonials testimonials={animatedTestimonials} />
+          </motion.div>
+        )}
 
         {/* Grid of testimonials cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonialsData.map((testimonial, index) => (
+        {testimonialsData.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonialsData.map((testimonial, index) => (
             <Card3D key={testimonial.id} intensity={8}>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -121,8 +77,9 @@ export default function Testimonials() {
                 <div className="absolute inset-0 rounded-lg shine-effect opacity-0 hover:opacity-30 transition-opacity pointer-events-none"></div>
               </motion.div>
             </Card3D>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   )

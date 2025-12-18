@@ -88,15 +88,15 @@ export default function BlogDetailPage() {
           {/* Header */}
           <div className="mb-8">
             <div className="flex items-center gap-3 mb-4">
-              <span className="bg-primary-500/20 text-primary-500 px-4 py-2 rounded-full text-sm font-semibold border border-primary-500/30">
+              <span className="bg-primary-500/20 text-white px-4 py-2 rounded-full text-sm font-semibold border border-primary-500/30">
                 {post.category}
               </span>
               <span className="text-gray-400 text-sm">{post.date}</span>
               <span className="text-gray-400 text-sm">•</span>
               <span className="text-gray-400 text-sm">{post.readTime}</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 gradient-text">{post.title}</h1>
-            <p className="text-xl text-gray-300 mb-6" dir={dir}>{post.description}</p>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">{post.title}</h1>
+            <p className="text-xl text-white mb-6" dir={dir}>{post.description}</p>
           </div>
 
           {/* Featured Image */}
@@ -114,7 +114,7 @@ export default function BlogDetailPage() {
           {details?.domainExplanation && (
             <Card3D intensity={5}>
               <div className="bg-gray-900 rounded-lg p-8 mb-8 border border-primary-500/30">
-                <h2 className="text-3xl font-bold text-white mb-4 gradient-text">Explication du Domaine</h2>
+                <h2 className="text-3xl font-bold text-white mb-4">Explication du Domaine</h2>
                 <p className="text-gray-300 leading-relaxed text-lg" dir={dir}>
                   {details.domainExplanation}
                 </p>
@@ -126,7 +126,7 @@ export default function BlogDetailPage() {
           {details?.howToStart && (
             <Card3D intensity={5}>
               <div className="bg-gray-900 rounded-lg p-8 mb-8 border border-primary-500/30">
-                <h2 className="text-3xl font-bold text-white mb-4 gradient-text">
+                <h2 className="text-3xl font-bold text-white mb-4">
                   {locale === 'fr' ? 'Comment Commencer' : locale === 'ar' ? 'كيف تبدأ' : 'How to Start'}
                 </h2>
                 <p className="text-gray-300 leading-relaxed text-lg" dir={dir}>
@@ -140,7 +140,7 @@ export default function BlogDetailPage() {
           {details?.essentialElements && details.essentialElements.length > 0 && (
             <Card3D intensity={5}>
               <div className="bg-gray-900 rounded-lg p-8 mb-8 border border-primary-500/30">
-                <h2 className="text-3xl font-bold text-white mb-6 gradient-text">
+                <h2 className="text-3xl font-bold text-white mb-6">
                   {locale === 'fr' ? 'Éléments Essentiels' : locale === 'ar' ? 'العناصر الأساسية' : 'Essential Elements'}
                 </h2>
                 <ul className="space-y-4">
@@ -195,7 +195,7 @@ export default function BlogDetailPage() {
           {details?.fullContent && (
             <Card3D intensity={5}>
               <div className="bg-gray-900 rounded-lg p-8 mb-8 border border-primary-500/30">
-                <h2 className="text-3xl font-bold text-white mb-6 gradient-text">
+                <h2 className="text-3xl font-bold text-white mb-6">
                   {locale === 'fr' ? 'Contenu Complet' : locale === 'ar' ? 'المحتوى الكامل' : 'Full Content'}
                 </h2>
                 <div
@@ -230,7 +230,7 @@ export default function BlogDetailPage() {
               {post.tags.map((tag, idx) => (
                 <span
                   key={idx}
-                  className="bg-primary-500/20 text-primary-500 px-3 py-1 rounded-full text-sm border border-primary-500/30"
+                  className="bg-primary-500/20 text-white px-3 py-1 rounded-full text-sm border border-primary-500/30"
                 >
                   #{tag}
                 </span>

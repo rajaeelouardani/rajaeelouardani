@@ -19,7 +19,14 @@ export const AnimatedTestimonials = ({
   const [isAnimating, setIsAnimating] = useState(false);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
+  // Return null if no testimonials
+  if (!testimonials || testimonials.length === 0) {
+    return null;
+  }
+
   useEffect(() => {
+    if (testimonials.length === 0) return;
+    
     intervalRef.current = setInterval(() => {
       setIsAnimating(true);
       setTimeout(() => {

@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import Globe from "react-globe.gl";
 
-export function World({ globeConfig, data }: { globeConfig: any; data: any[] }) {
+export function World({ globeConfig, data, moroccoPoint, htmlElementsData }: { globeConfig: any; data: any[]; moroccoPoint?: any; htmlElementsData?: any[] }) {
   const globeRef = useRef<any>(null);
 
   useEffect(() => {
@@ -16,13 +16,13 @@ export function World({ globeConfig, data }: { globeConfig: any; data: any[] }) 
       globe.controls().autoRotateSpeed = globeConfig.autoRotateSpeed || 0.5;
     }
 
-    // Initial position
+    // Initial position - centered
     if (globeConfig.initialPosition) {
       globe.pointOfView(
         {
           lat: globeConfig.initialPosition.lat,
           lng: globeConfig.initialPosition.lng,
-          altitude: globeConfig.initialPosition.altitude || 2,
+          altitude: globeConfig.initialPosition.altitude || 2.5,
         },
         0
       );
@@ -30,6 +30,9 @@ export function World({ globeConfig, data }: { globeConfig: any; data: any[] }) 
   }, [globeConfig]);
 
   const arcs = data.filter((d) => d.startLat && d.startLng && d.endLat && d.endLng);
+  
+  // Morocco point data for highlighting
+  const pointsData = moroccoPoint ? [moroccoPoint] : [];
 
   return (
     <Globe
@@ -51,6 +54,29 @@ export function World({ globeConfig, data }: { globeConfig: any; data: any[] }) 
       atmosphereColor={globeConfig.atmosphereColor || "#FFFFFF"}
       atmosphereAltitude={globeConfig.atmosphereAltitude || 0.1}
       backgroundColor="rgba(0,0,0,0)"
+      pointsData={pointsData}
+      pointLat={(d: any) => d.lat}
+      pointLng={(d: any) => d.lng}
+      pointColor={(d: any) => d.color || "#FF0000"}
+      pointRadius={(d: any) => d.size || 12}
+      pointLabel={(d: any) => d.label || ""}
+      pointResolution={2}
+      htmlElementsData={htmlElementsData || []}
+      htmlElement={(d: any) => {
+        if (d && d.html) {
+          return d.html;
+        }
+        return null;
+      }}
+      onGlobeReady={(globe: any) => {
+        // Ensure globe is fully visible and centered
+        if (globe) {
+          globe.controls().minDistance = 150;
+          globe.controls().maxDistance = 500;
+          globe.controls().enableZoom = true;
+          globe.controls().enableRotate = true;
+        }
+      }}
     />
   );
 }

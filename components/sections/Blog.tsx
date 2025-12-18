@@ -172,11 +172,16 @@ export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All')
   const educationalResources = getEducationalResources(t)
 
-  // Get all unique categories
+  // Get all unique categories with translations
   const categories = useMemo(() => {
     const cats = ['All', ...Array.from(new Set(blogPosts.map(post => post.category)))]
     return cats
   }, [])
+  
+  // Translate category name
+  const translateCategory = (category: string) => {
+    return t?.blog?.categories?.[category] || category
+  }
 
   // Filter posts by category
   const filteredPosts = useMemo(() => {
@@ -229,14 +234,15 @@ export default function Blog() {
                     ? 'text-white border-2 border-primary-500'
                     : 'text-gray-300 hover:text-white'
                 }`}
+                dir={dir}
               >
-                {category}
+                {translateCategory(category)}
               </button>
             ))}
           </div>
           <div className="text-center mt-4">
-            <p className="text-gray-400 text-sm">
-              {filteredPosts.length} {filteredPosts.length === 1 ? 'article' : 'articles'} {selectedCategory !== 'All' ? `dans ${selectedCategory}` : 'au total'}
+            <p className="text-gray-400 text-sm" dir={dir}>
+              {filteredPosts.length} {filteredPosts.length === 1 ? (t?.blog?.article || 'article') : (t?.blog?.articles || 'articles')} {selectedCategory !== 'All' ? `${t?.blog?.in || 'dans'} ${translateCategory(selectedCategory)}` : (t?.blog?.total || 'au total')}
             </p>
           </div>
         </motion.div>
@@ -259,8 +265,8 @@ export default function Blog() {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-black/80 backdrop-blur-sm text-primary-500 px-3 py-1 rounded-full text-xs font-semibold border border-primary-500/30">
-                      {post.category}
+                    <span className="bg-black/80 backdrop-blur-sm text-primary-500 px-3 py-1 rounded-full text-xs font-semibold border border-primary-500/30" dir={dir}>
+                      {translateCategory(post.category)}
                     </span>
                   </div>
                   <div className="absolute inset-0 shine-effect opacity-20"></div>
@@ -270,7 +276,7 @@ export default function Blog() {
                     <span>{post.date}</span>
                     <span>{post.readTime}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary-500 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary-500 transition-colors" dir={dir}>
                     {post.title}
                   </h3>
                   <p className="text-gray-400 mb-4 text-sm" dir={dir}>

@@ -26,7 +26,7 @@ export default function Footer() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4 text-white" dir={dir}>RAJAE ELOUARDANI</h3>
+              <h3 className="text-2xl font-bold mb-4 text-white" dir={dir}>{t.footer.fullName || t.nav.fullName || 'RAJAE ELOUARDANI'}</h3>
               <p className="text-gray-400 mb-4" dir={dir}>{t.hero.subtitle}</p>
               <p className="text-gray-500 text-sm leading-relaxed" dir={dir}>
                 {t.footer.description}
@@ -150,7 +150,7 @@ export default function Footer() {
                 className="text-primary-500 hover:text-primary-400 transition-colors font-semibold"
                 style={{ textShadow: '0 0 10px currentColor' }}
               >
-                Rajae Elouardani
+                {t.footer.copyrightName || t.nav.fullName || 'Rajae Elouardani'}
               </a>
             </p>
           </div>

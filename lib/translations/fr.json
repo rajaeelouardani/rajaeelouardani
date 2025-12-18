@@ -12,7 +12,10 @@
     "contact": "Contact",
     "blog": "Blog",
     "hireMe": "Engagez-moi !",
-    "contactMe": "Contactez-moi"
+    "contactMe": "Contactez-moi",
+    "fullName": "RAJAE ELOUARDANI",
+    "firstName": "RAJAE",
+    "lastName": "ELOUARDANI"
   },
   "hero": {
     "greeting": "SALUT !",
@@ -95,11 +98,800 @@
     "viewDetails": "Voir les Détails",
     "category": "Catégorie",
     "my": "Mes ",
-    "flipWords": ["Projets", "Portfolio", "Travaux", "Créations"]
+    "flipWords": ["Projets", "Portfolio", "Travaux", "Créations"],
+    "domains": {
+      "complete": "Projets Complets",
+      "design": "Design",
+      "photography": "Photographie",
+      "videography": "Vidéo & Montage",
+      "web": "Site Web"
+    },
+    "designCategories": {
+      "all": "Tous",
+      "bondrole": "Bâches",
+      "flayer": "Flyers A4",
+      "post": "Posts Instagram",
+      "logo": "Logos",
+      "CARTE": "Carte",
+      "ui ux": "UI/UX"
+    },
+    "emptyStates": {
+      "noPhotos": "Aucune photo dans cette catégorie pour le moment.",
+      "noImages": "Aucune image dans cette catégorie pour le moment.",
+      "noProjects": "Aucun projet dans cette catégorie pour le moment."
+    },
+    "youtube": "YouTube",
+    "videographyDescription": "Découvrez mes montages vidéo créatifs pour les clubs de la Faculté des Sciences Meknès. Vous trouverez d'autres vidéos sur les pages des clubs : IVR FSM Club, Photography FSM Club, et MUN FSM Club.",
+    "watchVideo": "Regarder la vidéo",
+    "projects": {
+      "1": {
+        "fullDescription": "Ghilla est un projet digital éducatif et entrepreneurial réalisé dans le cadre de l'accompagnement de lycéens marocains participant à la MENA Competition 2025, organisée en Égypte par INJAZ. Le projet vise à aider les élèves à structurer, présenter et valoriser leur idée de startup à travers une présence digitale professionnelle, conforme aux standards des compétitions entrepreneuriales internationales.",
+        "overview": "Project Overview – Ghilla",
+        "overviewContent": "Ghilla est un projet digital éducatif et entrepreneurial réalisé dans le cadre de l'accompagnement de lycéens marocains participant à la MENA Competition 2025, organisée en Égypte par INJAZ. Le projet vise à aider les élèves à structurer, présenter et valoriser leur idée de startup à travers une présence digitale professionnelle, conforme aux standards des compétitions entrepreneuriales internationales.",
+        "objectives": "Objectifs du Projet",
+        "objectivesList": [
+          "Accompagner les lycéens dans la présentation de leur projet entrepreneurial",
+          "Concevoir un site web moderne et professionnel pour présenter le concept, la vision et l'impact du projet Ghilla",
+          "Créer des supports de communication visuels adaptés à une compétition internationale",
+          "Renforcer les compétences des participants en communication, branding et outils digitaux"
+        ],
+        "website": "Site Web",
+        "liveWebsite": "Site en direct :",
+        "keyFeatures": "Fonctionnalités Clés",
+        "featuresList": [
+          "Présentation claire et structurée du projet Ghilla",
+          "Interface moderne, responsive et orientée expérience utilisateur",
+          "Contenu optimisé pour les jurys et présentations orales",
+          "Déploiement continu en production"
+        ],
+        "communication": "Communication & Ressources Visuelles",
+        "communicationContent": "Dans le cadre du projet, plusieurs supports de communication ont été réalisés afin d'assurer une cohérence visuelle et un fort impact lors de la compétition :",
+        "communicationList": [
+          "Flyers promotionnels",
+          "Bandrolles (banners) pour stands et présentations",
+          "Respect de l'identité visuelle du projet",
+          "Adaptation du contenu aux standards des compétitions internationales"
+        ],
+        "technologies": "Technologies Utilisées",
+        "targetAudience": "Public Cible",
+        "targetAudienceList": [
+          "Lycéens participants à la MENA Competition",
+          "Jurys et mentors INJAZ",
+          "Acteurs de l'entrepreneuriat et de l'éducation",
+          "Partenaires et sponsors potentiels"
+        ],
+        "impact": "Impact du Projet",
+        "impactList": [
+          "Mise en valeur du potentiel entrepreneurial des jeunes marocains",
+          "Amélioration de la qualité de présentation des projets étudiants",
+          "Contribution à l'écosystème entrepreneurial éducatif",
+          "Application concrète du développement web et du branding dans un contexte réel"
+        ],
+        "conclusion": "Conclusion",
+        "conclusionContent": "Le projet Ghilla démontre l'importance des outils digitaux, du web design et du branding dans la réussite des projets entrepreneuriaux portés par les jeunes. Il s'inscrit comme une initiative à impact éducatif et régional, reliant technologie, innovation et entrepreneuriat."
+      },
+      "2": {
+        "fullDescription": "Le site UMI – Tech Business Hub (TBH) est un projet web réalisé pour valoriser la plateforme officielle de l'incubateur universitaire d'innovation et d'entrepreneuriat de l'Université Moulay Ismail (UMI). En tant que membre du centre UMI – Tech Business Hub, j'ai conçu et développé ce site avec l'objectif de présenter clairement la mission de l'incubateur, ses services et son rôle dans l'accompagnement des porteurs de projets innovants à fort impact économique et social.",
+        "overview": "Project Overview – UMI Tech Business Hub (TBH)",
+        "overviewContent": "Le site UMI – Tech Business Hub (TBH) est un projet web réalisé pour valoriser la plateforme officielle de l'incubateur universitaire d'innovation et d'entrepreneuriat de l'Université Moulay Ismail (UMI). En tant que membre du centre UMI – Tech Business Hub, j'ai conçu et développé ce site avec l'objectif de présenter clairement la mission de l'incubateur, ses services et son rôle dans l'accompagnement des porteurs de projets innovants à fort impact économique et social.",
+        "objectives": "Objectifs du Projet",
+        "objectivesList": [
+          "Présenter l'identité et la mission de UMI – Tech Business Hub",
+          "Mettre en valeur l'écosystème entrepreneurial et innovant de l'UMI",
+          "Offrir une interface claire, moderne et institutionnelle",
+          "Faciliter la communication avec les étudiants, entrepreneurs et partenaires"
+        ],
+        "website": "Site Web",
+        "liveWebsite": "Site en direct :",
+        "keyFeatures": "Fonctionnalités Clés",
+        "featuresList": [
+          "Présentation structurée de l'incubateur et de ses activités",
+          "Design moderne, responsive et orienté expérience utilisateur",
+          "Navigation fluide et contenu accessible",
+          "Site optimisé pour une utilisation institutionnelle et académique",
+          "Déploiement en production"
+        ],
+        "communication": "Communication & Ressources Visuelles",
+        "communicationContent": "",
+        "communicationList": [],
+        "technologies": "Technologies Utilisées",
+        "targetAudience": "Public Cible",
+        "targetAudienceList": [
+          "Étudiants et porteurs de projets",
+          "Entrepreneurs et startups en phase d'idéation",
+          "Encadrants universitaires et mentors",
+          "Partenaires institutionnels et économiques"
+        ],
+        "impact": "Impact du Projet",
+        "impactList": [
+          "Valorisation du rôle de l'UMI dans l'innovation et l'entrepreneuriat",
+          "Renforcement de la visibilité du Tech Business Hub",
+          "Mise en avant des opportunités offertes aux jeunes entrepreneurs",
+          "Application concrète du développement web dans un contexte institutionnel"
+        ],
+        "conclusion": "Conclusion",
+        "conclusionContent": "Le site UMI – Tech Business Hub illustre l'importance du digital dans la promotion de l'innovation universitaire et de l'entrepreneuriat. Ce projet reflète mon engagement en tant que membre du centre UMI-TBH et ma volonté de contribuer à l'écosystème entrepreneurial à travers des solutions web modernes et efficaces."
+      },
+      "3": {
+        "fullDescription": "Mowajih AI est une plateforme web innovante basée sur l'intelligence artificielle, conçue pour accompagner les étudiants dans leurs choix académiques et professionnels à travers des recommandations personnalisées, adaptées à leurs intérêts, leur personnalité et leurs aspirations.",
+        "overview": "Project Overview – Mowajih AI",
+        "overviewContent": "Mowajih AI est une plateforme web innovante basée sur l'intelligence artificielle, conçue pour accompagner les étudiants dans leurs choix académiques et professionnels à travers des recommandations personnalisées, adaptées à leurs intérêts, leur personnalité et leurs aspirations. Le projet a été développé dans le cadre du Company Program d'INJAZ Al-Maghrib, avec le soutien de Attijariwafa Bank et Citibank, et a participé aux compétitions régionales et nationales organisées par INJAZ.",
+        "myRole": "Mon Rôle – Responsable Data Collection",
+        "myRoleContent": "Au sein de l'équipe Mowajih AI, j'ai occupé le rôle de Responsable Data Collection, avec pour mission principale de concevoir et structurer la stratégie de collecte de données, collecter des données pertinentes sur les profils étudiants (intérêts, parcours, aspirations, compétences), nettoyer, organiser et préparer les datasets destinés à l'entraînement du modèle d'intelligence artificielle, collaborer avec l'équipe technique pour assurer la qualité et la pertinence des données utilisées, et garantir la cohérence des données avec les objectifs de recommandation personnalisée. Ce rôle a été essentiel pour améliorer la précision, la fiabilité et la pertinence des recommandations générées par le modèle IA.",
+        "problematic": "Problématique",
+        "problematicContent": "Les étudiants sont souvent confrontés à une forte pression lorsqu'il s'agit de choisir leur parcours académique ou professionnel. Les questions répétitives telles que « Quelle filière choisis-tu ? » ou « Que veux-tu faire plus tard ? » peuvent accentuer un sentiment de confusion et d'incertitude. Les solutions traditionnelles d'orientation reposent généralement sur des conseils peu personnalisés, des agences spécialisées souvent coûteuses ou inaccessibles, et un accompagnement limité des conseillers d'orientation. Ces approches prennent rarement en compte l'unicité de chaque étudiant, notamment ses compétences, ses centres d'intérêt et ses ambitions personnelles.",
+        "ourApproach": "Notre Approche",
+        "ourApproachContent": "Mowajih AI propose une approche intelligente et personnalisée de l'orientation scolaire et professionnelle. La plateforme s'appuie sur l'intelligence artificielle, l'analyse des préférences et de la personnalité, les aspirations académiques et professionnelles, et une base de données continuellement mise à jour. Chaque étudiant reçoit ainsi des recommandations adaptées à son profil unique, en tenant compte des évolutions du marché de l'emploi et des opportunités académiques.",
+        "website": "Site Web",
+        "liveWebsite": "Site en direct :",
+        "keyFeatures": "Fonctionnalités Clés",
+        "featuresList": [
+          "Recommandations personnalisées - Analyse avancée des centres d'intérêt, des tests de personnalité, du parcours académique et des objectifs professionnels.",
+          "Base de données dynamique - Mise à jour continue des tendances du marché de l'emploi et des filières académiques.",
+          "Guidance intelligente - Approche basée sur la théorie des intelligences multiples, allant au-delà des simples résultats scolaires."
+        ],
+        "competitions": "Compétitions & Distinctions",
+        "competitionsContent": "Grâce au Company Program d'INJAZ Al-Maghrib, notre équipe a eu l'opportunité de participer à plusieurs compétitions majeures :",
+        "competitionsList": [
+          "Vainqueur de la compétition régionale de Meknès - Organisée à la Faculté des Sciences de Meknès, face à des équipes issues de différents établissements de l'Université Moulay Ismaïl.",
+          "Participation à la compétition nationale INJAZ - Prix obtenus au niveau national : Prix du Meilleur Service (décerné par Citibank) et Prix de l'Entrepreneur Responsable (décerné par Attijariwafa Bank)."
+        ],
+        "technologies": "Technologies Utilisées",
+        "targetAudience": "Public Cible",
+        "targetAudienceList": [
+          "Étudiants du secondaire et de l'enseignement supérieur",
+          "Élèves en phase d'orientation académique",
+          "Institutions éducatives et programmes d'accompagnement",
+          "Acteurs de l'innovation éducative"
+        ],
+        "impact": "Impact du Projet",
+        "impactList": [
+          "Aide concrète à l'orientation des étudiants",
+          "Réduction de l'incertitude liée aux choix de carrière",
+          "Valorisation de l'IA au service de l'éducation",
+          "Promotion de l'entrepreneuriat étudiant et de l'innovation sociale"
+        ],
+        "conclusion": "Conclusion",
+        "conclusionContent": "Mowajih AI est un projet à fort impact éducatif et social, combinant intelligence artificielle, données et entrepreneuriat. Mon rôle en tant que Responsable Data Collection a contribué directement à la qualité du modèle IA et à la pertinence des recommandations offertes aux étudiants. Ce projet représente une expérience marquante, tant sur le plan technique qu'humain et entrepreneurial."
+      },
+      "4": {
+        "fullDescription": "Le projet ARC D'ORÉ Meknès consiste en la conception et le développement du site web officiel du club, visant à renforcer sa présence digitale et à faciliter la communication avec ses membres, partenaires et le grand public.",
+        "overview": "ARC D'ORÉ Meknès – Site Web Officiel",
+        "overviewContent": "Le projet ARC D'ORÉ Meknès consiste en la conception et le développement du site web officiel du club, visant à renforcer sa présence digitale et à faciliter la communication avec ses membres, partenaires et le grand public. Le site a été conçu pour présenter le club, ses activités, ses événements et ses valeurs, à travers une interface claire, accessible et adaptée à tous les supports.",
+        "objectives": "Missions Réalisées",
+        "objectivesList": [
+          "Développement du site web du club",
+          "Structuration des pages et du contenu",
+          "Intégration des sections de présentation, activités et contacts",
+          "Mise en place d'une interface responsive",
+          "Optimisation de l'expérience utilisateur"
+        ],
+        "website": "Site Web",
+        "liveWebsite": "Site en direct :",
+        "keyFeatures": "Technologies Utilisées",
+        "featuresList": [],
+        "technologies": "Technologies Utilisées",
+        "competencies": "Compétences Développées",
+        "competenciesList": [
+          "Développement web front-end",
+          "Intégration responsive avec Bootstrap",
+          "Manipulation JavaScript pour l'interactivité",
+          "Structuration de sites web dynamiques avec PHP",
+          "Travail sur un projet réel associatif"
+        ],
+        "targetAudience": "Public Cible",
+        "targetAudienceList": [
+          "Membres du club ARC D'ORÉ Meknès",
+          "Partenaires et sponsors",
+          "Grand public intéressé par les activités du club"
+        ],
+        "impact": "Impact du Projet",
+        "impactList": [
+          "Amélioration de la visibilité en ligne du club ARC D'ORÉ Meknès",
+          "Facilitation de l'accès à l'information pour les membres",
+          "Valorisation des activités et événements du club",
+          "Contribution à la communication digitale du club"
+        ],
+        "conclusion": "Conclusion",
+        "conclusionContent": "Le site web ARC D'ORÉ Meknès a permis de renforcer significativement la présence digitale du club et d'améliorer la communication avec ses membres et partenaires. Ce projet a été une opportunité de travailler sur un projet associatif réel et de développer des compétences en développement web front-end et backend."
+      },
+      "5": {
+        "fullDescription": "Le IVR FSM Club (Innovation, Visionnaire, Robotique) est un club universitaire de la Faculté des Sciences de Meknès, dédié à la promotion de l'innovation, de l'excellence académique et de la collaboration interdisciplinaire. Le club intervient dans plusieurs domaines technologiques et scientifiques, notamment l'astronomie, les biotechnologies, les géotechnologies, la robotique et l'intelligence artificielle.",
+        "overview": "IVR FSM Club – Plateforme Web & E-Learning",
+        "overviewContent": "Le IVR FSM Club (Innovation, Visionnaire, Robotique) est un club universitaire de la Faculté des Sciences de Meknès, dédié à la promotion de l'innovation, de l'excellence académique et de la collaboration interdisciplinaire. Le club intervient dans plusieurs domaines technologiques et scientifiques, notamment l'astronomie, les biotechnologies, les géotechnologies, la robotique et l'intelligence artificielle. Dans le cadre de l'année universitaire 2024–2025, le club a lancé une plateforme de formation en ligne afin d'aider les étudiants à développer leurs compétences techniques, entrepreneuriales et professionnelles à distance.",
+        "objectives": "Projets Réalisés",
+        "objectivesList": [
+          "Site Web Officiel du IVR FSM Club - Présentation du club, de ses pôles et de ses activités. Mise en valeur des événements, formations et initiatives. Interface moderne, accessible et responsive. Plateforme de communication entre le club et les étudiants.",
+          "Plateforme E-Learning – FhamTech - Plateforme de cours à distance destinée aux étudiants. Contenus pédagogiques structurés et accessibles en ligne. Objectif : renforcer l'employabilité et les compétences pratiques. Formation orientée marché du travail et innovation."
+        ],
+        "website": "Sites Web",
+        "liveWebsite": "Site officiel du club :",
+        "eLearningWebsite": "Plateforme e-learning (FhamTech) :",
+        "keyFeatures": "Technologies Utilisées",
+        "featuresList": [],
+        "myRole": "Mon Rôle – Co-fondatrice & Formatrice",
+        "myRoleContent": "En tant que co-fondatrice du IVR FSM Club, mon rôle a inclus : participation à la création et à la structuration du club, contribution à la stratégie digitale et aux services proposés aux étudiants, mise en place de solutions web au service de la communauté étudiante, partage des tendances et nouveautés du marché du travail. En tant que formatrice, j'ai assuré la création et l'animation de cours en ligne sur le branding, le digital marketing, le développement web, l'entrepreneuriat, et les compétences digitales et professionnelles. Ces formations visaient à accompagner les étudiants dans leur montée en compétences et leur préparation au monde professionnel.",
+        "technologies": "Technologies Utilisées",
+        "competencies": "Compétences Développées",
+        "competenciesList": [
+          "Développement web front-end et back-end",
+          "Conception de plateformes éducatives",
+          "Création de contenus pédagogiques digitaux",
+          "Formation et accompagnement des étudiants",
+          "Leadership associatif et entrepreneuriat universitaire"
+        ],
+        "targetAudience": "Public Cible",
+        "targetAudienceList": [
+          "Étudiants de la Faculté des Sciences de Meknès",
+          "Membres du IVR FSM Club",
+          "Étudiants intéressés par l'innovation et la technologie",
+          "Communauté universitaire de l'UMI"
+        ],
+        "impact": "Impact du Projet",
+        "impactList": [
+          "Accès facilité à la formation digitale pour les étudiants",
+          "Renforcement des compétences techniques et entrepreneuriales",
+          "Contribution à l'employabilité des étudiants de la FSM",
+          "Création d'un écosystème d'apprentissage et d'innovation"
+        ],
+        "conclusion": "Conclusion",
+        "conclusionContent": "Le projet IVR FSM Club représente une initiative majeure pour promouvoir l'innovation et l'excellence académique à travers une plateforme web complète et une solution e-learning dédiée. En tant que co-fondatrice et formatrice, j'ai contribué à la création d'un écosystème digital qui accompagne les étudiants dans leur développement professionnel et leur préparation au marché du travail."
+      },
+      "6": {
+        "fullDescription": "Le Website Photography FSM Club est le site web officiel du Photography Club de la Faculté des Sciences de Meknès, conçu pour valoriser la créativité étudiante dans les domaines de la photographie et de la vidéographie. Développé et piloté par mes soins en tant que Présidente du club, ce projet vise à offrir une plateforme digitale moderne permettant de présenter les œuvres des membres, partager des ressources pédagogiques et promouvoir les activités et événements du club auprès de la communauté universitaire et au-delà.",
+        "overview": "Website Photography FSM Club",
+        "overviewContent": "Le Website Photography FSM Club est le site web officiel du Photography Club de la Faculté des Sciences de Meknès, conçu pour valoriser la créativité étudiante dans les domaines de la photographie et de la vidéographie. Développé et piloté par mes soins en tant que Présidente du club, ce projet vise à offrir une plateforme digitale moderne permettant de présenter les œuvres des membres, partager des ressources pédagogiques et promouvoir les activités et événements du club auprès de la communauté universitaire et au-delà.",
+        "objectives": "Mon Rôle – Présidente du Club",
+        "objectivesList": [
+          "Conception et développement du site web officiel",
+          "Définition de l'architecture, de l'expérience utilisateur et du design",
+          "Gestion et création du contenu (photos, vidéos, textes pédagogiques)",
+          "Animation et mise en ligne de cours en ligne",
+          "Supervision de la communication digitale du club",
+          "Organisation et gestion du recrutement des nouveaux membres du bureau",
+          "Coordination de l'équipe et suivi des projets du club"
+        ],
+        "website": "Site Web",
+        "liveWebsite": "Site officiel :",
+        "keyFeatures": "Fonctionnalités Clés",
+        "featuresList": [
+          "Galerie interactive - Classement des photos par thématiques : portraits, paysages, architecture, street photography, macro et événements.",
+          "Vidéothèque - Mise en avant des vidéos et documentaires réalisés par les membres.",
+          "Ressources pédagogiques - Cours en ligne, notamment Bases de la Photographie, et autres contenus éducatifs.",
+          "Modèle 3D interactif - Exploration ludique des composants d'un appareil photo via un modèle 3D interactif.",
+          "Présentation de l'équipe - Mise en valeur des membres et de leurs rôles au sein du club.",
+          "Actualités et événements - Suivi des activités, workshops et projets à venir."
+        ],
+        "technologies": "Technologies Utilisées",
+        "competencies": "Compétences Développées",
+        "competenciesList": [
+          "Développement web moderne avec Next.js",
+          "Intégration 3D et expériences interactives",
+          "Gestion de contenu digital",
+          "Création de plateformes éducatives en ligne",
+          "Leadership associatif et gestion d'équipe",
+          "Formation et accompagnement des étudiants"
+        ],
+        "targetAudience": "Public Cible",
+        "targetAudienceList": [
+          "Membres du Photography FSM Club",
+          "Étudiants de la Faculté des Sciences de Meknès",
+          "Communauté universitaire intéressée par la photographie",
+          "Grand public intéressé par la créativité étudiante"
+        ],
+        "impact": "Impact du Projet",
+        "impactList": [
+          "Valorisation des talents créatifs des étudiants",
+          "Centralisation des ressources pédagogiques du club",
+          "Amélioration de la visibilité du Photography FSM Club",
+          "Création d'un espace digital durable pour la communauté étudiante"
+        ],
+        "conclusion": "Conclusion",
+        "conclusionContent": "Le Website Photography FSM Club représente une réalisation majeure pour promouvoir la créativité étudiante et offrir une plateforme digitale complète dédiée à la photographie et de la vidéographie. En tant que Présidente du club, j'ai assuré la conception, le développement et la gestion de ce projet qui contribue à valoriser les talents des étudiants et à renforcer la présence digitale du club au sein de la communauté universitaire."
+      },
+      "7": {
+        "fullDescription": "Servicelik est une plateforme digitale intermédiaire reliant les étudiants, freelances, entrepreneurs et salariés aux espaces de coworking, afin de faciliter la recherche et la réservation d'espaces de travail professionnels adaptés aux nouvelles formes de travail. Je suis porteuse de l'idée et initiatrice du projet, actuellement en phase de développement.",
+        "overview": "Project Overview – Servicelik",
+        "overviewContent": "Servicelik est une plateforme digitale intermédiaire reliant les étudiants, freelances, entrepreneurs et salariés aux espaces de coworking, afin de faciliter la recherche et la réservation d'espaces de travail professionnels adaptés aux nouvelles formes de travail. Je suis porteuse de l'idée et initiatrice du projet, actuellement en phase de développement.",
+        "status": "Statut du Projet",
+        "statusList": [
+          "Porteuse de l'idée et fondatrice du concept",
+          "Site web et plateforme en cours de développement",
+          "Phase : conception, prototypage et développement technique"
+        ],
+        "problematic": "Problématique",
+        "problematicContent": "Avec l'évolution du télétravail, du freelancing et de l'entrepreneuriat, de nombreux professionnels rencontrent des difficultés pour accéder facilement à des espaces de travail flexibles. Parallèlement, les espaces de coworking manquent souvent de solutions digitales centralisées pour améliorer leur visibilité et gérer efficacement leurs réservations.",
+        "solution": "Solution Proposée",
+        "solutionContent": "Servicelik se positionne comme une plateforme intermédiaire qui centralise les offres d'espaces de coworking, met en relation directe les utilisateurs et les gestionnaires d'espaces, simplifie le processus de réservation, et améliore la visibilité digitale des espaces partenaires.",
+        "website": "Site Web",
+        "liveWebsite": "Site en développement :",
+        "keyFeatures": "Fonctionnalités Prévues",
+        "featuresList": [
+          "Recherche et réservation d'espaces de coworking",
+          "Comptes utilisateurs adaptés à plusieurs profils",
+          "Fiches détaillées des espaces (services, équipements, localisation)",
+          "Gestion des disponibilités et des réservations",
+          "Interface moderne, simple et intuitive"
+        ],
+        "technologies": "Technologies Utilisées",
+        "targetAudience": "Public Cible",
+        "targetAudienceList": [
+          "Étudiants",
+          "Freelances",
+          "Entrepreneurs et startups",
+          "Salariés en télétravail",
+          "Espaces de coworking"
+        ],
+        "vision": "Vision",
+        "visionContent": "Servicelik a pour ambition de devenir une solution de référence pour la réservation d'espaces de coworking, en contribuant au développement du travail flexible et à la dynamisation de l'écosystème entrepreneurial. Le site est encore en développement.",
+        "impact": "Impact du Projet",
+        "impactList": [
+          "Facilitation de l'accès aux espaces de coworking",
+          "Amélioration de la visibilité des espaces partenaires",
+          "Contribution au développement du travail flexible",
+          "Dynamisation de l'écosystème entrepreneurial"
+        ],
+        "conclusion": "Conclusion",
+        "conclusionContent": "Servicelik représente un projet innovant visant à répondre aux besoins croissants en espaces de travail flexibles. En tant que porteuse de l'idée et initiatrice du projet, je travaille actuellement sur le développement de cette plateforme qui a pour ambition de devenir une référence dans le domaine de la réservation d'espaces de coworking."
+      },
+      "8": {
+        "fullDescription": "J&S Firm est un cabinet de conseil en ressources humaines et solutions d'entreprise, spécialisé dans l'accompagnement des organisations dans leur transformation, leur croissance et l'optimisation de leurs performances humaines. Le projet consiste en la conception et le développement d'un site web professionnel visant à renforcer la présence digitale du cabinet et à valoriser son positionnement stratégique en tant que partenaire de confiance en RH.",
+        "overview": "J&S Firm – HR Consulting & Business Solutions Website",
+        "overviewContent": "J&S Firm est un cabinet de conseil en ressources humaines et solutions d'entreprise, spécialisé dans l'accompagnement des organisations dans leur transformation, leur croissance et l'optimisation de leurs performances humaines. Le projet consiste en la conception et le développement d'un site web professionnel visant à renforcer la présence digitale du cabinet et à valoriser son positionnement stratégique en tant que partenaire de confiance en RH.",
+        "objectives": "Objectifs du Site",
+        "objectivesList": [
+          "Présenter l'expertise et les services de J&S Firm",
+          "Mettre en avant une approche moderne et orientée performance RH",
+          "Renforcer la crédibilité et la visibilité du cabinet",
+          "Faciliter le contact avec les entreprises et partenaires"
+        ],
+        "website": "Site Web",
+        "liveWebsite": "Site en développement :",
+        "keyFeatures": "Compétences Mobilisées",
+        "featuresList": [
+          "Développement web moderne",
+          "Structuration de sites institutionnels",
+          "Mise en valeur de services B2B",
+          "Expérience utilisateur orientée conversion"
+        ],
+        "technologies": "Technologies Utilisées",
+        "positioning": "Positionnement",
+        "positioningContent": "« Façonner l'avenir du travail avec excellence et innovation. Votre partenaire de confiance pour transformer vos défis RH en opportunités de croissance. »",
+        "targetAudience": "Public Cible",
+        "targetAudienceList": [
+          "Entreprises en quête de conseil RH",
+          "Organisations en transformation",
+          "Partenaires commerciaux",
+          "Professionnels des ressources humaines"
+        ],
+        "impact": "Impact du Projet",
+        "impactList": [
+          "Renforcement de la présence digitale du cabinet",
+          "Amélioration de la visibilité et de la crédibilité",
+          "Facilitation du contact avec les clients potentiels",
+          "Valorisation du positionnement stratégique"
+        ],
+        "conclusion": "Conclusion",
+        "conclusionContent": "Le projet J&S Firm représente une réalisation importante dans le domaine du développement web institutionnel, mettant en valeur l'expertise RH du cabinet à travers une plateforme digitale moderne et professionnelle. Ce projet démontre ma capacité à créer des solutions web adaptées aux besoins des entreprises et à renforcer leur présence en ligne."
+      },
+      "9": {
+        "fullDescription": "Harvey Specteur est un cabinet marocain de conseil en ressources humaines et services aux entreprises, spécialisé dans l'accompagnement stratégique et opérationnel des organisations. Le projet consistait à développer un site web professionnel pour présenter les services du cabinet, son expertise et ses solutions RH sur une plateforme moderne et intuitive.",
+        "overview": "Harvey Specteur – Cabinet RH & Services aux Entreprises",
+        "overviewContent": "Harvey Specteur est un cabinet marocain de conseil en ressources humaines et services aux entreprises, spécialisé dans l'accompagnement stratégique et opérationnel des organisations. Le projet consistait à développer un site web professionnel pour présenter les services du cabinet, son expertise et ses solutions RH sur une plateforme moderne et intuitive. Le site vise à valoriser la crédibilité du cabinet, faciliter le contact avec les clients et renforcer la visibilité de ses services B2B dans tous les secteurs d'activité.",
+        "objectives": "Objectifs du Site",
+        "objectivesList": [
+          "Présenter l'expertise du cabinet et ses services RH (stratégie, politique RH, recrutement, formation)",
+          "Offrir une interface moderne, claire et responsive",
+          "Faciliter l'accès à l'information et la prise de rendez-vous",
+          "Mettre en avant le positionnement de Harvey Specteur en tant que partenaire de confiance pour les entreprises"
+        ],
+        "website": "Site Web",
+        "liveWebsite": "Site en direct :",
+        "keyFeatures": "Fonctionnalités Clés",
+        "featuresList": [
+          "Pages de présentation de l'entreprise et de ses services",
+          "Section « Découvrir nos services » et « Prendre rendez-vous »",
+          "Interface responsive et ergonomique",
+          "Mise en avant des solutions RH adaptées aux besoins des clients"
+        ],
+        "technologies": "Technologies Utilisées",
+        "competencies": "Compétences Développées",
+        "competenciesList": [
+          "Développement web institutionnel avec Next.js",
+          "Structuration et organisation de contenu B2B",
+          "Conception UX/UI pour une expérience professionnelle optimale",
+          "Intégration de fonctionnalités interactives pour la prise de contact"
+        ],
+        "positioning": "Positionnement",
+        "positioningContent": "« Cabinet marocain de conseil RH et services aux entreprises, spécialisé dans l'accompagnement stratégique et opérationnel, avec expertise reconnue et solutions adaptées à chaque client. »",
+        "targetAudience": "Public Cible",
+        "targetAudienceList": [
+          "Entreprises recherchant des services RH",
+          "Organisations en quête d'accompagnement stratégique",
+          "Clients B2B de tous secteurs d'activité",
+          "Professionnels des ressources humaines"
+        ],
+        "impact": "Impact du Projet",
+        "impactList": [
+          "Renforcement de la visibilité digitale du cabinet",
+          "Amélioration de l'accessibilité aux services et à l'information",
+          "Facilitation de la prise de contact et de rendez-vous",
+          "Valorisation du positionnement professionnel"
+        ],
+        "conclusion": "Conclusion",
+        "conclusionContent": "Le projet Harvey Specteur représente une réalisation significative dans le développement web pour le secteur RH, offrant une plateforme professionnelle qui met en valeur l'expertise du cabinet et facilite l'accès à ses services. Ce projet démontre ma capacité à créer des solutions web adaptées aux besoins spécifiques des cabinets de conseil et à renforcer leur présence digitale."
+      },
+      "10": {
+        "fullDescription": "Découvrez Rabat avec Mcovery grâce à des visites audio immersives guidées par des conteurs, musiciens et historiens. Commencez votre exploration en un clic, sans application ni réservation.",
+        "overview": "Mcovery – Part-Time Web Developer & SEO Specialist",
+        "overviewContent": "Découvrez Rabat avec Mcovery grâce à des visites audio immersives guidées par des conteurs, musiciens et historiens. Commencez votre exploration en un clic, sans application ni réservation. Le projet inclut la migration et la modernisation du site web WordPress vers un code personnalisé, optimisé pour la performance, la sécurité et le référencement SEO.",
+        "period": "Période",
+        "periodContent": "Stage Web Development : Juillet 2025 – Août 2025 (2 mois)\nEmploi à temps partiel : Septembre 2025 – Présent (4 mois)",
+        "location": "Lieu",
+        "locationContent": "Rabat, Maroc (Remote)",
+        "myRole": "Rôle & Responsabilités",
+        "myRoleList": [
+          "Réalisation du transfert de la plateforme WordPress vers un code sur mesure",
+          "Optimisation du code et de la structure pour améliorer la performance et la sécurité",
+          "SEO On-Page et optimisation du référencement naturel",
+          "Balises Title et Meta Description",
+          "Optimisation des images et contenus",
+          "Structure des URLs et maillage interne",
+          "Sitemap et fichiers robots.txt",
+          "Intégration et mise à jour des fonctionnalités existantes",
+          "Gestion et suivi du projet via Trello",
+          "Maintenance et amélioration continue de la plateforme"
+        ],
+        "website": "Site Web",
+        "liveWebsite": "Site en direct :",
+        "technologies": "Technologies Utilisées",
+        "technologiesList": [
+          "WordPress (migration et transfert)",
+          "HTML, CSS, JavaScript",
+          "React",
+          "Strapi",
+          "Tailwind CSS",
+          "Trello (gestion de projet)",
+          "SEO techniques (on-page)",
+          "Développement front-end et back-end"
+        ],
+        "competencies": "Compétences Développées",
+        "competenciesList": [
+          "Migration et refonte de sites WordPress",
+          "Développement web full-stack",
+          "Optimisation SEO et référencement naturel",
+          "Gestion de projet à distance",
+          "Optimisation de performance et bonnes pratiques de code",
+          "Collaboration efficace sur projets part-time"
+        ],
+        "impact": "Impact du Projet",
+        "impactList": [
+          "Modernisation et sécurisation de la plateforme Mcovery",
+          "Amélioration de la performance, de l'expérience utilisateur et du SEO",
+          "Augmentation de la visibilité et du trafic organique",
+          "Mise en place d'un code maintenable et évolutif",
+          "Contribution au développement durable de la plateforme"
+        ],
+        "conclusion": "Conclusion",
+        "conclusionContent": "Le projet Mcovery représente une expérience enrichissante en développement web et SEO, combinant migration technique, optimisation de performance et amélioration du référencement naturel. Ce projet démontre ma capacité à gérer des projets part-time complexes, à travailler en remote et à contribuer au développement durable d'une plateforme digitale."
+      },
+      "11": {
+        "fullDescription": "Moroccan Walking Tour (MWT) est une plateforme intermédiaire qui connecte les guides locaux avec les touristes, permettant de réserver des circuits touristiques authentiques à Rabat et au Maroc. Le projet consiste à transférer le site WordPress existant vers une plateforme moderne, sécurisée et performante, en utilisant une stack full-stack moderne.",
+        "overview": "MWT – Moroccan Walking Tour",
+        "overviewContent": "Moroccan Walking Tour (MWT) est une plateforme intermédiaire qui connecte les guides locaux avec les touristes, permettant de réserver des circuits touristiques authentiques à Rabat et au Maroc. Le projet consiste à transférer le site WordPress existant vers une plateforme moderne, sécurisée et performante, en utilisant une stack full-stack moderne.",
+        "status": "Statut",
+        "statusContent": "En cours de développement",
+        "period": "Période",
+        "periodContent": "2025 – Présent",
+        "myRole": "Rôle",
+        "myRoleContent": "Développeuse à temps partiel",
+        "responsibilities": "Responsabilités",
+        "responsibilitiesList": [
+          "Développement front-end et back-end sur la nouvelle plateforme",
+          "Intégration des fonctionnalités de réservation et de gestion des guides",
+          "Collaboration avec l'équipe pour le suivi des tâches",
+          "Contribution à la refonte du site pour le rendre responsive et performant"
+        ],
+        "website": "Site Web",
+        "liveWebsite": "Site en direct :",
+        "technologies": "Stack Technique",
+        "technologiesList": [
+          "Front-end : Next.js, Tailwind CSS, TypeScript",
+          "Back-end : NestJS, MySQL",
+          "Optimisation pour performance et SEO",
+          "Intégration d'un système de réservation en ligne"
+        ],
+        "objectives": "Objectifs",
+        "objectivesList": [
+          "Offrir une interface intuitive pour touristes et guides",
+          "Centraliser l'offre des circuits touristiques",
+          "Moderniser le site existant et améliorer l'expérience utilisateur",
+          "Garantir un site rapide, sécurisé et maintenable"
+        ],
+        "impact": "Impact Attendu",
+        "impactList": [
+          "Facilitation de l'accès aux expériences locales authentiques",
+          "Amélioration de la visibilité des guides locaux",
+          "Plateforme moderne et maintenable pour un usage durable"
+        ],
+        "conclusion": "Conclusion",
+        "conclusionContent": "Le projet MWT représente une opportunité de contribuer au développement d'une plateforme innovante dans le secteur du tourisme au Maroc, combinant technologie moderne et expérience locale authentique. Ce projet démontre ma capacité à développer des solutions full-stack performantes et à travailler sur des projets en cours de développement."
+      },
+      "12": {
+        "fullDescription": "Le SI_EHC est une plateforme multi-tenant complète pour la gestion des formations, couvrant tout le cycle de vie : catalogue, campagnes, sélections, workflows d'approbation, planification, suivi des formateurs, QCM et reporting.",
+        "overview": "SI_EHC – Système d'Information EHC",
+        "overviewContent": "Le SI_EHC est une plateforme multi-tenant complète pour la gestion des formations, couvrant tout le cycle de vie : catalogue, campagnes, sélections, workflows d'approbation, planification, suivi des formateurs, QCM et reporting. La plateforme permet une gestion efficace via 8 types d'utilisateurs, chacun avec un dashboard personnalisé : Super Admin, RRH (Responsable RH), Employés, Manager, RF (Responsable Formation), FI (Formateur Interne), OF (Organisme de Formation), et FE (Formateurs Externes).",
+        "status": "Statut",
+        "statusContent": "En cours de développement",
+        "period": "Période",
+        "periodContent": "2025",
+        "myRole": "Mon Rôle",
+        "myRoleContent": "Chef de projet : coordination technique et fonctionnelle",
+        "team": "Équipe",
+        "teamContent": "12 stagiaires",
+        "myRoleList": [
+          "Chef de projet : coordination technique et fonctionnelle",
+          "Supervision d'une équipe de 12 stagiaires",
+          "Planification et suivi des développements frontend et backend",
+          "Définition des workflows et spécifications fonctionnelles",
+          "Coordination entre backend, frontend et QA pour assurer qualité et cohérence",
+          "Reporting régulier sur l'état d'avancement et les livrables"
+        ],
+        "architecture": "Architecture Technique",
+        "backend": "Backend – 100% complet",
+        "backendList": [
+          "Framework : Node.js (Express.js)",
+          "Base de données : MySQL (Multi-tenant)",
+          "ORM : Sequelize",
+          "Authentification : JWT + Refresh Tokens",
+          "Sécurité : bcrypt, middlewares dédiés",
+          "Architecture en couches : Controllers → Services → Repositories → Models"
+        ],
+        "frontend": "Frontend – En cours",
+        "frontendList": [
+          "Framework : React.js",
+          "Gestion de l'état global : Redux Toolkit",
+          "Build : Vite",
+          "UI : Ant Design (antd)",
+          "Styles : Tailwind CSS"
+        ],
+        "technologies": "Technologies Utilisées",
+        "technologiesList": [
+          "Node.js, Express.js",
+          "MySQL, Sequelize",
+          "React.js, Redux Toolkit",
+          "Ant Design, Tailwind CSS",
+          "JWT (JSON Web Tokens)"
+        ],
+        "keyFeatures": "Fonctionnalités Clés",
+        "featuresList": [
+          "Gestion multi-tenant des formations et utilisateurs",
+          "Dashboards séparés et personnalisés pour chacun des 8 types d'utilisateurs",
+          "Catalogue et campagnes de formation",
+          "Workflows d'approbation et planification automatique",
+          "Suivi des formateurs et apprenants",
+          "QCM et reporting avancé"
+        ],
+        "progress": "État d'Avancement",
+        "progressList": [
+          "Backend : 100% complet",
+          "Frontend : en cours de développement",
+          "Dashboards et interface utilisateur en cours d'intégration"
+        ],
+        "impact": "Impact Attendu",
+        "impactList": [
+          "Centralisation et automatisation de la gestion des formations",
+          "Suivi précis des performances et de l'engagement des apprenants",
+          "Plateforme évolutive adaptée aux besoins multi-tenant",
+          "Expérience utilisateur optimisée selon le rôle de chaque utilisateur"
+        ],
+        "conclusion": "Conclusion",
+        "conclusionContent": "Le projet SI_EHC représente une réalisation majeure en tant que chef de projet, combinant expertise technique, gestion d'équipe et développement full-stack. Ce projet démontre ma capacité à coordonner de grands projets, à superviser des équipes, et à développer des solutions SaaS complexes et évolutives."
+      },
+      "13": {
+        "fullDescription": "Le projet CoursAdis a été réalisé dans le cadre du module UML et Génie Logiciel (GINF5). Il s'agit d'une plateforme de cours particuliers en ligne permettant de connecter élèves et professeurs certifiés. Les utilisateurs peuvent apprendre à leur rythme grâce à des cours personnalisés en visioconférence.",
+        "overview": "CoursAdis – Plateforme de Cours Particuliers en Ligne",
+        "overviewContent": "Le projet CoursAdis a été réalisé dans le cadre du module UML et Génie Logiciel (GINF5). Il s'agit d'une plateforme de cours particuliers en ligne permettant de connecter élèves et professeurs certifiés. Les utilisateurs peuvent apprendre à leur rythme grâce à des cours personnalisés en visioconférence. Ce projet a permis de mettre en pratique les concepts de modélisation UML, l'analyse des besoins, l'identification des acteurs, et la conception de diagrammes pour structurer un système logiciel complet.",
+        "status": "Statut",
+        "statusContent": "Développé dans le cadre académique",
+        "period": "Période",
+        "periodContent": "2025",
+        "myRole": "Rôle",
+        "myRoleContent": "Développeuse principale",
+        "team": "Équipe",
+        "teamContent": "Imane Halif (développement et design)",
+        "supervisor": "Encadrement",
+        "supervisorContent": "Pr. Ali Oublekacem, Département Informatique, Faculté des Sciences de Meknès",
+        "website": "Site Web",
+        "liveWebsite": "Site en direct :",
+        "technologies": "Technologies Utilisées",
+        "technologiesList": [
+          "Framework : Next.js 14.2",
+          "UI : React 18.3, Radix UI, Lucide React",
+          "Styling : Tailwind CSS 4.1, Glassmorphism, mode sombre/clair",
+          "Type Safety : TypeScript 5.0",
+          "Animations : Framer Motion",
+          "Forms : React Hook Form",
+          "Notifications : Sonner",
+          "Responsive Design : Mobile-first, interface moderne"
+        ],
+        "keyFeatures": "Fonctionnalités Principales",
+        "featuresStudents": "Pour les élèves",
+        "featuresStudentsList": [
+          "Tableau de bord personnel avec suivi des cours et progression",
+          "Catalogue de matières et recherche de professeurs",
+          "Achat de packs de cours (Découverte, Progression, Intensif)",
+          "Réservation de cours avec sélection de professeur et créneaux",
+          "Comptes rendus de cours et suivi de progression",
+          "Ressources pédagogiques partagées par les professeurs",
+          "Recommandations personnalisées",
+          "Gestion de profil et paramètres"
+        ],
+        "featuresTeachers": "Pour les professeurs",
+        "featuresTeachersList": [
+          "Tableau de bord avec statistiques et suivi des élèves",
+          "Gestion des cours et création de créneaux horaires",
+          "Agenda mensuel interactif",
+          "Comptes rendus de cours pour chaque séance",
+          "Gestion des élèves et suivi des réservations"
+        ],
+        "featuresAdmin": "Pour les administrateurs",
+        "featuresAdminList": [
+          "Gestion complète des cours (création, modification, suppression)",
+          "Gestion des utilisateurs (élèves, professeurs)",
+          "Validation des demandes de nouveaux professeurs",
+          "Statistiques et rapports de la plateforme",
+          "Configuration du système"
+        ],
+        "impact": "Impact du Projet",
+        "impactList": [
+          "Application pratique des concepts UML et génie logiciel",
+          "Développement d'une plateforme éducative complète et fonctionnelle",
+          "Expérience en développement full-stack avec technologies modernes",
+          "Collaboration en équipe et gestion de projet académique"
+        ],
+        "conclusion": "Conclusion",
+        "conclusionContent": "Le projet CoursAdis représente une réalisation académique significative qui démontre ma capacité à appliquer les concepts de modélisation UML, à développer des solutions web modernes et complètes, et à travailler en équipe sur un projet complexe. Ce projet illustre également ma maîtrise des technologies frontend modernes et de la conception d'interfaces utilisateur intuitives."
+      },
+      "14": {
+        "fullDescription": "MedChain est un projet innovant visant à digitaliser le secteur de la santé au Maroc grâce à une plateforme et une application mobile sécurisées, basées sur la blockchain.",
+        "overview": "MedChain – Plateforme de Digitalisation du Secteur de la Santé",
+        "overviewContent": "MedChain est un projet innovant visant à digitaliser le secteur de la santé au Maroc grâce à une plateforme et une application mobile sécurisées, basées sur la blockchain.",
+        "status": "Statut",
+        "statusContent": "Prix du DEEPTECH STARTUP CHALLENGE organisé par l'Université Moulay Ismaïl et INCUBOOSTER\n\nFinancement : 400 000 MAD accordés par Tamwilcom\n\nPrésentation devant un jury composé de chercheurs, étudiants et entrepreneurs\n\nProjet reconnu pour son impact social et économique dans le secteur de la santé",
+        "period": "Période",
+        "periodContent": "Mars 2024 – Présent (1 an 10 mois)",
+        "myRole": "Rôle",
+        "myRoleContent": "Porteuse de projet / PDG",
+        "location": "Localisation",
+        "locationContent": "Meknès, Fès-Meknès, Maroc",
+        "objectives": "Objectifs principaux",
+        "objectivesList": [
+          "Faciliter l'accès aux dossiers médicaux pour les patients et professionnels",
+          "Simplifier la prise de rendez-vous et la gestion médicale",
+          "Assurer la sécurité et la traçabilité des données médicales"
+        ],
+        "achievements": "Réalisations et Distinctions",
+        "achievementsList": [
+          "Prix du DEEPTECH STARTUP CHALLENGE organisé par l'Université Moulay Ismaïl et INCUBOOSTER",
+          "Financement : 400 000 MAD accordés par Tamwilcom",
+          "Présentation devant un jury composé de chercheurs, étudiants et entrepreneurs",
+          "Projet reconnu pour son impact social et économique dans le secteur de la santé"
+        ],
+        "impact": "Impact Attendu",
+        "impactList": [
+          "Amélioration de l'accessibilité aux soins pour les patients",
+          "Optimisation de la gestion médicale pour les professionnels de santé",
+          "Création d'un écosystème digital fiable et innovant dans le secteur médical"
+        ],
+        "conclusion": "Conclusion",
+        "conclusionContent": "MedChain représente un projet ambitieux à fort impact social, combinant innovation technologique (blockchain) et transformation du secteur de la santé. En tant que porteuse de projet et PDG, ce projet démontre ma capacité à développer des solutions complexes, à obtenir du financement, et à mener un projet entrepreneurial de grande envergure."
+      },
+      "15": {
+        "fullDescription": "Le projet Arihal consiste à développer une plateforme de gestion complète pour une entreprise de BTP, permettant un suivi efficace des projets, des ressources humaines et matérielles, ainsi que de la santé financière de l'entreprise.",
+        "overview": "Arihal – Gestion des Travaux pour Entreprise BTP",
+        "overviewContent": "Le projet Arihal consiste à développer une plateforme de gestion complète pour une entreprise de BTP, permettant un suivi efficace des projets, des ressources humaines et matérielles, ainsi que de la santé financière de l'entreprise.",
+        "status": "Statut",
+        "statusContent": "En cours de développement",
+        "sector": "Secteur",
+        "sectorContent": "BTP (Bâtiment et Travaux Publics)",
+        "period": "Période",
+        "periodContent": "2025",
+        "myRole": "Rôle",
+        "myRoleContent": "Développeuse / Responsable du projet",
+        "objectives": "Objectifs du Projet",
+        "objectivesContent": "Digitaliser et centraliser la gestion des projets, des chantiers, des employés et des ressources financières et matérielles",
+        "keyFeatures": "Fonctionnalités Clés",
+        "featuresDashboard": "Tableau de Bord Général",
+        "featuresDashboardList": [
+          "Vue d'ensemble des projets BTP et indicateurs clés",
+          "Santé financière globale de l'entreprise"
+        ],
+        "featuresProjects": "Gestion des Projets",
+        "featuresProjectsList": [
+          "Création et suivi des nouveaux projets",
+          "Résumé financier détaillé de chaque projet (revenus, dépenses, marges bénéficiaires)",
+          "Projets en cours et alertes sur le suivi"
+        ],
+        "featuresResources": "Gestion des Ressources",
+        "featuresResourcesList": [
+          "Alertes de stock pour matériaux sous le seuil critique (30%)",
+          "Pointage des ouvriers avec récapitulatif hebdomadaire",
+          "Suivi des véhicules et consommation de carburant"
+        ],
+        "featuresSites": "Gestion des Chantiers",
+        "featuresSitesList": [
+          "Gestion des chantiers et envoi de formulaires aux chefs de chantier",
+          "Formulaire hebdomadaire pour rapport de suivi"
+        ],
+        "featuresFinancial": "Gestion Financière",
+        "featuresFinancialList": [
+          "Suivi des dépenses, revenus et marges bénéficiaires par projet",
+          "Situation des salaires et suivi de la paie des employés"
+        ],
+        "featuresAdmin": "Gestion Administrative",
+        "featuresAdminList": [
+          "Suivi des documents administratifs, autorisations et certifications"
+        ],
+        "impact": "Objectifs et Impact",
+        "impactList": [
+          "Centraliser la gestion de tous les projets et chantiers BTP",
+          "Optimiser le suivi financier et la rentabilité des projets",
+          "Améliorer la gestion des ressources humaines et matérielles",
+          "Réduire les risques liés au stock et aux retards de chantier",
+          "Faciliter la prise de décision grâce à des indicateurs et rapports clairs"
+        ],
+        "conclusion": "Conclusion",
+        "conclusionContent": "Le projet Arihal représente une solution complète de digitalisation pour le secteur BTP, démontrant ma capacité à développer des plateformes de gestion complexes intégrant la gestion de projets, des ressources, des finances et des opérations. Ce projet illustre ma compréhension des besoins spécifiques du secteur du BTP et ma capacité à créer des solutions adaptées."
+      },
+      "16": {
+        "fullDescription": "Le projet Opuim Restaurant consistait à concevoir et développer le site web officiel du restaurant, avec un accent sur l'expérience utilisateur, l'accessibilité et la visibilité en ligne.",
+        "overview": "Opium Restaurant – Portugal",
+        "overviewContent": "Le projet Opuim Restaurant consistait à concevoir et développer le site web officiel du restaurant, avec un accent sur l'expérience utilisateur, l'accessibilité et la visibilité en ligne.",
+        "status": "Statut",
+        "statusContent": "Projet terminé",
+        "period": "Période",
+        "periodContent": "2025",
+        "myRole": "Rôle",
+        "myRoleContent": "Développeuse / Responsable contenu et design",
+        "location": "Localisation",
+        "locationContent": "Portugal",
+        "objectives": "Objectif",
+        "objectivesContent": "Création d'un site web complet pour le restaurant avec menu interactif, identité visuelle et contenu multilingue",
+        "website": "Site Web",
+        "liveWebsite": "Site en direct :",
+        "achievements": "Réalisations Clés",
+        "achievementsList": [
+          "Site Web : Développement complet et responsive",
+          "Menu interactif : Présentation des plats et boissons avec catégories et images",
+          "Logo et identité visuelle : Création de l'identité graphique du restaurant",
+          "Traduction multilingue : Contenu disponible en 4 langues : français, espagnol, portugais et arabe",
+          "Design moderne et intuitif adapté à tous les types d'écrans"
+        ],
+        "technologies": "Technologies et Outils Utilisés",
+        "technologiesList": [
+          "Frontend : Next.js, React",
+          "Styling : Tailwind CSS",
+          "Gestion de contenu : Texte, images et traductions",
+          "Responsive design : Optimisé pour mobile, tablette et desktop"
+        ],
+        "impact": "Impact",
+        "impactList": [
+          "Augmentation de la visibilité en ligne du restaurant",
+          "Expérience utilisateur fluide pour les clients multilingues",
+          "Mise en valeur du menu et des services proposés",
+          "Cohérence de l'identité visuelle et branding"
+        ],
+        "conclusion": "Conclusion",
+        "conclusionContent": "Le projet Opium Restaurant représente une réalisation complète alliant développement web, design et gestion de contenu multilingue. Ce projet démontre ma capacité à créer des sites web modernes et accessibles pour le secteur de la restauration, avec une attention particulière à l'expérience utilisateur et à l'identité visuelle."
+      }
+    }
   },
   "services": {
     "title": "Services de Développement Adaptés à Vos Besoins",
     "subtitle": "Solutions de développement web complètes, de la conception à la mise en production. Expertise en technologies modernes pour créer des applications performantes et évolutives.",
+    "globeTitle": "Travail International depuis le Maroc",
+    "globeDescription": "Fourniture de services de développement web et de design à des clients du monde entier. Connecter le Maroc au paysage numérique mondial.",
     "viewMore": "VOIR PLUS",
     "viewDetails": "VOIR LES DÉTAILS",
     "my": "Mes ",
@@ -258,6 +1050,11 @@
         "company": "CSC-FSM Club",
         "role": "Co-fondatrice",
         "description": "Co-fondé le Club Informatique de l'Université Moulay Ismaïl (CSC-FSM) en novembre 2021 avec Mohamed Ahram, Ayoub Elkatibi et d'autres étudiants de la Faculté des Sciences. Le club organise des ateliers pratiques, des hackathons et des projets réels—ouvert aux débutants et aux professionnels."
+      },
+      {
+        "company": "Agence de Marketing",
+        "role": "Stagiaire - Développement Web & Photographie",
+        "description": "Stage d'un mois dans une agence de marketing spécialisée en développement web et photographie. Participation active aux projets de développement web front-end et back-end, création de contenu visuel pour les campagnes marketing, réalisation de séances photo pour les clients, et support dans la gestion des réseaux sociaux. Développement de compétences en intégration web, retouche photo, et stratégie de communication digitale."
       },
       {
         "company": "ARMA Association",
@@ -569,7 +1366,18 @@
   "volunteering": {
     "sectionLabel": "BÉNÉVOLAT",
     "title": "Redonner à la Communauté",
-    "subtitle": "Engagement bénévole et contribution au développement de la communauté étudiante et sociale."
+    "subtitle": "Engagement bénévole et contribution au développement de la communauté étudiante et sociale.",
+    "viewMore": "Voir toutes les activités bénévoles"
+  },
+  "githubStats": {
+    "sectionLabel": "GITHUB",
+    "title": "Activité GitHub",
+    "subtitle": "Mes statistiques et contributions GitHub",
+    "stats": "Statistiques GitHub",
+    "topLanguages": "Langages les Plus Utilisés",
+    "activityGraph": "Graphique d'Activité",
+    "streak": "Série de Contributions",
+    "viewProfile": "Voir mon profil GitHub complet"
   },
   "languages": {
     "sectionLabel": "LANGUES",
@@ -605,7 +1413,11 @@
     "subtitle": "Recommandations et témoignages de mentors, professeurs et clients satisfaits"
   },
   "news": {
-    "sectionLabel": "DERNIÈRES ACTUALITÉS"
+    "sectionLabel": "DERNIÈRES ACTUALITÉS",
+    "title": "Explorez Mon Processus de Pensée Design",
+    "subtitle": "Nous mettons vos idées et donc vos souhaits sous la forme d'un unique",
+    "readMore": "Lire Plus",
+    "viewMore": "Voir Plus"
   },
   "pricing": {
     "title": "Plan Flexible",
@@ -627,12 +1439,6 @@
     "successMessage": "Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.",
     "errorMessage": "Erreur lors de l'envoi du message. Veuillez réessayer ou me contacter directement par email."
   },
-  "news": {
-    "title": "Explorez Mon Processus de Pensée Design",
-    "subtitle": "Nous mettons vos idées et donc vos souhaits sous la forme d'un unique",
-    "readMore": "Lire Plus",
-    "viewMore": "Voir Plus"
-  },
   "blog": {
     "sectionLabel": "BLOG",
     "title": "Blog Technologique & Ressources Éducatives",
@@ -644,6 +1450,29 @@
     "visitPlatform": "Visiter la Plateforme",
     "free": "GRATUIT",
     "flipWords": ["Blog", "Ressources", "Articles", "Tutoriels"],
+    "viewMore": "Voir plus d'articles",
+    "all": "Tous",
+    "article": "article",
+    "articles": "articles",
+    "in": "dans",
+    "total": "au total",
+    "categories": {
+      "All": "Tous",
+      "Photography": "Photographie",
+      "UI/UX Design": "Design UI/UX",
+      "Videography": "Vidéo",
+      "Web Development": "Développement Web",
+      "Databases": "Bases de données",
+      "AI & Image Processing": "IA & Traitement d'image",
+      "Content Creation": "Création de contenu",
+      "Digital Marketing": "Marketing Digital",
+      "Branding": "Branding",
+      "Entrepreneurship": "Entrepreneuriat",
+      "Soft Skills": "Compétences douces",
+      "Hard Skills": "Compétences techniques",
+      "Other Domains": "Autres domaines",
+      "Backend Development": "Développement Backend"
+    },
     "resources": {
       "linkedinLearning": "Cours professionnels et certifications",
       "googleDevelopers": "Ressources et cours gratuits de Google",
@@ -671,7 +1500,9 @@
   },
   "footer": {
     "followUs": "Suivez-nous",
-    "description": "Développeuse web spécialisée en Next.js, React.js et Node.js, je transforme des idées en applications web modernes, performantes et évolutives. Passionnée par la technologie et la créativité, je crée des solutions digitales innovantes."
+    "description": "Développeuse web spécialisée en Next.js, React.js et Node.js, je transforme des idées en applications web modernes, performantes et évolutives. Passionnée par la technologie et la créativité, je crée des solutions digitales innovantes.",
+    "fullName": "RAJAE ELOUARDANI",
+    "copyrightName": "Rajae Elouardani"
   }
 }
 

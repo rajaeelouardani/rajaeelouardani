@@ -3,6 +3,7 @@ import TechMarquee from '@/components/TechMarquee'
 import CreativePulse from '@/components/sections/CreativePulse'
 import Portfolio from '@/components/sections/Portfolio'
 import Blog from '@/components/sections/Blog'
+import { GlobeDemo } from '@/components/GlobeDemo'
 
 export default function Home() {
   return (
@@ -15,6 +16,9 @@ export default function Home() {
       
       {/* Creative Pulse Circle Section */}
       <CreativePulse />
+      
+      {/* Globe Section - International Work from Morocco */}
+      <GlobeDemo />
       
       {/* Portfolio Section - 3 Projects with View More Button */}
       <Portfolio />

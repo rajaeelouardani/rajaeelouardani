@@ -47,9 +47,9 @@ export default function Header() {
     >
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-xl md:text-2xl font-bold text-white flex items-center gap-2">
-            <span className="text-primary-500">RAJAE</span>
-            <span>ELOUARDANI</span>
+          <Link href="/" className="text-xl md:text-2xl font-bold text-white flex items-center gap-2" dir={dir}>
+            <span className="text-primary-500">{t.nav.firstName || 'RAJAE'}</span>
+            <span>{t.nav.lastName || 'ELOUARDANI'}</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -117,7 +117,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-700"
+            className="md:hidden text-white z-50 relative"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <svg
@@ -148,73 +148,85 @@ export default function Header() {
         {/* Mobile Menu */}
         <AnimatePresence>
           {isMobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden mt-4 pb-4 space-y-2 overflow-hidden"
-            >
-              {navLinks.map((link) => (
-                <div key={link.name}>
-                  {link.submenu ? (
-                    <div>
-                      <button
-                        onClick={() => setOpenSubmenu(openSubmenu === link.name ? null : link.name)}
-                        className="w-full text-left text-gray-700 hover:text-primary-600 transition-colors font-medium flex items-center justify-between py-2"
+            <>
+              {/* Backdrop */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 md:hidden"
+              />
+              {/* Menu Content */}
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                className="md:hidden mt-4 pb-4 space-y-2 overflow-hidden relative z-50 bg-black/95 backdrop-blur-md rounded-lg border border-gray-800 p-4 shadow-2xl"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {navLinks.map((link) => (
+                  <div key={link.name}>
+                    {link.submenu ? (
+                      <div>
+                        <button
+                          onClick={() => setOpenSubmenu(openSubmenu === link.name ? null : link.name)}
+                          className="w-full text-left text-white hover:text-primary-500 transition-colors font-medium flex items-center justify-between py-2"
+                        >
+                          {link.name}
+                          <svg
+                            className={`w-4 h-4 transition-transform ${
+                              openSubmenu === link.name ? 'rotate-180' : ''
+                            }`}
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
+                        {openSubmenu === link.name && (
+                          <div className="pl-4 space-y-2 mt-2">
+                            {link.submenu.map((sub) => (
+                              <Link
+                                key={sub.name}
+                                href={sub.href}
+                                className="block text-gray-300 hover:text-primary-500 transition-colors py-1"
+                                onClick={() => {
+                                  setIsMobileMenuOpen(false)
+                                  setOpenSubmenu(null)
+                                }}
+                              >
+                                {sub.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className="block text-white hover:text-primary-500 transition-colors py-2 font-medium"
+                        onClick={() => setIsMobileMenuOpen(false)}
                       >
                         {link.name}
-                        <svg
-                          className={`w-4 h-4 transition-transform ${
-                            openSubmenu === link.name ? 'rotate-180' : ''
-                          }`}
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </button>
-                      {openSubmenu === link.name && (
-                        <div className="pl-4 space-y-2 mt-2">
-                          {link.submenu.map((sub) => (
-                            <Link
-                              key={sub.name}
-                              href={sub.href}
-                              className="block text-gray-600 hover:text-primary-600 transition-colors py-1"
-                              onClick={() => {
-                                setIsMobileMenuOpen(false)
-                                setOpenSubmenu(null)
-                              }}
-                            >
-                              {sub.name}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      href={link.href}
-                      className="block text-gray-700 hover:text-primary-600 transition-colors py-2"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      {link.name}
-                    </Link>
-                  )}
+                      </Link>
+                    )}
+                  </div>
+                ))}
+                <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-gray-800">
+                  <LanguageSwitcher />
+                  <ThemeSwitcher />
                 </div>
-              ))}
-              <div className="flex flex-col gap-3 mt-4">
-                <LanguageSwitcher />
-                <ThemeSwitcher />
-              </div>
-              <Link
-                href="/contact"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="w-full bg-primary-600 text-white px-6 py-2 rounded-full hover:bg-primary-700 transition-colors mt-4 text-center"
-              >
-                {t.nav.contactMe}
-              </Link>
-            </motion.div>
+                <Link
+                  href="/contact"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="w-full bg-primary-600 text-white px-6 py-2 rounded-full hover:bg-primary-700 transition-colors mt-4 text-center font-semibold"
+                >
+                  {t.nav.contactMe}
+                </Link>
+              </motion.div>
+            </>
           )}
         </AnimatePresence>
       </nav>
