@@ -87,11 +87,13 @@ export default function ProjectDetailPage() {
                         <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
                           {projectData.objectives}
                         </h3>
-                        <ul className="list-disc list-inside space-y-2 text-white" dir={dir}>
-                          {projectData.objectivesList?.map((obj: string, idx: number) => (
-                            <li key={idx}>{obj}</li>
-                          ))}
-                        </ul>
+                        {'objectivesList' in projectData && projectData.objectivesList && (
+                          <ul className="list-disc list-inside space-y-2 text-white" dir={dir}>
+                            {projectData.objectivesList.map((obj: string, idx: number) => (
+                              <li key={idx}>{obj}</li>
+                            ))}
+                          </ul>
+                        )}
                       </div>
                     )}
 
@@ -100,11 +102,13 @@ export default function ProjectDetailPage() {
                         <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
                           {projectData.achievements}
                         </h3>
-                        <ul className="list-disc list-inside space-y-2 text-white" dir={dir}>
-                          {projectData.achievementsList?.map((achievement: string, idx: number) => (
-                            <li key={idx}>{achievement}</li>
-                          ))}
-                        </ul>
+                        {'achievementsList' in projectData && projectData.achievementsList && (
+                          <ul className="list-disc list-inside space-y-2 text-white" dir={dir}>
+                            {projectData.achievementsList.map((achievement: string, idx: number) => (
+                              <li key={idx}>{achievement}</li>
+                            ))}
+                          </ul>
+                        )}
                       </div>
                     )}
 
