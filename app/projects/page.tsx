@@ -393,7 +393,7 @@ export default function ProjectsPage() {
                               target.src = '/placeholder.jpg'
                             }}
                           />
-                          <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors" />
+                          <div className={`absolute inset-0 ${project.id === 10 || project.id === 11 || project.id === 16 ? 'bg-transparent' : 'bg-black/60'} group-hover:${project.id === 10 || project.id === 11 || project.id === 16 ? 'bg-transparent' : 'bg-black/40'} transition-colors`} />
                           {/* Cercle play au hover */}
                           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-transform duration-300">
@@ -442,7 +442,7 @@ export default function ProjectsPage() {
                                 target.src = '/placeholder.jpg'
                               }}
                             />
-                            <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors" />
+                            <div className={`absolute inset-0 ${project.id === 10 || project.id === 11 || project.id === 16 ? 'bg-transparent' : 'bg-black/60'} group-hover:${project.id === 10 || project.id === 11 || project.id === 16 ? 'bg-transparent' : 'bg-black/40'} transition-colors`} />
                             <div className="absolute bottom-4 left-4">
                               <span className="bg-primary-500/80 text-white px-3 py-1 rounded-full text-xs font-semibold">
                                 {project.category}
@@ -554,7 +554,7 @@ export default function ProjectsPage() {
               </button>
               
               {/* Image */}
-              <div className="relative w-full h-full flex items-center justify-center">
+              <div className={`relative w-full h-full flex items-center justify-center ${selectedImage.url.includes('mcovery.webp') ? 'bg-white p-8' : ''}`}>
                 <img
                   src={selectedImage.url}
                   alt="Design preview"
