@@ -64,6 +64,9 @@ export default function ProjectDetailPage() {
             const projectId = project.id.toString();
             const projectData = t?.portfolio?.projects?.[projectId as "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "10" | "11" | "12" | "13" | "14" | "15" | "16"];
             
+            // Helper function to safely access optional properties
+            const hasProp = (prop: string) => projectData && prop in projectData;
+            
             return (
               <>
                 <p className="text-white text-lg max-w-3xl mb-6" dir={dir}>
@@ -112,44 +115,48 @@ export default function ProjectDetailPage() {
                       </div>
                     )}
 
-                    <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
-                      <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
-                        {projectData.website}
-                      </h3>
-                      <p className="text-white mb-2" dir={dir}>
-                        {projectData.liveWebsite}
-                      </p>
-                      <a 
-                        href={project.link} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-white hover:text-gray-300 underline block mb-4"
-                      >
-                        {project.link}
-                      </a>
-                      {projectData.eLearningWebsite && (
-                        <>
+                    {'website' in projectData && projectData.website && (
+                      <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
+                        <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
+                          {projectData.website}
+                        </h3>
+                        {'liveWebsite' in projectData && projectData.liveWebsite && (
                           <p className="text-white mb-2" dir={dir}>
-                            {projectData.eLearningWebsite}
+                            {projectData.liveWebsite}
                           </p>
-                          <a 
-                            href="https://fhemtech.ivrclubfs.com/" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="text-white hover:text-gray-300 underline block"
-                          >
-                            https://fhemtech.ivrclubfs.com/
-                          </a>
-                        </>
-                      )}
-                    </div>
+                        )}
+                        <a 
+                          href={project.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-white hover:text-gray-300 underline block mb-4"
+                        >
+                          {project.link}
+                        </a>
+                        {'eLearningWebsite' in projectData && projectData.eLearningWebsite && (
+                          <>
+                            <p className="text-white mb-2" dir={dir}>
+                              {projectData.eLearningWebsite}
+                            </p>
+                            <a 
+                              href="https://fhemtech.ivrclubfs.com/" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-white hover:text-gray-300 underline block"
+                            >
+                              https://fhemtech.ivrclubfs.com/
+                            </a>
+                          </>
+                        )}
+                      </div>
+                    )}
 
-                    {projectData.keyFeatures && (
+                    {hasProp('keyFeatures') && projectData.keyFeatures && (
                       <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
                         <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
                           {projectData.keyFeatures}
                         </h3>
-                        {projectData.featuresList && projectData.featuresList.length > 0 ? (
+                        {hasProp('featuresList') && projectData.featuresList && projectData.featuresList.length > 0 ? (
                           <ul className="list-disc list-inside space-y-2 text-white" dir={dir}>
                             {projectData.featuresList.map((feature: string, idx: number) => (
                               <li key={idx}>{feature}</li>
@@ -157,100 +164,116 @@ export default function ProjectDetailPage() {
                           </ul>
                         ) : (
                           <>
-                            {projectData.featuresStudents && (
+                            {hasProp('featuresStudents') && projectData.featuresStudents && (
                               <div className="mb-4">
                                 <h4 className="text-lg font-semibold text-white mb-2" dir={dir}>
                                   {projectData.featuresStudents}
                                 </h4>
-                                <ul className="list-disc list-inside space-y-2 text-white ml-4" dir={dir}>
-                                  {projectData.featuresStudentsList?.map((feature: string, idx: number) => (
-                                    <li key={idx}>{feature}</li>
-                                  ))}
-                                </ul>
+                                {hasProp('featuresStudentsList') && projectData.featuresStudentsList && (
+                                  <ul className="list-disc list-inside space-y-2 text-white ml-4" dir={dir}>
+                                    {projectData.featuresStudentsList.map((feature: string, idx: number) => (
+                                      <li key={idx}>{feature}</li>
+                                    ))}
+                                  </ul>
+                                )}
                               </div>
                             )}
-                            {projectData.featuresTeachers && (
+                            {hasProp('featuresTeachers') && projectData.featuresTeachers && (
                               <div className="mb-4">
                                 <h4 className="text-lg font-semibold text-white mb-2" dir={dir}>
                                   {projectData.featuresTeachers}
                                 </h4>
-                                <ul className="list-disc list-inside space-y-2 text-white ml-4" dir={dir}>
-                                  {projectData.featuresTeachersList?.map((feature: string, idx: number) => (
-                                    <li key={idx}>{feature}</li>
-                                  ))}
-                                </ul>
+                                {hasProp('featuresTeachersList') && projectData.featuresTeachersList && (
+                                  <ul className="list-disc list-inside space-y-2 text-white ml-4" dir={dir}>
+                                    {projectData.featuresTeachersList.map((feature: string, idx: number) => (
+                                      <li key={idx}>{feature}</li>
+                                    ))}
+                                  </ul>
+                                )}
                               </div>
                             )}
-                            {projectData.featuresAdmin && (
+                            {hasProp('featuresAdmin') && projectData.featuresAdmin && (
                               <div className="mb-4">
                                 <h4 className="text-lg font-semibold text-white mb-2" dir={dir}>
                                   {projectData.featuresAdmin}
                                 </h4>
-                                <ul className="list-disc list-inside space-y-2 text-white ml-4" dir={dir}>
-                                  {projectData.featuresAdminList?.map((feature: string, idx: number) => (
-                                    <li key={idx}>{feature}</li>
-                                  ))}
-                                </ul>
+                                {hasProp('featuresAdminList') && projectData.featuresAdminList && (
+                                  <ul className="list-disc list-inside space-y-2 text-white ml-4" dir={dir}>
+                                    {projectData.featuresAdminList.map((feature: string, idx: number) => (
+                                      <li key={idx}>{feature}</li>
+                                    ))}
+                                  </ul>
+                                )}
                               </div>
                             )}
-                            {projectData.featuresDashboard && (
+                            {hasProp('featuresDashboard') && projectData.featuresDashboard && (
                               <div className="mb-4">
                                 <h4 className="text-lg font-semibold text-white mb-2" dir={dir}>
                                   {projectData.featuresDashboard}
                                 </h4>
-                                <ul className="list-disc list-inside space-y-2 text-white ml-4" dir={dir}>
-                                  {projectData.featuresDashboardList?.map((feature: string, idx: number) => (
-                                    <li key={idx}>{feature}</li>
-                                  ))}
-                                </ul>
+                                {hasProp('featuresDashboardList') && projectData.featuresDashboardList && (
+                                  <ul className="list-disc list-inside space-y-2 text-white ml-4" dir={dir}>
+                                    {projectData.featuresDashboardList.map((feature: string, idx: number) => (
+                                      <li key={idx}>{feature}</li>
+                                    ))}
+                                  </ul>
+                                )}
                               </div>
                             )}
-                            {projectData.featuresProjects && (
+                            {hasProp('featuresProjects') && projectData.featuresProjects && (
                               <div className="mb-4">
                                 <h4 className="text-lg font-semibold text-white mb-2" dir={dir}>
                                   {projectData.featuresProjects}
                                 </h4>
-                                <ul className="list-disc list-inside space-y-2 text-white ml-4" dir={dir}>
-                                  {projectData.featuresProjectsList?.map((feature: string, idx: number) => (
-                                    <li key={idx}>{feature}</li>
-                                  ))}
-                                </ul>
+                                {hasProp('featuresProjectsList') && projectData.featuresProjectsList && (
+                                  <ul className="list-disc list-inside space-y-2 text-white ml-4" dir={dir}>
+                                    {projectData.featuresProjectsList.map((feature: string, idx: number) => (
+                                      <li key={idx}>{feature}</li>
+                                    ))}
+                                  </ul>
+                                )}
                               </div>
                             )}
-                            {projectData.featuresResources && (
+                            {hasProp('featuresResources') && projectData.featuresResources && (
                               <div className="mb-4">
                                 <h4 className="text-lg font-semibold text-white mb-2" dir={dir}>
                                   {projectData.featuresResources}
                                 </h4>
-                                <ul className="list-disc list-inside space-y-2 text-white ml-4" dir={dir}>
-                                  {projectData.featuresResourcesList?.map((feature: string, idx: number) => (
-                                    <li key={idx}>{feature}</li>
-                                  ))}
-                                </ul>
+                                {hasProp('featuresResourcesList') && projectData.featuresResourcesList && (
+                                  <ul className="list-disc list-inside space-y-2 text-white ml-4" dir={dir}>
+                                    {projectData.featuresResourcesList.map((feature: string, idx: number) => (
+                                      <li key={idx}>{feature}</li>
+                                    ))}
+                                  </ul>
+                                )}
                               </div>
                             )}
-                            {projectData.featuresSites && (
+                            {hasProp('featuresSites') && projectData.featuresSites && (
                               <div className="mb-4">
                                 <h4 className="text-lg font-semibold text-white mb-2" dir={dir}>
                                   {projectData.featuresSites}
                                 </h4>
-                                <ul className="list-disc list-inside space-y-2 text-white ml-4" dir={dir}>
-                                  {projectData.featuresSitesList?.map((feature: string, idx: number) => (
-                                    <li key={idx}>{feature}</li>
-                                  ))}
-                                </ul>
+                                {hasProp('featuresSitesList') && projectData.featuresSitesList && (
+                                  <ul className="list-disc list-inside space-y-2 text-white ml-4" dir={dir}>
+                                    {projectData.featuresSitesList.map((feature: string, idx: number) => (
+                                      <li key={idx}>{feature}</li>
+                                    ))}
+                                  </ul>
+                                )}
                               </div>
                             )}
-                            {projectData.featuresFinancial && (
+                            {hasProp('featuresFinancial') && projectData.featuresFinancial && (
                               <div>
                                 <h4 className="text-lg font-semibold text-white mb-2" dir={dir}>
                                   {projectData.featuresFinancial}
                                 </h4>
-                                <ul className="list-disc list-inside space-y-2 text-white ml-4" dir={dir}>
-                                  {projectData.featuresFinancialList?.map((feature: string, idx: number) => (
-                                    <li key={idx}>{feature}</li>
-                                  ))}
-                                </ul>
+                                {hasProp('featuresFinancialList') && projectData.featuresFinancialList && (
+                                  <ul className="list-disc list-inside space-y-2 text-white ml-4" dir={dir}>
+                                    {projectData.featuresFinancialList.map((feature: string, idx: number) => (
+                                      <li key={idx}>{feature}</li>
+                                    ))}
+                                  </ul>
+                                )}
                               </div>
                             )}
                           </>
@@ -258,129 +281,149 @@ export default function ProjectDetailPage() {
                       </div>
                     )}
 
-                    {projectData.period && (
+                    {hasProp('period') && projectData.period && (
                       <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
                         <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
                           {projectData.period}
                         </h3>
-                        <p className="text-white whitespace-pre-line" dir={dir}>
-                          {projectData.periodContent}
-                        </p>
+                        {hasProp('periodContent') && (
+                          <p className="text-white whitespace-pre-line" dir={dir}>
+                            {projectData.periodContent}
+                          </p>
+                        )}
                       </div>
                     )}
 
-                    {projectData.location && (
+                    {hasProp('location') && projectData.location && (
                       <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
                         <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
                           {projectData.location}
                         </h3>
-                        <p className="text-white" dir={dir}>
-                          {projectData.locationContent}
-                        </p>
+                        {hasProp('locationContent') && (
+                          <p className="text-white" dir={dir}>
+                            {projectData.locationContent}
+                          </p>
+                        )}
                       </div>
                     )}
 
-                    {projectData.sector && (
+                    {hasProp('sector') && projectData.sector && (
                       <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
                         <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
                           {projectData.sector}
                         </h3>
-                        <p className="text-white" dir={dir}>
-                          {projectData.sectorContent}
-                        </p>
+                        {hasProp('sectorContent') && (
+                          <p className="text-white" dir={dir}>
+                            {projectData.sectorContent}
+                          </p>
+                        )}
                       </div>
                     )}
 
-                    {projectData.myRole && (
+                    {hasProp('myRole') && projectData.myRole && (
                       <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
                         <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
                           {projectData.myRole}
                         </h3>
-                        {projectData.myRoleList && projectData.myRoleList.length > 0 ? (
+                        {hasProp('myRoleList') && projectData.myRoleList && projectData.myRoleList.length > 0 ? (
                           <ul className="list-disc list-inside space-y-2 text-white" dir={dir}>
                             {projectData.myRoleList.map((item: string, idx: number) => (
                               <li key={idx}>{item}</li>
                             ))}
                           </ul>
                         ) : (
+                          hasProp('myRoleContent') && (
+                            <p className="text-white leading-relaxed" dir={dir}>
+                              {projectData.myRoleContent}
+                            </p>
+                          )
+                        )}
+                      </div>
+                    )}
+
+                    {hasProp('problematic') && projectData.problematic && (
+                      <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
+                        <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
+                          {projectData.problematic}
+                        </h3>
+                        {hasProp('problematicContent') && (
                           <p className="text-white leading-relaxed" dir={dir}>
-                            {projectData.myRoleContent}
+                            {projectData.problematicContent}
                           </p>
                         )}
                       </div>
                     )}
 
-                    {projectData.problematic && (
-                      <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
-                        <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
-                          {projectData.problematic}
-                        </h3>
-                        <p className="text-white leading-relaxed" dir={dir}>
-                          {projectData.problematicContent}
-                        </p>
-                      </div>
-                    )}
-
-                    {projectData.ourApproach && (
+                    {hasProp('ourApproach') && projectData.ourApproach && (
                       <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
                         <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
                           {projectData.ourApproach}
                         </h3>
-                        <p className="text-white leading-relaxed" dir={dir}>
-                          {projectData.ourApproachContent}
-                        </p>
+                        {hasProp('ourApproachContent') && (
+                          <p className="text-white leading-relaxed" dir={dir}>
+                            {projectData.ourApproachContent}
+                          </p>
+                        )}
                       </div>
                     )}
 
-                    {projectData.status && (
+                    {hasProp('status') && projectData.status && (
                       <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
                         <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
                           {projectData.status}
                         </h3>
-                        {projectData.statusList && projectData.statusList.length > 0 ? (
+                        {hasProp('statusList') && projectData.statusList && projectData.statusList.length > 0 ? (
                           <ul className="list-disc list-inside space-y-2 text-white" dir={dir}>
                             {projectData.statusList.map((item: string, idx: number) => (
                               <li key={idx}>{item}</li>
                             ))}
                           </ul>
                         ) : (
-                          <p className="text-white whitespace-pre-line" dir={dir}>
-                            {projectData.statusContent}
+                          hasProp('statusContent') && (
+                            <p className="text-white whitespace-pre-line" dir={dir}>
+                              {projectData.statusContent}
+                            </p>
+                          )
+                        )}
+                      </div>
+                    )}
+
+                    {hasProp('solution') && projectData.solution && (
+                      <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
+                        <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
+                          {projectData.solution}
+                        </h3>
+                        {hasProp('solutionContent') && (
+                          <p className="text-white leading-relaxed" dir={dir}>
+                            {projectData.solutionContent}
                           </p>
                         )}
                       </div>
                     )}
 
-                    {projectData.solution && (
-                      <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
-                        <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
-                          {projectData.solution}
-                        </h3>
-                        <p className="text-white leading-relaxed" dir={dir}>
-                          {projectData.solutionContent}
-                        </p>
-                      </div>
-                    )}
-
-                    {projectData.vision && (
+                    {hasProp('vision') && projectData.vision && (
                       <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
                         <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
                           {projectData.vision}
                         </h3>
-                        <p className="text-white leading-relaxed" dir={dir}>
-                          {projectData.visionContent}
-                        </p>
+                        {hasProp('visionContent') && (
+                          <p className="text-white leading-relaxed" dir={dir}>
+                            {projectData.visionContent}
+                          </p>
+                        )}
                       </div>
                     )}
 
-                    {projectData.positioning && (
+                    {hasProp('positioning') && projectData.positioning && (
                       <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
                         <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
                           {projectData.positioning}
                         </h3>
-                        <p className="text-white leading-relaxed italic" dir={dir}>
-                          {projectData.positioningContent}
-                        </p>
+                        {hasProp('positioningContent') && (
+                          <p className="text-white leading-relaxed italic" dir={dir}>
+                            {projectData.positioningContent}
+                          </p>
+                        )}
                       </div>
                     )}
 
@@ -415,7 +458,7 @@ export default function ProjectDetailPage() {
                       </div>
                     )}
 
-                    {projectData.communicationContent && projectData.communicationList && projectData.communicationList.length > 0 && (
+                    {hasProp('communication') && projectData.communication && hasProp('communicationContent') && projectData.communicationContent && (
                       <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
                         <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
                           {projectData.communication}
@@ -423,20 +466,22 @@ export default function ProjectDetailPage() {
                         <p className="text-white mb-4" dir={dir}>
                           {projectData.communicationContent}
                         </p>
-                        <ul className="list-disc list-inside space-y-2 text-white" dir={dir}>
-                          {projectData.communicationList?.map((item: string, idx: number) => (
-                            <li key={idx}>{item}</li>
-                          ))}
-                        </ul>
+                        {hasProp('communicationList') && projectData.communicationList && projectData.communicationList.length > 0 && (
+                          <ul className="list-disc list-inside space-y-2 text-white" dir={dir}>
+                            {projectData.communicationList.map((item: string, idx: number) => (
+                              <li key={idx}>{item}</li>
+                            ))}
+                          </ul>
+                        )}
                       </div>
                     )}
 
-                    {projectData.technologies && (
+                    {hasProp('technologies') && projectData.technologies && (
                       <div className="bg-gray-900/50 rounded-lg p-6 border border-gray-800">
                         <h3 className="text-xl font-bold text-white mb-4" dir={dir}>
                           {projectData.technologies}
                         </h3>
-                        {projectData.technologiesList && projectData.technologiesList.length > 0 ? (
+                        {hasProp('technologiesList') && projectData.technologiesList && projectData.technologiesList.length > 0 ? (
                           <ul className="list-disc list-inside space-y-2 text-white" dir={dir}>
                             {projectData.technologiesList.map((tech: string, idx: number) => (
                               <li key={idx}>{tech}</li>
