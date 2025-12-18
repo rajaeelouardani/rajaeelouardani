@@ -134,11 +134,12 @@ export default function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="glass-card p-6 rounded-lg"
+                whileHover={{ scale: 1.02, y: -5 }}
+                className="glass-card p-6 rounded-xl border border-gray-800/50 hover:border-primary-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/20"
               >
-                <div className="text-primary-500 mb-3">{item.icon}</div>
+                <div className="text-primary-500 mb-4 p-3 bg-primary-500/10 rounded-lg w-fit">{item.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2" dir={dir}>{item.title}</h3>
-                <p className="text-primary-400" dir={dir}>{item.value}</p>
+                <p className="text-gray-300 hover:text-primary-400 transition-colors" dir={dir}>{item.value}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -149,19 +150,21 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="shadow-input mx-auto w-full max-w-md rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-black"
+            className="glass-card mx-auto w-full max-w-md rounded-2xl p-6 md:p-8 border border-gray-800/50 hover:border-primary-500/50 transition-all duration-300 shadow-2xl"
           >
-            <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200" dir={dir}>
-              {t.contact.title}
-            </h2>
-            <p className="mt-2 max-w-sm text-sm text-neutral-600 dark:text-neutral-300" dir={dir}>
-              {"Get in touch with me. I'm always open to discussing new projects and opportunities."}
-            </p>
+            <div className="mb-6">
+              <h2 className="text-2xl font-bold text-white mb-2" dir={dir}>
+                {t.contact.title}
+              </h2>
+              <p className="text-sm text-gray-400" dir={dir}>
+                {"Get in touch with me. I'm always open to discussing new projects and opportunities."}
+              </p>
+            </div>
 
-            <form className="my-8" onSubmit={handleSubmit}>
-              <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
+            <form className="space-y-5" onSubmit={handleSubmit}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <LabelInputContainer>
-                  <Label htmlFor="firstname">{t.contact.firstName}</Label>
+                  <Label htmlFor="firstname" className="text-gray-300 mb-2">{t.contact.firstName}</Label>
                   <Input
                     id="firstname"
                     name="firstName"
@@ -171,10 +174,11 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     dir={dir}
+                    className="bg-gray-900/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-primary-500 focus:ring-primary-500/50 transition-all"
                   />
                 </LabelInputContainer>
                 <LabelInputContainer>
-                  <Label htmlFor="lastname">{t.contact.lastName}</Label>
+                  <Label htmlFor="lastname" className="text-gray-300 mb-2">{t.contact.lastName}</Label>
                   <Input
                     id="lastname"
                     name="lastName"
@@ -184,12 +188,13 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     dir={dir}
+                    className="bg-gray-900/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-primary-500 focus:ring-primary-500/50 transition-all"
                   />
                 </LabelInputContainer>
               </div>
 
-              <LabelInputContainer className="mb-4">
-                <Label htmlFor="email">{t.contact.yourEmail}</Label>
+              <LabelInputContainer>
+                <Label htmlFor="email" className="text-gray-300 mb-2">{t.contact.yourEmail}</Label>
                 <Input
                   id="email"
                   name="email"
@@ -199,11 +204,12 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   dir={dir}
+                  className="bg-gray-900/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-primary-500 focus:ring-primary-500/50 transition-all"
                 />
               </LabelInputContainer>
 
-              <LabelInputContainer className="mb-4">
-                <Label htmlFor="phone">{t.contact.yourPhone}</Label>
+              <LabelInputContainer>
+                <Label htmlFor="phone" className="text-gray-300 mb-2">{t.contact.yourPhone}</Label>
                 <Input
                   id="phone"
                   name="phone"
@@ -213,11 +219,12 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   dir={dir}
+                  className="bg-gray-900/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-primary-500 focus:ring-primary-500/50 transition-all"
                 />
               </LabelInputContainer>
 
-              <LabelInputContainer className="mb-4">
-                <Label htmlFor="service">{t.contact.chooseService}</Label>
+              <LabelInputContainer>
+                <Label htmlFor="service" className="text-gray-300 mb-2">{t.contact.chooseService}</Label>
                 <select
                   id="service"
                   name="service"
@@ -225,7 +232,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   dir={dir}
-                  className="flex h-10 w-full rounded-md border border-neutral-200 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-neutral-800 dark:bg-zinc-950 dark:ring-offset-zinc-950 dark:placeholder:text-neutral-400 dark:focus-visible:ring-primary-500 shadow-[0px_0px_1px_1px_#e5e7eb] dark:shadow-[0px_0px_1px_1px_#262626]"
+                  className="flex h-10 w-full rounded-md border border-gray-700 bg-gray-900/50 px-3 py-2 text-sm text-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:border-primary-500 disabled:cursor-not-allowed disabled:opacity-50 transition-all"
                 >
                   <option value="" className="bg-gray-900">{t.contact.chooseService}</option>
                   <option value="design" className="bg-gray-900">Design</option>
@@ -235,8 +242,8 @@ export default function Contact() {
                 </select>
               </LabelInputContainer>
 
-              <LabelInputContainer className="mb-8">
-                <Label htmlFor="message">{t.contact.yourMessage}</Label>
+              <LabelInputContainer>
+                <Label htmlFor="message" className="text-gray-300 mb-2">{t.contact.yourMessage}</Label>
                 <Textarea
                   id="message"
                   name="message"
@@ -246,30 +253,68 @@ export default function Contact() {
                   required
                   rows={6}
                   dir={dir}
+                  className="bg-gray-900/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-primary-500 focus:ring-primary-500/50 transition-all resize-none"
                 />
               </LabelInputContainer>
 
               {submitStatus === 'success' && (
-                <div className="mb-4 p-4 bg-green-500/20 border border-green-500 rounded-md text-green-400 text-sm" dir={dir}>
-                  {submitMessage}
-                </div>
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400 text-sm backdrop-blur-sm" dir={dir}
+                >
+                  <div className="flex items-center gap-2">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    {submitMessage}
+                  </div>
+                </motion.div>
               )}
               
               {submitStatus === 'error' && (
-                <div className="mb-4 p-4 bg-red-500/20 border border-red-500 rounded-md text-red-400 text-sm" dir={dir}>
-                  {submitMessage}
-                </div>
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400 text-sm backdrop-blur-sm" dir={dir}
+                >
+                  <div className="flex items-center gap-2">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                    {submitMessage}
+                  </div>
+                </motion.div>
               )}
 
-              <button
-                className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset] disabled:opacity-50 disabled:cursor-not-allowed"
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="group/btn relative block h-12 w-full rounded-lg bg-gradient-to-r from-primary-500 to-primary-600 font-semibold text-white shadow-lg shadow-primary-500/30 hover:shadow-xl hover:shadow-primary-500/40 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 overflow-hidden"
                 type="submit"
                 disabled={isSubmitting}
                 dir={dir}
               >
-                {isSubmitting ? (t.contact.sending || 'Envoi...') : t.contact.sendMessage} {!isSubmitting && (dir === 'rtl' ? '←' : '→')}
-                <BottomGradient />
-              </button>
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  {isSubmitting ? (
+                    <>
+                      <svg className="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      {t.contact.sending || 'Envoi...'}
+                    </>
+                  ) : (
+                    <>
+                      {t.contact.sendMessage}
+                      <svg className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={dir === 'rtl' ? "M10 19l-7-7m0 0l7-7m-7 7h18" : "M14 5l7 7m0 0l-7 7m7-7H3"} />
+                      </svg>
+                    </>
+                  )}
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-700 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
+              </motion.button>
             </form>
           </motion.div>
         </div>
