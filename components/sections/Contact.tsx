@@ -155,7 +155,7 @@ export default function Contact() {
               {t.contact.title}
             </h2>
             <p className="mt-2 max-w-sm text-sm text-neutral-600 dark:text-neutral-300" dir={dir}>
-              {t.contact.description || "Get in touch with me. I'm always open to discussing new projects and opportunities."}
+              {"Get in touch with me. I'm always open to discussing new projects and opportunities."}
             </p>
 
             <form className="my-8" onSubmit={handleSubmit}>
