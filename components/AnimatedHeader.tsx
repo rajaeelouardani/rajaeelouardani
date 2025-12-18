@@ -41,7 +41,7 @@ export default function AnimatedHeader() {
   const pointsRef = useRef<Point[]>([])
   const targetRef = useRef({ x: 0, y: 0 })
   const animateHeaderRef = useRef(true)
-  const animationFrameRef = useRef<number>()
+  const animationFrameRef = useRef<number | null>(null)
 
   const getDistance = (p1: { x: number; y: number }, p2: { x: number; y: number }) => {
     return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2)
