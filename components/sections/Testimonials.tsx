@@ -12,38 +12,80 @@ const testimonialsData: any[] = []
 const animatedTestimonials = [
   {
     quote:
-      "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-    name: "Sarah Chen",
-    designation: "Product Manager at TechFlow",
-    src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Une jeune étudiante exceptionnelle qui se distingue par son excellence académique, sa passion pour les technologies et son engagement remarquable au sein de son établissement. Dotée d'une solide culture numérique, Rajae maîtrise avec aisance les outils digitaux et s'intéresse profondément aux innovations technologiques. Curieuse, rigoureuse et toujours à la recherche de nouvelles compétences, elle incarne parfaitement le profil d'une future leader dans le domaine tech. Je recommande vivement pour toute opportunité académique ou professionnelle.",
+    name: "Hajar SLIMANI",
+    designation: "Professeur Habilité - HDR . Ecole Nationale de Commerce et de Gestion - Meknès [ENCG]",
+    src: "/testimonial/Hajar SLIMANI.jfif",
   },
   {
     quote:
-      "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-    name: "Michael Rodriguez",
-    designation: "CTO at InnovateSphere",
-    src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "J'ai eu l'occasion de collaborer avec Rajae dans plusieurs évènements, une étudiante exceptionnelle qui incarne parfaitement le leadership féminin. Engagée, dynamique et dotée d'un grand sens des responsabilités, elle sait fédérer, inspirer et agir avec impact. Une vraie force motrice que je recommande sans hésiter !",
+    name: "IMANE BOUHADDOU",
+    designation: "Docteur-Ingénieur Professeur ENSAM-Meknès",
+    src: "/testimonial/IMANE BOUHADDOU.jfif",
   },
   {
     quote:
-      "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-    name: "Emily Watson",
-    designation: "Operations Director at CloudScale",
-    src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Très belle vidéo de présentation chère Rajae Elouardani ! MashAllah. Ton profil, ta posture et ton projet sont très inspirants pour l'ensemble des talents accompagnés par 10000 CODEURS. C'est un honneur pour nous d'avoir l'opportunité de t'accompagner.",
+    name: "Douglas Mbiandou",
+    designation: "Ingénieur INSA Lyon 2000. Je construis un écosystème capable de répondre au besoin des entreprises en compétences numériques",
+    src: "/testimonial/Douglas Mbiandou.jfif",
   },
   {
     quote:
-      "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
-    name: "James Kim",
-    designation: "Engineering Lead at DataPro",
-    src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Un grand merci Rajae Elouardani pour ton engagement et ton dynamisme. Merci pour tout ce que tu as donné à UMI-MUN.",
+    name: "Awatif Beggar",
+    designation: "Professeure de l'enseignement supérieur, Université Moulay Ismail Meknès",
+    src: "/testimonial/Awatif Beggar.jpg",
   },
   {
     quote:
-      "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-    name: "Lisa Thompson",
-    designation: "VP of Technology at FutureNet",
-    src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Merci à toi Rajae Elouardani, ton projet, ta maturité et ton engagement sont à saluer, bravo encore et bon courage pour la suite.",
+    name: "Adam Bennis",
+    designation: "Responsable CGEM Antenne Meknès",
+    src: "/testimonial/Adam bennis.jfif",
+  },
+  {
+    quote:
+      "Fier de toi Rajae Elouardani. Hâte de suivre l'évolution de MedChain.",
+    name: "Samir Messaoudi",
+    designation: "Strategic Cybersecurity Leader | Quantum-Ready Security Architect | ISO 27001 Lead Implementer",
+    src: "/testimonial/Samir Messaoudi.jfif",
+  },
+  {
+    quote:
+      "Une fille exceptionnelle, engagée, ambitieuse, et toujours prête à se surpasser pour que tout soit parfait ! Faire partie de cet événement à tes côtés a été un vrai privilège. Ta rigueur, ta créativité et ton énergie positive sont une véritable source d'inspiration. Tu incarnes le leadership au féminin dans toute sa splendeur Rajae !",
+    name: "Yasmine Allal",
+    designation: "Founder & CEO of AFR'INCLUSIF | Peace and security researcher",
+    src: "/testimonial/Yasmine Allal.jfif",
+  },
+  {
+    quote:
+      "Un Grand Merci pour ce partage à Rajae Elouardani, cela a été un vrai plaisir de faire votre connaissance. Comme je l'ai indiqué lors de mon discours : Vous les jeunes Africains n'êtes pas l'avenir.. Vous êtes Le Présent ! Osez, Innovez et surtout, Croyez en Vous !",
+    name: "Sadife Mehmed Descamps",
+    designation: "Professional Committed to the Transformation & Innovation of the Healthcare Sector | International Expertise",
+    src: "/testimonial/Sadife Mehmed Descamps.jfif",
+  },
+  {
+    quote:
+      "Bravo à vous Rajae, j'ai vu des jeunes très intelligents et un avenir prometteur pour l'Afrique. Continuez SVP nous croyons en vous. Vous avez notre soutien et nos encouragement par des actes, des faits et le soutien comme nous le faisons déjà. All The Best!",
+    name: "Mahamouda Salouhou, PhD",
+    designation: "Director at European Center for Leadership & Entrepreneurship Education, Nelson Mandela Professor of Leadership & Education",
+    src: "/testimonial/Mahamouda Salouhou.jfif",
+  },
+  {
+    quote:
+      "Quel bel exemple tu donne à l'ensemble des étudiants. Ensemble, poursuivons cette dynamique en développant le concept UMI Peer-to-Peer Learning, pour faire de nos campus des espaces de partage, d'entraide et de transmission des savoirs entre étudiants. Mille bravos Rajae Elouardani. Fier d'avoir une étudiante comme toi engagée et dévouée.",
+    name: "Ahmed MOUCHTACHI",
+    designation: "Anciennement Président de l'Université Moulay Ismaïl / Anciennement Directeur de l'ENSAM-Casablanca",
+    src: "/testimonial/Ahmed MOUCHTACHI.jfif",
+  },
+  {
+    quote:
+      "Bravo chère Rajae Elouardani pour ton dynamisme. Continu à dissiper cette énergie positive dans l'entourage estudiantin. Nous sommes fiers de toi et de tous les étudiant(e)s qui croient à l'épanouissement via le parauniversitaire.",
+    name: "Nadia Handaq",
+    designation: "Professeure Chercheure à l'Université Moulay Ismail Experte-évaluatrice Erasmus+",
+    src: "/testimonial/Nadia Handaq.jfif",
   },
 ]
 
