@@ -82,11 +82,11 @@ export const AnimatedTestimonials = ({
             </div>
 
             <div className="flex items-center gap-4">
-              <div className="relative h-14 w-14 overflow-hidden rounded-full border-2 border-primary-500/50">
+              <div className={`relative h-14 w-14 overflow-hidden rounded-full border-2 border-primary-500/50 ${testimonials[active].src.includes('mcovery.webp') ? 'bg-white p-2' : ''}`}>
                 <img
                   src={testimonials[active].src}
                   alt={testimonials[active].name}
-                  className="h-full w-full object-cover"
+                  className={`h-full w-full ${testimonials[active].src.includes('mcovery.webp') ? 'object-contain' : 'object-cover'}`}
                 />
               </div>
               <div>
