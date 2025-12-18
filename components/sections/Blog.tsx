@@ -180,7 +180,9 @@ export default function Blog() {
   
   // Translate category name
   const translateCategory = (category: string) => {
-    return t?.blog?.categories?.[category] || category
+    const categories = t?.blog?.categories;
+    if (!categories) return category;
+    return (categories as Record<string, string>)[category] || category;
   }
 
   // Filter posts by category
