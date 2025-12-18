@@ -8,6 +8,7 @@ import Link from 'next/link'
 import Card3D from '@/components/Card3D'
 import { ThreeDMarquee } from '@/components/ui/3d-marquee'
 import { LayoutTextFlip } from '@/components/ui/layout-text-flip'
+import Testimonials from '@/components/sections/Testimonials'
 import { 
   FaChevronLeft, 
   FaChevronRight, 

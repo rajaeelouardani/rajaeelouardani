@@ -4,6 +4,7 @@ import CreativePulse from '@/components/sections/CreativePulse'
 import Portfolio from '@/components/sections/Portfolio'
 import Blog from '@/components/sections/Blog'
 import { GlobeDemo } from '@/components/GlobeDemo'
+import Testimonials from '@/components/sections/Testimonials'
 
 export default function Home() {
   return (
@@ -22,6 +23,9 @@ export default function Home() {
       
       {/* Portfolio Section - 3 Projects with View More Button */}
       <Portfolio />
+      
+      {/* Testimonials Section */}
+      <Testimonials />
       
       {/* Blog Section - 3 Blog Posts with View More Button */}
       <Blog />

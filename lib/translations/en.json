@@ -1412,7 +1412,64 @@
   "testimonials": {
     "sectionLabel": "TESTIMONIALS",
     "title": "Words from Happy Clients",
-    "subtitle": "Recommendations and testimonials from mentors, professors and satisfied clients"
+    "subtitle": "Recommendations and testimonials from mentors, professors and satisfied clients",
+    "items": [
+      {
+        "quote": "An exceptional young student who stands out for her academic excellence, passion for technology, and remarkable commitment within her institution. With a solid digital culture, Rajae masters digital tools with ease and is deeply interested in technological innovations. Curious, rigorous, and always seeking new skills, she perfectly embodies the profile of a future leader in the tech field. I highly recommend her for any academic or professional opportunity.",
+        "name": "Hajar SLIMANI",
+        "designation": "Associate Professor - HDR . National School of Commerce and Management - Meknes [ENCG]"
+      },
+      {
+        "quote": "I had the opportunity to collaborate with Rajae on several events, an exceptional student who perfectly embodies female leadership. Committed, dynamic, and with a great sense of responsibility, she knows how to unite, inspire, and act with impact. A true driving force that I recommend without hesitation!",
+        "name": "IMANE BOUHADDOU",
+        "designation": "Doctor-Engineer Professor ENSAM-Meknes"
+      },
+      {
+        "quote": "Very nice presentation video dear Rajae Elouardani! MashAllah. Your profile, your posture, and your project are very inspiring for all the talents supported by 10000 CODEURS. It is an honor for us to have the opportunity to accompany you.",
+        "name": "Douglas Mbiandou",
+        "designation": "Engineer INSA Lyon 2000. I build an ecosystem capable of meeting companies' needs for digital skills"
+      },
+      {
+        "quote": "A big thank you Rajae Elouardani for your commitment and dynamism. Thank you for everything you have given to UMI-MUN.",
+        "name": "Awatif Beggar",
+        "designation": "Professor of Higher Education, Moulay Ismail University Meknes"
+      },
+      {
+        "quote": "Thank you Rajae Elouardani, your project, your maturity, and your commitment are to be commended, bravo again and good luck for the future.",
+        "name": "Adam Bennis",
+        "designation": "CGEM Branch Manager Meknes"
+      },
+      {
+        "quote": "Proud of you Rajae Elouardani. Looking forward to following the evolution of MedChain.",
+        "name": "Samir Messaoudi",
+        "designation": "Strategic Cybersecurity Leader | Quantum-Ready Security Architect | ISO 27001 Lead Implementer"
+      },
+      {
+        "quote": "An exceptional girl, committed, ambitious, and always ready to surpass herself so that everything is perfect! Being part of this event by your side was a real privilege. Your rigor, your creativity, and your positive energy are a true source of inspiration. You embody female leadership in all its splendor Rajae!",
+        "name": "Yasmine Allal",
+        "designation": "Founder & CEO of AFR'INCLUSIF | Peace and security researcher"
+      },
+      {
+        "quote": "A big thank you for this sharing to Rajae Elouardani, it was a real pleasure to meet you. As I mentioned in my speech: You young Africans are not the future... You are The Present! Dare, Innovate, and above all, Believe in Yourself!",
+        "name": "Sadife Mehmed Descamps",
+        "designation": "Professional Committed to the Transformation & Innovation of the Healthcare Sector | International Expertise"
+      },
+      {
+        "quote": "Bravo to you Rajae, I have seen very intelligent young people and a promising future for Africa. Please continue, we believe in you. You have our support and encouragement through actions, facts, and support as we already do. All The Best!",
+        "name": "Mahamouda Salouhou, PhD",
+        "designation": "Director at European Center for Leadership & Entrepreneurship Education, Nelson Mandela Professor of Leadership & Education"
+      },
+      {
+        "quote": "What a great example you give to all students. Together, let's continue this dynamic by developing the UMI Peer-to-Peer Learning concept, to make our campuses spaces for sharing, mutual aid, and knowledge transmission between students. A thousand bravos Rajae Elouardani. Proud to have a student like you, committed and dedicated.",
+        "name": "Ahmed MOUCHTACHI",
+        "designation": "Former President of Moulay Ismail University / Former Director of ENSAM-Casablanca"
+      },
+      {
+        "quote": "Bravo dear Rajae Elouardani for your dynamism. Continue to spread this positive energy in the student environment. We are proud of you and all the students who believe in fulfillment through extracurricular activities.",
+        "name": "Nadia Handaq",
+        "designation": "Research Professor at Moulay Ismail University Erasmus+ Expert-Evaluator"
+      }
+    ]
   },
   "news": {
     "sectionLabel": "LATEST NEWS",
