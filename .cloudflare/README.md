@@ -6,18 +6,14 @@ Cloudflare Pages can automatically detect and build Next.js projects. No special
 
 ## Manual Configuration
 
-If you need to use `@cloudflare/next-on-pages`:
+For Next.js 16, Cloudflare Pages automatically detects and builds your Next.js application.
 
-1. Install the adapter:
-```bash
-npm install -D @cloudflare/next-on-pages
-```
+Simply configure in Cloudflare Pages dashboard:
+- Build command: `npm run build`
+- Build output directory: `.next`
+- Node version: `22.x` (or your preferred version)
 
-2. Update your build command in Cloudflare Pages dashboard:
-- Build command: `npm run pages:build`
-- Build output directory: `.vercel/output/static`
-
-3. Or use the automatic Next.js detection in Cloudflare Pages settings.
+**Note**: `@cloudflare/next-on-pages` is not compatible with Next.js 16. Use automatic detection instead.
 
 ## Important Notes
 

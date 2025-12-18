@@ -21,18 +21,16 @@ Le déploiement échoue car Cloudflare Pages utilise `npx wrangler deploy` qui e
    - Ne pas utiliser `npx wrangler deploy`
    - Laisser Cloudflare Pages gérer automatiquement le déploiement
 
-### Option 2 : Utiliser @cloudflare/next-on-pages
+### Option 2 : Export Statique (Alternative)
 
-Si vous voulez utiliser les fonctionnalités Cloudflare Workers :
+Si vous voulez un export statique complet :
 
-1. Installez l'adaptateur :
-```bash
-npm install -D @cloudflare/next-on-pages
-```
-
+1. Modifiez `next.config.js` pour ajouter `output: 'export'`
 2. Dans Cloudflare Pages dashboard :
-   - **Build command**: `npm run pages:build`
-   - **Build output directory**: `.vercel/output/static`
+   - **Build command**: `npm run build`
+   - **Build output directory**: `out`
+
+**Note**: L'export statique désactive certaines fonctionnalités Next.js comme les API routes.
 
 ## 📋 Variables d'Environnement
 
