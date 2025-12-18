@@ -49,10 +49,6 @@ export function World({ globeConfig, data, moroccoPoint, htmlElementsData }: { g
       arcDashLength={globeConfig.arcLength || 0.9}
       arcDashGap={globeConfig.arcLength || 0.9}
       arcDashAnimateTime={globeConfig.arcTime || 1000}
-      globeColor={globeConfig.globeColor || "#062056"}
-      showAtmosphere={globeConfig.showAtmosphere !== false}
-      atmosphereColor={globeConfig.atmosphereColor || "#FFFFFF"}
-      atmosphereAltitude={globeConfig.atmosphereAltitude || 0.1}
       backgroundColor="rgba(0,0,0,0)"
       pointsData={pointsData}
       pointLat={(d: any) => d.lat}
