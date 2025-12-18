@@ -594,6 +594,7 @@ export default function ProjectsPage() {
           </motion.div>
         )}
       </AnimatePresence>
+      <Testimonials />
     </div>
   )
 }
