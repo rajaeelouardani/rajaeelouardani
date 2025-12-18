@@ -21,6 +21,7 @@ const testimonialPhotos: { [key: string]: string } = {
   "Mahamouda Salouhou, PhD": "/testimonial/Mahamouda Salouhou.jfif",
   "Ahmed MOUCHTACHI": "/testimonial/Ahmed MOUCHTACHI.jfif",
   "Nadia Handaq": "/testimonial/Nadia Handaq.jfif",
+  "Mcovery": "/logos/mcovery.webp",
 }
 
 export default function Testimonials() {

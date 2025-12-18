@@ -287,27 +287,32 @@ export default function ProjectsPage() {
                 exit={{ opacity: 0 }}
                 className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
               >
-                {currentDesignImages.map((image, index) => (
-                  <motion.div
-                    key={`${image.projectId}-${index}`}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: index * 0.02 }}
-                    className="relative aspect-square overflow-hidden rounded-lg group cursor-pointer"
-                    onClick={() => setSelectedImage({ url: image.url, index })}
-                  >
-                    <img
-                      src={image.url}
-                      alt={`Design ${index + 1}`}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement
-                        target.src = '/placeholder.jpg'
-                      }}
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
-                  </motion.div>
-                ))}
+                {currentDesignImages.map((image, index) => {
+                  // Check if this is the Mcovery logo (need white background)
+                  const isMcoveryLogo = image.url.includes('mcovery.webp')
+                  
+                  return (
+                    <motion.div
+                      key={`${image.projectId}-${index}`}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: index * 0.02 }}
+                      className={`relative aspect-square overflow-hidden rounded-lg group cursor-pointer ${isMcoveryLogo ? 'bg-white p-4' : ''}`}
+                      onClick={() => setSelectedImage({ url: image.url, index })}
+                    >
+                      <img
+                        src={image.url}
+                        alt={`Design ${index + 1}`}
+                        className={`w-full h-full ${isMcoveryLogo ? 'object-contain' : 'object-cover'} group-hover:scale-110 transition-transform duration-300`}
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement
+                          target.src = '/placeholder.jpg'
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+                    </motion.div>
+                  )
+                })}
               </motion.div>
             </AnimatePresence>
 
