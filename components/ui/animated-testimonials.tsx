@@ -33,7 +33,7 @@ export const AnimatedTestimonials = ({
         setActive((prev) => (prev + 1) % testimonials.length);
         setIsAnimating(false);
       }, 500);
-    }, 5000);
+    }, 10000); // Augmenté de 5s à 10s pour avoir le temps de lire
 
     return () => {
       if (intervalRef.current) {
@@ -53,7 +53,7 @@ export const AnimatedTestimonials = ({
 
   return (
     <div className="relative mx-auto max-w-4xl">
-      <div className="relative h-[400px] overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black p-8 md:p-12">
+      <div className="relative min-h-[500px] md:min-h-[600px] overflow-y-auto rounded-2xl bg-gradient-to-br from-gray-900 to-black p-8 md:p-12">
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
         
         <AnimatePresence mode="wait">
@@ -76,7 +76,7 @@ export const AnimatedTestimonials = ({
                 </svg>
               </div>
               
-              <p className="text-xl md:text-2xl font-medium text-white mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl lg:text-2xl font-medium text-white mb-8 leading-relaxed">
                 {testimonials[active].quote}
               </p>
             </div>
@@ -90,10 +90,10 @@ export const AnimatedTestimonials = ({
                 />
               </div>
               <div>
-                <div className="text-white font-semibold text-lg">
+                <div className="text-white font-semibold text-base md:text-lg">
                   {testimonials[active].name}
                 </div>
-                <div className="text-gray-400 text-sm">
+                <div className="text-gray-400 text-xs md:text-sm">
                   {testimonials[active].designation}
                 </div>
               </div>
