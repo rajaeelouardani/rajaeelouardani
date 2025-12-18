@@ -14,7 +14,7 @@ interface Node {
 export default function AnimatedBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const nodesRef = useRef<Node[]>([])
-  const animationFrameRef = useRef<number>()
+  const animationFrameRef = useRef<number | null>(null)
   const mouseRef = useRef({ x: 0, y: 0 })
 
   useEffect(() => {
