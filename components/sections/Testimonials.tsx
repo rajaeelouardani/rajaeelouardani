@@ -8,31 +8,31 @@ import { LayoutTextFlip } from '@/components/ui/layout-text-flip'
 
 const testimonialsData: any[] = []
 
-// Photo mapping for testimonials
-const testimonialPhotos: { [key: string]: string } = {
-  "Hajar SLIMANI": "/testimonial/Hajar SLIMANI.jfif",
-  "IMANE BOUHADDOU": "/testimonial/IMANE BOUHADDOU.jfif",
-  "Douglas Mbiandou": "/testimonial/Douglas Mbiandou.jfif",
-  "Awatif Beggar": "/testimonial/Awatif Beggar.jpg",
-  "Adam Bennis": "/testimonial/Adam bennis.jfif",
-  "Samir Messaoudi": "/testimonial/Samir Messaoudi.jfif",
-  "Yasmine Allal": "/testimonial/Yasmine Allal.jfif",
-  "Sadife Mehmed Descamps": "/testimonial/Sadife Mehmed Descamps.jfif",
-  "Mahamouda Salouhou, PhD": "/testimonial/Mahamouda Salouhou.jfif",
-  "Ahmed MOUCHTACHI": "/testimonial/Ahmed MOUCHTACHI.jfif",
-  "Nadia Handaq": "/testimonial/Nadia Handaq.jfif",
-  "Mcovery": "/logos/mcovery.webp",
-}
+// Photo mapping for testimonials - using index to match photos across all languages
+const testimonialPhotos: string[] = [
+  "/testimonial/Hajar SLIMANI.jfif",
+  "/testimonial/IMANE BOUHADDOU.jfif",
+  "/testimonial/Douglas Mbiandou.jfif",
+  "/testimonial/Awatif Beggar.jpg",
+  "/testimonial/Adam bennis.jfif",
+  "/testimonial/Samir Messaoudi.jfif",
+  "/testimonial/Yasmine Allal.jfif",
+  "/testimonial/Sadife Mehmed Descamps.jfif",
+  "/testimonial/Mahamouda Salouhou.jfif",
+  "/testimonial/Ahmed MOUCHTACHI.jfif",
+  "/testimonial/Nadia Handaq.jfif",
+  "/logos/mcovery.webp",
+]
 
 export default function Testimonials() {
   const { t, dir } = useLanguage()
   
   // Get testimonials from translations
-  const testimonials = (t.testimonials?.items || []).map((item: any) => ({
+  const testimonials = (t.testimonials?.items || []).map((item: any, index: number) => ({
     quote: item.quote,
     name: item.name,
     designation: item.designation,
-    src: testimonialPhotos[item.name] || "/testimonial/default.jpg",
+    src: testimonialPhotos[index] || "/testimonial/default.jpg",
   }))
 
   return (
