@@ -678,6 +678,22 @@ const webDevelopmentProjects: Project[] = [
     link: 'https://www.mcovery.org/',
     associated: 'Mcovery - Rabat, Maroc (Remote)'
   },
+  // Mcovery Logo for Design section
+  {
+    id: 2001,
+    title: 'Mcovery Logo',
+    description: 'Logo design for Mcovery - Audio-guided tours platform.',
+    domain: 'design-only',
+    thumbnail: '/logos/mcovery.webp',
+    images: [
+      '/logos/mcovery.webp'
+    ],
+    logo: { url: '/logos/mcovery.webp', description: 'Mcovery logo' },
+    designCategory: 'logo',
+    category: 'Design - Logo',
+    period: '2025',
+    technologies: ['Logo Design', 'Branding']
+  },
   {
     id: 11,
     title: 'MWT – Moroccan Walking Tour',
