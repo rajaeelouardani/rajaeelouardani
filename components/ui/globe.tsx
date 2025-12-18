@@ -68,13 +68,13 @@ export function World({ globeConfig, data, moroccoPoint, htmlElementsData }: { g
         }
         return null;
       }}
-      onGlobeReady={(globe: any) => {
+      onGlobeReady={() => {
         // Ensure globe is fully visible and centered
-        if (globe) {
-          globe.controls().minDistance = 150;
-          globe.controls().maxDistance = 500;
-          globe.controls().enableZoom = true;
-          globe.controls().enableRotate = true;
+        if (globeRef.current) {
+          globeRef.current.controls().minDistance = 150;
+          globeRef.current.controls().maxDistance = 500;
+          globeRef.current.controls().enableZoom = true;
+          globeRef.current.controls().enableRotate = true;
         }
       }}
     />
