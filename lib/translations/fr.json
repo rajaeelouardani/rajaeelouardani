@@ -1110,6 +1110,11 @@
         "institution": "Lycée Moulay Ismail Meknes",
         "degree": "Baccalauréat Sciences Mathématiques B (SMB)",
         "description": "Baccalauréat Sciences Mathématiques B. Formation en mathématiques, physique, chimie et sciences de la vie et de la terre. Activités : Club Art et Culture."
+      },
+      {
+        "institution": "TBH – Tech Business Hub",
+        "degree": "Formations en Entrepreneuriat, Gestion de Projet et Innovation",
+        "description": "Formations continues orientées entrepreneuriat, gestion de projet et innovation au centre TBH – Tech Business Hub de l'Université Moulay Ismail. Formations sur : Entrepreneuriat & création de startups, Project Management, Business Model & stratégie, Innovation et mindset entrepreneurial. Participation à plusieurs programmes, compétitions et événements nationaux et internationaux (Company Program INJAZ, DeepTech Incuboster, Women Summit, compétitions Al Akhawayn University, etc.)."
       }
     ]
   },
@@ -1313,6 +1318,34 @@
         "issuer": "IBM",
         "date": "2022",
         "description": "Formation en algorithmes et pensée computationnelle"
+      },
+      {
+        "id": 28,
+        "title": "Formations TBH – Entrepreneuriat & Innovation",
+        "issuer": "TBH – Tech Business Hub",
+        "date": "2025",
+        "description": "Formations continues en entrepreneuriat, gestion de projet et innovation. Entrepreneuriat & création de startups, Project Management, Business Model & stratégie, Innovation et mindset entrepreneurial."
+      },
+      {
+        "id": 29,
+        "title": "Programme DeepTech – Incuboster",
+        "issuer": "INCUBOOSTER",
+        "date": "2025",
+        "description": "Participation au programme DeepTech – Incuboster dans le cadre des formations TBH."
+      },
+      {
+        "id": 30,
+        "title": "Women Summit",
+        "issuer": "TBH – Tech Business Hub",
+        "date": "2025",
+        "description": "Participation au Women Summit organisé dans le cadre des activités TBH."
+      },
+      {
+        "id": 31,
+        "title": "Compétitions et Programmes Al Akhawayn University",
+        "issuer": "Al Akhawayn University",
+        "date": "2025",
+        "description": "Participation à plusieurs compétitions et programmes en partenariat avec Al Akhawayn University dans le cadre des activités TBH."
       }
     ]
   },

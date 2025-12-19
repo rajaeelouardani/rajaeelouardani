@@ -37,6 +37,9 @@ const getOrgLogo = (company: string) => {
     'ARMA Association': '/logos/arma assiciation .png', // Association des Randonneurs Marocains pour les Aventures
     'جمعية مشاة مغرب المغامرات': '/logos/arma assiciation .png', // ARMA Association (Arabic)
     'DIGITAGUID ORIENTATION': '/logos/DIGITAGUIDE.png',
+    'TBH – Tech Business Hub': '/logos/tbh-logo.png',
+    'UMI – Tech Business Hub': '/logos/tbh-logo.png',
+    'Tech Business Hub': '/logos/tbh-logo.png',
   }
 
   const localLogo = localLogoMap[company]
@@ -80,6 +83,9 @@ const getOrgLogoFallback = (company: string) => {
     'ARMA Association': 'https://cdn.simpleicons.org/microsoft/0078D4',
     'جمعية مشاة مغرب المغامرات': 'https://cdn.simpleicons.org/microsoft/0078D4',
     'DIGITAGUID ORIENTATION': 'https://cdn.simpleicons.org/microsoft/0078D4',
+    'TBH – Tech Business Hub': 'https://cdn.simpleicons.org/microsoft/0078D4',
+    'UMI – Tech Business Hub': 'https://cdn.simpleicons.org/microsoft/0078D4',
+    'Tech Business Hub': 'https://cdn.simpleicons.org/microsoft/0078D4',
   }
   
   return fallbackLogos[company] || 'https://cdn.simpleicons.org/microsoft/0078D4'
@@ -248,6 +254,13 @@ const getEducations = (t: any) => [
     institution: 'Lycée Moulay Ismail Meknes',
     degree: t.experience.educations[7].degree,
     description: t.experience.educations[7].description,
+    color: 'text-primary-500',
+  },
+  {
+    period: '2025',
+    institution: t.experience.educations[8]?.institution || 'TBH – Tech Business Hub',
+    degree: t.experience.educations[8]?.degree || 'Formations en Entrepreneuriat, Gestion de Projet et Innovation',
+    description: t.experience.educations[8]?.description || 'Formations continues orientées entrepreneuriat, gestion de projet et innovation. Participation à plusieurs programmes, compétitions et événements nationaux et internationaux (Company Program INJAZ, DeepTech Incuboster, Women Summit, etc.).',
     color: 'text-primary-500',
   },
 ]
