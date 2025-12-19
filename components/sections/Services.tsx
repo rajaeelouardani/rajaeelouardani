@@ -90,12 +90,12 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-green-400 text-sm uppercase mb-2" dir={dir}>{t.nav.services}</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-mono" dir={dir}>
+          <p className="text-green-400 text-sm uppercase mb-2" dir={dir}>{t?.services?.sectionLabel || 'SERVICES'}</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-developer" dir={dir}>
             <LayoutTextFlip
               text={t?.services?.my || 'My '}
               words={t?.services?.flipWords || ["Services", "Expertise", "Skills", "Offerings"]}
-              className="text-4xl md:text-5xl"
+              className="text-4xl md:text-5xl font-developer"
             />
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto" dir={dir}>

@@ -890,6 +890,7 @@
     }
   },
   "services": {
+    "sectionLabel": "SERVICES",
     "title": "Services de Développement Adaptés à Vos Besoins",
     "subtitle": "Solutions de développement web complètes, de la conception à la mise en production. Expertise en technologies modernes pour créer des applications performantes et évolutives.",
     "globeTitle": "Travail International depuis le Maroc",

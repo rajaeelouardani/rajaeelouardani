@@ -890,6 +890,7 @@
     }
   },
   "services": {
+    "sectionLabel": "SERVICES",
     "title": "Development Services Tailored to Your Needs",
     "subtitle": "Complete web development solutions, from design to production. Expertise in modern technologies to create performant and scalable applications.",
     "globeTitle": "Working Internationally from Morocco",

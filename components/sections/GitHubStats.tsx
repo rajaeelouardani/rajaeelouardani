@@ -179,7 +179,7 @@ export default function GitHubStats() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
           <p className="text-green-400 text-sm uppercase mb-2" dir={dir}>{t?.githubStats?.sectionLabel || 'GitHub'}</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-mono" dir={dir}>
