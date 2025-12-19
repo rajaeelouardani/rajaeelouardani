@@ -1453,6 +1453,7 @@
     "sectionLabel": "TESTIMONIALS",
     "title": "Words from Happy Clients",
     "subtitle": "Recommendations and testimonials from mentors, professors and satisfied clients",
+    "flipWords": ["Words from Happy Clients", "Testimonials", "Client Reviews", "Recommendations"],
     "items": [
       {
         "quote": "An exceptional young student who stands out for her academic excellence, passion for technology, and remarkable commitment within her institution. With a solid digital culture, Rajae masters digital tools with ease and is deeply interested in technological innovations. Curious, rigorous, and always seeking new skills, she perfectly embodies the profile of a future leader in the tech field. I highly recommend her for any academic or professional opportunity.",
