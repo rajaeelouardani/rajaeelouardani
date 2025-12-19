@@ -84,8 +84,9 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <p className="text-green-400 text-sm uppercase mb-2" dir={dir}>{t.nav.contact}</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-tech" dir={dir}>
-            {t.contact.title}
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-tech text-center" dir={dir}>
+            <span className="text-white">{t.contact.title.substring(0, Math.ceil(t.contact.title.length / 2))}</span>
+            <span className="text-primary-500">{t.contact.title.substring(Math.ceil(t.contact.title.length / 2))}</span>
           </h2>
         </motion.div>
 

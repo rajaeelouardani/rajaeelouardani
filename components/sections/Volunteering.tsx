@@ -70,8 +70,9 @@ export default function Volunteering() {
           className="text-center mb-16"
         >
           <p className="text-green-400 text-sm uppercase mb-2" dir={dir}>{t.volunteering.sectionLabel}</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-tech" dir={dir}>
-            {t.volunteering.title}
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-tech text-center" dir={dir}>
+            <span className="text-white">{t.volunteering.title.substring(0, Math.ceil(t.volunteering.title.length / 2))}</span>
+            <span className="text-primary-500">{t.volunteering.title.substring(Math.ceil(t.volunteering.title.length / 2))}</span>
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto" dir={dir}>
             {t.volunteering.subtitle}

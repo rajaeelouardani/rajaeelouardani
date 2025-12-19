@@ -135,11 +135,12 @@ export default function Portfolio() {
           className="text-center mb-16"
         >
           <p className="text-green-400 text-sm uppercase mb-2" dir={dir}>{t.nav.projects}</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-500 mb-4 font-tech" dir={dir}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-tech text-center" dir={dir}>
+            <span className="text-white">{t.portfolio.my}</span>
             <LayoutTextFlip
-              text={t.portfolio.my}
+              text=""
               words={t.portfolio.flipWords}
-              className="text-4xl md:text-5xl text-blue-500"
+              className="text-4xl md:text-5xl"
             />
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto" dir={dir}>

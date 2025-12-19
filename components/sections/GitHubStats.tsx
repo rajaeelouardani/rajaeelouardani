@@ -182,7 +182,7 @@ export default function GitHubStats() {
           className="text-center mb-16"
         >
           <p className="text-green-400 text-sm uppercase mb-2" dir={dir}>{t?.githubStats?.sectionLabel || 'GitHub'}</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-tech" dir={dir}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-tech text-center" dir={dir}>
             <LayoutTextFlip
               text=""
               words={t?.githubStats?.flipWords || ["GitHub Activity", "Code Contributions", "Development Stats", "GitHub Profile"]}

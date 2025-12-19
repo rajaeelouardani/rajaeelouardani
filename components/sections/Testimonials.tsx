@@ -47,7 +47,7 @@ export default function Testimonials() {
           className="text-center mb-16"
         >
           <p className="text-green-400 text-sm uppercase mb-2">{t.testimonials.sectionLabel}</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-tech">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-tech text-center">
             <LayoutTextFlip
               text=""
               words={t.testimonials?.flipWords || ["Words from Happy Clients", "Testimonials", "Client Reviews", "Recommendations"]}

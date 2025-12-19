@@ -353,8 +353,9 @@ export default function Certifications() {
           className="text-center mb-16"
         >
           <p className="text-green-400 text-sm uppercase mb-2" dir={dir}>{t?.certifications?.sectionLabel}</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-tech" dir={dir}>
-            {t?.certifications?.title || 'Certificats'}
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-tech text-center" dir={dir}>
+            <span className="text-white">{(t?.certifications?.title || 'Certificats').substring(0, Math.ceil((t?.certifications?.title || 'Certificats').length / 2))}</span>
+            <span className="text-primary-500">{(t?.certifications?.title || 'Certificats').substring(Math.ceil((t?.certifications?.title || 'Certificats').length / 2))}</span>
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto" dir={dir}>
             {t?.certifications?.subtitle || 'Certifications et reconnaissances obtenues tout au long de mon parcours professionnel et académique.'}

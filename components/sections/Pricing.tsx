@@ -210,8 +210,9 @@ export default function Pricing() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-tech" dir={dir}>
-            {t?.pricing?.title || 'Flexible Plan'}
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-tech text-center" dir={dir}>
+            <span className="text-white">{(t?.pricing?.title || 'Flexible Plan').substring(0, Math.ceil((t?.pricing?.title || 'Flexible Plan').length / 2))}</span>
+            <span className="text-primary-500">{(t?.pricing?.title || 'Flexible Plan').substring(Math.ceil((t?.pricing?.title || 'Flexible Plan').length / 2))}</span>
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto" dir={dir}>
             {t?.pricing?.subtitle || 'Comprehensive strategies, the realm of consulting caters to a spectrum of needs with its array of versatile offerings.'}

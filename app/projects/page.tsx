@@ -162,9 +162,10 @@ export default function ProjectsPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 font-tech" dir={dir}>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-tech text-center" dir={dir}>
+            <span className="text-white">{t?.portfolio?.my || 'Mes '}</span>
             <LayoutTextFlip
-              text={t?.portfolio?.my || 'Mes '}
+              text=""
               words={t?.portfolio?.flipWords || ["Projets", "Portfolio", "Travaux", "Créations"]}
               className="text-4xl md:text-5xl"
             />

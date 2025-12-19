@@ -33,8 +33,9 @@ export default function News() {
             className="flex-1"
           >
             <p className="text-green-400 text-sm uppercase mb-2">{t.news.sectionLabel}</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-tech">
-              Explore My Design Thinking Process
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 font-tech text-center">
+              <span className="text-white">Explore My Design </span>
+              <span className="text-primary-500">Thinking Process</span>
             </h2>
           </motion.div>
           <motion.div

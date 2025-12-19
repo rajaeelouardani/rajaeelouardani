@@ -204,14 +204,15 @@ export default function Blog() {
           className="text-center mb-16"
         >
           <p className="text-blue-400 text-sm uppercase mb-2" dir={dir}>{t.blog.sectionLabel}</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-tech" dir={dir}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-tech text-center" dir={dir}>
+            <span className="text-white">Technology </span>
             <LayoutTextFlip
-              text="Technology "
+              text=""
               words={t.blog.flipWords}
               className="text-4xl md:text-5xl"
             />
             {' '}
-            <span className="text-blue-500" dir={dir}>{t.blog.andEducationalResources}</span>
+            <span className="text-primary-500" dir={dir}>{t.blog.andEducationalResources}</span>
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto" dir={dir}>
             {t.blog.subtitle}

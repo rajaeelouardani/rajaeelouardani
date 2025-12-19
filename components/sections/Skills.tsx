@@ -214,11 +214,11 @@ export default function Skills() {
           >
             {t?.skills?.visitSkills || 'Visit My Skills'}
           </motion.button>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-tech" dir={dir}>
-            <span>{t?.skills?.my || 'My '}</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-tech text-center" dir={dir}>
+            <span className="text-white">{t?.skills?.my || 'My '}</span>
             <span className="text-primary-500">{t?.skills?.skillsText || 'Skills'}</span>
-            <span className="text-green-400">{t?.skills?.andExpertise || ' & '}</span>
-            <span className="text-green-400">{t?.skills?.expertiseText || 'Expertise'}</span>
+            <span className="text-white">{t?.skills?.andExpertise || ' & '}</span>
+            <span className="text-primary-500">{t?.skills?.expertiseText || 'Expertise'}</span>
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto" dir={dir}>
             {t?.skills?.subtitle || 'Explore the tools and skills I use daily.'}
