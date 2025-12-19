@@ -337,6 +337,15 @@ export default function ProjectsPage() {
         ) : activeDomain === 'complete' ? (
           /* Complete projects with 3D marquee background */
           <div className="relative mx-auto my-10 flex h-screen w-full max-w-7xl flex-col items-center justify-center overflow-hidden rounded-3xl">
+            {/* 3D Marquee Background */}
+            <ThreeDMarquee
+              className="pointer-events-none absolute inset-0 h-full w-full z-0"
+              images={webProjectCoverImages}
+            />
+
+            {/* Overlay */}
+            <div className="absolute inset-0 z-10 h-full w-full bg-black/80 dark:bg-black/40" />
+
             {/* Title Section */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -350,15 +359,6 @@ export default function ProjectsPage() {
                 {t?.portfolio?.subtitle || 'Des projets qui combinent créativité et technologie pour créer des solutions innovantes qui inspirent et transforment.'}
               </p>
             </motion.div>
-
-            {/* Overlay */}
-            <div className="absolute inset-0 z-10 h-full w-full bg-black/80 dark:bg-black/40" />
-
-            {/* 3D Marquee Background */}
-            <ThreeDMarquee
-              className="pointer-events-none absolute inset-0 h-full w-full"
-              images={webProjectCoverImages}
-            />
           </div>
         ) : (
           /* Other domains: Projects with cards */

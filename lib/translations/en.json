@@ -1414,6 +1414,7 @@
     "sectionLabel": "GITHUB",
     "title": "GitHub Activity",
     "subtitle": "My GitHub statistics and contributions",
+    "flipWords": ["GitHub Activity", "Code Contributions", "Development Stats", "GitHub Profile"],
     "stats": "GitHub Statistics",
     "topLanguages": "Most Used Languages",
     "activityGraph": "Activity Graph",

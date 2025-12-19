@@ -115,6 +115,14 @@ export default function Header() {
                       }`}
                     >
                       {link.name}
+                      {pathname === link.href && (
+                        <motion.div
+                          layoutId="navbar-indicator"
+                          className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-500"
+                          initial={false}
+                          transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                        />
+                      )}
                     </Link>
                     {hoveredLink === link.href && navSubtitles[link.href] && (
                       <motion.div

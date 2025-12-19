@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Card3D from '@/components/Card3D'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { useTheme } from '@/contexts/ThemeContext'
 import { HoverBorderGradient } from '@/components/ui/hover-border-gradient'
 
 const volunteering = [
@@ -48,6 +49,16 @@ const volunteering = [
 
 export default function Volunteering() {
   const { t, dir } = useLanguage()
+  const { primaryColor } = useTheme()
+  
+  // Convert hex color to rgba for shadow
+  const hexToRgba = (hex: string, alpha: number) => {
+    const r = parseInt(hex.slice(1, 3), 16)
+    const g = parseInt(hex.slice(3, 5), 16)
+    const b = parseInt(hex.slice(5, 7), 16)
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`
+  }
+  
   return (
     <section id="volunteering" dir={dir} className="py-20 bg-black/80 relative overflow-hidden z-10">
       <div className="container mx-auto px-4">
@@ -68,23 +79,34 @@ export default function Volunteering() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {volunteering.slice(0, 4).map((item, index) => (
+          {volunteering.slice(0, 4).map((item, index) => {
+            const translatedItem = t?.volunteering?.items?.[index]
+            return (
             <Card3D key={item.id} intensity={8}>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="glass-card p-6 rounded-lg transition-all duration-300 cursor-pointer group card-3d transform-3d h-full shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:shadow-[0_0_30px_rgba(59,130,246,0.7)]"
+                className="glass-card p-6 rounded-lg transition-all duration-300 cursor-pointer group card-3d transform-3d h-full"
+                style={{
+                  boxShadow: `0 0 20px ${hexToRgba(primaryColor, 0.5)}, 0 0 40px ${hexToRgba(primaryColor, 0.2)}`,
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = `0 0 30px ${hexToRgba(primaryColor, 0.7)}, 0 0 60px ${hexToRgba(primaryColor, 0.3)}`
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = `0 0 20px ${hexToRgba(primaryColor, 0.5)}, 0 0 40px ${hexToRgba(primaryColor, 0.2)}`
+                }}
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
                     <h3 className={`text-xl font-bold mb-1 ${item.color} group-hover:text-primary-500 transition-colors`}>
-                      {item.organization}
+                      {translatedItem?.organization || item.organization}
                     </h3>
-                    <p className="text-white font-semibold mb-2">{item.role}</p>
+                    <p className="text-white font-semibold mb-2">{translatedItem?.role || item.role}</p>
                     <span className="text-xs text-gray-500 bg-gray-800 px-2 py-1 rounded border border-gray-700">
-                      {item.category}
+                      {translatedItem?.category || item.category}
                     </span>
                   </div>
                   <div className="ml-4">
@@ -105,14 +127,15 @@ export default function Volunteering() {
                     )}
                   </div>
                 </div>
-                <p className="text-gray-400 text-sm mb-4">{item.description}</p>
+                <p className="text-gray-400 text-sm mb-4">{translatedItem?.description || item.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-gray-500">{item.period}</span>
+                  <span className="text-xs text-gray-500">{translatedItem?.period || item.period}</span>
                 </div>
                 <div className="absolute inset-0 rounded-lg shine-effect opacity-0 group-hover:opacity-20 transition-opacity"></div>
               </motion.div>
             </Card3D>
-          ))}
+            )
+          })}
         </div>
 
         {/* View More Button */}

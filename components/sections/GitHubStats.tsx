@@ -185,7 +185,7 @@ export default function GitHubStats() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-tech" dir={dir}>
             <LayoutTextFlip
               text=""
-              words={["GitHub Activity", "Code Contributions", "Development Stats", "GitHub Profile"]}
+              words={t?.githubStats?.flipWords || ["GitHub Activity", "Code Contributions", "Development Stats", "GitHub Profile"]}
               className="text-4xl md:text-5xl"
             />
           </h2>
