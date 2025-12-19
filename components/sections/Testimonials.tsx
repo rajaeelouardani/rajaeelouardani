@@ -22,7 +22,7 @@ const testimonialPhotos: string[] = [
   "/testimonial/Ahmed MOUCHTACHI.jfif",
   "/testimonial/Nadia Handaq.jfif",
   "/logos/mcovery.webp",
-  "/testimonial/Kenza Abbouti.jpg", // Kenza Abbouti
+  "/testimonial/default.jpg", // Kenza Abbouti - TODO: Add photo
 ]
 
 export default function Testimonials() {
