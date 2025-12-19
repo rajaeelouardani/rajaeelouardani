@@ -38,7 +38,10 @@ const nextConfig = {
         hostname: 'github-readme-activity-graph.vercel.app',
       },
     ],
-    minimumCacheTTL: 60,
+    minimumCacheTTL: 31536000, // 1 year for static images
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
   // Compression

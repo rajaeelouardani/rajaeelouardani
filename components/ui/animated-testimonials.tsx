@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 type Testimonial = {
@@ -83,10 +84,14 @@ export const AnimatedTestimonials = ({
 
             <div className="flex items-center gap-4">
               <div className={`relative h-14 w-14 overflow-hidden rounded-full border-2 border-primary-500/50 ${testimonials[active].src.includes('mcovery.webp') ? 'bg-white p-2' : ''}`}>
-                <img
+                <Image
                   src={testimonials[active].src}
                   alt={testimonials[active].name}
-                  className={`h-full w-full ${testimonials[active].src.includes('mcovery.webp') ? 'object-contain' : 'object-cover'}`}
+                  fill
+                  className={testimonials[active].src.includes('mcovery.webp') ? 'object-contain' : 'object-cover'}
+                  sizes="56px"
+                  loading="lazy"
+                  quality={85}
                 />
               </div>
               <div>

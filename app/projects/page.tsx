@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 import { projects, ProjectDomain, getProjectsByDomain, getYouTubeEmbedUrl, webDevelopmentProjects } from '@/lib/projectsData'
 import { useLanguage } from '@/contexts/LanguageContext'
 import Link from 'next/link'
@@ -161,7 +162,7 @@ export default function ProjectsPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" dir={dir}>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 font-mono" dir={dir}>
             <LayoutTextFlip
               text={t?.portfolio?.my || 'Mes '}
               words={t?.portfolio?.flipWords || ["Projets", "Portfolio", "Travaux", "Créations"]}
@@ -228,10 +229,14 @@ export default function ProjectsPage() {
                     className="relative aspect-square overflow-hidden rounded-lg group cursor-pointer"
                     onClick={() => setSelectedImage({ url: image.url, index })}
                   >
-                    <img
+                    <Image
                       src={image.url}
                       alt={`Photography ${index + 1}`}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-300"
+                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                      loading="lazy"
+                      quality={80}
                       onError={(e) => {
                         const target = e.target as HTMLImageElement
                         target.src = '/placeholder.jpg'
@@ -300,10 +305,14 @@ export default function ProjectsPage() {
                       className={`relative aspect-square overflow-hidden rounded-lg group cursor-pointer ${isMcoveryLogo ? 'bg-white p-4' : ''}`}
                       onClick={() => setSelectedImage({ url: image.url, index })}
                     >
-                      <img
+                      <Image
                         src={image.url}
                         alt={`Design ${index + 1}`}
-                        className={`w-full h-full ${isMcoveryLogo ? 'object-contain' : 'object-cover'} group-hover:scale-110 transition-transform duration-300`}
+                        fill
+                        className={`${isMcoveryLogo ? 'object-contain' : 'object-cover'} group-hover:scale-110 transition-transform duration-300`}
+                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                        loading="lazy"
+                        quality={80}
                         onError={(e) => {
                           const target = e.target as HTMLImageElement
                           target.src = '/placeholder.jpg'
@@ -384,10 +393,14 @@ export default function ProjectsPage() {
                         }}
                       >
                         <div className={`relative h-64 overflow-hidden ${project.id === 10 || project.id === 11 || project.id === 16 ? 'bg-white' : ''}`}>
-                          <img
+                          <Image
                             src={project.thumbnail}
                             alt={project.title}
-                            className={`w-full h-full ${project.id === 10 || project.id === 11 || project.id === 16 ? 'object-contain p-4' : 'object-cover'} group-hover:scale-110 transition-transform duration-300`}
+                            fill
+                            className={`${project.id === 10 || project.id === 11 || project.id === 16 ? 'object-contain p-4' : 'object-cover'} group-hover:scale-110 transition-transform duration-300`}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            loading="lazy"
+                            quality={80}
                             onError={(e) => {
                               const target = e.target as HTMLImageElement
                               target.src = '/placeholder.jpg'
@@ -433,10 +446,14 @@ export default function ProjectsPage() {
                           className="glass-card rounded-lg overflow-hidden cursor-pointer group h-full flex flex-col"
                         >
                           <div className={`relative h-64 overflow-hidden ${project.id === 10 || project.id === 11 || project.id === 16 ? 'bg-white' : ''}`}>
-                            <img
+                            <Image
                               src={project.thumbnail}
                               alt={project.title}
-                              className={`w-full h-full ${project.id === 10 || project.id === 11 || project.id === 16 ? 'object-contain p-4' : 'object-cover'} group-hover:scale-110 transition-transform duration-300`}
+                              fill
+                              className={`${project.id === 10 || project.id === 11 || project.id === 16 ? 'object-contain p-4' : 'object-cover'} group-hover:scale-110 transition-transform duration-300`}
+                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                              loading="lazy"
+                              quality={80}
                               onError={(e) => {
                                 const target = e.target as HTMLImageElement
                                 target.src = '/placeholder.jpg'
@@ -555,15 +572,21 @@ export default function ProjectsPage() {
               
               {/* Image */}
               <div className={`relative w-full h-full flex items-center justify-center ${selectedImage.url.includes('mcovery.webp') ? 'bg-white p-8' : ''}`}>
-                <img
-                  src={selectedImage.url}
-                  alt="Design preview"
-                  className="max-w-full max-h-[90vh] object-contain"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement
-                    target.src = '/placeholder.jpg'
-                  }}
-                />
+                <div className="relative w-full h-full max-h-[90vh]">
+                  <Image
+                    src={selectedImage.url}
+                    alt="Design preview"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 80vw"
+                    quality={90}
+                    priority
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement
+                      target.src = '/placeholder.jpg'
+                    }}
+                  />
+                </div>
               </div>
 
               {/* Navigation buttons */}
