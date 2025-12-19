@@ -51,15 +51,15 @@ export default function Hero() {
                   className="text-5xl md:text-6xl lg:text-7xl font-tech"
                 />
               </motion.h1>
-              <motion.h2
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-3xl md:text-4xl font-semibold font-tech text-center"
               >
-                <span className="text-white">{t.hero.subtitle.substring(0, Math.ceil(t.hero.subtitle.length / 2))}</span>
-                <span className="text-primary-500">{t.hero.subtitle.substring(Math.ceil(t.hero.subtitle.length / 2))}</span>
-              </motion.h2>
+                <span className="text-white">{t.hero.subtitle?.substring(0, Math.ceil((t.hero.subtitle?.length || 0) / 2)) || ''}</span>
+                <span className="text-primary-500">{t.hero.subtitle?.substring(Math.ceil((t.hero.subtitle?.length || 0) / 2)) || ''}</span>
+              </motion.p>
                 <motion.span
                   animate={{ 
                     opacity: [1, 0.8, 1],
