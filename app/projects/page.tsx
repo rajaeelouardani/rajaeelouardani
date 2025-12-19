@@ -338,10 +338,12 @@ export default function ProjectsPage() {
           /* Complete projects with 3D marquee background */
           <div className="relative mx-auto my-10 flex h-screen w-full max-w-7xl flex-col items-center justify-center overflow-hidden rounded-3xl">
             {/* 3D Marquee Background */}
-            <ThreeDMarquee
-              className="pointer-events-none absolute inset-0 h-full w-full z-0"
-              images={webProjectCoverImages}
-            />
+            <div className="absolute inset-0 z-0 w-full h-full">
+              <ThreeDMarquee
+                className="pointer-events-none w-full h-full"
+                images={webProjectCoverImages}
+              />
+            </div>
 
             {/* Overlay */}
             <div className="absolute inset-0 z-10 h-full w-full bg-black/80 dark:bg-black/40" />

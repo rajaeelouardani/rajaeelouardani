@@ -50,7 +50,7 @@ export default function Testimonials() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-tech">
             <LayoutTextFlip
               text=""
-              words={["Words from Happy Clients", "Testimonials", "Client Reviews", "Recommendations"]}
+              words={t.testimonials?.flipWords || ["Words from Happy Clients", "Testimonials", "Client Reviews", "Recommendations"]}
               className="text-4xl md:text-5xl"
             />
           </h2>
