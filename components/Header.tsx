@@ -15,9 +15,11 @@ interface NavLink {
 
 export default function Header() {
   const { t, dir } = useLanguage()
+  const pathname = usePathname()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null)
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +37,15 @@ export default function Header() {
     { name: t.nav.skills, href: '/skills' },
     { name: t.nav.blog, href: '/blog' },
   ]
+
+  const navSubtitles: Record<string, string> = {
+    '/': t.hero?.subtitle || 'Création de Solutions Numériques',
+    '/about': t.hero?.description || 'Découvrez mon parcours et mes compétences',
+    '/services': t.services?.subtitle || 'Services numériques et créatifs',
+    '/projects': t.portfolio?.subtitle || 'Projets créatifs et technologiques',
+    '/skills': t.skills?.subtitle || 'Outils et technologies que j\'utilise',
+    '/blog': t.blog?.subtitle || 'Articles et réflexions sur le développement',
+  }
 
   return (
     <header
@@ -91,12 +102,31 @@ export default function Header() {
                     </AnimatePresence>
                   </>
                 ) : (
-                  <Link
-                    href={link.href}
-                    className="text-white hover:text-primary-500 transition-colors font-medium"
+                  <div
+                    className="relative group"
+                    onMouseEnter={() => setHoveredLink(link.href)}
+                    onMouseLeave={() => setHoveredLink(null)}
                   >
-                    {link.name}
-                  </Link>
+                    <Link
+                      href={link.href}
+                      className={`text-white hover:text-primary-500 transition-colors font-medium relative ${
+                        pathname === link.href ? 'text-primary-500' : ''
+                      }`}
+                    >
+                      {link.name}
+                    </Link>
+                    {hoveredLink === link.href && navSubtitles[link.href] && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-3 py-1.5 bg-gray-900 rounded-lg shadow-lg border border-gray-800 whitespace-nowrap z-50 pointer-events-none"
+                      >
+                        <p className="text-xs text-gray-300">{navSubtitles[link.href]}</p>
+                        <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-900 border-l border-t border-gray-800 rotate-45"></div>
+                      </motion.div>
+                    )}
+                  </div>
                 )}
               </div>
             ))}

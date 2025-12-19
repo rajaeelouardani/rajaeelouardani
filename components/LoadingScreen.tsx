@@ -4,9 +4,11 @@ import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 import { IconCode } from '@tabler/icons-react'
+import { useTheme } from '@/contexts/ThemeContext'
 
 export default function LoadingScreen() {
   const pathname = usePathname()
+  const { primaryColor } = useTheme()
   const [isLoading, setIsLoading] = useState(true)
   const [progress, setProgress] = useState(0)
 
@@ -50,13 +52,13 @@ export default function LoadingScreen() {
             className="mb-8"
           >
             <div className="relative w-20 h-20 flex items-center justify-center">
-              <IconCode className="w-16 h-16 text-blue-500 absolute z-10" strokeWidth={1.5} />
+              <IconCode className="w-16 h-16 absolute z-10" strokeWidth={1.5} style={{ color: primaryColor }} />
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
                 className="absolute inset-0"
               >
-                <div className="w-20 h-20 border-4 border-blue-500 border-t-transparent rounded-full"></div>
+                <div className="w-20 h-20 border-4 border-t-transparent rounded-full" style={{ borderColor: primaryColor }}></div>
               </motion.div>
             </div>
           </motion.div>
@@ -72,7 +74,10 @@ export default function LoadingScreen() {
               initial={{ width: 0 }}
               animate={{ width: `${progress}%` }}
               transition={{ duration: 0.3 }}
-              className="h-full bg-gradient-to-r from-blue-500 to-blue-400"
+              className="h-full"
+              style={{ 
+                background: `linear-gradient(to right, ${primaryColor}, ${primaryColor}dd)`
+              }}
             />
           </div>
 
