@@ -1108,8 +1108,8 @@
       },
       {
         "institution": "Lycée Moulay Ismail Meknes",
-        "degree": "Baccalauréat Sciences Mathématiques B (SMB)",
-        "description": "Baccalauréat Sciences Mathématiques B. Formation en mathématiques, physique, chimie et sciences de la vie et de la terre. Activités : Club Art et Culture."
+        "degree": "Baccalauréat Sciences Ingénieries",
+        "description": "Baccalauréat Sciences Ingénieries. Formation en mathématiques, physique, chimie et sciences ingénieries. Activités : Club Art et Culture. Premier prix de l'association \"أنا وأنت\" organisé à Fès avec un robot suiveur de ligne qui sensibilise aux risques du tabagisme et de fumer dans chaque station jusqu'à leur arrêt dans un tombeau."
       },
       {
         "institution": "TBH – Tech Business Hub",
@@ -1396,10 +1396,10 @@
       },
       {
         "id": 6,
-        "title": "Prix de compétition régionale de l'association \"أنا وأنت\"",
+        "title": "Premier prix de compétition régionale de l'association \"أنا وأنت\"",
         "issuer": "Association \"أنا وأنت\"",
         "date": "Jul 2021",
-        "description": "Prix de compétition régionale de l'association \"أنا وأنت\".",
+        "description": "Premier prix de l'association \"أنا وأنت\" organisé à Fès. Réalisation d'un robot suiveur de ligne qui sensibilise aux risques du tabagisme et de fumer dans chaque station jusqu'à son arrêt dans un tombeau.",
         "associated": "Lycée Moulay Ismail Meknes"
       }
     ]
