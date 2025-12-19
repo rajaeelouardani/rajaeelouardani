@@ -59,7 +59,7 @@ export default function Header() {
     >
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-xl md:text-2xl font-bold text-white flex items-center gap-2 font-mono" dir={dir}>
+          <Link href="/" className="text-xl md:text-2xl font-bold text-white flex items-center gap-2 font-tech" dir={dir}>
             <span className="text-primary-500">{t.nav.firstName || 'RAJAE'}</span>
             <span>{t.nav.lastName || 'ELOUARDANI'}</span>
           </Link>

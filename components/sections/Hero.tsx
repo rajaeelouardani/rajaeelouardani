@@ -42,20 +42,20 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight font-mono"
+                className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight font-tech"
               >
                 <span className="text-white">{t.hero.imA}</span>{' '}
                 <LayoutTextFlip
                   text=""
                   words={t.hero.roles}
-                  className="text-5xl md:text-6xl lg:text-7xl text-blue-500 font-mono"
+                  className="text-5xl md:text-6xl lg:text-7xl text-blue-500 font-tech"
                 />
               </motion.h1>
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-3xl md:text-4xl font-semibold text-blue-400 font-mono"
+                className="text-3xl md:text-4xl font-semibold text-blue-400 font-tech"
               >
                 <motion.span
                   animate={{ 

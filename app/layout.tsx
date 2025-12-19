@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { JetBrains_Mono, Inter } from 'next/font/google'
+import { Radley, Tektur, Reem_Kufi } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -11,16 +11,24 @@ import AnimatedBackground from '@/components/AnimatedBackground'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import { ThemeProvider } from '@/contexts/ThemeContext'
 
-const jetbrainsMono = JetBrains_Mono({ 
+const radley = Radley({ 
   subsets: ['latin'], 
-  variable: '--font-jetbrains-mono',
-  weight: ['400', '500', '600', '700'],
+  variable: '--font-radley',
+  weight: ['400'],
   display: 'swap',
 })
 
-const inter = Inter({ 
+const tektur = Tektur({ 
   subsets: ['latin'], 
-  variable: '--font-inter',
+  variable: '--font-tektur',
+  weight: ['400', '500', '600', '700', '800', '900'],
+  display: 'swap',
+})
+
+const reemKufi = Reem_Kufi({ 
+  subsets: ['arabic', 'latin'], 
+  variable: '--font-reem-kufi',
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
 })
 
@@ -151,7 +159,7 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="en" className={`${jetbrainsMono.variable} ${inter.variable}`}>
+    <html lang="en" className={`${radley.variable} ${tektur.variable} ${reemKufi.variable}`}>
       <head>
         <script
           type="application/ld+json"

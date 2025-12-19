@@ -204,7 +204,7 @@ export default function Blog() {
           className="text-center mb-16"
         >
           <p className="text-blue-400 text-sm uppercase mb-2" dir={dir}>{t.blog.sectionLabel}</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-mono" dir={dir}>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-tech" dir={dir}>
             <LayoutTextFlip
               text="Technology "
               words={t.blog.flipWords}

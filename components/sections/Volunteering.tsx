@@ -59,7 +59,7 @@ export default function Volunteering() {
           className="text-center mb-16"
         >
           <p className="text-green-400 text-sm uppercase mb-2" dir={dir}>{t.volunteering.sectionLabel}</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-mono" dir={dir}>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-tech" dir={dir}>
             {t.volunteering.title}
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto" dir={dir}>

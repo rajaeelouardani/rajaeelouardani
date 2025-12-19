@@ -91,11 +91,11 @@ export default function Services() {
           className="text-center mb-16"
         >
           <p className="text-green-400 text-sm uppercase mb-2" dir={dir}>{t?.services?.sectionLabel || 'SERVICES'}</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-developer" dir={dir}>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-tech" dir={dir}>
             <LayoutTextFlip
               text={t?.services?.my || 'My '}
               words={t?.services?.flipWords || ["Services", "Expertise", "Skills", "Offerings"]}
-              className="text-4xl md:text-5xl font-developer"
+              className="text-4xl md:text-5xl font-tech"
             />
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto" dir={dir}>
