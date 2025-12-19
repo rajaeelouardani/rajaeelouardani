@@ -60,19 +60,19 @@ export default function Hero() {
                 <span className="text-white">{t.hero.subtitle?.substring(0, Math.ceil((t.hero.subtitle?.length || 0) / 2)) || ''}</span>
                 <span className="text-primary-500">{t.hero.subtitle?.substring(Math.ceil((t.hero.subtitle?.length || 0) / 2)) || ''}</span>
               </motion.p>
-                <motion.span
-                  animate={{ 
-                    opacity: [1, 0.8, 1],
-                  }}
-                  transition={{ 
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                >
-                  {t.hero.craftingDigitalSolutions}
-                </motion.span>
-              </motion.h2>
+              <motion.span
+                animate={{ 
+                  opacity: [1, 0.8, 1],
+                }}
+                transition={{ 
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="block text-center text-lg text-gray-400 mt-2"
+              >
+                {t.hero.craftingDigitalSolutions}
+              </motion.span>
             </div>
 
             {/* Subtitle - Value + Tech */}
