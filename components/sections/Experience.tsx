@@ -36,6 +36,7 @@ const getOrgLogo = (company: string) => {
     'Faculté des Sciences de Meknès & Université de Naples Federico II': '/logos/logo napoli Federico II.webp',
     'ARMA Association': '/logos/arma assiciation .png', // Association des Randonneurs Marocains pour les Aventures
     'جمعية مشاة مغرب المغامرات': '/logos/arma assiciation .png', // ARMA Association (Arabic)
+    'DIGITAGUID ORIENTATION': '/logos/DIGITAGUIDE.png',
   }
 
   const localLogo = localLogoMap[company]
@@ -78,6 +79,7 @@ const getOrgLogoFallback = (company: string) => {
     'Faculté des Sciences de Meknès & Université de Naples Federico II': 'https://cdn.simpleicons.org/microsoft/0078D4',
     'ARMA Association': 'https://cdn.simpleicons.org/microsoft/0078D4',
     'جمعية مشاة مغرب المغامرات': 'https://cdn.simpleicons.org/microsoft/0078D4',
+    'DIGITAGUID ORIENTATION': 'https://cdn.simpleicons.org/microsoft/0078D4',
   }
   
   return fallbackLogos[company] || 'https://cdn.simpleicons.org/microsoft/0078D4'
@@ -173,6 +175,13 @@ const getExperiences = (t: any) => [
     company: t.experience.experiences[12]?.company || 'Agence de Marketing',
     role: t.experience.experiences[12]?.role || 'Stagiaire - Développement Web & Photographie',
     description: t.experience.experiences[12]?.description || 'Stage d\'un mois dans une agence de marketing, développement web et photographie. Participation aux projets de développement web, création de contenu visuel et support marketing.',
+    color: 'text-primary-500',
+  },
+  {
+    period: '2020',
+    company: t.experience.experiences[14]?.company || 'DIGITAGUID ORIENTATION',
+    role: t.experience.experiences[14]?.role || 'Fondatrice & Coordinatrice',
+    description: t.experience.experiences[14]?.description || 'Fondation et coordination d\'une initiative de volontariat éducatif pendant la pandémie COVID-19. Création de groupes WhatsApp pour l\'orientation et le partage de ressources pédagogiques. Mobilisation de 40 enseignants couvrant 4 matières. Mise en place de 12 groupes regroupant 256 élèves bénéficiant de cours, exercices, supports numériques et conseils méthodologiques. Évolution vers un programme d\'accompagnement à l\'orientation scolaire pour les examens régionaux et nationaux du baccalauréat.',
     color: 'text-primary-500',
   },
   {

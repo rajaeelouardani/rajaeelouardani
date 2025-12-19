@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Card3D from '@/components/Card3D'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { HoverBorderGradient } from '@/components/ui/hover-border-gradient'
@@ -8,6 +9,16 @@ import { HoverBorderGradient } from '@/components/ui/hover-border-gradient'
 const volunteering = [
   {
     id: 1,
+    organization: 'DIGITAGUID ORIENTATION',
+    role: 'Fondatrice & Coordinatrice',
+    period: '2020',
+    description: 'Fondation et coordination d\'une initiative de volontariat éducatif pendant la pandémie COVID-19. Création de groupes WhatsApp pour l\'orientation et le partage de ressources pédagogiques. Mobilisation de 40 enseignants couvrant 4 matières (Français, Arabe, Histoire-Géographie, Éducation Islamique). Mise en place de 12 groupes regroupant 256 élèves bénéficiant de cours, exercices, supports numériques et conseils méthodologiques. Évolution vers un programme d\'accompagnement à l\'orientation scolaire pour les examens régionaux et nationaux du baccalauréat. Collaboration avec des étudiants lauréats pour partager expériences et perspectives académiques.',
+    category: 'Education & Orientation',
+    color: 'text-primary-500',
+    logo: '/logos/DIGITAGUIDE.png',
+  },
+  {
+    id: 2,
     organization: 'Enactus FSJES Meknes',
     role: 'President',
     period: 'Mar 2023 - Feb 2024',
@@ -16,7 +27,7 @@ const volunteering = [
     color: 'text-green-400',
   },
   {
-    id: 2,
+    id: 3,
     organization: 'IVR FSM CLUB',
     role: 'Marketing Manager',
     period: 'Nov 2023 - Jul 2024',
@@ -25,7 +36,7 @@ const volunteering = [
     color: 'text-primary-500',
   },
   {
-    id: 3,
+    id: 4,
     organization: 'Photography Club FSM',
     role: 'Responsable du club / Formatrice / Graphique designer',
     period: 'Jan 2024 - Jul 2024',
@@ -77,9 +88,21 @@ export default function Volunteering() {
                     </span>
                   </div>
                   <div className="ml-4">
-                    <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center border border-green-500/30">
-                      <span className="text-2xl">🤝</span>
-                    </div>
+                    {item.logo ? (
+                      <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center border border-gray-700 overflow-hidden p-1">
+                        <Image
+                          src={item.logo}
+                          alt={item.organization}
+                          width={40}
+                          height={40}
+                          className="object-contain"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center border border-green-500/30">
+                        <span className="text-2xl">🤝</span>
+                      </div>
+                    )}
                   </div>
                 </div>
                 <p className="text-gray-400 text-sm mb-4">{item.description}</p>
