@@ -178,7 +178,7 @@ export default function SocialDock() {
           boxShadow: `0 20px 60px ${primaryColor}20, 0 0 40px ${primaryColor}10`,
         }}
       >
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-col space-y-4">
           {socialLinks.map((item, index) => (
             <DockIcon 
               key={item.title}
