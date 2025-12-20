@@ -11,17 +11,17 @@ const testimonialsData: any[] = []
 // Photo mapping for testimonials - using index to match photos across all languages
 const testimonialPhotos: string[] = [
   "/testimonial/kenza Abbouti.webp", // Kenza Abbouti - First testimonial
-  "/testimonial/Hajar SLIMANI.jfif",
-  "/testimonial/IMANE BOUHADDOU.jfif",
-  "/testimonial/Douglas Mbiandou.jfif",
+  "/testimonial/Hajar SLIMANI.png",
+  "/testimonial/IMANE BOUHADDOU.png",
+  "/testimonial/Douglas Mbiandou.png",
   "/testimonial/Awatif Beggar.jpg",
-  "/testimonial/Adam bennis.jfif",
-  "/testimonial/Samir Messaoudi.jfif",
-  "/testimonial/Yasmine Allal.jfif",
-  "/testimonial/Sadife Mehmed Descamps.jfif",
-  "/testimonial/Mahamouda Salouhou.jfif",
-  "/testimonial/Ahmed MOUCHTACHI.jfif",
-  "/testimonial/Nadia Handaq.jfif",
+  "/testimonial/Adam bennis.png",
+  "/testimonial/Samir Messaoudi.png",
+  "/testimonial/Yasmine Allal.png",
+  "/testimonial/Sadife Mehmed Descamps.png",
+  "/testimonial/Mahamouda Salouhou.png",
+  "/testimonial/Ahmed MOUCHTACHI.png",
+  "/testimonial/Nadia Handaq.png",
   "/logos/mcovery.webp",
   "/testimonial/Hôtel Le Rochegude.png",
 ]

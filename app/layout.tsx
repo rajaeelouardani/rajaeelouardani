@@ -222,18 +222,18 @@ export default function RootLayout({
         <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
         {/* Preload first 3 testimonial images (most important) */}
         <link rel="preload" href="/testimonial/kenza Abbouti.webp" as="image" fetchPriority="high" type="image/webp" />
-        <link rel="preload" href="/testimonial/Hajar SLIMANI.jfif" as="image" fetchPriority="high" type="image/jpeg" />
-        <link rel="preload" href="/testimonial/IMANE BOUHADDOU.jfif" as="image" fetchPriority="high" type="image/jpeg" />
+        <link rel="preload" href="/testimonial/Hajar SLIMANI.png" as="image" fetchPriority="high" type="image/png" />
+        <link rel="preload" href="/testimonial/IMANE BOUHADDOU.png" as="image" fetchPriority="high" type="image/png" />
         {/* Prefetch remaining testimonial images (lower priority) */}
-        <link rel="prefetch" href="/testimonial/Douglas Mbiandou.jfif" as="image" />
+        <link rel="prefetch" href="/testimonial/Douglas Mbiandou.png" as="image" />
         <link rel="prefetch" href="/testimonial/Awatif Beggar.jpg" as="image" />
-        <link rel="prefetch" href="/testimonial/Adam bennis.jfif" as="image" />
-        <link rel="prefetch" href="/testimonial/Samir Messaoudi.jfif" as="image" />
-        <link rel="prefetch" href="/testimonial/Yasmine Allal.jfif" as="image" />
-        <link rel="prefetch" href="/testimonial/Sadife Mehmed Descamps.jfif" as="image" />
-        <link rel="prefetch" href="/testimonial/Mahamouda Salouhou.jfif" as="image" />
-        <link rel="prefetch" href="/testimonial/Ahmed MOUCHTACHI.jfif" as="image" />
-        <link rel="prefetch" href="/testimonial/Nadia Handaq.jfif" as="image" />
+        <link rel="prefetch" href="/testimonial/Adam bennis.png" as="image" />
+        <link rel="prefetch" href="/testimonial/Samir Messaoudi.png" as="image" />
+        <link rel="prefetch" href="/testimonial/Yasmine Allal.png" as="image" />
+        <link rel="prefetch" href="/testimonial/Sadife Mehmed Descamps.png" as="image" />
+        <link rel="prefetch" href="/testimonial/Mahamouda Salouhou.png" as="image" />
+        <link rel="prefetch" href="/testimonial/Ahmed MOUCHTACHI.png" as="image" />
+        <link rel="prefetch" href="/testimonial/Nadia Handaq.png" as="image" />
         <link rel="prefetch" href="/logos/mcovery.webp" as="image" />
         <link rel="prefetch" href="/testimonial/Hôtel Le Rochegude.png" as="image" />
         <script

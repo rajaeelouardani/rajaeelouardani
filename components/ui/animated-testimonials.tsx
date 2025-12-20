@@ -156,9 +156,7 @@ export const AnimatedTestimonials = ({
                     quality={60}
                     unoptimized={
                       testimonials[active].src.startsWith('http') || 
-                      testimonials[active].src.startsWith('//') ||
-                      testimonials[active].src.endsWith('.jfif') ||
-                      testimonials[active].src.endsWith('.JFIF')
+                      testimonials[active].src.startsWith('//')
                     }
                     onError={(e) => {
                       console.error(`❌ Failed to load testimonial image: ${testimonials[active].src}`, e);
