@@ -460,12 +460,13 @@ export default function ProjectsPage() {
                           transition={{ delay: index * 0.1 }}
                           className="glass-card rounded-lg overflow-hidden cursor-pointer group h-full flex flex-col"
                         >
-                          <div className={`relative h-64 overflow-hidden ${project.id === 10 || project.id === 11 || project.id === 16 ? 'bg-white' : ''}`}>
+                          <div className={`relative h-64 overflow-hidden ${project.id === 4 || project.id === 10 || project.id === 11 || project.id === 16 ? 'bg-white' : ''}`}>
                             <Image
                               src={project.thumbnail}
                               alt={project.title}
                               fill
-                              className={`${project.id === 10 || project.id === 11 || project.id === 16 ? 'object-contain p-4' : 'object-cover'} group-hover:scale-110 transition-transform duration-300`}
+                              className={`${project.id === 4 || project.id === 10 || project.id === 11 || project.id === 16 ? 'object-contain p-4' : 'object-cover'} group-hover:scale-110 transition-transform duration-300`}
+                              unoptimized={project.thumbnail.endsWith('.jfif') || project.thumbnail.endsWith('.JFIF')}
                               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                               loading="lazy"
                               quality={80}
@@ -474,7 +475,7 @@ export default function ProjectsPage() {
                                 target.src = '/placeholder.jpg'
                               }}
                             />
-                            <div className={`absolute inset-0 ${project.id === 10 || project.id === 11 || project.id === 16 ? 'bg-transparent' : 'bg-black/60'} group-hover:${project.id === 10 || project.id === 11 || project.id === 16 ? 'bg-transparent' : 'bg-black/40'} transition-colors`} />
+                            <div className={`absolute inset-0 ${project.id === 4 || project.id === 10 || project.id === 11 || project.id === 16 ? 'bg-transparent' : 'bg-black/60'} group-hover:${project.id === 4 || project.id === 10 || project.id === 11 || project.id === 16 ? 'bg-transparent' : 'bg-black/40'} transition-colors`} />
                             <div className="absolute bottom-4 left-4">
                               <span className="bg-primary-500/80 text-white px-3 py-1 rounded-full text-xs font-semibold">
                                 {project.category}

@@ -650,7 +650,7 @@ export default function ProjectDetailPage() {
             className="mb-12"
           >
             <h2 className="text-2xl font-bold text-white mb-4" dir={dir}>Logo</h2>
-            <div className={`rounded-lg p-8 flex items-center justify-center ${project.id === 10 || project.id === 11 || project.id === 16 ? 'bg-white' : 'bg-gray-900'}`}>
+            <div className={`rounded-lg p-8 flex items-center justify-center ${project.id === 4 || project.id === 10 || project.id === 11 || project.id === 16 ? 'bg-white' : 'bg-gray-900'}`}>
               <Image
                 src={project.logo.url}
                 alt={project.logo.description || 'Logo'}
