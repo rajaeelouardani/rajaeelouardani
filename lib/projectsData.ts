@@ -558,10 +558,10 @@ const webDevelopmentProjects: Project[] = [
     title: 'ARC D\'ORÉ Meknès',
     description: 'Site web officiel du club ARC D\'ORÉ Meknès, conçu pour renforcer sa présence digitale et faciliter la communication avec ses membres et partenaires.',
     domain: 'web-development',
-    thumbnail: '/logos/arc dore meknes.png',
-    images: ['/logos/arc dore meknes.png'],
+    thumbnail: '/logos/arc dore meknes.jfif',
+    images: ['/logos/arc dore meknes.jfif'],
     logo: {
-      url: '/logos/arc dore meknes.png',
+      url: '/logos/arc dore meknes.jfif',
       description: 'Logo ARC D\'ORÉ Meknès'
     },
     category: 'Web Development & Association',

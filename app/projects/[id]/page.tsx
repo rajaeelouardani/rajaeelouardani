@@ -657,6 +657,7 @@ export default function ProjectDetailPage() {
                 width={200}
                 height={200}
                 className="object-contain"
+                unoptimized={project.logo.url.endsWith('.jfif') || project.logo.url.endsWith('.JFIF')}
               />
             </div>
           </motion.div>

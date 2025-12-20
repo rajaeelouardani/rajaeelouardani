@@ -18,18 +18,18 @@ const getOrgLogo = (issuer: string) => {
     'ECLEE': '/logos/logo-eclee.png',
     'freeCodeCamp': 'https://cdn.simpleicons.org/freecodecamp/0A0A23',
     'Udemy': 'https://cdn.simpleicons.org/udemy/EC5252',
-    'OpenClassrooms': '/logos/openclassrooms_logo.png',
-    'IBM': '/logos/ibm_logo.png',
-    'Cambridge International Education': '/logos/cambridgeinternational_logo.png',
-    'Al Akhawayn University': '/logos/Al Akhawayn University.png',
-    'AUF': '/logos/auf_logo.png',
-    'AUF - Afrique Centrale et Grands Lacs': '/logos/auf_logo.png',
+    'OpenClassrooms': '/logos/openclassrooms_logo.jfif',
+    'IBM': '/logos/ibm_logo.jfif',
+    'Cambridge International Education': '/logos/cambridgeinternational_logo.jfif',
+    'Al Akhawayn University': '/logos/Al Akhawayn University.jfif',
+    'AUF': '/logos/auf_logo.jfif',
+    'AUF - Afrique Centrale et Grands Lacs': '/logos/auf_logo.jfif',
     'International Association of Physics Students': '/logos/IAPS_LOGO_LIGHT_BACKGROUND-1024x1024.png',
     'UM6P - University Mohammed VI Polytechnic': '/logos/um6p.png',
     'Centre 2htj consulting': '/logos/cape.jpg',
-    'Club l\'arc doré Meknes': '/logos/arc dore meknes.png',
-    'Alison': '/logos/alison_learning_logo.png',
-    'Unihance': '/logos/unihance_logo.png',
+    'Club l\'arc doré Meknes': '/logos/arc dore meknes.jfif',
+    'Alison': '/logos/alison_learning_logo.jfif',
+    'Unihance': '/logos/unihance_logo.jfif',
     'Faculté des Sciences Meknès': '/logos/umi.png',
     'UNESCO': '/logos/unesco.jpeg',
     'TBH – Tech Business Hub': '/logos/tbh-logo.png',
@@ -41,21 +41,21 @@ const getOrgLogo = (issuer: string) => {
     'Faculty of Sciences Meknès': '/logos/umi.png',
     'Moulay Ismaïl University': '/logos/umi.png',
     'Moulay Ismail Meknès University': '/logos/umi.png',
-    'Central Africa and Great Lakes': '/logos/auf_logo.png',
-    'AUF - Central Africa and Great Lakes': '/logos/auf_logo.png',
+    'Central Africa and Great Lakes': '/logos/auf_logo.jfif',
+    'AUF - Central Africa and Great Lakes': '/logos/auf_logo.jfif',
     // Variantes traduites AR
     'جامعة مولاي إسماعيل': '/logos/umi.png',
     'جامعة مولاي إسماعيل مكناس': '/logos/umi.png',
     'كلية العلوم مكناس': '/logos/umi.png',
     'إنجاز المغرب (Junior Achievement Worldwide)': '/logos/injaz jw.png',
     'معهد إدارة المشاريع': '/logos/pmief.png',
-    'AUF - أفريقيا الوسطى والبحيرات الكبرى': '/logos/auf_logo.png',
+    'AUF - أفريقيا الوسطى والبحيرات الكبرى': '/logos/auf_logo.jfif',
     'الرابطة الدولية لطلاب الفيزياء': '/logos/IAPS_LOGO_LIGHT_BACKGROUND-1024x1024.png',
     'جامعة محمد السادس للبوليتكنيك': '/logos/um6p.png',
     'مركز 2htj للاستشارات': '/logos/cape.jpg',
-    'نادي القوس الذهبي مكناس': '/logos/arc dore meknes.png',
-    'جامعة الأخوين': '/logos/Al Akhawayn University.png',
-    'كامبريدج التعليم الدولي': '/logos/cambridgeinternational_logo.png',
+    'نادي القوس الذهبي مكناس': '/logos/arc dore meknes.jfif',
+    'جامعة الأخوين': '/logos/Al Akhawayn University.jfif',
+    'كامبريدج التعليم الدولي': '/logos/cambridgeinternational_logo.jfif',
     'اليونسكو': '/logos/unesco.jpeg',
   }
   
@@ -389,6 +389,7 @@ export default function Certifications() {
                         width={32}
                         height={32}
                         className="w-full h-full object-contain"
+                        unoptimized={getOrgLogo((cert as any).issuerOriginal || cert.issuer).endsWith('.jfif') || getOrgLogo((cert as any).issuerOriginal || cert.issuer).endsWith('.JFIF')}
                         onError={(e) => {
                           const target = e.target as HTMLImageElement
                           target.style.display = 'none'
@@ -397,7 +398,6 @@ export default function Certifications() {
                             parent.innerHTML = '<span class="text-2xl">🏆</span>'
                           }
                         }}
-                        unoptimized
                       />
                     </div>
                   </div>
