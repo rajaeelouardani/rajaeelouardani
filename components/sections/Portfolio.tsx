@@ -1,13 +1,13 @@
-'use client'
+"use client"
 
+import { useMemo } from 'react'
 import { motion } from 'framer-motion'
-import { useLanguage } from '@/contexts/LanguageContext'
 import Link from 'next/link'
+import { useLanguage } from '@/contexts/LanguageContext'
 import { HoverBorderGradient } from '@/components/ui/hover-border-gradient'
 import { LayoutTextFlip } from '@/components/ui/layout-text-flip'
 import { ThreeDMarquee } from '@/components/ui/3d-marquee'
 import { webDevelopmentProjects } from '@/lib/projectsData'
-import { useMemo } from 'react'
 
 const projects = [
   {
@@ -107,7 +107,7 @@ const projects = [
   },
 ]
 
-export default function Portfolio() {
+function Portfolio() {
   const { t, dir } = useLanguage()
   
   // Get web project cover images for 3D marquee
@@ -115,13 +115,22 @@ export default function Portfolio() {
     const images: string[] = []
     
     webDevelopmentProjects.forEach(project => {
-      // Add only thumbnail/cover
+      // Add thumbnail/cover first
       if (project.thumbnail) {
         images.push(project.thumbnail)
       }
     })
     
-    return images.filter(Boolean)
+    const filteredImages = images.filter(Boolean)
+    
+    // Log for debugging
+    if (typeof window !== 'undefined') {
+      console.log('Portfolio - Web Project Cover Images collected:', filteredImages)
+      console.log('Portfolio - Total projects:', webDevelopmentProjects.length)
+      console.log('Portfolio - Total images:', filteredImages.length)
+    }
+    
+    return filteredImages
   }, [])
   
   return (
@@ -149,26 +158,26 @@ export default function Portfolio() {
         </motion.div>
 
         {/* 3D Marquee Section */}
-        <div className="relative mx-auto my-10 flex h-screen w-full max-w-7xl flex-col items-center justify-center overflow-hidden rounded-3xl">
-          {/* Title Overlay */}
-          <div className="relative z-20 mx-auto max-w-4xl text-center px-4 mb-8">
-            <h2 className="relative z-20 mx-auto max-w-4xl text-center text-2xl font-bold text-balance text-white md:text-4xl lg:text-6xl mb-4">
+        {webProjectCoverImages.length > 0 && (
+          <div className="relative mx-auto my-10 flex h-screen w-full max-w-7xl flex-col items-center justify-center overflow-hidden rounded-3xl">
+            {/* Title and Description - Au-dessus de tout */}
+            <h2 className="relative z-[20] mx-auto max-w-4xl text-center text-2xl font-bold text-balance text-white md:text-4xl lg:text-6xl mb-4 drop-shadow-2xl">
               {t.portfolio.marqueeTitle || 'Mes Projets Web'}
             </h2>
-            <p className="relative z-20 mx-auto max-w-2xl text-center text-sm text-neutral-200 md:text-base">
+            <p className="relative z-[20] mx-auto max-w-2xl py-8 text-center text-sm text-neutral-200 md:text-base drop-shadow-lg" dir={dir}>
               {t.portfolio.marqueeSubtitle || 'Découvrez mes réalisations web'}
             </p>
+
+            {/* 3D Marquee - En avant-plan, bien visible */}
+            <ThreeDMarquee
+              className="pointer-events-none absolute inset-0 h-full w-full z-[10]"
+              images={webProjectCoverImages}
+            />
+            
+            {/* Overlay très léger - juste pour améliorer la lisibilité du texte */}
+            <div className="absolute inset-0 z-[15] h-full w-full bg-gradient-to-b from-black/20 via-transparent to-black/20 pointer-events-none" />
           </div>
-          
-          {/* Overlay */}
-          <div className="absolute inset-0 z-10 h-full w-full bg-black/80 dark:bg-black/40" />
-          
-          {/* 3D Marquee Background */}
-          <ThreeDMarquee
-            className="pointer-events-none absolute inset-0 h-full w-full"
-            images={webProjectCoverImages}
-          />
-        </div>
+        )}
 
         {/* View More Button */}
         {projects.length > 3 && (
@@ -199,3 +208,5 @@ export default function Portfolio() {
     </section>
   )
 }
+
+export default Portfolio

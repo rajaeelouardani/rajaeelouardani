@@ -1456,6 +1456,11 @@
     "flipWords": ["Words from Happy Clients", "Testimonials", "Client Reviews", "Recommendations"],
     "items": [
       {
+        "quote": "I had the pleasure of working with Rajae during several entrepreneurship programs. She is a highly ambitious and dynamic young woman who consistently showed initiative, creativity, and a strong willingness to learn. Rajae approaches every challenge with enthusiasm and professionalism, and her positive attitude makes her a valuable team member. She has great potential and I am confident she will achieve excellent results in her future.",
+        "name": "Kenza Abbouti",
+        "designation": "Regional Operation Coordinator at INJAZ Al-Maghrib (Junior Achievement Worldwide)"
+      },
+      {
         "quote": "An exceptional young student who stands out for her academic excellence, passion for technology, and remarkable commitment within her institution. With a solid digital culture, Rajae masters digital tools with ease and is deeply interested in technological innovations. Curious, rigorous, and always seeking new skills, she perfectly embodies the profile of a future leader in the tech field. I highly recommend her for any academic or professional opportunity.",
         "name": "Hajar SLIMANI",
         "designation": "Associate Professor - HDR . National School of Commerce and Management - Meknes [ENCG]"
@@ -1516,9 +1521,9 @@
         "designation": "Mcovery"
       },
       {
-        "quote": "Bravo Rajae Elouardani happy to collaborate together",
-        "name": "Kenza Abbouti",
-        "designation": "Regional Operation Coordinator at INJAZ Al-Maghrib (Junior Achievement Worldwide)"
+        "quote": "We had the pleasure of collaborating with Rajae Elouardani on a design project for our establishment, Hôtel Le Rochegude. Rajae was able to understand the hotel's identity and translate our vision through a modern, elegant design that is consistent with our image. Her professionalism, creativity, and attention to detail greatly contributed to the quality of the final result. She demonstrated excellent listening skills, adaptability, and great rigor throughout the project. We highly recommend Rajae Elouardani for any design or digital creation project, and we would be delighted to collaborate with her again in the future.",
+        "name": "Hôtel Le Rochegude",
+        "designation": "41 Avenue du Maréchal Foch, 81000 Albi, France"
       }
     ]
   },

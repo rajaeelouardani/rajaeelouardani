@@ -91,7 +91,7 @@ export const AnimatedTestimonials = ({
                   className={testimonials[active].src.includes('mcovery.webp') ? 'object-contain' : 'object-cover'}
                   sizes="56px"
                   loading="lazy"
-                  quality={85}
+                  quality={75}
                 />
               </div>
               <div>

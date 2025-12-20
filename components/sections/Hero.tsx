@@ -55,10 +55,10 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-3xl md:text-4xl font-semibold font-tech text-center"
+                className="text-3xl md:text-4xl font-semibold font-tech text-center flex items-center justify-center gap-2 flex-wrap"
               >
-                <span className="text-white">{t.hero.subtitle?.substring(0, Math.ceil((t.hero.subtitle?.length || 0) / 2)) || ''}</span>
-                <span className="text-primary-500">{t.hero.subtitle?.substring(Math.ceil((t.hero.subtitle?.length || 0) / 2)) || ''}</span>
+                <span className="text-white inline-block">{t.hero.subtitle?.substring(0, Math.ceil((t.hero.subtitle?.length || 0) / 2)) || ''}</span>
+                <span className="text-primary-500 inline-block">{t.hero.subtitle?.substring(Math.ceil((t.hero.subtitle?.length || 0) / 2)) || ''}</span>
               </motion.p>
               <motion.span
                 animate={{ 

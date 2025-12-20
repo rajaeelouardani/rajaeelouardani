@@ -11,7 +11,7 @@ const localeFlags: Record<Locale, string> = {
   ar: '🇸🇦',
 }
 
-export default function LanguageSwitcher() {
+export default function LanguageSwitcher({ isMobile = false }: { isMobile?: boolean }) {
   const { locale, setLocale } = useLanguage()
   const [isOpen, setIsOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
@@ -38,7 +38,7 @@ export default function LanguageSwitcher() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-center w-10 h-10 bg-gray-900 border border-primary-500/30 rounded-lg text-white hover:bg-gray-800 transition-colors relative overflow-visible"
+        className={`flex items-center justify-center ${isMobile ? 'w-8 h-8' : 'w-10 h-10'} bg-gray-900 border border-primary-500/30 rounded-lg text-white hover:bg-gray-800 transition-colors relative overflow-visible`}
         title="Change language"
       >
         <svg
@@ -63,7 +63,7 @@ export default function LanguageSwitcher() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-full mt-2 right-0 bg-gray-900 border border-primary-500/30 rounded-lg shadow-lg overflow-hidden z-50 min-w-[180px]"
+            className={`absolute ${isMobile ? 'bottom-full mb-2' : 'top-full mt-2'} right-0 bg-gray-900 border border-primary-500/30 rounded-lg shadow-lg overflow-hidden z-[60] min-w-[180px]`}
           >
             {locales.map((loc) => (
               <button

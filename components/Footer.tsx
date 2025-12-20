@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Footer() {
@@ -22,11 +23,21 @@ export default function Footer() {
         </article>
       </article>
       
-      <footer dir={dir} className="relative bg-black/80 border-t border-gray-900 text-white py-12 z-10">
+      <footer dir={dir} className="relative bg-black/80 border-t border-gray-900 text-white py-12 z-10 shadow-lg shadow-primary-500/50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="bg-black/60 rounded-2xl p-8 shadow-lg shadow-primary-500/30">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4 text-white" dir={dir}>{t.footer.fullName || t.nav.fullName || 'RAJAE ELOUARDANI'}</h3>
+              <div className="flex items-center gap-3 mb-4">
+                <Image
+                  src="/svg mon logo favicon.png"
+                  alt="Rajae Elouardani Logo"
+                  width={70}
+                  height={70}
+                  className="object-contain"
+                />
+                <h3 className="text-2xl font-bold text-white" dir={dir}>{t.footer.fullName || t.nav.fullName || 'RAJAE ELOUARDANI'}</h3>
+              </div>
               <p className="text-gray-400 mb-4" dir={dir}>{t.hero.subtitle}</p>
               <p className="text-gray-500 text-sm leading-relaxed" dir={dir}>
                 {t.footer.description}
@@ -139,20 +150,21 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-            <p className="text-gray-400">
-              © 2025 All rights reserved. Designed by{' '}
-              <a 
-                href="https://www.linkedin.com/in/rajae-elouardani-577892225/?originalSubdomain=ma" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary-500 hover:text-primary-400 transition-colors font-semibold"
-                style={{ textShadow: '0 0 10px currentColor' }}
-              >
-                {t.footer.copyrightName || t.nav.fullName || 'Rajae Elouardani'}
-              </a>
-            </p>
+            </div>
+            <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+              <p className="text-gray-400">
+                © 2025 All rights reserved. Designed by{' '}
+                <a 
+                  href="https://www.linkedin.com/in/rajae-elouardani-577892225/?originalSubdomain=ma" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-500 hover:text-primary-400 transition-colors font-semibold"
+                  style={{ textShadow: '0 0 10px currentColor' }}
+                >
+                  {t.footer.copyrightName || t.nav.fullName || 'Rajae Elouardani'}
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </footer>

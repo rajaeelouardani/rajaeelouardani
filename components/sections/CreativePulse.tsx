@@ -149,15 +149,14 @@ export default function CreativePulse() {
           className="text-center mb-16"
         >
           <p className="text-blue-400 text-sm uppercase mb-2" dir={dir}>{t.creativePulse.sectionLabel}</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-tech text-center" dir={dir}>
-            <span className="text-white">{t.creativePulse.my}</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-tech text-center flex items-center justify-center gap-2 flex-wrap" dir={dir}>
+            <span className="text-white inline-block">{t.creativePulse.my}</span>
             <LayoutTextFlip
               text=""
               words={t.creativePulse.flipWords}
-              className="text-4xl md:text-5xl"
+              className="text-4xl md:text-5xl inline-block"
             />
-            {' '}
-            <span className="text-primary-500">{t.creativePulse.title}</span>
+            <span className="text-primary-500 inline-block">{t.creativePulse.title}</span>
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto" dir={dir}>
             {t.creativePulse.subtitle}

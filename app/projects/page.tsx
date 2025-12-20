@@ -122,13 +122,26 @@ export default function ProjectsPage() {
     const images: string[] = []
     
     webDevelopmentProjects.forEach(project => {
-      // Add only thumbnail/cover
+      // Add thumbnail/cover first
       if (project.thumbnail) {
         images.push(project.thumbnail)
       }
+      // Also add first image from images array if available and different from thumbnail
+      if (project.images && project.images.length > 0 && project.images[0] !== project.thumbnail) {
+        images.push(project.images[0])
+      }
     })
     
-    return images.filter(Boolean)
+    const filteredImages = images.filter(Boolean)
+    
+    // Log for debugging
+    if (typeof window !== 'undefined') {
+      console.log('Web Project Cover Images collected:', filteredImages)
+      console.log('Total projects:', webDevelopmentProjects.length)
+      console.log('Total images:', filteredImages.length)
+    }
+    
+    return filteredImages
   }, [])
 
   // Design categories
@@ -162,12 +175,12 @@ export default function ProjectsPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-tech text-center" dir={dir}>
-            <span className="text-white">{t?.portfolio?.my || 'Mes '}</span>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-tech text-center flex items-center justify-center gap-2" dir={dir}>
+            <span className="text-white inline-block">{t?.portfolio?.my || 'Mes'}</span>
             <LayoutTextFlip
               text=""
               words={t?.portfolio?.flipWords || ["Projets", "Portfolio", "Travaux", "Créations"]}
-              className="text-4xl md:text-5xl"
+              className="text-4xl md:text-5xl inline-block"
             />
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-4" dir={dir}>
@@ -338,30 +351,29 @@ export default function ProjectsPage() {
         ) : activeDomain === 'complete' ? (
           /* Complete projects with 3D marquee background */
           <div className="relative mx-auto my-10 flex h-screen w-full max-w-7xl flex-col items-center justify-center overflow-hidden rounded-3xl">
-            {/* 3D Marquee Background */}
-            <div className="absolute inset-0 z-0 w-full h-full">
+            {/* Title and Description - Au-dessus de tout */}
+            <h2 className="relative z-[20] mx-auto max-w-4xl text-center text-2xl font-bold text-balance text-white md:text-4xl lg:text-6xl font-tech flex items-center justify-center gap-2 drop-shadow-2xl" dir={dir}>
+              <span className="text-white inline-block">{t?.portfolio?.my || 'Mes'}</span>
+              <span className="text-primary-500 inline-block">{t?.portfolio?.flipWords?.[0] || 'Projets'}</span>
+            </h2>
+            <p className="relative z-[20] mx-auto max-w-2xl py-8 text-center text-sm text-neutral-200 md:text-base drop-shadow-lg" dir={dir}>
+              {t?.portfolio?.subtitle || 'Des projets qui combinent créativité et technologie pour créer des solutions innovantes qui inspirent et transforment.'}
+            </p>
+
+            {/* 3D Marquee - En avant-plan, bien visible */}
+            {webProjectCoverImages.length > 0 ? (
               <ThreeDMarquee
-                className="pointer-events-none w-full h-full"
+                className="pointer-events-none absolute inset-0 h-full w-full z-[10]"
                 images={webProjectCoverImages}
               />
-            </div>
-
-            {/* Overlay */}
-            <div className="absolute inset-0 z-10 h-full w-full bg-black/80 dark:bg-black/40" />
-
-            {/* Title Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="relative z-20 mx-auto max-w-4xl text-center"
-            >
-              <h2 className="relative z-20 mx-auto max-w-4xl text-center text-2xl font-bold text-balance text-white md:text-4xl lg:text-6xl" dir={dir}>
-                {t?.portfolio?.my || 'Mes'} {t?.portfolio?.title || 'Projets'}
-              </h2>
-              <p className="relative z-20 mx-auto max-w-2xl py-8 text-center text-sm text-neutral-200 md:text-base" dir={dir}>
-                {t?.portfolio?.subtitle || 'Des projets qui combinent créativité et technologie pour créer des solutions innovantes qui inspirent et transforment.'}
-              </p>
-            </motion.div>
+            ) : (
+              <div className="absolute inset-0 flex items-center justify-center text-gray-500 z-[10]">
+                <p>Loading projects...</p>
+              </div>
+            )}
+            
+            {/* Overlay très léger - juste pour améliorer la lisibilité du texte */}
+            <div className="absolute inset-0 z-[15] h-full w-full bg-gradient-to-b from-black/20 via-transparent to-black/20 pointer-events-none" />
           </div>
         ) : (
           /* Other domains: Projects with cards */
@@ -574,53 +586,65 @@ export default function ProjectsPage() {
               </button>
               
               {/* Image */}
-              <div className={`relative w-full h-full flex items-center justify-center ${selectedImage.url.includes('mcovery.webp') ? 'bg-white p-8' : ''}`}>
-                <div className="relative w-full h-full max-h-[90vh]">
+              <div className={`relative w-full h-full flex items-center justify-center min-h-[400px] ${selectedImage.url.includes('mcovery.webp') ? 'bg-white p-8' : 'bg-transparent'}`}>
+                <div className="relative w-full h-full max-h-[90vh] min-h-[400px]">
                   <Image
                     src={selectedImage.url}
-                    alt="Design preview"
+                    alt={`Image ${selectedImage.index + 1}`}
                     fill
                     className="object-contain"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 80vw"
-                    quality={90}
+                    quality={75}
                     priority
                     onError={(e) => {
                       const target = e.target as HTMLImageElement
-                      target.src = '/placeholder.jpg'
+                      const parent = target.parentElement
+                      if (parent) {
+                        parent.innerHTML = '<div class="flex items-center justify-center h-full text-gray-400">Image non disponible</div>'
+                      }
                     }}
                   />
                 </div>
               </div>
 
               {/* Navigation buttons */}
-              {((activeDomain === 'design-only' && currentDesignImages.length > 1) || (activeDomain === 'photography' && allPhotographyImages.length > 1)) && (
-                <>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation()
-                      const imageList = activeDomain === 'design-only' ? currentDesignImages : allPhotographyImages
-                      const currentIndex = imageList.findIndex(img => img.url === selectedImage.url)
-                      const prevIndex = currentIndex > 0 ? currentIndex - 1 : imageList.length - 1
-                      setSelectedImage({ url: imageList[prevIndex].url, index: prevIndex })
-                    }}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-3 transition-colors shadow-lg"
-                  >
-                    <FaChevronLeft className="w-6 h-6" />
-                  </button>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation()
-                      const imageList = activeDomain === 'design-only' ? currentDesignImages : allPhotographyImages
-                      const currentIndex = imageList.findIndex(img => img.url === selectedImage.url)
-                      const nextIndex = currentIndex < imageList.length - 1 ? currentIndex + 1 : 0
-                      setSelectedImage({ url: imageList[nextIndex].url, index: nextIndex })
-                    }}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-3 transition-colors shadow-lg"
-                  >
-                    <FaChevronRight className="w-6 h-6" />
-                  </button>
-                </>
-              )}
+              {(() => {
+                const imageList = activeDomain === 'design-only' ? currentDesignImages : activeDomain === 'photography' ? allPhotographyImages : []
+                const hasMultipleImages = imageList.length > 1
+                
+                if (!hasMultipleImages) return null
+                
+                const currentIndex = imageList.findIndex(img => img.url === selectedImage.url)
+                const prevIndex = currentIndex > 0 ? currentIndex - 1 : imageList.length - 1
+                const nextIndex = currentIndex < imageList.length - 1 ? currentIndex + 1 : 0
+                
+                return (
+                  <>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        setSelectedImage({ url: imageList[prevIndex].url, index: prevIndex })
+                      }}
+                      className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-primary-500 hover:bg-primary-600 text-white rounded-full p-3 transition-colors shadow-lg"
+                    >
+                      <FaChevronLeft className="w-6 h-6" />
+                    </button>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        setSelectedImage({ url: imageList[nextIndex].url, index: nextIndex })
+                      }}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-primary-500 hover:bg-primary-600 text-white rounded-full p-3 transition-colors shadow-lg"
+                    >
+                      <FaChevronRight className="w-6 h-6" />
+                    </button>
+                    {/* Image counter */}
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 bg-black/70 text-white px-4 py-2 rounded-full text-sm">
+                      {currentIndex + 1} / {imageList.length}
+                    </div>
+                  </>
+                )
+              })()}
             </motion.div>
           </motion.div>
         )}

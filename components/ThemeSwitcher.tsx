@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTheme } from '@/contexts/ThemeContext'
 
@@ -13,17 +13,34 @@ const themes = [
   { name: 'Red', value: 'red', color: '#ef4444' },
 ] as const
 
-export default function ThemeSwitcher() {
+export default function ThemeSwitcher({ isMobile = false }: { isMobile?: boolean }) {
   const { colorTheme, setColorTheme } = useTheme()
   const [isOpen, setIsOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [isOpen])
 
   return (
-    <div className="relative">
+    <div className="relative" ref={dropdownRef}>
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-center w-10 h-10 bg-gray-900 border border-primary-500/30 rounded-lg text-white hover:bg-gray-800 transition-colors"
+        className={`flex items-center justify-center ${isMobile ? 'w-8 h-8' : 'w-10 h-10'} bg-gray-900 border border-primary-500/30 rounded-lg text-white hover:bg-gray-800 transition-colors`}
         title="Change theme"
       >
         <div
@@ -38,7 +55,7 @@ export default function ThemeSwitcher() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="absolute top-full mt-2 right-0 bg-gray-900 border border-primary-500/30 rounded-lg shadow-lg overflow-hidden z-50 min-w-[150px]"
+            className={`absolute ${isMobile ? 'bottom-full mb-2' : 'top-full mt-2'} right-0 bg-gray-900 border border-primary-500/30 rounded-lg shadow-lg overflow-hidden z-[60] min-w-[150px]`}
           >
             {themes.map((theme) => (
               <button

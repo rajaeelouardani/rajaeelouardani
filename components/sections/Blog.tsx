@@ -167,6 +167,105 @@ const getEducationalResources = (t: any) => [
   },
 ]
 
+function BlogPostCard({ post, index, dir, translateCategory, t }: { post: any, index: number, dir: string, translateCategory: (cat: string) => string, t: any }) {
+  const [imageError, setImageError] = useState(false)
+  
+  return (
+    <Card3D intensity={8}>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: index * 0.1 }}
+        className="glass-card rounded-lg overflow-hidden transition-all duration-300 cursor-pointer group card-3d transform-3d"
+      >
+        <div className="relative h-48 bg-black overflow-hidden">
+          {!imageError ? (
+            <Image
+              src={post.image}
+              alt={post.title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              loading="lazy"
+              onError={() => setImageError(true)}
+            />
+          ) : (
+            <Image
+              src="/Rajae elouardani.png"
+              alt={post.title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          )}
+          <div className="absolute top-4 left-4">
+            <span className="bg-black/80 backdrop-blur-sm text-primary-500 px-3 py-1 rounded-full text-xs font-semibold border border-primary-500/30" dir={dir}>
+              {translateCategory(post.category)}
+            </span>
+          </div>
+          <div className="absolute inset-0 shine-effect opacity-20"></div>
+        </div>
+        <div className="p-6">
+          <div className="flex items-center justify-between mb-3 text-xs text-gray-500">
+            <span>{post.date}</span>
+            <span>{post.readTime}</span>
+          </div>
+          <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary-500 transition-colors" dir={dir}>
+            {post.title}
+          </h3>
+          <p className="text-gray-400 mb-4 text-sm" dir={dir}>
+            {post.description}
+          </p>
+          <div className="flex flex-wrap gap-2 mb-4">
+            {post.tags.map((tag: string, idx: number) => (
+              <span
+                key={idx}
+                className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded border border-gray-700"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+          <div className="border-t border-gray-800 pt-4">
+            <p className="text-xs text-gray-500 mb-2" dir={dir}>{t.blog.educationalResourcesLabel}</p>
+            <div className="flex flex-wrap gap-2">
+              {post.resources.map((resource: any, idx: number) => (
+                <a
+                  key={idx}
+                  href={resource.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-primary-500 hover:text-primary-400 transition-colors underline"
+                >
+                  {resource.name}
+                </a>
+              ))}
+            </div>
+          </div>
+          <Link 
+            href={`/blog/${post.id}`}
+            className="block mt-4"
+          >
+            <motion.button
+              whileHover={{ x: 5 }}
+              className="w-full text-left text-white font-semibold hover:text-primary-500 transition-colors flex items-center gap-2 text-sm"
+            >
+              {t.blog.readMore}
+              <motion.span
+                animate={{ x: [0, 5, 0] }}
+                transition={{ repeat: Infinity, duration: 1.5 }}
+              >
+                →
+              </motion.span>
+            </motion.button>
+          </Link>
+        </div>
+      </motion.div>
+    </Card3D>
+  )
+}
+
 export default function Blog() {
   const { t, dir } = useLanguage()
   const [selectedCategory, setSelectedCategory] = useState<string>('All')
@@ -253,84 +352,7 @@ export default function Blog() {
         {/* Blog Posts Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {filteredPosts.slice(0, 3).map((post, index) => (
-            <Card3D key={post.id} intensity={8}>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="glass-card rounded-lg overflow-hidden transition-all duration-300 cursor-pointer group card-3d transform-3d"
-              >
-                <div className="relative h-48 bg-black overflow-hidden">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-black/80 backdrop-blur-sm text-primary-500 px-3 py-1 rounded-full text-xs font-semibold border border-primary-500/30" dir={dir}>
-                      {translateCategory(post.category)}
-                    </span>
-                  </div>
-                  <div className="absolute inset-0 shine-effect opacity-20"></div>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-3 text-xs text-gray-500">
-                    <span>{post.date}</span>
-                    <span>{post.readTime}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary-500 transition-colors" dir={dir}>
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-400 mb-4 text-sm" dir={dir}>
-                    {post.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {post.tags.map((tag, idx) => (
-                      <span
-                        key={idx}
-                        className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded border border-gray-700"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="border-t border-gray-800 pt-4">
-                    <p className="text-xs text-gray-500 mb-2" dir={dir}>{t.blog.educationalResourcesLabel}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {post.resources.map((resource, idx) => (
-                        <a
-                          key={idx}
-                          href={resource.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-xs text-primary-500 hover:text-primary-400 transition-colors underline"
-                        >
-                          {resource.name}
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                  <Link 
-                    href={`/blog/${post.id}`}
-                    className="block mt-4"
-                  >
-                    <motion.button
-                      whileHover={{ x: 5 }}
-                      className="w-full text-left text-white font-semibold hover:text-primary-500 transition-colors flex items-center gap-2 text-sm"
-                    >
-                      {t.blog.readMore}
-                      <motion.span
-                        animate={{ x: [0, 5, 0] }}
-                        transition={{ repeat: Infinity, duration: 1.5 }}
-                      >
-                        →
-                      </motion.span>
-                    </motion.button>
-                  </Link>
-                </div>
-              </motion.div>
-            </Card3D>
+            <BlogPostCard key={post.id} post={post} index={index} dir={dir} translateCategory={translateCategory} t={t} />
           ))}
         </div>
 

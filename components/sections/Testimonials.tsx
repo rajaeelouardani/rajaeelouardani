@@ -10,6 +10,7 @@ const testimonialsData: any[] = []
 
 // Photo mapping for testimonials - using index to match photos across all languages
 const testimonialPhotos: string[] = [
+  "/testimonial/kenza Abbouti.webp", // Kenza Abbouti - First testimonial
   "/testimonial/Hajar SLIMANI.jfif",
   "/testimonial/IMANE BOUHADDOU.jfif",
   "/testimonial/Douglas Mbiandou.jfif",
@@ -22,7 +23,7 @@ const testimonialPhotos: string[] = [
   "/testimonial/Ahmed MOUCHTACHI.jfif",
   "/testimonial/Nadia Handaq.jfif",
   "/logos/mcovery.webp",
-  "/testimonial/default.jpg", // Kenza Abbouti - TODO: Add photo
+  "/testimonial/Hôtel Le Rochegude.png",
 ]
 
 export default function Testimonials() {

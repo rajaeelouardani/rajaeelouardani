@@ -37,6 +37,10 @@ export const metadata: Metadata = {
     default: 'Rajae Elouardani - Portfolio | Web Developer & Content Creator',
     template: '%s | Rajae Elouardani',
   },
+  icons: {
+    icon: '/svg mon logo favicon.png',
+    apple: '/svg mon logo favicon.png',
+  },
   description: 'Développeuse web Full Stack spécialisée en Next.js, React.js et Node.js. Étudiante en Informatique | ALX Software Engineering | Ambassadrice 10000 Codeurs | Présidente Photography FSM Club. Découvrez mes projets web, design et photographie.',
   keywords: [
     'Rajae Elouardani',
@@ -161,6 +165,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${radley.variable} ${tektur.variable} ${reemKufi.variable}`}>
       <head>
+        <link rel="icon" href="/svg mon logo favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/svg mon logo favicon.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}

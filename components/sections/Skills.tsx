@@ -42,6 +42,26 @@ import {
   FaUserTie,
   FaNetworkWired,
   FaProjectDiagram,
+  FaReact,
+  FaNodeJs,
+  FaHtml5,
+  FaCss3Alt,
+  FaSass,
+  FaBootstrap,
+  FaPhp,
+  FaGitAlt,
+  FaGithub,
+  FaPython,
+  FaUbuntu,
+  FaFigma,
+  FaWordpress,
+  FaTrello,
+  FaJira,
+  FaBlender,
+  FaCode,
+  FaDatabase,
+  FaVideo,
+  FaEdit,
 } from 'react-icons/fa'
 import { 
   FaDiagramProject,
@@ -49,51 +69,114 @@ import {
   FaHeartCircleCheck,
   FaBrain,
   FaCommentsDollar,
+  FaJs,
 } from 'react-icons/fa6'
+import {
+  SiNextdotjs,
+  SiTypescript,
+  SiRedux,
+  SiExpress,
+  SiMysql,
+  SiMongodb,
+  SiSequelize,
+  SiAntdesign,
+  SiElementor,
+  SiWoocommerce,
+  SiThreedotjs,
+  SiTailwindcss,
+  SiCanva,
+  SiAdobexd,
+  SiVscodium,
+  SiUml,
+  SiObsstudio,
+  SiPostman,
+  SiWireshark,
+  SiXampp,
+  SiVmware,
+  SiCplusplus,
+  SiCodeblocks,
+  SiC,
+  SiGnuemacs,
+  SiArduino,
+  SiAdobeaftereffects,
+  SiAdobepremierepro,
+  SiAdobeillustrator,
+  SiAdobephotoshop,
+  SiWondershare,
+  SiOllama,
+} from 'react-icons/si'
 
-// Helper function to get logo URL from Simple Icons
-const getLogoUrl = (name: string, fallback?: string) => {
-  const iconMap: { [key: string]: string } = {
-    'Next.js': 'nextdotjs',
-    'React.js': 'react',
-    'TypeScript': 'typescript',
-    'JavaScript': 'javascript',
-    'Node.js': 'nodedotjs',
-    'Express.js': 'express',
-    'Redux.js': 'redux',
-    'HTML5': 'html5',
-    'CSS': 'css3',
-    'SCSS': 'sass',
-    'Tailwind CSS': 'tailwindcss',
-    'Bootstrap': 'bootstrap',
-    'PHP': 'php',
-    'MySQL': 'mysql',
-    'Sequelize.js': 'sequelize',
-    'Ant Design': 'antdesign',
-    'WordPress': 'wordpress',
-    'Elementor': 'elementor',
-    'WooCommerce': 'woocommerce',
-    'Three.js': 'threedotjs',
-    'React Three Fiber': 'react',
-    'Figma': 'figma',
-    'Git': 'git',
-    'GitHub': 'github',
-    'Trello': 'trello',
-    'REST APIs': 'rest',
-    'Python': 'python',
-    'C': 'c',
-    'C++': 'cplusplus',
-    'HTML': 'html5',
-    'CSS Sprites': 'css3',
-    'Emacs': 'gnuemacs',
-    'Ubuntu': 'ubuntu',
-    'Arduino IDE': 'arduino',
-    'Jira': 'jira',
+// Helper function to get icon (logo URL or Font Awesome component)
+const getIconComponent = (name: string): SkillIcon => {
+  // Map tool names to local logo file paths in public/logos/ or external URLs
+  const localLogoMap: { [key: string]: string | null } = {
+    'Blender': '/logos/blender.png',
+    'Visual Studio Code': 'https://cdn.simpleicons.org/visualstudiocode/007ACC',
+  }
+
+  // Check for local logo or external URL first
+  const localLogo = localLogoMap[name]
+  if (localLogo) {
+    return localLogo
+  }
+
+  // Fallback to Font Awesome icons
+  const iconMap: { [key: string]: React.ComponentType<{ className?: string }> } = {
+    'Next.js': SiNextdotjs,
+    'React.js': FaReact,
+    'TypeScript': SiTypescript,
+    'JavaScript': FaJs,
+    'Node.js': FaNodeJs,
+    'Express.js': SiExpress,
+    'Redux.js': SiRedux,
+    'HTML5': FaHtml5,
+    'CSS': FaCss3Alt,
+    'SCSS': FaSass,
+    'Tailwind CSS': SiTailwindcss,
+    'Bootstrap': FaBootstrap,
+    'PHP': FaPhp,
+    'MySQL': SiMysql,
+    'MongoDB': SiMongodb,
+    'Sequelize.js': SiSequelize,
+    'Ant Design': SiAntdesign,
+    'WordPress': FaWordpress,
+    'Elementor': SiElementor,
+    'WooCommerce': SiWoocommerce,
+    'Three.js': SiThreedotjs,
+    'React Three Fiber': FaReact,
+    'Figma': FaFigma,
+    'Git': FaGitAlt,
+    'GitHub': FaGithub,
+    'Trello': FaTrello,
+    'Jira': FaJira,
+    'Adobe Photoshop': SiAdobephotoshop,
+    'Adobe Illustrator': SiAdobeillustrator,
+    'Adobe Premiere Pro': SiAdobepremierepro,
+    'Canva': SiCanva,
+    'Adobe After Effects': SiAdobeaftereffects,
+    'Adobe XD': SiAdobexd,
+    'OBS Studio': SiObsstudio,
+    'Enterprise Architect': SiUml,
+    'Postman': SiPostman,
+    'Ollama': SiOllama,
+    'CapCut': FaVideo, // Fallback for CapCut
+    'Filmora': SiWondershare,
+    'Wireshark': SiWireshark,
+    'XAMPP': SiXampp,
+    'VMware': SiVmware,
+    'Dev C++': SiCplusplus,
+    'Code::Blocks': SiCodeblocks,
+    'Python': FaPython,
+    'C': SiC,
+    'C++': SiCplusplus,
+    'HTML': FaHtml5,
+    'CSS Sprites': FaCss3Alt,
+    'Emacs': SiGnuemacs,
+    'Ubuntu': FaUbuntu,
+    'Arduino IDE': SiArduino,
   }
   
-  const iconName = iconMap[name] || fallback || 'code'
-  // Using colored logos instead of white for better visibility
-  return `https://cdn.simpleicons.org/${iconName}`
+  return iconMap[name] || FaNetworkWired // Default fallback icon
 }
 
 type SkillIcon = string | React.ComponentType<{ className?: string; strokeWidth?: number }>
@@ -105,41 +188,60 @@ interface Skill {
 
 const allSkills: Record<string, Skill[]> = {
   'Tools & Technologies': [
-    { name: 'Next.js', icon: getLogoUrl('Next.js') },
-    { name: 'React.js', icon: getLogoUrl('React.js') },
-    { name: 'TypeScript', icon: getLogoUrl('TypeScript') },
-    { name: 'JavaScript', icon: getLogoUrl('JavaScript') },
-    { name: 'Node.js', icon: getLogoUrl('Node.js') },
-    { name: 'Express.js', icon: getLogoUrl('Express.js') },
-    { name: 'Redux.js', icon: getLogoUrl('Redux.js') },
-    { name: 'HTML5', icon: getLogoUrl('HTML5') },
-    { name: 'CSS', icon: getLogoUrl('CSS') },
-    { name: 'SCSS', icon: getLogoUrl('SCSS') },
-    { name: 'Tailwind CSS', icon: getLogoUrl('Tailwind CSS') },
-    { name: 'Bootstrap', icon: getLogoUrl('Bootstrap') },
-    { name: 'PHP', icon: getLogoUrl('PHP') },
-    { name: 'MySQL', icon: getLogoUrl('MySQL') },
-    { name: 'Sequelize.js', icon: getLogoUrl('Sequelize.js') },
-    { name: 'Ant Design', icon: getLogoUrl('Ant Design') },
-    { name: 'WordPress', icon: getLogoUrl('WordPress') },
-    { name: 'Elementor', icon: getLogoUrl('Elementor') },
-    { name: 'WooCommerce', icon: getLogoUrl('WooCommerce') },
-    { name: 'Three.js', icon: getLogoUrl('Three.js') },
-    { name: 'React Three Fiber', icon: getLogoUrl('React Three Fiber') },
-    { name: 'Figma', icon: getLogoUrl('Figma') },
-    { name: 'Git', icon: getLogoUrl('Git') },
-    { name: 'GitHub', icon: getLogoUrl('GitHub') },
-    { name: 'Trello', icon: getLogoUrl('Trello') },
-    { name: 'REST APIs', icon: getLogoUrl('REST APIs', 'rest') },
-    { name: 'Python', icon: getLogoUrl('Python') },
-    { name: 'C', icon: getLogoUrl('C') },
-    { name: 'C++', icon: getLogoUrl('C++') },
-    { name: 'HTML', icon: getLogoUrl('HTML') },
-    { name: 'CSS Sprites', icon: getLogoUrl('CSS Sprites') },
-    { name: 'Emacs', icon: getLogoUrl('Emacs') },
-    { name: 'Ubuntu', icon: getLogoUrl('Ubuntu') },
-    { name: 'Arduino IDE', icon: getLogoUrl('Arduino IDE') },
-    { name: 'Jira', icon: getLogoUrl('Jira') },
+    { name: 'Next.js', icon: getIconComponent('Next.js') },
+    { name: 'React.js', icon: getIconComponent('React.js') },
+    { name: 'TypeScript', icon: getIconComponent('TypeScript') },
+    { name: 'JavaScript', icon: getIconComponent('JavaScript') },
+    { name: 'Node.js', icon: getIconComponent('Node.js') },
+    { name: 'Express.js', icon: getIconComponent('Express.js') },
+    { name: 'Redux.js', icon: getIconComponent('Redux.js') },
+    { name: 'HTML5', icon: getIconComponent('HTML5') },
+    { name: 'CSS', icon: getIconComponent('CSS') },
+    { name: 'SCSS', icon: getIconComponent('SCSS') },
+    { name: 'Tailwind CSS', icon: getIconComponent('Tailwind CSS') },
+    { name: 'Bootstrap', icon: getIconComponent('Bootstrap') },
+    { name: 'PHP', icon: getIconComponent('PHP') },
+    { name: 'MySQL', icon: getIconComponent('MySQL') },
+    { name: 'MongoDB', icon: getIconComponent('MongoDB') },
+    { name: 'Sequelize.js', icon: getIconComponent('Sequelize.js') },
+    { name: 'Ant Design', icon: getIconComponent('Ant Design') },
+    { name: 'WordPress', icon: getIconComponent('WordPress') },
+    { name: 'Elementor', icon: getIconComponent('Elementor') },
+    { name: 'WooCommerce', icon: getIconComponent('WooCommerce') },
+    { name: 'Three.js', icon: getIconComponent('Three.js') },
+    { name: 'React Three Fiber', icon: getIconComponent('React Three Fiber') },
+    { name: 'Figma', icon: getIconComponent('Figma') },
+    { name: 'Git', icon: getIconComponent('Git') },
+    { name: 'GitHub', icon: getIconComponent('GitHub') },
+    { name: 'Trello', icon: getIconComponent('Trello') },
+    { name: 'Jira', icon: getIconComponent('Jira') },
+    { name: 'Adobe Photoshop', icon: getIconComponent('Adobe Photoshop') },
+    { name: 'Adobe Illustrator', icon: getIconComponent('Adobe Illustrator') },
+    { name: 'Adobe Premiere Pro', icon: getIconComponent('Adobe Premiere Pro') },
+    { name: 'Canva', icon: getIconComponent('Canva') },
+    { name: 'Adobe After Effects', icon: getIconComponent('Adobe After Effects') },
+    { name: 'Blender', icon: getIconComponent('Blender') },
+    { name: 'Adobe XD', icon: getIconComponent('Adobe XD') },
+    { name: 'Visual Studio Code', icon: getIconComponent('Visual Studio Code') },
+    { name: 'OBS Studio', icon: getIconComponent('OBS Studio') },
+    { name: 'Enterprise Architect', icon: getIconComponent('Enterprise Architect') },
+    { name: 'Postman', icon: getIconComponent('Postman') },
+    { name: 'Ollama', icon: getIconComponent('Ollama') },
+    { name: 'CapCut', icon: getIconComponent('CapCut') },
+    { name: 'Filmora', icon: getIconComponent('Filmora') },
+    { name: 'Wireshark', icon: getIconComponent('Wireshark') },
+    { name: 'XAMPP', icon: getIconComponent('XAMPP') },
+    { name: 'VMware', icon: getIconComponent('VMware') },
+    { name: 'Dev C++', icon: getIconComponent('Dev C++') },
+    { name: 'Code::Blocks', icon: getIconComponent('Code::Blocks') },
+    { name: 'Python', icon: getIconComponent('Python') },
+    { name: 'C', icon: getIconComponent('C') },
+    { name: 'C++', icon: getIconComponent('C++') },
+    { name: 'HTML', icon: getIconComponent('HTML') },
+    { name: 'CSS Sprites', icon: getIconComponent('CSS Sprites') },
+    { name: 'Emacs', icon: getIconComponent('Emacs') },
+    { name: 'Ubuntu', icon: getIconComponent('Ubuntu') },
+    { name: 'Arduino IDE', icon: getIconComponent('Arduino IDE') },
   ],
   'Industry Knowledge': [
     { name: 'User Experience (UX)', icon: IconUser },
@@ -254,7 +356,7 @@ export default function Skills() {
               // Check if icon is a React component
               const isReactComponent = typeof skill.icon === 'function' || (typeof skill.icon === 'object' && skill.icon !== null && '$$typeof' in skill.icon)
               const IconComponent = isReactComponent ? skill.icon : null
-              const isImageUrl = typeof skill.icon === 'string' && skill.icon.startsWith('http')
+              const isImageUrl = typeof skill.icon === 'string' && (skill.icon.startsWith('http') || skill.icon.startsWith('/'))
               
               return (
                 <Card3D key={skill.name} intensity={5}>
@@ -284,9 +386,10 @@ export default function Skills() {
                             // Check if component name suggests it's a Tabler icon
                             const componentName = Component.displayName || Component.name || ''
                             const isTablerIcon = componentName.startsWith('Icon')
+                            const isFontAwesome = componentName.includes('Fa') || componentName.includes('Si')
                             return (
                               <Component 
-                                className="w-8 h-8 text-primary-500 group-hover:text-primary-400 transition-colors"
+                                className={`w-8 h-8 ${isFontAwesome ? 'text-primary-500 group-hover:text-primary-400' : 'text-primary-500 group-hover:text-primary-400'} transition-colors`}
                                 {...(isTablerIcon ? { strokeWidth: 1.5 } : {})}
                               />
                             )

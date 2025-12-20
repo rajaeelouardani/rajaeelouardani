@@ -572,6 +572,7 @@ html {
   );
   border: 1px solid rgba(59, 130, 246, 0.2);
   border-top: 1px solid rgba(139, 92, 246, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(59, 130, 246, 0.25);
   border-left: 1px solid rgba(59, 130, 246, 0.3);
   box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.4),
@@ -584,11 +585,15 @@ html {
 
 #blog .glass-card,
 #blog .glass-card:hover {
-  box-shadow: none !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(59, 130, 246, 0.25) !important;
   border-left: none !important;
   background: rgba(0, 0, 0, 0.4) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+#blog .glass-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(59, 130, 246, 0.4) !important;
 }
 
 #blog .glass-card::before,
@@ -611,7 +616,7 @@ html {
 
 #about .glass-card,
 #about .glass-card:hover {
-  box-shadow: none !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(59, 130, 246, 0.25) !important;
   border-left: none !important;
   background: rgba(0, 0, 0, 0.2) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -620,25 +625,36 @@ html {
   -webkit-backdrop-filter: none !important;
 }
 
+#about .glass-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(59, 130, 246, 0.4) !important;
+}
+
 #about .glass-card::before,
 #about .glass-card::after {
   display: none !important;
 }
 
-#projects .glass-card,
+#projects .glass-card {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(59, 130, 246, 0.25) !important;
+}
+
 #projects .glass-card:hover {
-  box-shadow: none !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(59, 130, 246, 0.4) !important;
 }
 
 #certifications .glass-card,
 #certifications .glass-card:hover {
-  box-shadow: none !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(59, 130, 246, 0.25) !important;
   border-left: none !important;
   background: rgba(0, 0, 0, 0.4) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
+}
+
+#certifications .glass-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(59, 130, 246, 0.4) !important;
 }
 
 #certifications .glass-card::before,
@@ -648,13 +664,17 @@ html {
 
 #honors-awards .glass-card,
 #honors-awards .glass-card:hover {
-  box-shadow: none !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(59, 130, 246, 0.25) !important;
   border-left: none !important;
   background: rgba(0, 0, 0, 0.4) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
+}
+
+#honors-awards .glass-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(59, 130, 246, 0.4) !important;
 }
 
 #honors-awards .glass-card::before,
@@ -691,7 +711,7 @@ html {
   );
   box-shadow:
     0 30px 60px rgba(0, 0, 0, 0.5),
-    0 0 30px rgba(59, 130, 246, 0.2),
+    0 0 40px rgba(59, 130, 246, 0.4),
     inset 0 0 20px rgba(255, 255, 255, 0.05);
   transform: translateY(-2px);
   border-color: rgba(59, 130, 246, 0.4);
