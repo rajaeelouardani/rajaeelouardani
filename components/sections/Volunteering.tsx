@@ -81,7 +81,6 @@ export default function Volunteering() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {volunteering.slice(0, 4).map((item, index) => {
-            const translatedItem = t?.volunteering?.items?.[index]
             return (
             <Card3D key={item.id} intensity={8}>
               <motion.div
@@ -103,11 +102,11 @@ export default function Volunteering() {
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
                     <h3 className={`text-xl font-bold mb-1 ${item.color} group-hover:text-primary-500 transition-colors`}>
-                      {translatedItem?.organization || item.organization}
+                      {item.organization}
                     </h3>
-                    <p className="text-white font-semibold mb-2">{translatedItem?.role || item.role}</p>
+                    <p className="text-white font-semibold mb-2">{item.role}</p>
                     <span className="text-xs text-gray-500 bg-gray-800 px-2 py-1 rounded border border-gray-700">
-                      {translatedItem?.category || item.category}
+                      {item.category}
                     </span>
                   </div>
                   <div className="ml-4">
@@ -128,9 +127,9 @@ export default function Volunteering() {
                     )}
                   </div>
                 </div>
-                <p className="text-gray-400 text-sm mb-4">{translatedItem?.description || item.description}</p>
+                <p className="text-gray-400 text-sm mb-4">{item.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-gray-500">{translatedItem?.period || item.period}</span>
+                  <span className="text-xs text-gray-500">{item.period}</span>
                 </div>
                 <div className="absolute inset-0 rounded-lg shine-effect opacity-0 group-hover:opacity-20 transition-opacity"></div>
               </motion.div>
