@@ -55,8 +55,8 @@ function DockIcon({ item, index, mouseY, primaryColor, isLoading }: {
     return Math.abs((bounds.top + bounds.height / 2) - (val as number));
   });
 
-  const widthSync = useTransform(distance, [-40, 0, 40], [36, 48, 36]);
-  const heightSync = useTransform(distance, [-40, 0, 40], [36, 48, 36]);
+  const widthSync = useTransform(distance, [-40, 0, 40], [28, 36, 28]);
+  const heightSync = useTransform(distance, [-40, 0, 40], [28, 36, 28]);
   const scaleSync = useTransform(distance, [-40, 0, 40], [1, 1.2, 1]);
 
   const width = useSpring(widthSync, {
@@ -93,10 +93,10 @@ function DockIcon({ item, index, mouseY, primaryColor, isLoading }: {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            className="w-9 h-9 flex items-center justify-center"
+            className="w-7 h-7 flex items-center justify-center"
           >
             <motion.div
-              className="w-4 h-4 border-2 border-gray-400 border-t-transparent rounded-full"
+              className="w-3 h-3 border-2 border-gray-400 border-t-transparent rounded-full"
               animate={{ rotate: 360 }}
               transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
             />
@@ -112,9 +112,9 @@ function DockIcon({ item, index, mouseY, primaryColor, isLoading }: {
             whileTap={{ scale: 0.9 }}
           >
             <IconComponent 
-              className="h-4 w-4 text-gray-400 group-hover:text-white transition-colors z-10" 
+              className="h-3 w-3 text-gray-400 group-hover:text-white transition-colors z-10" 
               style={{
-                filter: `drop-shadow(0 0 6px ${primaryColor}80)`,
+                filter: `drop-shadow(0 0 4px ${primaryColor}80)`,
               }}
             />
             <motion.div
@@ -127,9 +127,9 @@ function DockIcon({ item, index, mouseY, primaryColor, isLoading }: {
         )}
       </AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, x: -10 }}
-        whileHover={{ opacity: 1, x: -70 }}
-        className="absolute left-full ml-3 px-3 py-1.5 bg-black/90 backdrop-blur-md text-white text-xs rounded-lg whitespace-nowrap shadow-xl pointer-events-none z-50 border border-white/20"
+        initial={{ opacity: 0, x: 10 }}
+        whileHover={{ opacity: 1, x: 70 }}
+        className="absolute right-full mr-3 px-3 py-1.5 bg-black/90 backdrop-blur-md text-white text-xs rounded-lg whitespace-nowrap shadow-xl pointer-events-none z-50 border border-white/20"
         style={{
           boxShadow: `0 10px 30px ${primaryColor}40`,
         }}
@@ -164,16 +164,16 @@ export default function SocialDock() {
 
   return (
     <motion.div
-      initial={{ x: -100, opacity: 0 }}
+      initial={{ x: 100, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ type: "spring", stiffness: 120, damping: 10 }}
-      className="fixed left-4 top-1/2 -translate-y-1/2 z-[100] hidden md:flex"
+      className="fixed right-8 top-1/2 -translate-y-1/2 z-[100] hidden md:flex"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
       <div
         ref={dockRef}
-        className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-2 shadow-2xl"
+        className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-1.5 shadow-2xl"
         style={{
           boxShadow: `0 20px 60px ${primaryColor}20, 0 0 40px ${primaryColor}10`,
         }}

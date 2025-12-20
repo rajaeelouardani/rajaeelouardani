@@ -160,22 +160,22 @@ function Portfolio() {
         {/* 3D Marquee Section */}
         {webProjectCoverImages.length > 0 && (
           <div className="relative mx-auto my-10 flex h-screen w-full max-w-7xl flex-col items-center justify-center overflow-hidden rounded-3xl">
-            {/* Title and Description - Au-dessus de tout */}
-            <h2 className="relative z-[20] mx-auto max-w-4xl text-center text-2xl font-bold text-balance text-white md:text-4xl lg:text-6xl mb-4 drop-shadow-2xl">
+            {/* Title and Description */}
+            <h2 className="relative z-20 mx-auto max-w-4xl text-center text-2xl font-bold text-balance text-white md:text-4xl lg:text-6xl mb-4">
               {t.portfolio.marqueeTitle || 'Mes Projets Web'}
             </h2>
-            <p className="relative z-[20] mx-auto max-w-2xl py-8 text-center text-sm text-neutral-200 md:text-base drop-shadow-lg" dir={dir}>
+            <p className="relative z-20 mx-auto max-w-2xl py-8 text-center text-sm text-neutral-200 md:text-base" dir={dir}>
               {t.portfolio.marqueeSubtitle || 'Découvrez mes réalisations web'}
             </p>
 
-            {/* 3D Marquee - En avant-plan, bien visible */}
+            {/* 3D Marquee Background */}
             <ThreeDMarquee
-              className="pointer-events-none absolute inset-0 h-full w-full z-[10]"
+              className="pointer-events-none absolute inset-0 h-full w-full"
               images={webProjectCoverImages}
             />
             
-            {/* Overlay très léger - juste pour améliorer la lisibilité du texte */}
-            <div className="absolute inset-0 z-[15] h-full w-full bg-gradient-to-b from-black/20 via-transparent to-black/20 pointer-events-none" />
+            {/* Overlay - Lighter to show images but keep text readable */}
+            <div className="absolute inset-0 z-10 h-full w-full bg-gradient-to-b from-black/60 via-black/40 to-black/60 dark:from-black/40 dark:via-black/20 dark:to-black/40" />
           </div>
         )}
 

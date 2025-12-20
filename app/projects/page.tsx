@@ -351,29 +351,29 @@ export default function ProjectsPage() {
         ) : activeDomain === 'complete' ? (
           /* Complete projects with 3D marquee background */
           <div className="relative mx-auto my-10 flex h-screen w-full max-w-7xl flex-col items-center justify-center overflow-hidden rounded-3xl">
-            {/* Title and Description - Au-dessus de tout */}
-            <h2 className="relative z-[20] mx-auto max-w-4xl text-center text-2xl font-bold text-balance text-white md:text-4xl lg:text-6xl font-tech flex items-center justify-center gap-2 drop-shadow-2xl" dir={dir}>
+            {/* Title and Description */}
+            <h2 className="relative z-20 mx-auto max-w-4xl text-center text-2xl font-bold text-balance text-white md:text-4xl lg:text-6xl font-tech flex items-center justify-center gap-2" dir={dir}>
               <span className="text-white inline-block">{t?.portfolio?.my || 'Mes'}</span>
               <span className="text-primary-500 inline-block">{t?.portfolio?.flipWords?.[0] || 'Projets'}</span>
             </h2>
-            <p className="relative z-[20] mx-auto max-w-2xl py-8 text-center text-sm text-neutral-200 md:text-base drop-shadow-lg" dir={dir}>
+            <p className="relative z-20 mx-auto max-w-2xl py-8 text-center text-sm text-neutral-200 md:text-base" dir={dir}>
               {t?.portfolio?.subtitle || 'Des projets qui combinent créativité et technologie pour créer des solutions innovantes qui inspirent et transforment.'}
             </p>
 
-            {/* 3D Marquee - En avant-plan, bien visible */}
+            {/* 3D Marquee Background */}
             {webProjectCoverImages.length > 0 ? (
               <ThreeDMarquee
-                className="pointer-events-none absolute inset-0 h-full w-full z-[10]"
+                className="pointer-events-none absolute inset-0 h-full w-full"
                 images={webProjectCoverImages}
               />
             ) : (
-              <div className="absolute inset-0 flex items-center justify-center text-gray-500 z-[10]">
+              <div className="absolute inset-0 flex items-center justify-center text-gray-500">
                 <p>Loading projects...</p>
               </div>
             )}
             
-            {/* Overlay très léger - juste pour améliorer la lisibilité du texte */}
-            <div className="absolute inset-0 z-[15] h-full w-full bg-gradient-to-b from-black/20 via-transparent to-black/20 pointer-events-none" />
+            {/* Overlay - Lighter to show images but keep text readable */}
+            <div className="absolute inset-0 z-10 h-full w-full bg-gradient-to-b from-black/60 via-black/40 to-black/60 dark:from-black/40 dark:via-black/20 dark:to-black/40" />
           </div>
         ) : (
           /* Other domains: Projects with cards */
