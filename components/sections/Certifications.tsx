@@ -389,6 +389,7 @@ export default function Certifications() {
                         width={32}
                         height={32}
                         className="w-full h-full object-contain"
+                        unoptimized={getOrgLogo((cert as any).issuerOriginal || cert.issuer).endsWith('.jfif') || getOrgLogo((cert as any).issuerOriginal || cert.issuer).endsWith('.JFIF')}
                         onError={(e) => {
                           const target = e.target as HTMLImageElement
                           target.style.display = 'none'

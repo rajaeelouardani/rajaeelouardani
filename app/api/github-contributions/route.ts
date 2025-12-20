@@ -8,10 +8,19 @@ export async function GET() {
   const token = process.env.GITHUB_TOKEN
 
   if (!token) {
-    return NextResponse.json(
-      { error: 'GitHub token not configured' },
-      { status: 500 }
-    )
+    // Return empty data instead of error to prevent 500
+    return NextResponse.json({
+      totalContributions: 0,
+      totalContributionsWithPrivate: 0,
+      privateContributions: 0,
+      totalCommits: 0,
+      totalIssues: 0,
+      totalPullRequests: 0,
+      totalReviews: 0,
+      totalRepositories: 0,
+      calendar: [],
+      error: 'GitHub token not configured',
+    })
   }
 
   try {
