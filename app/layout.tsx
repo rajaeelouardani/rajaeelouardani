@@ -217,21 +217,25 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/svg mon logo favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/svg mon logo favicon.png" />
-        {/* Preload testimonial images for faster loading */}
-        <link rel="preload" href="/testimonial/kenza Abbouti.webp" as="image" fetchPriority="high" />
-        <link rel="preload" href="/testimonial/Hajar SLIMANI.jfif" as="image" fetchPriority="high" />
-        <link rel="preload" href="/testimonial/IMANE BOUHADDOU.jfif" as="image" fetchPriority="high" />
-        <link rel="preload" href="/testimonial/Douglas Mbiandou.jfif" as="image" fetchPriority="high" />
-        <link rel="preload" href="/testimonial/Awatif Beggar.jpg" as="image" fetchPriority="high" />
-        <link rel="preload" href="/testimonial/Adam bennis.jfif" as="image" fetchPriority="high" />
-        <link rel="preload" href="/testimonial/Samir Messaoudi.jfif" as="image" fetchPriority="high" />
-        <link rel="preload" href="/testimonial/Yasmine Allal.jfif" as="image" fetchPriority="high" />
-        <link rel="preload" href="/testimonial/Sadife Mehmed Descamps.jfif" as="image" fetchPriority="high" />
-        <link rel="preload" href="/testimonial/Mahamouda Salouhou.jfif" as="image" fetchPriority="high" />
-        <link rel="preload" href="/testimonial/Ahmed MOUCHTACHI.jfif" as="image" fetchPriority="high" />
-        <link rel="preload" href="/testimonial/Nadia Handaq.jfif" as="image" fetchPriority="high" />
-        <link rel="preload" href="/logos/mcovery.webp" as="image" fetchPriority="high" />
-        <link rel="preload" href="/testimonial/Hôtel Le Rochegude.png" as="image" fetchPriority="high" />
+        {/* DNS prefetch and preconnect for faster image loading */}
+        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
+        {/* Preload first 3 testimonial images (most important) */}
+        <link rel="preload" href="/testimonial/kenza Abbouti.webp" as="image" fetchPriority="high" type="image/webp" />
+        <link rel="preload" href="/testimonial/Hajar SLIMANI.jfif" as="image" fetchPriority="high" type="image/jpeg" />
+        <link rel="preload" href="/testimonial/IMANE BOUHADDOU.jfif" as="image" fetchPriority="high" type="image/jpeg" />
+        {/* Prefetch remaining testimonial images (lower priority) */}
+        <link rel="prefetch" href="/testimonial/Douglas Mbiandou.jfif" as="image" />
+        <link rel="prefetch" href="/testimonial/Awatif Beggar.jpg" as="image" />
+        <link rel="prefetch" href="/testimonial/Adam bennis.jfif" as="image" />
+        <link rel="prefetch" href="/testimonial/Samir Messaoudi.jfif" as="image" />
+        <link rel="prefetch" href="/testimonial/Yasmine Allal.jfif" as="image" />
+        <link rel="prefetch" href="/testimonial/Sadife Mehmed Descamps.jfif" as="image" />
+        <link rel="prefetch" href="/testimonial/Mahamouda Salouhou.jfif" as="image" />
+        <link rel="prefetch" href="/testimonial/Ahmed MOUCHTACHI.jfif" as="image" />
+        <link rel="prefetch" href="/testimonial/Nadia Handaq.jfif" as="image" />
+        <link rel="prefetch" href="/logos/mcovery.webp" as="image" />
+        <link rel="prefetch" href="/testimonial/Hôtel Le Rochegude.png" as="image" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}

@@ -18,6 +18,8 @@ export const AnimatedTestimonials = ({
 }) => {
   const [active, setActive] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
+  const [imageErrors, setImageErrors] = useState<Set<string>>(new Set());
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   // Return null if no testimonials
@@ -25,12 +27,14 @@ export const AnimatedTestimonials = ({
     return null;
   }
 
-  // Preload ALL images at once for instant loading
+  // Preload ALL images at once for instant loading with better error handling
   useEffect(() => {
     if (testimonials.length === 0) return;
     
     // Preload ALL testimonial images immediately
     const allImages = testimonials.map((t) => t.src).filter(Boolean);
+    const loaded = new Set<string>();
+    const errors = new Set<string>();
 
     allImages.forEach((src) => {
       if (src && !src.startsWith('http') && !src.startsWith('//')) {
@@ -42,14 +46,33 @@ export const AnimatedTestimonials = ({
         link.setAttribute('fetchpriority', 'high');
         document.head.appendChild(link);
         
-        // Also preload with Image object as fallback
+        // Also preload with Image object with proper error handling
         const img = new window.Image();
+        img.onload = () => {
+          loaded.add(src);
+          setLoadedImages(new Set(loaded));
+        };
+        img.onerror = () => {
+          errors.add(src);
+          setImageErrors(new Set(errors));
+          console.warn(`Failed to preload image: ${src}`);
+        };
         img.src = src;
       }
     });
 
     // No cleanup needed - keep all images preloaded
   }, [testimonials]);
+
+  // Helper function to get initials from name
+  const getInitials = (name: string) => {
+    return name
+      .split(' ')
+      .map(n => n[0])
+      .join('')
+      .toUpperCase()
+      .slice(0, 2);
+  };
 
   useEffect(() => {
     if (testimonials.length === 0) return;
@@ -109,30 +132,43 @@ export const AnimatedTestimonials = ({
             </div>
 
             <div className="flex items-center gap-4">
-              <div className={`relative h-14 w-14 overflow-hidden rounded-full border-2 border-primary-500/50 ${testimonials[active].src.includes('mcovery.webp') ? 'bg-white p-2' : ''}`}>
-                <Image
-                  src={testimonials[active].src}
-                  alt={testimonials[active].name}
-                  fill
-                  className={testimonials[active].src.includes('mcovery.webp') ? 'object-contain' : 'object-cover'}
-                  sizes="56px"
-                  priority={true}
-                  loading="eager"
-                  quality={60}
-                  unoptimized={testimonials[active].src.startsWith('http') || testimonials[active].src.startsWith('//')}
-                  onError={(e) => {
-                    console.error(`❌ Failed to load testimonial image: ${testimonials[active].src}`, e);
-                    const target = e.target as HTMLImageElement;
-                    if (target.parentElement) {
-                      target.parentElement.style.backgroundColor = 'rgba(100, 100, 100, 0.3)';
-                    }
-                    target.style.opacity = '0.5';
-                    target.style.filter = 'grayscale(100%)';
-                  }}
-                  onLoad={() => {
-                    console.log(`✅ Successfully loaded testimonial image: ${testimonials[active].src}`);
-                  }}
-                />
+              <div className={`relative h-14 w-14 overflow-hidden rounded-full border-2 border-primary-500/50 ${testimonials[active].src.includes('mcovery.webp') ? 'bg-white p-2' : 'bg-gray-800'}`}>
+                {/* Placeholder with initials while loading or on error */}
+                {(!loadedImages.has(testimonials[active].src) || imageErrors.has(testimonials[active].src)) && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary-500/20 to-primary-600/20">
+                    <span className="text-white font-bold text-sm">
+                      {getInitials(testimonials[active].name)}
+                    </span>
+                  </div>
+                )}
+                {/* Actual image */}
+                {!imageErrors.has(testimonials[active].src) && (
+                  <Image
+                    src={testimonials[active].src}
+                    alt={testimonials[active].name}
+                    fill
+                    className={`transition-opacity duration-300 ${
+                      loadedImages.has(testimonials[active].src) ? 'opacity-100' : 'opacity-0'
+                    } ${testimonials[active].src.includes('mcovery.webp') ? 'object-contain' : 'object-cover'}`}
+                    sizes="56px"
+                    priority={active <= 2}
+                    loading={active <= 2 ? "eager" : "lazy"}
+                    quality={60}
+                    unoptimized={testimonials[active].src.startsWith('http') || testimonials[active].src.startsWith('//')}
+                    onError={(e) => {
+                      console.error(`❌ Failed to load testimonial image: ${testimonials[active].src}`, e);
+                      const newErrors = new Set(imageErrors);
+                      newErrors.add(testimonials[active].src);
+                      setImageErrors(newErrors);
+                    }}
+                    onLoad={() => {
+                      console.log(`✅ Successfully loaded testimonial image: ${testimonials[active].src}`);
+                      const newLoaded = new Set(loadedImages);
+                      newLoaded.add(testimonials[active].src);
+                      setLoadedImages(newLoaded);
+                    }}
+                  />
+                )}
               </div>
               <div>
                 <div className="text-white font-semibold text-base md:text-lg">
