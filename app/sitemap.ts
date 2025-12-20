@@ -4,20 +4,20 @@ import { projects } from '@/lib/projectsData'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://rajaeelouardani.com'
   
-  // Static routes
+  // Static routes with optimized priorities
   const routes = [
-    '',
-    '/about',
-    '/projects',
-    '/blog',
-    '/contact',
-    '/services',
-    '/skills',
-  ].map((route) => ({
+    { route: '', priority: 1.0, changeFrequency: 'daily' as const },
+    { route: '/projects', priority: 0.9, changeFrequency: 'weekly' as const },
+    { route: '/blog', priority: 0.9, changeFrequency: 'weekly' as const },
+    { route: '/about', priority: 0.8, changeFrequency: 'monthly' as const },
+    { route: '/contact', priority: 0.7, changeFrequency: 'monthly' as const },
+    { route: '/services', priority: 0.8, changeFrequency: 'monthly' as const },
+    { route: '/skills', priority: 0.8, changeFrequency: 'monthly' as const },
+  ].map(({ route, priority, changeFrequency }) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1 : 0.8,
+    changeFrequency,
+    priority,
   }))
 
   // Dynamic project routes

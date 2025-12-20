@@ -48,14 +48,31 @@ export const metadata: Metadata = {
     'Full Stack Developer',
     'Next.js Developer',
     'React Developer',
+    'React.js Developer',
+    'Node.js Developer',
+    'TypeScript Developer',
+    'JavaScript Developer',
     'Portfolio',
     'Web Development',
+    'Frontend Developer',
+    'Backend Developer',
     'Photography',
     'Design',
+    'UI/UX Design',
+    'Graphic Design',
+    'Logo Design',
     'Morocco',
+    'Moroccan Developer',
     'ALX Software Engineering',
     '10000 Codeurs',
+    'Content Creator',
+    'Freelance Developer',
+    'Web Design',
+    'Mobile Development',
+    'Responsive Design',
   ],
+  category: 'Portfolio',
+  classification: 'Web Development Portfolio',
   authors: [{ name: 'Rajae Elouardani' }],
   creator: 'Rajae Elouardani',
   publisher: 'Rajae Elouardani',
@@ -155,11 +172,44 @@ export default function RootLayout({
     '@type': 'WebSite',
     name: 'Rajae Elouardani - Portfolio',
     url: baseUrl,
-    description: 'Web Developer Portfolio',
+    description: 'Web Developer Portfolio - Full Stack Developer specializing in Next.js, React.js, and Node.js',
     author: {
       '@type': 'Person',
       name: 'Rajae Elouardani',
     },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${baseUrl}/search?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: baseUrl,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Projects',
+        item: `${baseUrl}/projects`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Blog',
+        item: `${baseUrl}/blog`,
+      },
+    ],
   }
 
   return (
@@ -167,6 +217,21 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/svg mon logo favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/svg mon logo favicon.png" />
+        {/* Preload testimonial images for faster loading */}
+        <link rel="preload" href="/testimonial/kenza Abbouti.webp" as="image" fetchPriority="high" />
+        <link rel="preload" href="/testimonial/Hajar SLIMANI.jfif" as="image" fetchPriority="high" />
+        <link rel="preload" href="/testimonial/IMANE BOUHADDOU.jfif" as="image" fetchPriority="high" />
+        <link rel="preload" href="/testimonial/Douglas Mbiandou.jfif" as="image" fetchPriority="high" />
+        <link rel="preload" href="/testimonial/Awatif Beggar.jpg" as="image" fetchPriority="high" />
+        <link rel="preload" href="/testimonial/Adam bennis.jfif" as="image" fetchPriority="high" />
+        <link rel="preload" href="/testimonial/Samir Messaoudi.jfif" as="image" fetchPriority="high" />
+        <link rel="preload" href="/testimonial/Yasmine Allal.jfif" as="image" fetchPriority="high" />
+        <link rel="preload" href="/testimonial/Sadife Mehmed Descamps.jfif" as="image" fetchPriority="high" />
+        <link rel="preload" href="/testimonial/Mahamouda Salouhou.jfif" as="image" fetchPriority="high" />
+        <link rel="preload" href="/testimonial/Ahmed MOUCHTACHI.jfif" as="image" fetchPriority="high" />
+        <link rel="preload" href="/testimonial/Nadia Handaq.jfif" as="image" fetchPriority="high" />
+        <link rel="preload" href="/logos/mcovery.webp" as="image" fetchPriority="high" />
+        <link rel="preload" href="/testimonial/Hôtel Le Rochegude.png" as="image" fetchPriority="high" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
@@ -175,6 +240,22 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <meta name="theme-color" content="#000000" />
+        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <link rel="canonical" href={baseUrl} />
+        <meta name="geo.region" content="MA" />
+        <meta name="geo.placename" content="Morocco" />
+        <meta name="language" content="French, English, Arabic" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="distribution" content="global" />
+        <meta name="rating" content="general" />
+        <meta httpEquiv="content-language" content="fr, en, ar" />
       </head>
       <body className="antialiased">
         <LanguageProvider>

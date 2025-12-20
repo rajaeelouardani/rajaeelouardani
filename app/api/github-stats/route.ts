@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server'
 
-export const runtime = 'edge'
 export const dynamic = 'force-dynamic'
 export const revalidate = 3600 // Revalidate every hour
 
@@ -20,6 +19,38 @@ export async function GET() {
     })
 
     if (!userRes.ok) {
+      // If rate limited or unauthorized, return a basic response
+      if (userRes.status === 403 || userRes.status === 429) {
+        console.warn('GitHub API rate limited or unauthorized')
+        // Return minimal data structure to prevent complete failure
+        return NextResponse.json({
+          user: {
+            login: username,
+            name: username,
+            avatar_url: '',
+            bio: null,
+            public_repos: 0,
+            followers: 0,
+            following: 0,
+            created_at: '',
+            location: null,
+            blog: null,
+            company: null,
+          },
+          stats: {
+            totalStars: 0,
+            totalForks: 0,
+            totalRepos: 0,
+            ownedRepos: 0,
+            contributedRepos: 0,
+            totalCommits: 0,
+            topLanguages: [],
+            allLanguages: [],
+          },
+          repos: [],
+          error: 'Rate limited or unauthorized',
+        })
+      }
       throw new Error(`GitHub API error: ${userRes.status}`)
     }
 

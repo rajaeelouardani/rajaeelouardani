@@ -5,6 +5,7 @@ import Portfolio from '@/components/sections/Portfolio'
 import Blog from '@/components/sections/Blog'
 import { GlobeDemo } from '@/components/GlobeDemo'
 import Testimonials from '@/components/sections/Testimonials'
+import GitHubStats from '@/components/sections/GitHubStats'
 
 export default function Home() {
   return (
@@ -29,6 +30,9 @@ export default function Home() {
       
       {/* Blog Section - 3 Blog Posts with View More Button */}
       <Blog />
+      
+      {/* GitHub Stats Section */}
+      <GitHubStats />
     </div>
   )
 }

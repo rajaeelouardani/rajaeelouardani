@@ -25,24 +25,21 @@ export const AnimatedTestimonials = ({
     return null;
   }
 
-  // Preload next images for faster transitions
+  // Preload ALL images at once for instant loading
   useEffect(() => {
     if (testimonials.length === 0) return;
     
-    // Preload current and next 2 images
-    const imagesToPreload = [
-      testimonials[active]?.src,
-      testimonials[(active + 1) % testimonials.length]?.src,
-      testimonials[(active + 2) % testimonials.length]?.src,
-    ].filter(Boolean);
+    // Preload ALL testimonial images immediately
+    const allImages = testimonials.map((t) => t.src).filter(Boolean);
 
-    imagesToPreload.forEach((src) => {
+    allImages.forEach((src) => {
       if (src && !src.startsWith('http') && !src.startsWith('//')) {
         // Use link preload for better performance
         const link = document.createElement('link');
         link.rel = 'preload';
         link.as = 'image';
         link.href = src;
+        link.setAttribute('fetchpriority', 'high');
         document.head.appendChild(link);
         
         // Also preload with Image object as fallback
@@ -51,16 +48,8 @@ export const AnimatedTestimonials = ({
       }
     });
 
-    return () => {
-      // Cleanup preload links
-      imagesToPreload.forEach((src) => {
-        if (src) {
-          const link = document.querySelector(`link[href="${src}"]`);
-          if (link) link.remove();
-        }
-      });
-    };
-  }, [active, testimonials]);
+    // No cleanup needed - keep all images preloaded
+  }, [testimonials]);
 
   useEffect(() => {
     if (testimonials.length === 0) return;
@@ -127,9 +116,9 @@ export const AnimatedTestimonials = ({
                   fill
                   className={testimonials[active].src.includes('mcovery.webp') ? 'object-contain' : 'object-cover'}
                   sizes="56px"
-                  priority={active === 0 || active === 1}
-                  loading={active <= 1 ? "eager" : "lazy"}
-                  quality={90}
+                  priority={true}
+                  loading="eager"
+                  quality={60}
                   unoptimized={testimonials[active].src.startsWith('http') || testimonials[active].src.startsWith('//')}
                   onError={(e) => {
                     console.error(`❌ Failed to load testimonial image: ${testimonials[active].src}`, e);

@@ -135,33 +135,64 @@ export default function GitHubStats() {
   useEffect(() => {
     const fetchGitHubData = async () => {
       try {
+        setLoading(true)
+        setError(null)
+        
         // Fetch stats, contributions, and events in parallel
         const [statsRes, contributionsRes, eventsRes] = await Promise.all([
-          fetch('/api/github-stats'),
-          fetch('/api/github-contributions'),
-          fetch('/api/github-events'),
+          fetch('/api/github-stats', { 
+            cache: 'no-store',
+            headers: {
+              'Content-Type': 'application/json',
+            }
+          }),
+          fetch('/api/github-contributions', { 
+            cache: 'no-store',
+            headers: {
+              'Content-Type': 'application/json',
+            }
+          }),
+          fetch('/api/github-events', { 
+            cache: 'no-store',
+            headers: {
+              'Content-Type': 'application/json',
+            }
+          }),
         ])
 
+        // Check if stats response has error
         if (!statsRes.ok) {
-          throw new Error('Failed to fetch GitHub stats')
+          const errorData = await statsRes.json().catch(() => ({}))
+          throw new Error(errorData.message || `Failed to fetch GitHub stats: ${statsRes.status}`)
         }
 
         const statsJson = await statsRes.json()
+        
+        // Check if response contains error
+        if (statsJson.error) {
+          throw new Error(statsJson.message || statsJson.error)
+        }
+        
         setData(statsJson)
 
         // Contributions are optional (may fail if no token)
         if (contributionsRes.ok) {
           const contributionsJson = await contributionsRes.json()
-          setContributions(contributionsJson)
+          if (!contributionsJson.error) {
+            setContributions(contributionsJson)
+          }
         }
 
         // Events are optional
         if (eventsRes.ok) {
           const eventsJson = await eventsRes.json()
-          setEvents(eventsJson)
+          if (!eventsJson.error) {
+            setEvents(eventsJson)
+          }
         }
       } catch (err: any) {
-        setError(err.message || 'Error loading GitHub stats')
+        const errorMessage = err.message || 'Error loading GitHub stats'
+        setError(errorMessage)
         console.error('Error fetching GitHub stats:', err)
       } finally {
         setLoading(false)
@@ -195,15 +226,72 @@ export default function GitHubStats() {
         </motion.div>
 
         {/* Real GitHub Stats from API */}
-        {loading ? (
+        {error ? (
+          <div className="text-center py-12">
+            <div className="bg-red-900/20 border border-red-500/50 rounded-lg p-6 max-w-2xl mx-auto">
+              <p className="text-red-400 font-semibold mb-2" dir={dir}>Erreur de chargement</p>
+              <p className="text-gray-300 text-sm mb-4" dir={dir}>{error}</p>
+              <button
+                onClick={() => {
+                  setError(null)
+                  setLoading(true)
+                  window.location.reload()
+                }}
+                className="px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-lg transition-colors"
+                dir={dir}
+              >
+                Réessayer
+              </button>
+            </div>
+          </div>
+        ) : loading ? (
           <div className="text-center py-12">
             <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500"></div>
             <p className="text-gray-400 mt-4" dir={dir}>Chargement des statistiques GitHub...</p>
           </div>
         ) : error ? (
           <div className="text-center py-12">
-            <p className="text-red-400" dir={dir}>{error}</p>
-            <p className="text-gray-400 mt-2 text-sm" dir={dir}>Les graphiques ci-dessous utilisent des images statiques</p>
+            <div className="bg-red-900/20 border border-red-500/50 rounded-lg p-6 max-w-2xl mx-auto">
+              <p className="text-red-400 font-semibold mb-2" dir={dir}>Erreur de chargement</p>
+              <p className="text-gray-300 text-sm mb-4" dir={dir}>{error}</p>
+              <button
+                onClick={() => {
+                  setError(null)
+                  setLoading(true)
+                  const fetchGitHubData = async () => {
+                    try {
+                      setLoading(true)
+                      setError(null)
+                      const statsRes = await fetch('/api/github-stats', { 
+                        cache: 'no-store',
+                        headers: {
+                          'Content-Type': 'application/json',
+                        }
+                      })
+                      if (!statsRes.ok) {
+                        const errorData = await statsRes.json().catch(() => ({}))
+                        throw new Error(errorData.message || `Failed to fetch GitHub stats: ${statsRes.status}`)
+                      }
+                      const statsJson = await statsRes.json()
+                      if (statsJson.error) {
+                        throw new Error(statsJson.message || statsJson.error)
+                      }
+                      setData(statsJson)
+                    } catch (err: any) {
+                      setError(err.message || 'Error loading GitHub stats')
+                    } finally {
+                      setLoading(false)
+                    }
+                  }
+                  fetchGitHubData()
+                }}
+                className="px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-lg transition-colors"
+                dir={dir}
+              >
+                Réessayer
+              </button>
+            </div>
+            <p className="text-gray-400 mt-4 text-sm" dir={dir}>Les graphiques ci-dessous utilisent des images statiques</p>
           </div>
         ) : data ? (
           <>
