@@ -35,45 +35,50 @@ export function World({ globeConfig, data, moroccoPoint, htmlElementsData }: { g
   const pointsData = moroccoPoint ? [moroccoPoint] : [];
 
   return (
-    <Globe
-      ref={globeRef}
-      globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
-      arcsData={arcs}
-      arcStartLat={(d: any) => d.startLat}
-      arcStartLng={(d: any) => d.startLng}
-      arcEndLat={(d: any) => d.endLat}
-      arcEndLng={(d: any) => d.endLng}
-      arcColor={(d: any) => d.color || "#3b82f6"}
-      arcAltitude={(d: any) => d.arcAlt || 0.1}
-      arcStroke={(d: any) => d.stroke || 0.4}
-      arcDashLength={globeConfig.arcLength || 0.9}
-      arcDashGap={globeConfig.arcLength || 0.9}
-      arcDashAnimateTime={globeConfig.arcTime || 1000}
-      backgroundColor="rgba(0,0,0,0)"
-      pointsData={pointsData}
-      pointLat={(d: any) => d.lat}
-      pointLng={(d: any) => d.lng}
-      pointColor={(d: any) => d.color || "#FF0000"}
-      pointRadius={(d: any) => d.size || 12}
-      pointLabel={(d: any) => d.label || ""}
-      pointResolution={2}
-      htmlElementsData={htmlElementsData || []}
-      htmlElement={(d: any) => {
-        if (d && d.html) {
-          return d.html;
-        }
-        return null;
-      }}
-      onGlobeReady={() => {
-        // Ensure globe is fully visible and centered
-        if (globeRef.current) {
-          globeRef.current.controls().minDistance = 150;
-          globeRef.current.controls().maxDistance = 500;
-          globeRef.current.controls().enableZoom = true;
-          globeRef.current.controls().enableRotate = true;
-        }
-      }}
-    />
+    <div className="w-full h-full relative overflow-visible flex items-center justify-center" style={{ touchAction: 'pan-x pan-y pinch-zoom', margin: '0 auto' }}>
+      <Globe
+        ref={globeRef}
+        globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
+        arcsData={arcs}
+        arcStartLat={(d: any) => d.startLat}
+        arcStartLng={(d: any) => d.startLng}
+        arcEndLat={(d: any) => d.endLat}
+        arcEndLng={(d: any) => d.endLng}
+        arcColor={(d: any) => d.color || "#3b82f6"}
+        arcAltitude={(d: any) => d.arcAlt || 0.1}
+        arcStroke={(d: any) => d.stroke || 0.4}
+        arcDashLength={globeConfig.arcLength || 0.9}
+        arcDashGap={globeConfig.arcLength || 0.9}
+        arcDashAnimateTime={globeConfig.arcTime || 1000}
+        backgroundColor="rgba(0,0,0,0)"
+        pointsData={pointsData}
+        pointLat={(d: any) => d.lat}
+        pointLng={(d: any) => d.lng}
+        pointColor={(d: any) => d.color || "#FF0000"}
+        pointRadius={(d: any) => d.size || 12}
+        pointLabel={(d: any) => d.label || ""}
+        pointResolution={2}
+        htmlElementsData={htmlElementsData || []}
+        htmlElement={(d: any) => {
+          if (d && d.html) {
+            return d.html;
+          }
+          return null;
+        }}
+        onGlobeReady={() => {
+          // Ensure globe is fully visible and centered
+          if (globeRef.current) {
+            globeRef.current.controls().minDistance = 150;
+            globeRef.current.controls().maxDistance = 500;
+            globeRef.current.controls().enableZoom = true;
+            globeRef.current.controls().enableRotate = true;
+            // Allow panning for mobile
+            globeRef.current.controls().enablePan = true;
+            globeRef.current.controls().panSpeed = 0.8;
+          }
+        }}
+      />
+    </div>
   );
 }
 

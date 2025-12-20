@@ -251,15 +251,15 @@ export function GlobeDemo() {
         </motion.div>
       </div>
 
-      {/* Globe container - centered */}
-      <div className="flex items-center justify-center py-10 md:py-20 h-auto min-h-[600px] md:min-h-[700px] relative">
-        <div className="max-w-7xl mx-auto w-full relative h-full min-h-[600px] md:h-[40rem] px-4">
-          <div className="w-full h-full max-w-6xl mx-auto relative flex items-center justify-center">
-            <World data={sampleArcs} globeConfig={globeConfig} htmlElementsData={htmlElementsData} />
+      {/* Globe container - centered with frame like 3D marquee */}
+      <div className="container mx-auto px-4">
+        <div className="relative mx-auto my-10 flex h-screen w-full max-w-7xl flex-col items-center justify-center overflow-hidden rounded-3xl">
+          {/* Globe Background - perfectly centered with equal spacing */}
+          <div className="absolute inset-0 w-full h-full flex items-center justify-center">
+            <div className="w-full h-full max-w-full flex items-center justify-center" style={{ paddingLeft: '2rem', paddingRight: '2rem', left: 0, right: 0, margin: '0 auto' }}>
+              <World data={sampleArcs} globeConfig={globeConfig} htmlElementsData={htmlElementsData} />
+            </div>
           </div>
-          
-          {/* Shadow gradient - reduced opacity and positioned below globe */}
-          <div className="absolute w-full bottom-0 inset-x-0 h-20 bg-gradient-to-t from-black/30 to-transparent pointer-events-none select-none z-10" />
         </div>
       </div>
     </section>
