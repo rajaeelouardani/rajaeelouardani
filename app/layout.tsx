@@ -8,6 +8,7 @@ import ScrollToTop from '@/components/ScrollToTop'
 import SocialDock from '@/components/SocialDock'
 import LoadingScreen from '@/components/LoadingScreen'
 import AnimatedBackground from '@/components/AnimatedBackground'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import { ThemeProvider } from '@/contexts/ThemeContext'
 
@@ -34,14 +35,14 @@ const reemKufi = Reem_Kufi({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Rajae Elouardani - Portfolio | Web Developer & Content Creator',
+    default: 'Rajae Elouardani - Web Developer Portfolio',
     template: '%s | Rajae Elouardani',
   },
   icons: {
     icon: '/svg mon logo favicon.png',
     apple: '/svg mon logo favicon.png',
   },
-  description: 'Développeuse web Full Stack spécialisée en Next.js, React.js et Node.js. Étudiante en Informatique | ALX Software Engineering | Ambassadrice 10000 Codeurs | Présidente Photography FSM Club. Découvrez mes projets web, design et photographie.',
+  description: 'Développeuse web Full Stack spécialisée en Next.js, React.js et Node.js. Découvrez mes projets web, design et photographie sur mon portfolio.',
   keywords: [
     'Rajae Elouardani',
     'Web Developer',
@@ -95,8 +96,8 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     url: process.env.NEXT_PUBLIC_SITE_URL || 'https://rajaeelouardani.com',
     siteName: 'Rajae Elouardani - Portfolio',
-    title: 'Rajae Elouardani - Web Developer & Content Creator',
-    description: 'Développeuse web Full Stack spécialisée en Next.js, React.js et Node.js. Découvrez mes projets web, design et photographie.',
+    title: 'Rajae Elouardani - Web Developer Portfolio',
+    description: 'Développeuse web Full Stack spécialisée en Next.js, React.js et Node.js. Découvrez mes projets web, design et photographie sur mon portfolio.',
     images: [
       {
         url: '/Rajae elouardani.png',
@@ -108,10 +109,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Rajae Elouardani - Web Developer & Content Creator',
+    title: 'Rajae Elouardani - Web Developer Portfolio',
     description: 'Développeuse web Full Stack spécialisée en Next.js, React.js et Node.js.',
     images: ['/Rajae elouardani.png'],
     creator: '@rajaeelouardani',
+    site: '@rajaeelouardani',
   },
   robots: {
     index: true,
@@ -142,8 +144,8 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Rajae Elouardani',
-    jobTitle: 'Web Developer',
-    description: 'Web Developer | Content Creator | Computer Science Student',
+    jobTitle: 'Full Stack Web Developer',
+    description: 'Full Stack Web Developer specializing in Next.js, React.js, and Node.js | Content Creator | Computer Science Student',
     url: baseUrl,
     knowsAbout: [
       'Web Development',
@@ -177,6 +179,48 @@ export default function RootLayout({
       '@type': 'Person',
       name: 'Rajae Elouardani',
     },
+    mainEntity: {
+      '@type': 'Person',
+      name: 'Rajae Elouardani',
+    },
+    hasPart: [
+      {
+        '@type': 'WebPage',
+        name: 'Projects',
+        url: `${baseUrl}/projects`,
+        description: 'Portfolio de projets web, design et photographie',
+      },
+      {
+        '@type': 'WebPage',
+        name: 'About',
+        url: `${baseUrl}/about`,
+        description: 'À propos de Rajae Elouardani - Développeuse web Full Stack',
+      },
+      {
+        '@type': 'WebPage',
+        name: 'Services',
+        url: `${baseUrl}/services`,
+        description: 'Services de développement web et design',
+      },
+      {
+        '@type': 'WebPage',
+        name: 'Blog',
+        url: `${baseUrl}/blog`,
+        description: 'Articles et réflexions sur le développement web',
+      },
+      {
+        '@type': 'WebPage',
+        name: 'Contact',
+        url: `${baseUrl}/contact`,
+        description: 'Contactez Rajae Elouardani pour vos projets web',
+      },
+      {
+        '@type': 'WebPage',
+        name: 'Skills',
+        url: `${baseUrl}/skills`,
+        description: 'Compétences techniques et technologies maîtrisées',
+      },
+    ],
     potentialAction: {
       '@type': 'SearchAction',
       target: {
@@ -210,6 +254,34 @@ export default function RootLayout({
         item: `${baseUrl}/blog`,
       },
     ],
+  }
+
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': `${baseUrl}#business`,
+    name: 'Rajae Elouardani - Web Development Services',
+    image: `${baseUrl}/Rajae elouardani.png`,
+    url: baseUrl,
+    telephone: '+212-XXX-XXXXXX',
+    priceRange: '$$',
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'MA',
+      addressLocality: 'Meknes',
+      addressRegion: 'Fès-Meknès',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '33.8959',
+      longitude: '-5.5547',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'Morocco',
+    },
+    serviceType: 'Web Development',
+    description: 'Full Stack Web Development services specializing in Next.js, React.js, and Node.js',
   }
 
   return (
@@ -248,11 +320,14 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
         <meta name="theme-color" content="#000000" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <link rel="canonical" href={baseUrl} />
         <meta name="geo.region" content="MA" />
         <meta name="geo.placename" content="Morocco" />
         <meta name="language" content="French, English, Arabic" />
@@ -262,6 +337,7 @@ export default function RootLayout({
         <meta httpEquiv="content-language" content="fr, en, ar" />
       </head>
       <body className="antialiased">
+        <GoogleAnalytics />
         <LanguageProvider>
           <ThemeProvider>
             <AnimatedBackground />

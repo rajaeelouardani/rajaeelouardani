@@ -158,6 +158,22 @@ export default function Hero() {
               >
                 {t.hero.viewMyProjects}
               </motion.button>
+              <Link
+                href="https://10000codeurs.com/rajae-elouardani/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <motion.button
+                  whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(34, 197, 94, 0.4)' }}
+                  whileTap={{ scale: 0.95 }}
+                  className="glass-button border-2 border-green-400 text-green-400 px-8 py-4 rounded-full font-semibold hover:bg-green-400/20 hover:text-green-300 transition-all relative overflow-hidden group flex items-center gap-2"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                  </svg>
+                  <span>10000 Codeurs</span>
+                </motion.button>
+              </Link>
             </motion.div>
           </motion.div>
 

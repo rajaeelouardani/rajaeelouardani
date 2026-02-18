@@ -8,6 +8,7 @@ import {
   IconBrandGithub,
   IconBrandLinkedin,
   IconBrandInstagram,
+  IconBrandX,
 } from "@tabler/icons-react";
 import { useTheme } from "@/contexts/ThemeContext";
 
@@ -32,6 +33,11 @@ const socialLinks: SocialLink[] = [
     title: "GitHub",
     icon: IconBrandGithub,
     href: "https://github.com/rajaeelouardani",
+  },
+  {
+    title: "X (Twitter)",
+    icon: IconBrandX,
+    href: "https://x.com/rajaeelouardani",
   },
   {
     title: "Instagram",

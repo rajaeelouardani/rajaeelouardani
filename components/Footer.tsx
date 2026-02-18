@@ -39,9 +39,23 @@ export default function Footer() {
                 <h3 className="text-2xl font-bold text-white" dir={dir}>{t.footer.fullName || t.nav.fullName || 'RAJAE ELOUARDANI'}</h3>
               </div>
               <p className="text-gray-400 mb-4" dir={dir}>{t.hero.subtitle}</p>
-              <p className="text-gray-500 text-sm leading-relaxed" dir={dir}>
+              <p className="text-gray-500 text-sm leading-relaxed mb-4" dir={dir}>
                 {t.footer.description}
               </p>
+              <a
+                href="https://10000codeurs.com/rajae-elouardani/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-500/20 to-green-500/20 border border-primary-500/50 rounded-lg text-sm font-semibold text-white hover:from-primary-500/30 hover:to-green-500/30 hover:border-primary-500 transition-all duration-300 group"
+              >
+                <svg className="w-5 h-5 text-primary-500 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+                <span>10000 Codeurs Profile</span>
+                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
             </div>
             <div>
               <h4 className="font-semibold mb-4 text-white">{t.nav.home}</h4>
@@ -126,6 +140,17 @@ export default function Footer() {
                     </svg>
                   </a>
                   <a 
+                    href="https://x.com/rajaeelouardani" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-primary-500 transition-colors"
+                  >
+                    <span className="sr-only">X (Twitter)</span>
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                  </a>
+                  <a 
                     href="https://www.instagram.com/rajaeelouardani/" 
                     target="_blank"
                     rel="noopener noreferrer"
@@ -141,11 +166,13 @@ export default function Footer() {
                   <a 
                     href="mailto:elouardanirajae@gmail.com" 
                     className="text-gray-400 hover:text-primary-500 transition-colors text-sm flex items-center gap-2"
+                    aria-label="Contact email"
                   >
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    elouardanirajae@gmail.com
+                    <span className="sr-only">Email: </span>
+                    <span aria-hidden="true">Contact Me</span>
                   </a>
                 </div>
               </div>
