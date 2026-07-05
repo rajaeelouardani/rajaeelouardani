@@ -1,0 +1,340 @@
+# 👩‍💻 Rajae Elouardani Portfolio
+
+<div align="center">
+
+A modern, responsive, and multilingual portfolio website showcasing professional experience, skills, projects, and achievements.
+
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.1-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![React](https://img.shields.io/badge/React-19-61dafb?style=for-the-badge&logo=react)](https://reactjs.org/)
+
+</div>
+
+---
+
+## ✨ Features
+
+### 🌍 **Multilingual Support**
+- **3 Languages**: French, English, Arabic
+- Full RTL (Right-to-Left) support for Arabic
+- Dynamic language switching
+- Translated content across all sections
+
+### 🎨 **Design & UI/UX**
+- Modern glassmorphism design
+- Neural network animated background
+- Smooth animations with Framer Motion
+- Fully responsive (Mobile, Tablet, Desktop)
+- Dark theme optimized
+- 3D card effects and hover interactions
+
+### 📄 **Sections**
+
+- **🏠 Hero Section** - Introduction with animated background and skills marquee
+- **💼 Experience & Education** - Interactive timeline with company logos
+- **🎯 Services** - Tabbed navigation with detailed service packages
+- **📂 Portfolio** - Project showcase with filtering
+- **🛠️ Skills** - Technical skills organized by categories
+- **🏆 Certifications** - Professional certifications with logos
+- **⭐ Honors & Awards** - Recognition and achievements
+- **📝 Blog** - Educational resources and articles
+- **📧 Contact** - Functional contact form with email integration
+
+### 🚀 **Technical Features**
+
+- ⚡ **Performance**: Server-side rendering with Next.js
+- 📱 **Responsive**: Mobile-first approach
+- 🔍 **SEO Optimized**: Meta tags and structured data
+- 📧 **Email Integration**: Gmail SMTP for contact form
+- 🎭 **Animations**: Smooth page transitions and micro-interactions
+- 🌐 **i18n**: Complete internationalization support
+
+---
+
+## 🛠️ Technologies Used
+
+### **Frontend**
+- [Next.js 16](https://nextjs.org/) - React framework with SSR
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Tailwind CSS 4.1](https://tailwindcss.com/) - Utility-first CSS
+- [Framer Motion](https://www.framer.com/motion/) - Animation library
+- [React Icons](https://react-icons.github.io/react-icons/) - Icon library
+- [Tabler Icons](https://tabler.io/icons) - Additional icons
+
+### **Backend & API**
+- [Next.js API Routes](https://nextjs.org/docs/api-routes/introduction) - Serverless API
+- [Nodemailer](https://nodemailer.com/) - Email sending
+
+### **Other Libraries**
+- [Three.js](https://threejs.org/) - 3D graphics (Globe)
+- [react-globe.gl](https://github.com/vasturiano/react-globe.gl) - Interactive globe
+
+---
+
+## 📋 Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- **Node.js** 18+ ([Download](https://nodejs.org/))
+- **npm** or **yarn** package manager
+- **Git** (for version control)
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/rajaeelouardani/rajaeelouardani.git
+cd rajaeelouardani
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+```env
+GMAIL_USER=your-email@gmail.com
+GMAIL_APP_PASSWORD=your-app-password
+```
+
+> 📖 **Note**: See [GMAIL_SETUP.md](./GMAIL_SETUP.md) for detailed email configuration instructions.
+
+### 4. Run Development Server
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### 5. Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+---
+
+## 📁 Project Structure
+
+```
+rajae-elouardani-portfolio/
+├── app/                      # Next.js app directory
+│   ├── api/                  # API routes
+│   │   └── contact/          # Contact form endpoint
+│   ├── about/                # About page
+│   ├── blog/                 # Blog pages
+│   ├── contact/              # Contact page
+│   ├── skills/               # Skills page
+│   └── page.tsx              # Home page
+├── components/               # React components
+│   ├── sections/             # Page sections
+│   ├── ui/                   # UI components
+│   └── ...                   # Other components
+├── contexts/                 # React contexts
+│   ├── LanguageContext.tsx   # i18n context
+│   └── ThemeContext.tsx      # Theme context
+├── lib/                      # Utilities and helpers
+│   ├── translations/         # Translation files (fr, en, ar)
+│   └── blogDetailsTranslations/  # Blog translations
+├── public/                   # Static assets
+│   └── logos/                # Organization logos
+└── ...config files
+```
+
+---
+
+## 🌐 Multilingual Configuration
+
+The project supports 3 languages:
+
+- 🇫🇷 **French** (`fr`) - Default
+- 🇬🇧 **English** (`en`)
+- 🇸🇦 **Arabic** (`ar`) - With RTL support
+
+Translation files are located in `lib/translations/`:
+- `fr.json` - French translations
+- `en.json` - English translations
+- `ar.json` - Arabic translations
+
+### Adding Translations
+
+1. Edit the respective JSON file in `lib/translations/`
+2. Add your translation keys following the existing structure
+3. The LanguageContext will automatically load translations
+
+---
+
+## 📧 Email Configuration
+
+The contact form uses Gmail SMTP to send emails. Follow these steps:
+
+### 1. Enable 2-Factor Authentication
+- Go to [Google Account Security](https://myaccount.google.com/security)
+- Enable "Two-Step Verification"
+
+### 2. Generate App Password
+- Go to [Google App Passwords](https://myaccount.google.com/apppasswords)
+- Create a new app password for "Mail"
+- Copy the 16-character password
+
+### 3. Configure Environment Variables
+Add to `.env.local`:
+```env
+GMAIL_USER=your-email@gmail.com
+GMAIL_APP_PASSWORD=your-16-char-app-password
+```
+
+> 📖 For detailed instructions, see [GMAIL_SETUP.md](./GMAIL_SETUP.md)
+
+---
+
+## 🎨 Customization
+
+### Update Personal Information
+
+Edit translation files in `lib/translations/`:
+
+- **Hero Section**: `t.hero.*`
+- **Experience**: `t.experience.experiences[]`
+- **Education**: `t.experience.educations[]`
+- **Skills**: `t.skills.*`
+- **Services**: `t.services.*`
+- **Projects**: Edit `components/sections/Portfolio.tsx`
+
+### Modify Colors
+
+Edit `tailwind.config.js` to customize the color scheme:
+
+```js
+theme: {
+  extend: {
+    colors: {
+      primary: {
+        // Your primary colors
+      }
+    }
+  }
+}
+```
+
+### Add Logos
+
+Place organization logos in `public/logos/` and update the logo mapping in:
+- `components/sections/Experience.tsx` - `getOrgLogo()`
+- `components/sections/Certifications.tsx` - `getOrgLogo()`
+- `components/sections/HonorsAwards.tsx` - `getOrgLogo()`
+
+---
+
+## 📱 Responsive Breakpoints
+
+- **Mobile**: < 768px
+- **Tablet**: 768px - 1024px
+- **Desktop**: > 1024px
+
+---
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Import your repository on [Vercel](https://vercel.com)
+3. Add environment variables in Vercel dashboard
+4. Deploy!
+
+### Other Platforms
+
+The project can be deployed on any platform that supports Next.js:
+- Netlify
+- AWS Amplify
+- Railway
+- DigitalOcean App Platform
+
+---
+
+## 📝 Available Scripts
+
+```bash
+# Development server
+npm run dev
+
+# Production build
+npm run build
+
+# Start production server
+npm start
+
+# Lint code
+npm run lint
+```
+
+---
+
+## 🔒 Security
+
+- Environment variables are never committed to Git
+- `.env.local` is in `.gitignore`
+- Sensitive data is excluded from the repository
+- Email credentials are stored securely
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the ISC License.
+
+---
+
+## 👤 Author
+
+**Rajae Elouardani**
+
+- 🌐 Portfolio: [rajaeelouardani.com](https://rajaeelouardani.com)
+- 💼 LinkedIn: [rajae-elouardani](https://linkedin.com/in/rajae-elouardani)
+- 📧 Email: elouardanirajae@gmail.com
+
+---
+
+## 🙏 Acknowledgments
+
+- Design inspired by modern portfolio themes
+- Icons from [Tabler Icons](https://tabler.io/icons) and [React Icons](https://react-icons.github.io/)
+- Logos from [Simple Icons](https://simpleicons.org/) and organization sources
+
+---
+
+<div align="center">
+
+**⭐ If you like this project, give it a star on GitHub! ⭐**
+
+Made with ❤️ by Rajae Elouardani
+
+</div>

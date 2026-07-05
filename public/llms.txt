@@ -1,0 +1,32 @@
+# llms.txt for elouardanirajae.online
+
+# About
+Rajae Elouardani is a Full Stack Web Developer specializing in Next.js, React.js, and Node.js. 
+She is a Computer Science student at ALX Software Engineering, Ambassador at 10000 Codeurs, 
+and President of Photography FSM Club.
+
+# Website Information
+- Site URL: https://www.elouardanirajae.online
+- Primary Domain: https://rajaeelouardani.com
+- Language: French, English, Arabic
+
+# Services
+- Web Development (Next.js, React.js, Node.js)
+- Frontend Development
+- Backend Development
+- UI/UX Design
+- Logo Design
+- Photography
+
+# Technologies
+Next.js, React.js, Node.js, TypeScript, JavaScript, HTML, CSS, Tailwind CSS
+
+# Contact
+- Email: elouardanirajae@gmail.com
+- LinkedIn: https://www.linkedin.com/in/rajae-elouardani-577892225/
+- GitHub: https://github.com/rajaeelouardani
+- Instagram: https://www.instagram.com/rajaeelouardani/
+- X (Twitter): https://x.com/rajaeelouardani
+
+# Location
+Meknes, Morocco

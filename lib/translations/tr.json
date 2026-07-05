@@ -1,0 +1,127 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımda",
+    "services": "Hizmetler",
+    "projects": "Projeler",
+    "skills": "Yetenekler",
+    "certifications": "Sertifikalar",
+    "honors": "Ödüller",
+    "volunteering": "Gönüllülük",
+    "languages": "Diller",
+    "contact": "İletişim",
+    "blog": "Blog",
+    "hireMe": "Beni İşe Al!"
+  },
+  "hero": {
+    "greeting": "MERHABA!",
+    "name": "RAJAE ELOUARDANI",
+    "title": "Full Stack Web Geliştirici",
+    "subtitle": "Dijital Çözümler Yaratma",
+    "description": "Next.js, React.js ve Node.js konusunda uzmanlaşmış tutkulu bir web geliştirici. Fikirleri modern ve performanslı web uygulamalarına dönüştürüyorum.",
+    "bio": "Bilgisayar Bilimi Öğrencisi | ALX Software Engineering | 10000 Codeurs Elçisi | IVR CLUB FSM Kurucu Ortağı | Photography FSM Club Başkanı",
+    "hireMe": "HER ZAMAN BENİ İŞE AL!",
+    "viewProjects": "Projelerimi Görüntüle",
+    "yearsExperience": "Yıl Deneyim",
+    "webProjects": "Web Projeleri",
+    "technologies": "Teknolojiler"
+  },
+  "skills": {
+    "title": "Yeteneklerim ve Uzmanlığım",
+    "subtitle": "Görsel olarak çarpıcı ve işlevsel tasarımlar oluşturmak için günlük olarak kullandığım araçları ve yetenekleri keşfedin.",
+    "visitSkills": "YETENEKLERİMİ ZİYARET ET & BENİ İŞE AL",
+    "toolsTechnologies": "Araçlar ve Teknolojiler",
+    "industryKnowledge": "Sektör Bilgisi",
+    "interpersonalSkills": "Kişilerarası Beceriler"
+  },
+  "portfolio": {
+    "title": "Gerçek Projelerle Yaratıcılığı Sergileme",
+    "subtitle": "Yaratıcılığı ve teknolojiyi birleştirerek ilham veren ve dönüştüren yenilikçi çözümler oluşturan projeler.",
+    "viewMore": "Daha Fazla Görüntüle",
+    "viewDetails": "Detayları Görüntüle",
+    "category": "Kategori"
+  },
+  "services": {
+    "title": "İhtiyaçlarınıza Göre Özelleştirilmiş Geliştirme Hizmetleri",
+    "subtitle": "Tasarımdan üretime kadar eksiksiz web geliştirme çözümleri. Performanslı ve ölçeklenebilir uygulamalar oluşturmak için modern teknolojilerde uzmanlık.",
+    "viewMore": "DAHA FAZLA GÖRÜNTÜLE",
+    "viewDetails": "DETAYLARI GÖRÜNTÜLE",
+    "webDevelopment": "WEB GELİŞTİRME",
+    "webDevelopmentDesc": "Next.js, React.js, TypeScript ile modern ve duyarlı web siteleri geliştirme. Performanslı ve optimize edilmiş web uygulamaları oluşturma.",
+    "frontendDevelopment": "FRONTEND GELİŞTİRME",
+    "frontendDevelopmentDesc": "React, Tailwind CSS ve en son frontend teknolojileri ile modern ve sezgisel kullanıcı arayüzleri oluşturma.",
+    "backendDevelopment": "BACKEND GELİŞTİRME",
+    "backendDevelopmentDesc": "Node.js, Express.js, MySQL ve Sequelize ile sağlam uygulamalar için RESTful API'ler ve sunucular geliştirme.",
+    "ecommerce": "E-TİCARET ÇÖZÜMLERİ",
+    "ecommerceDesc": "WordPress, WooCommerce ve özel çözümlerle eksiksiz e-ticaret platformları geliştirme.",
+    "uiux": "UI/UX TASARIM",
+    "uiuxDesc": "Figma ve en iyi uygulamalarla çekici kullanıcı arayüzleri ve optimize edilmiş kullanıcı deneyimleri tasarlama.",
+    "3d": "3D WEB DENEYİMLERİ",
+    "3dDesc": "Sürükleyici web siteleri için React Three Fiber ve Three.js ile etkileşimli 3D web deneyimleri oluşturma."
+  },
+  "experience": {
+    "title": "Amaçla Tasarımı Güçlendirme",
+    "subtitle": "Bir web geliştirici ve içerik oluşturucu olarak, toplumumuzun gelişimine katkıda bulunma ve öğrencilerin akademik seviyesini yükseltme arzusuyla yönlendiriliyorum.",
+    "myExperience": "Deneyimim",
+    "myEducation": "Eğitimim"
+  },
+  "certifications": {
+    "title": "Başarılarım ve Tanınmalarım",
+    "subtitle": "Yeteneklerimi ve uzmanlığımı doğrulayan profesyonel lisanslarımı ve sertifikalarımı keşfedin."
+  },
+  "honors": {
+    "title": "Tanınma ve Başarılar",
+    "subtitle": "Çeşitli alanlarda mükemmellik ve yenilik için alınan ödüller ve ayrıcalıklar."
+  },
+  "volunteering": {
+    "title": "Topluma Geri Verme",
+    "subtitle": "Öğrenci ve sosyal topluluğun gelişimine gönüllü katılım ve katkı."
+  },
+  "languages": {
+    "title": "Çok Dilli Yeterlilik",
+    "subtitle": "Uluslararası bir ortamda etkili iletişim için dil becerileri."
+  },
+  "testimonials": {
+    "title": "Mutlu Müşterilerden Sözler",
+    "subtitle": "Mentörler, profesörler ve memnun müşterilerden tavsiyeler ve referanslar"
+  },
+  "pricing": {
+    "title": "Esnek Fiyatlandırma Planı",
+    "subtitle": "Kapsamlı stratejiler, danışmanlık alanı, çok yönlü teklifler dizisiyle bir dizi ihtiyaca hitap eder.",
+    "monthly": "Aylık",
+    "yearly": "Yıllık",
+    "getStarted": "BAŞLA",
+    "popular": "Popüler"
+  },
+  "contact": {
+    "title": "Fikirleri Gerçeğe Dönüştürme",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "address": "Adres",
+    "firstName": "Ad",
+    "lastName": "Soyad",
+    "yourEmail": "E-postanız",
+    "yourPhone": "Telefonunuz",
+    "chooseService": "Hizmet Seçin",
+    "yourMessage": "Mesajınız",
+    "sendMessage": "Mesaj Gönder"
+  },
+  "news": {
+    "title": "Tasarım Düşünme Sürecimi Keşfedin",
+    "subtitle": "Fikirlerinizi ve dolayısıyla isteklerinizi benzersiz bir şekle koyuyoruz",
+    "readMore": "Daha Fazla Oku",
+    "viewMore": "Daha Fazla Görüntüle"
+  },
+  "blog": {
+    "title": "Teknoloji Blogu ve Eğitim Kaynakları",
+    "subtitle": "Uzmanlaştığım teknolojiler hakkında makaleler, öğreticiler ve kaynaklar",
+    "readMore": "Daha Fazla Oku",
+    "educationalResources": "Eğitim Kaynakları",
+    "visitPlatform": "Platformu Ziyaret Et",
+    "free": "ÜCRETSİZ"
+  },
+  "footer": {
+    "followUs": "Bizi Takip Edin"
+  }
+}
+
