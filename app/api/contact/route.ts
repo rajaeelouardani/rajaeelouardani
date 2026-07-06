@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
+import type SMTPTransport from 'nodemailer/lib/smtp-transport'
 
 export const runtime = 'nodejs'
+export const maxDuration = 30
 
 const escapeHtml = (text: string): string => {
   const map: Record<string, string> = {
@@ -12,6 +14,17 @@ const escapeHtml = (text: string): string => {
     "'": '&#039;',
   }
   return text.replace(/[&<>"']/g, (m) => map[m])
+}
+
+function getSmtpConfig() {
+  const user = process.env.GMAIL_USER?.trim()
+  const pass = process.env.GMAIL_APP_PASSWORD?.replace(/\s/g, '')
+
+  if (!user || !pass) {
+    return null
+  }
+
+  return { user, pass }
 }
 
 async function sendContactEmail({
@@ -27,24 +40,29 @@ async function sendContactEmail({
   subject: string
   html: string
 }) {
-  const gmailUser = process.env.GMAIL_USER
-  const gmailPassword = process.env.GMAIL_APP_PASSWORD
-
-  if (!gmailUser || !gmailPassword) {
-    throw new Error(
-      'Configuration SMTP manquante. Définissez GMAIL_USER et GMAIL_APP_PASSWORD dans .env.local'
-    )
+  const smtp = getSmtpConfig()
+  if (!smtp) {
+    const err = new Error('SMTP_NOT_CONFIGURED')
+    throw err
   }
 
-  const transporter = nodemailer.createTransport({
+  // Port 465 (SSL) — plus fiable sur Vercel serverless que 587
+  const transportOptions: SMTPTransport.Options = {
     host: 'smtp.gmail.com',
-    port: 587,
-    secure: false,
+    port: 465,
+    secure: true,
     auth: {
-      user: gmailUser,
-      pass: gmailPassword,
+      user: smtp.user,
+      pass: smtp.pass,
     },
-  })
+    connectionTimeout: 15_000,
+    greetingTimeout: 15_000,
+    socketTimeout: 20_000,
+  }
+
+  const transporter = nodemailer.createTransport(transportOptions)
+
+  await transporter.verify()
 
   return transporter.sendMail({
     from,
@@ -53,6 +71,46 @@ async function sendContactEmail({
     subject,
     html,
   })
+}
+
+function mapSmtpError(error: unknown): { status: number; message: string; code: string } {
+  const errMsg = error instanceof Error ? error.message : String(error)
+
+  if (errMsg === 'SMTP_NOT_CONFIGURED') {
+    return {
+      status: 503,
+      code: 'SMTP_NOT_CONFIGURED',
+      message:
+        'Le service email n\'est pas configuré sur le serveur. Ajoutez GMAIL_USER et GMAIL_APP_PASSWORD sur Vercel puis redéployez.',
+    }
+  }
+
+  if (
+    errMsg.includes('Invalid login') ||
+    errMsg.includes('Username and Password not accepted') ||
+    errMsg.includes('535')
+  ) {
+    return {
+      status: 503,
+      code: 'SMTP_AUTH_FAILED',
+      message:
+        'Authentification Gmail échouée. Vérifiez GMAIL_USER et GMAIL_APP_PASSWORD (mot de passe d\'application, pas le mot de passe Gmail).',
+    }
+  }
+
+  if (errMsg.includes('ETIMEDOUT') || errMsg.includes('ECONNECTION') || errMsg.includes('timeout')) {
+    return {
+      status: 503,
+      code: 'SMTP_TIMEOUT',
+      message: 'Connexion SMTP expirée. Réessayez dans quelques instants.',
+    }
+  }
+
+  return {
+    status: 500,
+    code: 'SMTP_SEND_FAILED',
+    message: 'Erreur lors de l\'envoi de l\'email. Veuillez réessayer plus tard.',
+  }
 }
 
 export async function POST(request: NextRequest) {
@@ -78,9 +136,20 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Adresse email invalide' }, { status: 400 })
     }
 
-    const gmailUser = process.env.GMAIL_USER || 'elouardaniraje@gmail.com'
+    const smtp = getSmtpConfig()
+    if (!smtp) {
+      console.error('[contact] Variables manquantes: GMAIL_USER ou GMAIL_APP_PASSWORD')
+      return NextResponse.json(
+        {
+          error: 'Service email non configuré.',
+          code: 'SMTP_NOT_CONFIGURED',
+        },
+        { status: 503 }
+      )
+    }
+
     const recipientEmail =
-      process.env.CONTACT_RECIPIENT || process.env.GMAIL_USER || 'elouardaniraje@gmail.com'
+      process.env.CONTACT_RECIPIENT?.trim() || smtp.user
 
     const safeFirstName = escapeHtml(firstName)
     const safeLastName = escapeHtml(lastName)
@@ -113,26 +182,28 @@ export async function POST(request: NextRequest) {
 
     const result = await sendContactEmail({
       to: recipientEmail,
-      from: `"Portfolio Contact" <${gmailUser}>`,
+      from: `"Portfolio Contact" <${smtp.user}>`,
       replyTo: email,
       subject: emailSubject,
       html: emailHtml,
     })
+
+    console.log('[contact] Email envoyé:', result.messageId)
 
     return NextResponse.json(
       { message: 'Email envoyé avec succès', messageId: result.messageId },
       { status: 200 }
     )
   } catch (error: unknown) {
-    const errMsg = error instanceof Error ? error.message : 'Erreur inconnue'
-    console.error('Erreur contact:', errMsg)
+    const mapped = mapSmtpError(error)
+    console.error('[contact] Erreur SMTP:', error)
 
     return NextResponse.json(
       {
-        error: 'Erreur lors de l\'envoi de l\'email. Veuillez réessayer plus tard.',
-        details: process.env.NODE_ENV === 'development' ? errMsg : undefined,
+        error: mapped.message,
+        code: mapped.code,
       },
-      { status: 500 }
+      { status: mapped.status }
     )
   }
 }
