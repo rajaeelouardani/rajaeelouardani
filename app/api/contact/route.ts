@@ -1,9 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 import type SMTPTransport from 'nodemailer/lib/smtp-transport'
+import type Transporter from 'nodemailer/lib/mailer'
 
 export const runtime = 'nodejs'
 export const maxDuration = 30
+
+const DEFAULT_GMAIL = 'elouardanirajae@gmail.com'
 
 const escapeHtml = (text: string): string => {
   const map: Record<string, string> = {
@@ -16,15 +19,40 @@ const escapeHtml = (text: string): string => {
   return text.replace(/[&<>"']/g, (m) => map[m])
 }
 
-function getSmtpConfig() {
-  const user = process.env.GMAIL_USER?.trim()
-  const pass = process.env.GMAIL_APP_PASSWORD?.replace(/\s/g, '')
+/** Nettoie les variables Vercel (espaces, guillemets, retours ligne). */
+function cleanEnv(value: string | undefined): string {
+  if (!value) return ''
+  return value.trim().replace(/^["']|["']$/g, '').trim()
+}
 
-  if (!user || !pass) {
+function getSmtpConfig() {
+  const user = cleanEnv(process.env.GMAIL_USER) || DEFAULT_GMAIL
+  const pass = cleanEnv(process.env.GMAIL_APP_PASSWORD).replace(/\s/g, '')
+
+  if (!pass) {
     return null
   }
 
   return { user, pass }
+}
+
+function createTransporters(user: string, pass: string): Transporter[] {
+  const auth = { user, pass }
+
+  const configs: SMTPTransport.Options[] = [
+    { service: 'gmail', auth },
+    { host: 'smtp.gmail.com', port: 465, secure: true, auth },
+    { host: 'smtp.gmail.com', port: 587, secure: false, auth, requireTLS: true },
+  ]
+
+  return configs.map((options) =>
+    nodemailer.createTransport({
+      ...options,
+      connectionTimeout: 15_000,
+      greetingTimeout: 15_000,
+      socketTimeout: 20_000,
+    })
+  )
 }
 
 async function sendContactEmail({
@@ -42,35 +70,23 @@ async function sendContactEmail({
 }) {
   const smtp = getSmtpConfig()
   if (!smtp) {
-    const err = new Error('SMTP_NOT_CONFIGURED')
-    throw err
+    throw new Error('SMTP_NOT_CONFIGURED')
   }
 
-  // Port 465 (SSL) — plus fiable sur Vercel serverless que 587
-  const transportOptions: SMTPTransport.Options = {
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
-    auth: {
-      user: smtp.user,
-      pass: smtp.pass,
-    },
-    connectionTimeout: 15_000,
-    greetingTimeout: 15_000,
-    socketTimeout: 20_000,
+  const transporters = createTransporters(smtp.user, smtp.pass)
+  let lastError: unknown
+
+  for (const transporter of transporters) {
+    try {
+      await transporter.verify()
+      return await transporter.sendMail({ from, to, replyTo, subject, html })
+    } catch (error) {
+      lastError = error
+      console.warn('[contact] Tentative SMTP échouée, essai suivant…')
+    }
   }
 
-  const transporter = nodemailer.createTransport(transportOptions)
-
-  await transporter.verify()
-
-  return transporter.sendMail({
-    from,
-    to,
-    replyTo,
-    subject,
-    html,
-  })
+  throw lastError ?? new Error('SMTP_SEND_FAILED')
 }
 
 function mapSmtpError(error: unknown): { status: number; message: string; code: string } {
@@ -81,20 +97,21 @@ function mapSmtpError(error: unknown): { status: number; message: string; code: 
       status: 503,
       code: 'SMTP_NOT_CONFIGURED',
       message:
-        'Le service email n\'est pas configuré sur le serveur. Ajoutez GMAIL_USER et GMAIL_APP_PASSWORD sur Vercel puis redéployez.',
+        'Le service email n\'est pas configuré. Ajoutez GMAIL_APP_PASSWORD sur Vercel puis redéployez.',
     }
   }
 
   if (
     errMsg.includes('Invalid login') ||
     errMsg.includes('Username and Password not accepted') ||
-    errMsg.includes('535')
+    errMsg.includes('535') ||
+    errMsg.includes('534')
   ) {
     return {
       status: 503,
       code: 'SMTP_AUTH_FAILED',
       message:
-        'Authentification Gmail échouée. Vérifiez GMAIL_USER et GMAIL_APP_PASSWORD (mot de passe d\'application, pas le mot de passe Gmail).',
+        'Authentification Gmail échouée. Vérifiez que GMAIL_USER = elouardanirajae@gmail.com et que GMAIL_APP_PASSWORD est un mot de passe d\'application (16 caractères), pas votre mot de passe Gmail.',
     }
   }
 
@@ -138,18 +155,14 @@ export async function POST(request: NextRequest) {
 
     const smtp = getSmtpConfig()
     if (!smtp) {
-      console.error('[contact] Variables manquantes: GMAIL_USER ou GMAIL_APP_PASSWORD')
+      console.error('[contact] GMAIL_APP_PASSWORD manquant sur le serveur')
       return NextResponse.json(
-        {
-          error: 'Service email non configuré.',
-          code: 'SMTP_NOT_CONFIGURED',
-        },
+        { error: 'Service email non configuré.', code: 'SMTP_NOT_CONFIGURED' },
         { status: 503 }
       )
     }
 
-    const recipientEmail =
-      process.env.CONTACT_RECIPIENT?.trim() || smtp.user
+    const recipientEmail = cleanEnv(process.env.CONTACT_RECIPIENT) || smtp.user
 
     const safeFirstName = escapeHtml(firstName)
     const safeLastName = escapeHtml(lastName)
@@ -199,10 +212,7 @@ export async function POST(request: NextRequest) {
     console.error('[contact] Erreur SMTP:', error)
 
     return NextResponse.json(
-      {
-        error: mapped.message,
-        code: mapped.code,
-      },
+      { error: mapped.message, code: mapped.code },
       { status: mapped.status }
     )
   }

@@ -18,7 +18,7 @@
 Dans le fichier `.env.local` à la racine du projet :
 
 ```env
-GMAIL_USER=elouardaniraje@gmail.com
+GMAIL_USER=elouardanirajae@gmail.com
 GMAIL_APP_PASSWORD=votre-clé-d-application-16-caractères
 ```
 
