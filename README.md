@@ -1,340 +1,185 @@
-# 👩‍💻 Rajae Elouardani Portfolio
-
 <div align="center">
 
-A modern, responsive, and multilingual portfolio website showcasing professional experience, skills, projects, and achievements.
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=800&color=C9A227&center=true&vCenter=true&width=700&lines=Rajae+Elouardani;Fullstack+Developer;Next.js+%C2%B7+React+%C2%B7+Node.js;Building+products+with+impact" alt="Typing SVG" />
 
-[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.1-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
-[![React](https://img.shields.io/badge/React-19-61dafb?style=for-the-badge&logo=react)](https://reactjs.org/)
+  <br />
+
+  **Fullstack Developer** · Tech Project Leader · Building **MedChain**  
+  Co-fondatrice **IVR Club FSM** · Ambassadrice **10000 Codeurs** · Présidente **Photography Club FSM**
+
+  [![Portfolio](https://img.shields.io/badge/Portfolio-elouardanirajae.online-C9A227?style=for-the-badge&logo=safari&logoColor=white)](https://www.elouardanirajae.online/)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Rajae_Elouardani-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rajae-elouardani-577892225)
+  [![GitHub](https://img.shields.io/badge/GitHub-rajaeelouardani-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rajaeelouardani)
+  [![Location](https://img.shields.io/badge/Meknès-Maroc-C8102E?style=for-the-badge&logo=googlemaps&logoColor=white)](https://www.elouardanirajae.online/)
 
 </div>
 
 ---
 
-## ✨ Features
+### À propos
 
-### 🌍 **Multilingual Support**
-- **3 Languages**: French, English, Arabic
-- Full RTL (Right-to-Left) support for Arabic
-- Dynamic language switching
-- Translated content across all sections
+Je conçois et livre des **produits web concrets** — de l’idée au déploiement.  
+Étudiante en informatique (Université Moulay Ismail, Meknès), ALX Software Engineering, je transforme des besoins métier en plateformes **Next.js / Node.js** performantes, sécurisées et scalables.
 
-### 🎨 **Design & UI/UX**
-- Modern glassmorphism design
-- Neural network animated background
-- Smooth animations with Framer Motion
-- Fully responsive (Mobile, Tablet, Desktop)
-- Dark theme optimized
-- 3D card effects and hover interactions
-
-### 📄 **Sections**
-
-- **🏠 Hero Section** - Introduction with animated background and skills marquee
-- **💼 Experience & Education** - Interactive timeline with company logos
-- **🎯 Services** - Tabbed navigation with detailed service packages
-- **📂 Portfolio** - Project showcase with filtering
-- **🛠️ Skills** - Technical skills organized by categories
-- **🏆 Certifications** - Professional certifications with logos
-- **⭐ Honors & Awards** - Recognition and achievements
-- **📝 Blog** - Educational resources and articles
-- **📧 Contact** - Functional contact form with email integration
-
-### 🚀 **Technical Features**
-
-- ⚡ **Performance**: Server-side rendering with Next.js
-- 📱 **Responsive**: Mobile-first approach
-- 🔍 **SEO Optimized**: Meta tags and structured data
-- 📧 **Email Integration**: Gmail SMTP for contact form
-- 🎭 **Animations**: Smooth page transitions and micro-interactions
-- 🌐 **i18n**: Complete internationalization support
+- 15+ plateformes livrées (santé, tourisme, RH, hôtellerie, éducation)
+- 1er prix **RIDUGE 2026** · Semi-finaliste **Water4Future Hackathon 2026** (UNESCO)
+- Prix **DeepTech Startup Challenge** (Tamwilcom)
 
 ---
 
-## 🛠️ Technologies Used
+### Stack technique
 
-### **Frontend**
-- [Next.js 16](https://nextjs.org/) - React framework with SSR
-- [TypeScript](https://www.typescriptlang.org/) - Type safety
-- [Tailwind CSS 4.1](https://tailwindcss.com/) - Utility-first CSS
-- [Framer Motion](https://www.framer.com/motion/) - Animation library
-- [React Icons](https://react-icons.github.io/react-icons/) - Icon library
-- [Tabler Icons](https://tabler.io/icons) - Additional icons
+#### Frontend
+<p>
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white" alt="Redux" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Ant_Design-0170FE?style=for-the-badge&logo=antdesign&logoColor=white" alt="Ant Design" />
+  <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=white" alt="Three.js" />
+</p>
 
-### **Backend & API**
-- [Next.js API Routes](https://nextjs.org/docs/api-routes/introduction) - Serverless API
-- [Nodemailer](https://nodemailer.com/) - Email sending
+#### Backend & data
+<p>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js" />
+  <img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white" alt="NestJS" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+  <img src="https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=sequelize&logoColor=white" alt="Sequelize" />
+  <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" alt="JWT" />
+  <img src="https://img.shields.io/badge/REST_API-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="REST API" />
+</p>
 
-### **Other Libraries**
-- [Three.js](https://threejs.org/) - 3D graphics (Globe)
-- [react-globe.gl](https://github.com/vasturiano/react-globe.gl) - Interactive globe
-
----
-
-## 📋 Prerequisites
-
-Before you begin, ensure you have the following installed:
-
-- **Node.js** 18+ ([Download](https://nodejs.org/))
-- **npm** or **yarn** package manager
-- **Git** (for version control)
-
----
-
-## 🚀 Getting Started
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/rajaeelouardani/rajaeelouardani.git
-cd rajaeelouardani
-```
-
-### 2. Install Dependencies
-
-```bash
-npm install
-# or
-yarn install
-```
-
-### 3. Environment Variables
-
-Create a `.env.local` file in the root directory:
-
-```env
-GMAIL_USER=your-email@gmail.com
-GMAIL_APP_PASSWORD=your-app-password
-```
-
-> 📖 **Note**: See [GMAIL_SETUP.md](./GMAIL_SETUP.md) for detailed email configuration instructions.
-
-### 4. Run Development Server
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### 5. Build for Production
-
-```bash
-npm run build
-npm start
-```
+#### Outils & autres
+<p>
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
+  <img src="https://img.shields.io/badge/WordPress-21759B?style=for-the-badge&logo=wordpress&logoColor=white" alt="WordPress" />
+  <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
+  <img src="https://img.shields.io/badge/Blockchain-121D33?style=for-the-badge&logo=bitcoin&logoColor=white" alt="Blockchain" />
+  <img src="https://img.shields.io/badge/Scrum-009FDA?style=for-the-badge&logo=jira&logoColor=white" alt="Scrum" />
+</p>
 
 ---
 
-## 📁 Project Structure
+### Projets phares
 
-```
-rajae-elouardani-portfolio/
-├── app/                      # Next.js app directory
-│   ├── api/                  # API routes
-│   │   └── contact/          # Contact form endpoint
-│   ├── about/                # About page
-│   ├── blog/                 # Blog pages
-│   ├── contact/              # Contact page
-│   ├── skills/               # Skills page
-│   └── page.tsx              # Home page
-├── components/               # React components
-│   ├── sections/             # Page sections
-│   ├── ui/                   # UI components
-│   └── ...                   # Other components
-├── contexts/                 # React contexts
-│   ├── LanguageContext.tsx   # i18n context
-│   └── ThemeContext.tsx      # Theme context
-├── lib/                      # Utilities and helpers
-│   ├── translations/         # Translation files (fr, en, ar)
-│   └── blogDetailsTranslations/  # Blog translations
-├── public/                   # Static assets
-│   └── logos/                # Organization logos
-└── ...config files
-```
+<table>
+  <tr>
+    <td width="50%">
+      <h3>KiliCasa MVP</h3>
+      <p>Plateforme produit au sein de <b>@KILICASA</b> — conception et livraison fullstack (commits, issues, reviews).</p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white" alt="Next.js" />
+        <img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black" alt="React" />
+      </p>
+      <p><a href="https://github.com/KILICASA/KiliCasa_MVP">Repository</a></p>
+    </td>
+    <td width="50%">
+      <h3>MedChain</h3>
+      <p>Digitaliser et sécuriser les dossiers de santé au Maroc via <b>web + mobile + blockchain</b> (rendez-vous, accès patient / professionnel).</p>
+      <p>
+        <img src="https://img.shields.io/badge/Blockchain-121D33?logo=bitcoin&logoColor=white" alt="Blockchain" />
+        <img src="https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white" alt="Node.js" />
+        <img src="https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white" alt="Next.js" />
+      </p>
+      <p><a href="https://www.elouardanirajae.online/">Portfolio</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h3>Morocco Walking Tour</h3>
+      <p>3 dashboards (Client / Admin / Guide), <b>tickets QR</b>, réservations, paiements, RBAC, 6 sections publiques SEO.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white" alt="Next.js" />
+        <img src="https://img.shields.io/badge/NestJS-E0234E?logo=nestjs&logoColor=white" alt="NestJS" />
+        <img src="https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white" alt="PostgreSQL" />
+      </p>
+    </td>
+    <td>
+      <h3>Photography FSM</h3>
+      <p>Site officiel du club photo — galerie, identité visuelle, stack TypeScript. Live : photography-fs.vercel.app</p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white" alt="Vercel" />
+      </p>
+      <p>
+        <a href="https://github.com/rajaeelouardani/photography-fs">Code</a> ·
+        <a href="https://photography-fs.vercel.app">Demo</a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h3>EHC Groupe — logiciel RH</h3>
+      <p>9 dashboards : formations, workflows, reporting. Site officiel + interfaces Ant Design.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Ant_Design-0170FE?logo=antdesign&logoColor=white" alt="Ant Design" />
+        <img src="https://img.shields.io/badge/Sequelize-52B0E7?logo=sequelize&logoColor=white" alt="Sequelize" />
+        <img src="https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white" alt="Node.js" />
+      </p>
+    </td>
+    <td>
+      <h3>IT Blaaan</h3>
+      <p>Écosystème cabinet IT : site SEO, suivi projets, facturation, RH, abonnements SaaS clients.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white" alt="Next.js" />
+        <img src="https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white" alt="PostgreSQL" />
+        <img src="https://img.shields.io/badge/JWT-000000?logo=jsonwebtokens&logoColor=white" alt="JWT" />
+      </p>
+    </td>
+  </tr>
+</table>
 
----
-
-## 🌐 Multilingual Configuration
-
-The project supports 3 languages:
-
-- 🇫🇷 **French** (`fr`) - Default
-- 🇬🇧 **English** (`en`)
-- 🇸🇦 **Arabic** (`ar`) - With RTL support
-
-Translation files are located in `lib/translations/`:
-- `fr.json` - French translations
-- `en.json` - English translations
-- `ar.json` - Arabic translations
-
-### Adding Translations
-
-1. Edit the respective JSON file in `lib/translations/`
-2. Add your translation keys following the existing structure
-3. The LanguageContext will automatically load translations
-
----
-
-## 📧 Email Configuration
-
-The contact form uses Gmail SMTP to send emails. Follow these steps:
-
-### 1. Enable 2-Factor Authentication
-- Go to [Google Account Security](https://myaccount.google.com/security)
-- Enable "Two-Step Verification"
-
-### 2. Generate App Password
-- Go to [Google App Passwords](https://myaccount.google.com/apppasswords)
-- Create a new app password for "Mail"
-- Copy the 16-character password
-
-### 3. Configure Environment Variables
-Add to `.env.local`:
-```env
-GMAIL_USER=your-email@gmail.com
-GMAIL_APP_PASSWORD=your-16-char-app-password
-```
-
-> 📖 For detailed instructions, see [GMAIL_SETUP.md](./GMAIL_SETUP.md)
-
----
-
-## 🎨 Customization
-
-### Update Personal Information
-
-Edit translation files in `lib/translations/`:
-
-- **Hero Section**: `t.hero.*`
-- **Experience**: `t.experience.experiences[]`
-- **Education**: `t.experience.educations[]`
-- **Skills**: `t.skills.*`
-- **Services**: `t.services.*`
-- **Projects**: Edit `components/sections/Portfolio.tsx`
-
-### Modify Colors
-
-Edit `tailwind.config.js` to customize the color scheme:
-
-```js
-theme: {
-  extend: {
-    colors: {
-      primary: {
-        // Your primary colors
-      }
-    }
-  }
-}
-```
-
-### Add Logos
-
-Place organization logos in `public/logos/` and update the logo mapping in:
-- `components/sections/Experience.tsx` - `getOrgLogo()`
-- `components/sections/Certifications.tsx` - `getOrgLogo()`
-- `components/sections/HonorsAwards.tsx` - `getOrgLogo()`
+Autres livraisons : Smart Tourism Ifrane, Mcovery, Hôtel Le Rochegude (France), Restaurant Opium (Portugal), MyBotFoodies, CourAdis, ECLEE, Arc Doré Meknès, HopStep & Ghila (INJAZ).
 
 ---
 
-## 📱 Responsive Breakpoints
+### GitHub
 
-- **Mobile**: < 768px
-- **Tablet**: 768px - 1024px
-- **Desktop**: > 1024px
+<div align="center">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=rajaeelouardani&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" alt="GitHub stats" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rajaeelouardani&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&count_private=true" alt="Top languages" />
+</div>
 
----
+<div align="center">
+  <img src="https://github-readme-streak-stats.demolab.com/?user=rajaeelouardani&theme=tokyonight&hide_border=true" alt="GitHub streak" />
+</div>
 
-## 🚀 Deployment
-
-### Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Import your repository on [Vercel](https://vercel.com)
-3. Add environment variables in Vercel dashboard
-4. Deploy!
-
-### Other Platforms
-
-The project can be deployed on any platform that supports Next.js:
-- Netlify
-- AWS Amplify
-- Railway
-- DigitalOcean App Platform
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=rajaeelouardani&theme=tokyo-night&hide_border=true&area=true" alt="Contribution graph" />
+</p>
 
 ---
 
-## 📝 Available Scripts
+### Distinctions
 
-```bash
-# Development server
-npm run dev
+- 1er prix **RIDUGE 2026** — Rallye International des Universités et Grandes Écoles
+- Semi-finaliste **Water4Future Hackathon 2026** — UNESCO Water Centre
+- Prix **DeepTech Startup Challenge** — Tamwilcom
+- Awards **INJAZ Al-Maghrib** (Attijariwafa Bank, Citi Bank, Innovation Camp)
 
-# Production build
-npm run build
-
-# Start production server
-npm start
-
-# Lint code
-npm run lint
-```
+**Certifs clés :** Linux Essentials (LPI) · Scrum SFC™ · Oracle MySQL Explorer · Oxford AI & Rule of Law · freeCodeCamp Responsive Web Design
 
 ---
 
-## 🔒 Security
+### Contact
 
-- Environment variables are never committed to Git
-- `.env.local` is in `.gitignore`
-- Sensitive data is excluded from the repository
-- Email credentials are stored securely
+Ouverte aux missions **fullstack**, **lead tech** et **product**.
 
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the ISC License.
-
----
-
-## 👤 Author
-
-**Rajae Elouardani**
-
-- 🌐 Portfolio: [rajaeelouardani.com](https://rajaeelouardani.com)
-- 💼 LinkedIn: [rajae-elouardani](https://linkedin.com/in/rajae-elouardani)
-- 📧 Email: elouardanirajae@gmail.com
-
----
-
-## 🙏 Acknowledgments
-
-- Design inspired by modern portfolio themes
-- Icons from [Tabler Icons](https://tabler.io/icons) and [React Icons](https://react-icons.github.io/)
-- Logos from [Simple Icons](https://simpleicons.org/) and organization sources
-
----
+- Portfolio : [elouardanirajae.online](https://www.elouardanirajae.online/)
+- LinkedIn : [Rajae Elouardani](https://www.linkedin.com/in/rajae-elouardani-577892225)
+- GitHub : [@rajaeelouardani](https://github.com/rajaeelouardani)
 
 <div align="center">
 
-**⭐ If you like this project, give it a star on GitHub! ⭐**
-
-Made with ❤️ by Rajae Elouardani
+  *Working internationally from Morocco* 🇲🇦
 
 </div>
