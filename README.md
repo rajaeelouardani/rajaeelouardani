@@ -158,22 +158,23 @@ Smart Tourism Ifrane · Hôtel Le Rochegude (France) · Restaurant Opium (Portug
 
 <div align="center">
 
-<a href="https://github.com/rajaeelouardani">
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=rajaeelouardani&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=C9A227&icon_color=C9A227&text_color=E6EDF3&ring_color=C9A227&count_private=true&include_all_commits=true" alt="GitHub Stats" />
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rajaeelouardani&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=C9A227&text_color=E6EDF3&langs_count=8&count_private=true" alt="Top Languages" />
-</a>
+<img height="180" src="https://github-stats-extended.vercel.app/api?username=rajaeelouardani&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=C9A227&icon_color=C9A227&text_color=E6EDF3&ring_color=C9A227&count_private=true&include_all_commits=true" alt="GitHub Stats" />
+<img height="180" src="https://github-stats-extended.vercel.app/api/top-langs/?username=rajaeelouardani&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=C9A227&text_color=E6EDF3&langs_count=8&count_private=true" alt="Top Languages" />
 
 <br/><br/>
 
-<img src="https://github-readme-streak-stats.demolab.com/?user=rajaeelouardani&theme=radical&hide_border=true&background=0D1117&ring=C9A227&fire=C9A227&currStreakLabel=C9A227" alt="GitHub Streak" />
+<img src="https://streak-stats.demolab.com/?user=rajaeelouardani&theme=radical&hide_border=true&background=0D1117&ring=C9A227&fire=C9A227&currStreakLabel=C9A227" alt="GitHub Streak" />
 
 <br/><br/>
 
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=rajaeelouardani&bg_color=0D1117&color=C9A227&line=C9A227&point=E6EDF3&area=true&area_color=C9A227&hide_border=true&custom_title=Contribution%20Activity" alt="Contribution Activity Graph" />
+<img width="400" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=rajaeelouardani&theme=radical" alt="Summary Stats" />
+<img width="400" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=rajaeelouardani&theme=radical" alt="Repos per language" />
+<img width="400" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=rajaeelouardani&theme=radical" alt="Most commit language" />
+<img width="400" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=rajaeelouardani&theme=radical&utcOffset=1" alt="Productive time" />
 
 <br/><br/>
 
-<img src="https://github-profile-trophy.vercel.app/?username=rajaeelouardani&theme=onedark&no-frame=true&no-bg=true&column=7&margin-w=8&margin-h=8" alt="GitHub Trophies" />
+<img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=rajaeelouardani&theme=radical" alt="Profile details graph" />
 
 <br/><br/>
 
