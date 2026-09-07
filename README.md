@@ -45,31 +45,109 @@ Je conçois et livre des **produits web concrets** — de l’idée au déploiem
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" width="28" height="28" /> Stack technique
 
+Technologies utilisées à travers mes repos (KiliCasa, MedChain, Photography FSM, MWT, EHC, Consulting IT, etc.).
+
 <div align="center">
 
+### Langages
+<img src="https://skillicons.dev/icons?i=ts,js,html,css,sass,py,java,php,md&theme=dark" alt="Languages" />
+<br/>
+<img src="https://img.shields.io/badge/Shell-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Shell" />
+<img src="https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white" alt="PowerShell" />
+<img src="https://img.shields.io/badge/PLpgSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PLpgSQL" />
+<img src="https://img.shields.io/badge/MDX-1B1F24?style=for-the-badge&logo=mdx&logoColor=white" alt="MDX" />
+<img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter" />
+
+<br/><br/>
+
 ### Frontend
-<img src="https://skillicons.dev/icons?i=nextjs,react,ts,js,redux,tailwind,threejs&theme=dark" alt="Frontend skills" />
+<img src="https://skillicons.dev/icons?i=nextjs,react,redux,tailwind,threejs,vite,svelte,jquery&theme=dark" alt="Frontend" />
+<br/>
+<img src="https://img.shields.io/badge/Radix_UI-161618?style=for-the-badge&logo=radixui&logoColor=white" alt="Radix UI" />
+<img src="https://img.shields.io/badge/Ant_Design-0170FE?style=for-the-badge&logo=antdesign&logoColor=white" alt="Ant Design" />
+<img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
+<img src="https://img.shields.io/badge/Recharts-22B5BF?style=for-the-badge&logo=recharts&logoColor=white" alt="Recharts" />
+<img src="https://img.shields.io/badge/Leaflet-199900?style=for-the-badge&logo=leaflet&logoColor=white" alt="Leaflet" />
+<img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
+<img src="https://img.shields.io/badge/TanStack_Query-FF4154?style=for-the-badge&logo=reactquery&logoColor=white" alt="TanStack Query" />
+<img src="https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=shadcnui&logoColor=white" alt="shadcn/ui" />
 
 <br/><br/>
 
-### Backend & Data
-<img src="https://skillicons.dev/icons?i=nodejs,express,nestjs,postgres,mysql,sequelize,py,php&theme=dark" alt="Backend skills" />
+### Mobile
+<img src="https://skillicons.dev/icons?i=react,expo&theme=dark" alt="Mobile" />
+<br/>
+<img src="https://img.shields.io/badge/React_Native-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React Native" />
+<img src="https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white" alt="Expo" />
 
 <br/><br/>
 
-### Outils & DevOps
-<img src="https://skillicons.dev/icons?i=git,github,vercel,linux,figma,wordpress,postman,docker&theme=dark" alt="Tools skills" />
+### Backend & APIs
+<img src="https://skillicons.dev/icons?i=nodejs,express,nestjs,graphql,postman&theme=dark" alt="Backend" />
+<br/>
+<img src="https://img.shields.io/badge/REST_API-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="REST API" />
+<img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" alt="JWT" />
+<img src="https://img.shields.io/badge/Zod-3E67B1?style=for-the-badge&logo=zod&logoColor=white" alt="Zod" />
+<img src="https://img.shields.io/badge/Better_Auth-000000?style=for-the-badge&logo=auth0&logoColor=white" alt="Better Auth" />
+<img src="https://img.shields.io/badge/WebAuthn-3423A6?style=for-the-badge&logo=fingerprint&logoColor=white" alt="WebAuthn" />
+<img src="https://img.shields.io/badge/Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white" alt="Stripe" />
+<img src="https://img.shields.io/badge/Nodemailer-0F9D58?style=for-the-badge&logo=gmail&logoColor=white" alt="Nodemailer" />
+<img src="https://img.shields.io/badge/Resend-000000?style=for-the-badge&logo=resend&logoColor=white" alt="Resend" />
 
 <br/><br/>
 
-<p>
-  <img src="https://img.shields.io/badge/Ant_Design-0170FE?style=flat-square&logo=antdesign&logoColor=white" alt="Ant Design" />
-  <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" alt="JWT" />
-  <img src="https://img.shields.io/badge/REST_API-FF6C37?style=flat-square&logo=postman&logoColor=white" alt="REST API" />
-  <img src="https://img.shields.io/badge/Blockchain-121D33?style=flat-square&logo=bitcoin&logoColor=white" alt="Blockchain" />
-  <img src="https://img.shields.io/badge/Scrum-009FDA?style=flat-square&logo=jira&logoColor=white" alt="Scrum" />
-  <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap" />
-</p>
+### Data & ORM
+<img src="https://skillicons.dev/icons?i=postgres,mysql,sqlite,prisma,mongodb,redis&theme=dark" alt="Data" />
+<br/>
+<img src="https://img.shields.io/badge/Drizzle_ORM-C5F74F?style=for-the-badge&logo=drizzle&logoColor=black" alt="Drizzle ORM" />
+<img src="https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=sequelize&logoColor=white" alt="Sequelize" />
+<img src="https://img.shields.io/badge/Meilisearch-FF5CAA?style=for-the-badge&logo=meilisearch&logoColor=white" alt="Meilisearch" />
+<img src="https://img.shields.io/badge/AWS_S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white" alt="AWS S3" />
+
+<br/><br/>
+
+### CMS & Content
+<img src="https://skillicons.dev/icons?i=wordpress&theme=dark" alt="CMS icons" />
+<br/>
+<img src="https://img.shields.io/badge/Strapi-4945FF?style=for-the-badge&logo=strapi&logoColor=white" alt="Strapi" />
+<img src="https://img.shields.io/badge/Ghost-15171A?style=for-the-badge&logo=ghost&logoColor=white" alt="Ghost" />
+<img src="https://img.shields.io/badge/Handlebars-F0772B?style=for-the-badge&logo=handlebarsdotjs&logoColor=white" alt="Handlebars" />
+
+<br/><br/>
+
+### DevOps · Cloud · Deploy
+<img src="https://skillicons.dev/icons?i=docker,linux,nginx,cloudflare,aws,vercel,githubactions,terraform,ansible,bash&theme=dark" alt="DevOps" />
+<br/>
+<img src="https://img.shields.io/badge/Coolify-000000?style=for-the-badge&logo=coolify&logoColor=white" alt="Coolify" />
+<img src="https://img.shields.io/badge/Docker_Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker Compose" />
+<img src="https://img.shields.io/badge/Traefik-24A1C1?style=for-the-badge&logo=traefikproxy&logoColor=white" alt="Traefik" />
+<img src="https://img.shields.io/badge/pnpm-F69220?style=for-the-badge&logo=pnpm&logoColor=white" alt="pnpm" />
+<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
+<img src="https://img.shields.io/badge/Tailscale-242424?style=for-the-badge&logo=tailscale&logoColor=white" alt="Tailscale" />
+<img src="https://img.shields.io/badge/HCL_/_Terraform-844FBA?style=for-the-badge&logo=hashicorp&logoColor=white" alt="HCL" />
+<img src="https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white" alt="Ansible" />
+
+<br/><br/>
+
+### Tests & Qualité
+<img src="https://skillicons.dev/icons?i=vitest,jest,playwright&theme=dark" alt="Testing" />
+<br/>
+<img src="https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white" alt="Playwright" />
+<img src="https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white" alt="Vitest" />
+<img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint" />
+<img src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black" alt="Prettier" />
+<img src="https://img.shields.io/badge/Husky-000000?style=for-the-badge&logo=husky&logoColor=white" alt="Husky" />
+
+<br/><br/>
+
+### Outils & Design
+<img src="https://skillicons.dev/icons?i=git,github,figma,postman&theme=dark" alt="Tools" />
+<br/>
+<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
+<img src="https://img.shields.io/badge/Scrum-009FDA?style=for-the-badge&logo=jira&logoColor=white" alt="Scrum" />
+<img src="https://img.shields.io/badge/Blockchain-121D33?style=for-the-badge&logo=bitcoin&logoColor=white" alt="Blockchain" />
+<img src="https://img.shields.io/badge/QR_Code-000000?style=for-the-badge&logo=qrcode&logoColor=white" alt="QR Code" />
+<img src="https://img.shields.io/badge/PDF.js-CA2027?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="PDF" />
 
 </div>
 
@@ -81,21 +159,24 @@ Je conçois et livre des **produits web concrets** — de l’idée au déploiem
   <tr>
     <td width="50%" valign="top">
       <h3>🏠 KiliCasa MVP</h3>
-      <p>Plateforme produit <b>@KILICASA</b> — conception & livraison fullstack.</p>
+      <p>Plateforme produit <b>@KILICASA</b> — Next.js, Drizzle, Postgres, Coolify, Stripe, Meilisearch.</p>
       <p>
         <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
         <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
-        <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" />
+        <img src="https://img.shields.io/badge/Coolify-000000?style=flat-square&logo=coolify&logoColor=white" />
+        <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+        <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
       </p>
       <p><a href="https://github.com/KILICASA/KiliCasa_MVP">🔗 Repo</a> · <a href="https://dev.kilicasa.com">🚀 Demo</a></p>
     </td>
     <td width="50%" valign="top">
       <h3>🩺 MedChain</h3>
-      <p>Dossiers de santé sécurisés — <b>web + mobile + blockchain</b>.</p>
+      <p>Dossiers de santé sécurisés — <b>web + mobile + blockchain</b> · Docker Compose.</p>
       <p>
         <img src="https://img.shields.io/badge/Blockchain-121D33?style=flat-square&logo=bitcoin&logoColor=white" />
         <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
         <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
+        <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
       </p>
       <p><a href="https://medchain-frontend-silk.vercel.app">🚀 Demo</a> · <a href="https://www.elouardanirajae.online/">🌐 Portfolio</a></p>
     </td>
@@ -103,20 +184,22 @@ Je conçois et livre des **produits web concrets** — de l’idée au déploiem
   <tr>
     <td valign="top">
       <h3>🗺️ Morocco Walking Tour</h3>
-      <p>3 dashboards · <b>tickets QR</b> · paiements · RBAC · SEO.</p>
+      <p>3 dashboards · tickets QR · NestJS / Strapi · Postgres · Docker.</p>
       <p>
         <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
         <img src="https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white" />
+        <img src="https://img.shields.io/badge/Strapi-4945FF?style=flat-square&logo=strapi&logoColor=white" />
         <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
       </p>
       <p><a href="https://moroccan-walking-tours.vercel.app">🚀 Demo</a></p>
     </td>
     <td valign="top">
       <h3>📷 Photography FSM</h3>
-      <p>Site officiel du club — galerie & identité visuelle.</p>
+      <p>Site officiel du club — Next.js, Three.js, Expo / React Native.</p>
       <p>
         <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
-        <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
+        <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white" />
+        <img src="https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=white" />
         <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" />
       </p>
       <p><a href="https://github.com/rajaeelouardani/photography-fs">💻 Code</a> · <a href="https://photography-fs.vercel.app">🚀 Demo</a></p>
@@ -125,7 +208,7 @@ Je conçois et livre des **produits web concrets** — de l’idée au déploiem
   <tr>
     <td valign="top">
       <h3>🏢 EHC Groupe — RH</h3>
-      <p>9 dashboards : formations, workflows, reporting.</p>
+      <p>9 dashboards : formations, workflows, reporting · Ant Design.</p>
       <p>
         <img src="https://img.shields.io/badge/Ant_Design-0170FE?style=flat-square&logo=antdesign&logoColor=white" />
         <img src="https://img.shields.io/badge/Sequelize-52B0E7?style=flat-square&logo=sequelize&logoColor=white" />
