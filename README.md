@@ -134,14 +134,19 @@ Technologies utilisées à travers mes repos (KiliCasa, MedChain, Photography FS
 
 <br/><br/>
 
-### DevOps · Cloud · Deploy
-<img src="https://skillicons.dev/icons?i=docker,linux,nginx,cloudflare,aws,vercel,githubactions,terraform,ansible,bash&theme=dark" alt="DevOps" />
+### DevOps · CI/CD · Cloud · Deploy
+<img src="https://skillicons.dev/icons?i=docker,kubernetes,linux,nginx,cloudflare,aws,vercel,githubactions,gitlab,jenkins,terraform,ansible,bash&theme=dark" alt="DevOps" />
 <br/>
+<img src="https://img.shields.io/badge/CI%2FCD-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI/CD" />
+<img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes" />
+<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
+<img src="https://img.shields.io/badge/GitLab_CI-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white" alt="GitLab CI" />
+<img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white" alt="Jenkins" />
 <img src="https://img.shields.io/badge/Coolify-000000?style=for-the-badge&logo=coolify&logoColor=white" alt="Coolify" />
 <img src="https://img.shields.io/badge/Docker_Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker Compose" />
+<img src="https://img.shields.io/badge/Helm-0F1689?style=for-the-badge&logo=helm&logoColor=white" alt="Helm" />
 <img src="https://img.shields.io/badge/Traefik-24A1C1?style=for-the-badge&logo=traefikproxy&logoColor=white" alt="Traefik" />
 <img src="https://img.shields.io/badge/pnpm-F69220?style=for-the-badge&logo=pnpm&logoColor=white" alt="pnpm" />
-<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
 <img src="https://img.shields.io/badge/Tailscale-242424?style=for-the-badge&logo=tailscale&logoColor=white" alt="Tailscale" />
 <img src="https://img.shields.io/badge/HCL_/_Terraform-844FBA?style=for-the-badge&logo=hashicorp&logoColor=white" alt="HCL" />
 <img src="https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white" alt="Ansible" />
