@@ -8,7 +8,7 @@
 
 <br/>
 
-**Fullstack Developer** · Tech Project Leader · Building **MedChain**  
+**Fullstack Developer** · **Photographe / Vidéaste** · Tech Project Leader · Building **MedChain**  
 Co-fondatrice **IVR Club FSM** · Ambassadrice **10000 Codeurs** · Présidente **Photography Club FSM**
 
 <br/>
@@ -159,11 +159,51 @@ Technologies utilisées à travers mes repos (KiliCasa, MedChain, Photography FS
 
 <br/><br/>
 
+### UI · CSS
+<img src="https://skillicons.dev/icons?i=tailwind,bootstrap,css,sass,html&theme=dark" alt="UI CSS" />
+<br/>
+<img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+<img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
+<img src="https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=shadcnui&logoColor=white" alt="shadcn/ui" />
+<img src="https://img.shields.io/badge/Ant_Design-0170FE?style=for-the-badge&logo=antdesign&logoColor=white" alt="Ant Design" />
+
+<br/><br/>
+
+### Créatif · Photo · Vidéo
+<img src="https://img.shields.io/badge/Photography-C9A227?style=for-the-badge&logo=camera&logoColor=white" alt="Photography" />
+<img src="https://img.shields.io/badge/Videography-E11D48?style=for-the-badge&logo=youtube&logoColor=white" alt="Videography" />
+<img src="https://img.shields.io/badge/Adobe_Photoshop-31A8FF?style=for-the-badge&logo=adobephotoshop&logoColor=white" alt="Photoshop" />
+<img src="https://img.shields.io/badge/Adobe_Lightroom-31A8FF?style=for-the-badge&logo=adobelightroom&logoColor=white" alt="Lightroom" />
+<img src="https://img.shields.io/badge/Adobe_Premiere_Pro-9999FF?style=for-the-badge&logo=adobepremierepro&logoColor=white" alt="Premiere Pro" />
+<img src="https://img.shields.io/badge/Adobe_After_Effects-9999FF?style=for-the-badge&logo=adobeaftereffects&logoColor=white" alt="After Effects" />
+<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
+
+<br/><br/>
+
+### AI · LLM · Agents
+<img src="https://img.shields.io/badge/AI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="AI" />
+<img src="https://img.shields.io/badge/LLM-000000?style=for-the-badge&logo=huggingface&logoColor=white" alt="LLM" />
+<img src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white" alt="Ollama" />
+<img src="https://img.shields.io/badge/AI_Agents-10A37F?style=for-the-badge&logo=openai&logoColor=white" alt="AI Agents" />
+<img src="https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white" alt="Cursor" />
+<img src="https://img.shields.io/badge/ChatGPT-412991?style=for-the-badge&logo=openai&logoColor=white" alt="ChatGPT" />
+<img src="https://img.shields.io/badge/Claude-D97706?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude" />
+<img src="https://img.shields.io/badge/Prompt_Engineering-6366F1?style=for-the-badge&logo=brain&logoColor=white" alt="Prompt Engineering" />
+
+<br/><br/>
+
+### Collab · Agile
+<img src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white" alt="Jira" />
+<img src="https://img.shields.io/badge/Trello-0052CC?style=for-the-badge&logo=trello&logoColor=white" alt="Trello" />
+<img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" alt="Slack" />
+<img src="https://img.shields.io/badge/Scrum-009FDA?style=for-the-badge&logo=jira&logoColor=white" alt="Scrum" />
+<img src="https://img.shields.io/badge/GitHub_Projects-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Projects" />
+
+<br/><br/>
+
 ### Outils & Design
 <img src="https://skillicons.dev/icons?i=git,github,figma,postman&theme=dark" alt="Tools" />
 <br/>
-<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
-<img src="https://img.shields.io/badge/Scrum-009FDA?style=for-the-badge&logo=jira&logoColor=white" alt="Scrum" />
 <img src="https://img.shields.io/badge/Blockchain-121D33?style=for-the-badge&logo=bitcoin&logoColor=white" alt="Blockchain" />
 <img src="https://img.shields.io/badge/QR_Code-000000?style=for-the-badge&logo=qrcode&logoColor=white" alt="QR Code" />
 <img src="https://img.shields.io/badge/PDF.js-CA2027?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="PDF" />
