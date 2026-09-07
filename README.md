@@ -17,6 +17,8 @@ Co-fondatrice **IVR Club FSM** · Ambassadrice **10000 Codeurs** · Présidente 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Rajae_Elouardani-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rajae-elouardani-577892225)
 [![GitHub](https://img.shields.io/badge/GitHub-rajaeelouardani-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rajaeelouardani)
 [![Location](https://img.shields.io/badge/Meknès-Maroc-C8102E?style=for-the-badge&logo=googlemaps&logoColor=white)](https://www.elouardanirajae.online/)
+[![Since 2021](https://img.shields.io/badge/Since_2021-Jiksaww-6e40c9?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Jiksaww)
+[![Private repos](https://img.shields.io/badge/Private_repos-41-critical?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rajaeelouardani?tab=repositories)
 
 </div>
 
@@ -28,13 +30,20 @@ Co-fondatrice **IVR Club FSM** · Ambassadrice **10000 Codeurs** · Présidente 
 
 <div align="center">
 
-| 🚀 Livraisons | 🏆 Distinctions | 💻 Focus |
-|:---:|:---:|:---:|
-| **15+** plateformes | **1er** RIDUGE 2026 | **Next.js / Node.js** |
-| Santé · Tourisme · RH | UNESCO Water4Future | Produits scalables |
-| Hôtellerie · Éducation | DeepTech Tamwilcom | De l’idée au deploy |
+| 📦 Repos | 🔒 Privés | 🌐 Publics | 🧠 Depuis 2021 |
+|:---:|:---:|:---:|:---:|
+| **61** au total* | **41** (compte actuel) | **20** (3 + 17) | **[@Jiksaww](https://github.com/Jiksaww)** |
+| **44** owned `@rajaeelouardani` | + **23** collab/org privés | **17** non-forks Jiksaww | Oct 2021 → aujourd’hui |
+
+| 🚀 Livraisons | 🏆 Distinctions | 💻 Focus | 📈 Contributions |
+|:---:|:---:|:---:|:---:|
+| **15+** plateformes | **1er** RIDUGE 2026 | **Next.js / Node.js** | **2 301** / an (actuel) |
+| Santé · Tourisme · RH | UNESCO Water4Future | Coolify · Docker | **288** sur Jiksaww |
+| Hôtellerie · Éducation | DeepTech Tamwilcom | Produits scalables | Privé inclus |
 
 </div>
+
+\* Exact : **41** repos privés + **3** publics sur [@rajaeelouardani](https://github.com/rajaeelouardani) · **17** repos publics (hors forks) sur [@Jiksaww](https://github.com/Jiksaww) depuis **2021-10-20**.
 
 <br/>
 
@@ -42,6 +51,16 @@ Je conçois et livre des **produits web concrets** — de l’idée au déploiem
 Étudiante en informatique (Université Moulay Ismail, Meknès), ALX Software Engineering.
 
 <img src="https://user-attachments.githubusercontent.com/74038190/212284100-561aa473-397c-4e87-9e85-5e3c2b7f0f8f.gif" width="100%" height="2" alt="divider" />
+
+
+### Historique GitHub
+
+| Compte | Depuis | Repos (exact) | Contributions notables |
+|:---|:---|:---|:---|
+| [@rajaeelouardani](https://github.com/rajaeelouardani) | **2025-05-05** | **44** owned = **3** public + **41** private | **2 301** contributions (12 mois, privé inclus) |
+| [@Jiksaww](https://github.com/Jiksaww) | **2021-10-20** | **17** public (non-fork) · **20** public total | 2021:1 · 2022:2 · 2023:**275** · 2024:1 · 2025:9 |
+
+Ancien profil (ALX, C, Shell, Python, HTML) : [github.com/Jiksaww](https://github.com/Jiksaww)
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" width="28" height="28" /> Stack technique
 
